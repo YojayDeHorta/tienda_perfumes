@@ -1,0 +1,106 @@
+        <div class="slider">
+          <ul>
+            <li><img src="img/Slider-1.jpg"></li>
+            <li><img src="img/Slider-2.jpg"></li>
+            <li><img src="img/slider-3.PNG"></li>
+          </ul>
+        </div>
+
+        <div class="Diseño-Cat">
+          <h1 class="Cat">CATEGORÍAS</h1>
+        </div>
+
+
+        <div class="Tabs">
+            <ul>
+                <li><font style="font-family:cursive" size=5>DAMAS</font></li>
+                <li><font style="font-family:cursive" size=5>CABALLEROS</font></li>
+            </ul>
+                <div class="Tabs-Categorias">
+                      <div class="Pestaña-Damas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facere dolore suscipit repudiandae, labore voluptatibus id earum blanditiis rerum perferendis maxime a possimus quo facilis nulla dolorum fuga! Illum, dolores?</div>
+                      <div class="Pestaña-Caballeros">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ab doloribus ad suscipit tempore maiores, quam adipisci fugiat, ea officiis impedit! Illo error explicabo obcaecati dolorem facere dolores optio velit?</div>
+                </div>
+          </div>
+          <div class="Anuncios">
+            <h2 class="Publicidad" ><font>“SI TIENE 55 AÑOS O MÁS, OBTENGA UN 10% DE DESCUENTO ADICIONAL CADA LUNES”</font></h1>
+          </div>
+
+
+
+
+                  <div class="Opciones" id="Cuenta"><i class="fas fa-book-open" id="Cuenta"></i>GARANTÍA</div>
+        <div class="Opciones" id="Soporte">SOPORTE</div>
+        <button class="Opciones" id="Garantia"><i class="far fa-user-circle"></i>MI CUENTA</button >
+
+        
+
+
+
+
+
+
+    <h1>PERFUME LOCIÓN ACQUA DI GIO</h1>
+    <img class="Img-1" src="img/Catalogo-1.png">
+    <a href="https://www.youtube.com/watch?v=tKuBgn3QtlQ"
+    alt="La cabeza y el torso de un esqueleto de dinosaurio">
+      <p>
+        ACQUA DI GIÒ PROFUMO de Giorgio Armani es un “Eau de Parfum” para hombre que se incluye en la familia Aromática Acuática.
+        Se trata de una reedición del clásico Acqua Di Giò que celebra sus 20 años de vida, éxitos y logros.
+      </p>
+      <h3>
+        $250 USD
+      </h3>
+      <br/>
+      <button class="Compra-1"><h3>COMPRAR</h3></button>
+    </a>
+
+
+
+          <div id="Producto_4" class="Producto">
+            <h1>EMPORIO ARMANI STRONGER WITH YOU DE GIORGIO ARMANI</h1>
+            <img class="Img-1" src="img/Catalogo-2.jpg">
+            <p class="Descripcion">
+              ACQUA DI GIÒ PROFUMO de Giorgio Armani es un “Eau de Parfum” para hombre que se incluye en la familia Aromática Acuática.
+              Se trata de una reedición del clásico Acqua Di Giò que celebra sus 20 años de vida, éxitos y logros.
+            </p>
+            <h3>COSTO $250 USD</h3>
+            <button><i class="fas fa-shopping-cart">COMPRAR</i></button>
+          </div>
+          <div id="Producto_5" class="Producto">
+            <h1>EMPORIO ARMANI FOR HIM DE GIORGIO ARMANI</h1>
+            <img class="Img-1" src="img/Catalogo-3.jpg">
+            <p class="Descripcion">
+              ACQUA DI GIÒ PROFUMO de Giorgio Armani es un “Eau de Parfum” para hombre que se incluye en la familia Aromática Acuática.
+              Se trata de una reedición del clásico Acqua Di Giò que celebra sus 20 años de vida, éxitos y logros.
+            </p>
+            <h3>COSTO $250 USD</h3>
+            <button><i class="fas fa-shopping-cart">COMPRAR</i></button>
+          </div>
+          <div id="Producto_6" class="Producto">
+            <h1>PERFUME LOCIÓN ACQUA DI GIO</h1>
+            <img class="Img-1" src="img/Catalogo-1.png">
+            <p class="Descripcion">
+              ACQUA DI GIÒ PROFUMO de Giorgio Armani es un “Eau de Parfum” para hombre que se incluye en la familia Aromática Acuática.
+              Se trata de una reedición del clásico Acqua Di Giò que celebra sus 20 años de vida, éxitos y logros.
+            </p>
+            <h3>COSTO $250 USD</h3>
+            <button><i class="fas fa-shopping-cart">COMPRAR</i></button>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h3 class="Precio" id="Precio-1">COSTO $250 USD</h3>
+            <button class="Compra" id="Compra_1"><i class="fas fa-shopping-cart">COMPRAR</i></button>

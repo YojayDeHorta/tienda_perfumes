@@ -1,0 +1,395 @@
+.Pagina_Principal{
+  background: url("/img/1.png")
+}
+
+
+*{
+    position:relative;
+    max-width: 99%;
+    left:5px;
+    top:5px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  /*--------INDEX--------*/
+.Div-Principal{
+  width: 100%;
+  height: 1000px;
+}
+
+header{
+  width:100%;
+}
+
+header .Nav-Opciones{
+position:relative;
+background-color: black;
+width:100%;
+height: 40px;
+text-align:left;
+top:0px;
+}
+
+.Nav-Opciones ul li{
+  position: relative;
+  display:inline;
+  margin-left: 50px;
+  font-size:25px;
+  left:1100px;
+  top:-10px;
+}
+
+.Nav-Opciones a{
+  color:silver;
+}
+
+.Nav-Opciones i:hover{
+  border-bottom:5px solid darkred;
+  color:bisque;
+}
+
+a .Img-Logo{
+  top:-40px;
+  z-index: 2;
+}
+
+.Publicidad-1{
+  position:relative;
+  background-color: darkred;
+  z-index: 1;
+  width:98%;
+  height:150px;
+  top:-116px;
+  left:10px;
+  
+}
+
+
+.Publicidad-1 #Letra-Publicidad{
+  position:relative;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-transform: uppercase;
+  color:white;
+  left:400px;
+  width:40%;
+  top:45px;
+  text-align:center;
+  font-size:25px;
+}
+
+.Publicidad-1 .Buscar{
+  position:relative;
+  background-color:white;
+  left:1050px;
+  width:20%;
+  height:45px;
+  border-radius: 10px;
+  top:-20px;
+}
+
+
+.Publicidad-2{
+  background-color:bisque;
+  text-align:right;
+  width:98%;
+  height:340px;
+  left:10px;
+  top:-137px;
+}
+
+.Publicidad-2 h1{
+  width:40%;
+  top:110px;
+  color:black;
+}
+
+
+.Publicidad-2 .Portada-Img{
+  width:50%;
+  height:325px;
+  left:-10px;
+  animation: Borde 20s infinite alternate linear;
+  border-radius: 10px; 
+  top:-90px; 
+}
+
+ @keyframes Borde{
+	
+  0% {
+    margin-left:0;
+    border: 10px solid gray;  
+	}
+  
+	33.3333% {
+    margin-left:0;
+    border: 10px solid darkred;  
+	}
+
+	66.666% {
+    margin-left:0;
+    border: 10px solid  navy;  
+	}
+
+	100% {
+    margin-left:0;
+    border: 10px solid  purple;   
+	}
+
+  }
+
+/*--------INDEX--------*/
+.Formulario-P{
+  position:relative;
+  text-align: center;
+  width:98%;
+  height: 600px;
+  z-index: 1;
+  left:15px;
+  top:-80px;
+}
+
+.Tabs-Usuario label{
+  display: inline-block;
+  padding: 20px;
+  color: black;
+  cursor: pointer;
+  font-size:25px;
+}
+
+.Tabs-Usuario label:hover{
+  border-bottom: 5px solid red;
+}
+
+.content{
+  position: relative;
+}
+
+.content div{
+  position: absolute;
+  width: 100%;
+  transition: all 600ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#Registrate,#Login{
+  display: none;
+}
+
+#Registrate:checked ~ .Tabs-1,
+#Login:checked ~ .Tabs-2
+{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/*---------------REGISTRATE-------------------*/
+#Registrar{
+  position: relative;
+  background-color: transparent;
+  width:35%;
+  left:455px;
+  height:510px;
+  top:-10px;
+  box-shadow: 0px 0px 10px 0px;
+}   
+
+legend{
+  /*background-color: silver;*/
+  border-radius: 10px;
+  font-size: 15px;
+  color:darkred;
+  width: 100%;
+  height:85px;
+}
+
+legend h1{
+  position:relative;
+  top:20px;
+}
+
+.Input-Registrate{
+    position:relative;
+    border-right: none;
+    background-color:transparent;
+    padding: 0px;
+    margin: 0px;
+    border-left:none;
+    border-top: none;
+    text-decoration: none;
+    top:40px;
+    width:70%;
+    height: 40px;
+}
+
+.Input-Registrate:hover{
+ background-color:white;
+ border-radius: 10px;
+}
+
+.Botton-Enviar{
+  position: relative;
+  background-color:silver;
+  border:0;
+  border-radius: 15px;
+  font-size: 25px;
+  width: 50%;
+  height:35px;
+  color:trasparent;
+  top:60px;
+  color:darkred;
+}
+
+.Botton-Enviar:hover{
+  color:bisque;
+  background-color:black;
+}
+
+/*----------LOGIN------------*/
+#Iniciar{
+  position: relative;
+  background-color: transparent;
+  width:32%;
+  left:479px;
+  height:490px;
+  top:-20px;
+  box-shadow: 0px 0px 10px 0px;
+}
+
+#Iniciar h1{
+  position: relative;
+  text-align: center;
+  font-size:40px;
+  color:darkred;
+}
+
+.Input{
+  position:relative;
+  border-right: none;
+  background-color:transparent;
+  padding: 0px;
+  margin: 0px;
+  border-left:none;
+  border-top: none;
+  text-decoration: none;
+  top:5px;
+  width:70%;
+  height: 40px;
+}
+
+#Iniciar .Usuario{
+  position:relative;
+  font-size:15px;
+  top:35px;
+}
+
+#Iniciar .Usuario a{
+  color:black;
+}
+
+/*----------LOGIN------------*/
+
+/*--------SLIDE---------*/
+
+
+
+/*--SLIDE--*/
+
+.Div-Slide{
+  position:relative;
+  width:98%;
+  left:10px;
+  background-color: white;
+  top:-125px;
+}
+
+#slide{
+	position:relative;
+	margin:auto;
+	width:1000px;
+	height:301px;
+  top:0px;
+	}
+
+.text-slide{
+  float:flex;
+  top:110px;
+  left:50px;
+  color:bisque;
+}
+	
+#slide ul{
+	position:relative;
+	top:-60px;
+	left:5px;
+	width:1000px;
+  background:url(../img/Img-3.jpg);
+
+	}
+	
+#slide ul li img{
+	position:absolute;
+	opacity:0;
+	left:0;
+	transition:opacity 1s ease-out;	
+	}
+		
+#slide ul li label{
+	position:relative;
+	z-index:3;
+	top:300px;
+	left:440px;
+	float:left;
+	width:10px;
+	height:10px;
+	margin:0 2px;
+	background:black;
+	cursor:pointer;
+	border-radius:100%;
+	}
+	
+
+#slide ul li label:active{
+	background:magenta;
+	}
+	
+#slide ul li input{
+	display:none;
+	}
+	
+#slide ul li input#boton-1:checked ~ #foto01{
+	opacity:1;	
+	}
+	
+#slide ul li input#boton-2:checked ~ #foto02{
+	opacity:1;	
+	}
+	
+#slide ul li input#boton-3:checked ~ #foto03{
+	opacity:1;	
+	}
+	
+#slide ul li input#boton-4:checked ~ #foto04{
+	opacity:1;	
+	}
+	
+#slide ul li input#boton-5:checked ~ #foto05{
+	opacity:1;	
+	}
+	
+
+
+/*--------SLIDE---------*/
+
+#Promocion_1{
+  position:relative;
+  background-color:navy;
+  text-align:center;
+  font-size:25px;
+  width:98%;
+  left:10px;
+  top: -157px;
+}
