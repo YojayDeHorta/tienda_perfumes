@@ -11,14 +11,16 @@ class Cliente
     private $apellido;
     private $numero_movil;
     private $password;
+    private $email;
    
-    public function __construct($id_cliente, $nombre,$apellido,$numero_movil,$password){
+    public function __construct($id_cliente, $nombre,$apellido,$numero_movil,$password,$email){
         $this->id_cliente = $id_cliente;
         $this->nombre = $nombre;
         $this->apellido = $apellido;
     	$this->numero_movil = $numero_movil;
     	$this->password = $password;
-    	
+        $this->email = $email;
+
     }
     
     public function getId_cliente()
@@ -78,6 +80,18 @@ class Cliente
     public function setPassword($password)
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email= $email;
 
         return $this;
     }

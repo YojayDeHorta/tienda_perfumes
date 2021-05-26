@@ -3,12 +3,12 @@
         require_once (__DIR__."/../MDB/mdbCliente.php");	
 		$errMsg = 'OK';
 	
-		$Numero_telefono = $_POST['Telefono'];
+		$Email = $_POST['Email'];
 		$password = $_POST['Contraseña'];
         
-        $cliente = autenticarCliente($Numero_telefono, $password);
+        $cliente = autenticarCliente($Email, $password);
         
-        if($Numero_telefono == "1234" ){
+        if($Email == "admin" ){
             
             header("Location: ../../view/admin/");
         }else{
@@ -18,6 +18,8 @@
                 $_SESSION['NOMBRE_CLIENTE'] = $cliente->getNombre();
                 $_SESSION['APELLIDO_CLIENTE'] = $cliente->getApellido();
                 $_SESSION['NUMERO_CLIENTE'] = $cliente->getNumero_movil();
+                $_SESSION['EMAIL_CLIENTE'] = $cliente->getEmail();
+
 
                 echo'<script type="text/javascript">
                 alert("INICIO DE SESION CORRECTAMENTE");

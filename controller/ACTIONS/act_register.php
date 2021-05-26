@@ -7,12 +7,13 @@
         $nombre = $_POST['Nombre'];
         $apellido = $_POST['Apellido'];        
         $password = $_POST['Contraseña'];
+        $email = $_POST['Email'];
 
-        $cliente = buscarClientePornumeromovil($numero_movil);
+        $cliente = autenticarCliente($email, $password);
 		if($cliente == null){
 
             $nuevocliente=NULL;
-            $nuevocliente= new Cliente("",$nombre,$apellido,$numero_movil,$password);
+            $nuevocliente= new Cliente("",$nombre,$apellido,$numero_movil,$password,$email);
             insertarCliente($nuevocliente);
             //header("Location: ../../view/store/registrate.html?band=2"); 
 
@@ -26,7 +27,7 @@
 
              echo'<script type="text/javascript">
              alert("telefono y/o contraseña no válido o existente");
-             window.location.href="../../view/store/";
+             window.location.href="../../view/store/registrate.html";
              </script>';
 
             //header("Location: ../../view/store/registrate.html?band=1"); 

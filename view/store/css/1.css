@@ -1,172 +1,400 @@
-.Pagina_Principal{
+.Pagina_Principal {
   background: url("/img/1.png")
 }
 
+* {
+  position: relative;
+  max-width: 99%;
+  left: 5px;
+  top: 5px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
 
-*{
-    position:relative;
-    max-width: 99%;
-    left:5px;
-    top:5px;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-
-  /*--------INDEX--------*/
-.Div-Principal{
+/*--------INDEX--------*/
+.Div-Principal {
   width: 100%;
   height: 1000px;
 }
 
-header{
-  width:100%;
+header {
+  width: 100%;
+  top: -85px;
 }
 
-header .Nav-Opciones{
-position:relative;
-background-color: black;
-width:100%;
-height: 40px;
-text-align:left;
-top:0px;
+header .Logo-Perfumes {
+  text-align: left;
+  font-family: Yellowtail;
+  font-size: 25px;
+  color: bisque;
+  top: -2px;
 }
 
-.Nav-Opciones ul li{
+header .Nav-Opciones {
   position: relative;
-  display:inline;
+  background-color: black;
+  text-align: right;
+  width: 100%;
+  height: 40px;
+  top: 0px;
+}
+
+.Nav-Opciones ul li {
+  position: relative;
+  display: inline;
   margin-left: 50px;
-  font-size:25px;
-  left:1100px;
-  top:-10px;
+  font-size: 25px;
+  left: -20px;
+  top: -66px;
 }
 
-.Nav-Opciones a{
-  color:silver;
+.Nav-Opciones a {
+  color: silver;
 }
 
-.Nav-Opciones i:hover{
-  border-bottom:5px solid darkred;
-  color:bisque;
+.Nav-Opciones a:hover {
+  color: white;
 }
 
-a .Img-Logo{
-  top:-40px;
-  z-index: 2;
-}
-
-.Publicidad-1{
-  position:relative;
-  background-color: darkred;
+.Publicidad-1 {
+  position: relative;
+  background-color: gray;
   z-index: 1;
-  width:98%;
-  height:150px;
-  top:-116px;
-  left:10px;
-  
+  width: 98%;
+  height: 150px;
+  top: -104px;
+  left: 10px;
 }
 
-
-.Publicidad-1 #Letra-Publicidad{
-  position:relative;
-  font-family: Arial, Helvetica, sans-serif; 
+.Publicidad-1 #Letra-Publicidad {
+  position: relative;
+  font-family: Segoe Print;
   text-transform: uppercase;
-  color:white;
-  left:400px;
-  width:40%;
-  top:45px;
-  text-align:center;
-  font-size:25px;
-}
-
-.Publicidad-1 .Buscar{
-  position:relative;
-  background-color:white;
-  left:1050px;
-  width:20%;
-  height:45px;
-  border-radius: 10px;
-  top:-20px;
-}
-
-
-.Publicidad-2{
-  background-color:bisque;
-  text-align:right;
-  width:98%;
-  height:340px;
-  left:10px;
-  top:-137px;
-}
-
-.Publicidad-2 h1{
-  width:40%;
-  top:110px;
-  color:black;
-}
-
-
-.Publicidad-2 .Portada-Img{
-  width:50%;
-  height:325px;
-  left:-10px;
-  animation: Borde 20s infinite alternate linear;
-  border-radius: 10px; 
-  top:-90px; 
-}
-
- @keyframes Borde{
-	
-  0% {
-    margin-left:0;
-    border: 10px solid gray;  
-	}
-  
-	33.3333% {
-    margin-left:0;
-    border: 10px solid darkred;  
-	}
-
-	66.666% {
-    margin-left:0;
-    border: 10px solid  navy;  
-	}
-
-	100% {
-    margin-left:0;
-    border: 10px solid  purple;   
-	}
-
-  }
-
-/*--------INDEX--------*/
-.Formulario-P{
-  position:relative;
+  color: white;
   text-align: center;
-  width:98%;
+  left: 140px;
+  max-width: 70%;
+  font-size: 4vh;
+  top: 20px;
+}
+
+.Publicidad-1 .Buscar {
+  position: relative;
+  background-color: white;
+  left: 1140px;
+  width: 18%;
+  height: 40px;
+  border-radius: 10px;
+  top: -90px;
+}
+
+/*-------------SLIDE--------------------------------*/
+.Div-Slide {
+  position: relative;
+  text-align:center;
+  background-color:#f9f9f9;
+  margin: 0;
+  width: 98%;
+  height:300px;
+  left: 8px;
+  top: -120px;
+}
+
+.text-slide {
+  float: flex;
+  top: 110px;
+  left: 50px;
+  color: black;
+}
+
+#slide h3 {
+  position: relative;
+  float: flex;
+  text-align: center;
+  top: 130px;
+}
+
+#slide ul {
+  position: relative;
+  
+  width: 100%;
+  height:285px;
+  top:-82px;
+  margin:0;
+  /*background:url(../img/Img-3.jpg);*/
+  
+}
+
+#slide ul li img {
+  position: absolute;
+  height:290px;
+  opacity: 0;
+  left: 0;
+  transition: opacity 1s ease-out;
+  top:0px;
+  width:2000px;
+  
+}
+
+#slide ul li label {
+  position: relative;
+  border: 5px solid gray;
+  z-index: 3;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: gray;
+  cursor: pointer;
+  border-radius: 100%;
+  left:610px;
+  top:260px;
+}
+
+
+#slide ul li label:active {
+  border: 5px solid magenta;
+  
+}
+
+#slide ul li input {
+  display: none;
+}
+
+#slide ul li input#boton-1:checked~#foto01 {
+  opacity: 1;
+}
+
+#slide ul li input#boton-2:checked~#foto02 {
+  opacity: 1;
+}
+
+#slide ul li input#boton-3:checked~#foto03 {
+  opacity: 1;
+}
+
+#slide ul li input#boton-4:checked~#foto04 {
+  opacity: 1;
+}
+
+#slide ul li input#boton-5:checked~#foto05 {
+  opacity: 1;
+}
+
+/*------------------------------SLIDE---------*/
+
+
+/*-------PERFUMES FAVORITOS--------*/
+
+.Top-Favoritos {
+  position: relative;
+  border-bottom: 3px solid black;
+  text-align: left;
+  top: -435px;
+  width: 97%;
+  left: 20px;
+  height: 200px;
+}
+
+.Perfumes-Favoritos {
+  top: -7px;
+  color: black;
+}
+
+#Perfume_1 {
+  position: relative;
+  width: 5%;
+  color: black;
+  top: -20px;
+  font-size: 22px;
+}
+
+.Perfumes .Letra-Top {
+  width: 51%;
+  top: -20px;
+}
+
+.Perfumes {
+  position: relative;
+  text-align: center;
+  width: 10%;
+  top: -0px;
+}
+
+.Perfumes img {
+  position: relative;
+  width: 40%;
+  top: -1px;
+}
+
+.Perfumes h3 {
+  position: relative;
+  font-size: 15px;
+  top: -30px;
+}
+
+/*--------------------------------------*/
+
+/**----------TABLA CATEGORIAS--------------------**/
+
+.Categoria {
+  position: relative;
+  width: 97%;
+  left: 20px;
+  top: -420px;
+}
+
+.Categoria #Indicacion-Mensajes{
+  font-size: 30px;
+  border-bottom: 5px solid navy;
+  background-color: white;
+  width: 25%;
+  color: black;
+}
+
+#Opciones-Productos {
+  position: relative;
+  top: 10px;
+  width: 100%;
+}
+
+#Opciones-Productos #Secciones-Productos {
+  position: relative;
+  background-color: #f9f9f9;
+  height: 35px;
+}
+
+#Opciones-Productos #Secciones-Productos h3 {
+  position: relative;
+  color:black;
+  font-size: 25px;
+  top: 10px;
+}
+
+#Opciones-Productos #Secciones-Productos h3:hover {
+  border-bottom: 5px solid red;
+}
+
+#Secciones-Productos #label-Productos{
+  position: relative;
+  margin-left: 200px;
+  left: -110px;
+  color: white;
+  top: -50px;
+  width:20%;
+}
+
+#Opciones-Productos label:hover {
+  border: 0;
+}
+/**----------TABLA CATEGORIAS--------------------**/
+/**-----------------TABLA DE PRODUCTOS------------------------------**/
+
+.Tabla-Perfumes {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  border-spacing: 50px;
+  border-collapse: separate;
+  top: 10px;
+}
+
+.Tabla-Perfumes .Seccion-Perfumes {
+  position: relative;
+  background-color:trasparent;
+}
+
+.Tabla-Perfumes .Producto {
+  border-bottom: 5px solid bisque;
+  width: 30%;
+
+}
+
+.Tabla-Perfumes .Producto:hover {
+  border: 2px solid black;
+  background-color: #eeeeee;
+  color: black;     
+  border-radius: 20px;
+}
+
+
+.Tabla-Perfumes .Titulo {
+  width: 100%;
+  font-size: 15px;
+}
+
+.Tabla-Perfumes .Precio {
+  position: relative;
+  width: 100%;
+  border: none;
+  top: -20px;
+  font-size: 15px;
+}
+
+.Tabla-Perfumes .Descripcion {
+  position: relative;
+  top: -20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+.Tabla-Perfumes .Img-Producto {
+  position: relative;
+  width: 40%;
+}
+.Tabla-Perfumes .Compra {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  outline: none;
+  color: black;
+  width: 60%;
+  height: 40px;
+  top: -10px;
+}
+
+.Tabla-Perfumes .Compra:hover {
+  background-color: black;
+  color: bisque;
+}
+
+.Tabla-Perfumes .Compra h3 {
+  position: relative;
+  top: -6px;
+}
+/**-----------------TABLA DE PRODUCTOS------------------------------**/
+
+/*-------- TABLA --------*/
+.Formulario-P {
+  position: relative;
+  text-align: center;
+  width: 98%;
   height: 600px;
   z-index: 1;
-  left:15px;
-  top:-80px;
+  left: 15px;
+  top: -80px;
 }
 
-.Tabs-Usuario label{
+.Tabs-Usuario label {
   display: inline-block;
   padding: 20px;
   color: black;
   cursor: pointer;
-  font-size:25px;
+  font-size: 25px;
 }
 
-.Tabs-Usuario label:hover{
+.Tabs-Usuario label:hover {
   border-bottom: 5px solid red;
 }
 
-.content{
+.content {
   position: relative;
 }
 
-.content div{
+.content div {
   position: absolute;
   width: 100%;
   transition: all 600ms ease;
@@ -174,120 +402,130 @@ a .Img-Logo{
   visibility: hidden;
 }
 
-#Registrate,#Login{
+#Registrate,
+#Login {
   display: none;
 }
 
-#Registrate:checked ~ .Tabs-1,
-#Login:checked ~ .Tabs-2
-{
+#Registrate:checked~.Tabs-1,
+#Login:checked~.Tabs-2 {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
 }
 
 /*---------------REGISTRATE-------------------*/
-#Registrar{
+#Registrar {
   position: relative;
-  background-color: transparent;
-  width:35%;
-  left:455px;
-  height:510px;
-  top:-10px;
+  background-color: #f9f9f9;
+  width: 40%;
+  left: 410px;
+  height: 450px;
+  top: -10px;
   box-shadow: 0px 0px 10px 0px;
-}   
+}
 
-legend{
+legend {
   /*background-color: silver;*/
   border-radius: 10px;
   font-size: 15px;
-  color:darkred;
+  color: black;
   width: 100%;
-  height:85px;
+  height: 85px;
 }
 
-legend h1{
-  position:relative;
-  top:20px;
-}
-
-.Input-Registrate{
-    position:relative;
-    border-right: none;
-    background-color:transparent;
-    padding: 0px;
-    margin: 0px;
-    border-left:none;
-    border-top: none;
-    text-decoration: none;
-    top:40px;
-    width:70%;
-    height: 40px;
-}
-
-.Input-Registrate:hover{
- background-color:white;
- border-radius: 10px;
-}
-
-.Botton-Enviar{
+legend h1 {
   position: relative;
-  background-color:silver;
-  border:0;
-  border-radius: 15px;
-  font-size: 25px;
-  width: 50%;
-  height:35px;
-  color:trasparent;
-  top:60px;
-  color:darkred;
+  top: 20px;
 }
 
-.Botton-Enviar:hover{
-  color:bisque;
-  background-color:black;
-}
-
-/*----------LOGIN------------*/
-#Iniciar{
+.Input-Registrate {
   position: relative;
-  background-color: transparent;
-  width:32%;
-  left:479px;
-  height:490px;
-  top:-20px;
-  box-shadow: 0px 0px 10px 0px;
-}
-
-#Iniciar h1{
-  position: relative;
-  text-align: center;
-  font-size:40px;
-  color:darkred;
-}
-
-.Input{
-  position:relative;
   border-right: none;
-  background-color:transparent;
+  background-color: transparent;
+  margin-left: 20px;
   padding: 0px;
   margin: 0px;
-  border-left:none;
+  border-left: none;
   border-top: none;
   text-decoration: none;
-  top:5px;
-  width:70%;
+  top: 40px;
+  width: 40%;
   height: 40px;
 }
 
-#Iniciar .Usuario{
-  position:relative;
-  font-size:15px;
-  top:35px;
+.Input-Registrate:hover {
+  background-color: white;
+  border-radius: 10px;
 }
 
-#Iniciar .Usuario a{
-  color:black;
+
+.Botton-Enviar {
+  position: relative;
+  background-color: silver;
+  border: 0;
+  border-radius: 15px;
+  font-size: 25px;
+  width: 50%;
+  height: 35px;
+  color: trasparent;
+  top: 60px;
+  color: black;
+}
+
+.Botton-Enviar:hover {
+  color: bisque;
+  background-color: black;
+}
+
+#btn-registrar{
+  position: relative;
+  top:70px;
+}
+
+
+
+
+/*----------LOGIN------------*/
+#Iniciar {
+  position: relative;
+  background-color: #f9f9f9;
+  width: 32%;
+  left: 479px;
+  height: 490px;
+  top: -20px;
+  box-shadow: 0px 0px 10px 0px;
+}
+
+#Iniciar h1 {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+}
+
+.Input {
+  position: relative;
+  border-right: none;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  border-left: none;
+  border-top: none;
+  text-decoration: none;
+  top: 5px;
+  width: 70%;
+  height: 40px;
+}
+
+#Iniciar .Usuario {
+  position: relative;
+  font-size: 15px;
+  top: 35px;
+}
+
+#Iniciar .Usuario a {
+  color: black;
 }
 
 /*----------LOGIN------------*/
@@ -296,100 +534,4 @@ legend h1{
 
 
 
-/*--SLIDE--*/
 
-.Div-Slide{
-  position:relative;
-  width:98%;
-  left:10px;
-  background-color: white;
-  top:-125px;
-}
-
-#slide{
-	position:relative;
-	margin:auto;
-	width:1000px;
-	height:301px;
-  top:0px;
-	}
-
-.text-slide{
-  float:flex;
-  top:110px;
-  left:50px;
-  color:bisque;
-}
-	
-#slide ul{
-	position:relative;
-	top:-60px;
-	left:5px;
-	width:1000px;
-  background:url(../img/Img-3.jpg);
-
-	}
-	
-#slide ul li img{
-	position:absolute;
-	opacity:0;
-	left:0;
-	transition:opacity 1s ease-out;	
-	}
-		
-#slide ul li label{
-	position:relative;
-	z-index:3;
-	top:300px;
-	left:440px;
-	float:left;
-	width:10px;
-	height:10px;
-	margin:0 2px;
-	background:black;
-	cursor:pointer;
-	border-radius:100%;
-	}
-	
-
-#slide ul li label:active{
-	background:magenta;
-	}
-	
-#slide ul li input{
-	display:none;
-	}
-	
-#slide ul li input#boton-1:checked ~ #foto01{
-	opacity:1;	
-	}
-	
-#slide ul li input#boton-2:checked ~ #foto02{
-	opacity:1;	
-	}
-	
-#slide ul li input#boton-3:checked ~ #foto03{
-	opacity:1;	
-	}
-	
-#slide ul li input#boton-4:checked ~ #foto04{
-	opacity:1;	
-	}
-	
-#slide ul li input#boton-5:checked ~ #foto05{
-	opacity:1;	
-	}
-	
-
-
-/*--------SLIDE---------*/
-
-#Promocion_1{
-  position:relative;
-  background-color:navy;
-  text-align:center;
-  font-size:25px;
-  width:98%;
-  left:10px;
-  top: -157px;
-}

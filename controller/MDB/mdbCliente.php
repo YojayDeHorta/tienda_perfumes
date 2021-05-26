@@ -17,4 +17,10 @@
         $cliente = $dao->buscarClientePornumeromovil($numero_movil);
         return $cliente;
     }
+    function buscarClientePoremail($email){
+        require_once(__DIR__."/../../model/DAO/ClienteDAO.php");
+        $dao=new ClienteDAO();
+        $cliente = $dao->buscarClientePornumeromovil($email);
+        return $cliente;
+    }
     ?>

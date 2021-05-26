@@ -15,8 +15,12 @@
 </head>
 
 <body background="img/Fondo_Usuario.jpg">
+  <br> <br> <br> <br>
   <header class="Cabecera">
     <nav class="Nav-Opciones">
+      <a href="Index.html">
+        <h1 class="Logo-Perfumes">PERFUMERÍA</h1>
+      </a>
       <ul>
         <li><a href=""><i class="fas fa-user-cog"></i></a></li>
         <li><a href=""><i class="fas fa-cart-plus"></i></a></li>
@@ -24,10 +28,9 @@
       </ul>
     </nav>
   </header>
-  <a href="Index.html"><img class="Img-Logo" src="img/LOGO-NUEVO.PNG"></a>
   <div class="Formulario-P">
     <div class="Tabs-Usuario">
-      <label for="Registrate">Regístrate</label>
+      <label for="Registrate">Registrarme</label>
       <label for="Login">Iniciar Sesión</label>
     </div>
     <div class="content">
@@ -37,24 +40,25 @@
           <legend>
             <h1>REGÍSTRATE <br> <i class="fas fa-user-plus"></i></h1>
           </legend>
-          <input class="Input-Registrate" type="text" name="Nombre" placeholder="Nombre">&nbsp <br> <br> <br>
-          <input class="Input-Registrate" type="text" name="Apellido"placeholder="Apellido"> &nbsp <br> <br> <br>
-          <input class="Input-Registrate" type="tel" name="Telefono" placeholder="Telefono"> &nbsp <br> <br> <br>
-          <input class="Input-Registrate" type="tel" name="Contraseña" placeholder="Contraseña"> &nbsp
+          <input class="Input-Registrate" type="text" name="Nombre" placeholder="Nombre">&nbsp  &nbsp 
+          <input class="Input-Registrate" type="text" name="Apellido" placeholder="Apellido">&nbsp  &nbsp  <br> <br> <br>
+          <input class="Input-Registrate" type="tel" name="Telefono" placeholder="Telefono"> &nbsp  &nbsp  
+          <input class="Input-Registrate" type="tel" name="Email" placeholder="Email">&nbsp  &nbsp   <br> <br> <br>
+          <input class="Input-Registrate" type="tel" name="Contraseña" placeholder="Contraseña">&nbsp &nbsp  
+          <input class="Input-Registrate" type="tel" placeholder="Confirmar Contraseña"> &nbsp  &nbsp 
           <br><br>
-          <input type="submit" value="Registrarme" class="Botton-Enviar"/>
+          <input type="submit" value="Registrarme" id="btn-registrar" class="Botton-Enviar"/>
           <br>
         </form>
       </div>
       <input type="radio" name="radio" id="Login" checked>
       <div class="Tabs-2">
-        <form action="../../controller/ACTIONS/act_login.php" class="Formulario" id="Iniciar" method="POST">
+        <form  class="Formulario" id="Iniciar" action="../../controller/ACTIONS/act_login.php" method="POST">
           <h1>Bienvenido a Perfumes <br> <i class="fas fa-users"><br></i></h1>
           <br> <br>
-          <input id="Telefono" class="Input" type="text" name="Telefono" placeholder="Numero de telefono"> <br> <br>
+          <input id="Telefono" class="Input" type="text" name="Email" placeholder="Numero de telefono o Email"> <br> <br>
           <input id="Contraseña" class="Input" type="text" name="Contraseña" placeholder="Contraseña">
           <h1 class="Usuario" id="Contraseña"><a href="">¿PERDISTE TU CONTRASEÑA?</a></h1> <br>
-          <h1 class="Usuario" id="Registro"><a href="Registrate.html">¿NO TIENES CUENTA? REGISTRASTE</a></h1>
           <input type="submit" value="Ingresar" class="Botton-Enviar"/>
         </form>
       </div>
