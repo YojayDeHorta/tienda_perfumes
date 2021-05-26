@@ -11,5 +11,4 @@ CREATE TABLE compras(
   FOREIGN KEY(id_producto) REFERENCES productos(id_producto),
   FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente) 
   )
-andersons 4
-joder buenas tetas las de mayda
+
