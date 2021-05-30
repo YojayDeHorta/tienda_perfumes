@@ -1,6 +1,3 @@
-.Pagina_Principal {
-  background: url("/img/1.png")
-}
 
 * {
   position: relative;
@@ -90,97 +87,76 @@ header .Nav-Opciones {
 }
 
 /*-------------SLIDE--------------------------------*/
-.Div-Slide {
-  position: relative;
-  text-align:center;
+.slider{
+	position: relative;
   background-color:#f9f9f9;
-  margin: 0;
-  width: 98%;
-  height:300px;
-  left: 8px;
-  top: -120px;
+	width: 98%;
+  height:350px;
+  top:-100px;
+  left:12px;
 }
 
-.text-slide {
-  float: flex;
-  top: 110px;
-  left: 50px;
-  color: black;
+.myslide{
+  position:relative;
+	height: 340px;
+  width:100%;
+	display: none;
+	overflow: hidden;
+  left:7px;
 }
 
-#slide h3 {
-  position: relative;
-  float: flex;
-  text-align: center;
-  top: 130px;
-}
-
-#slide ul {
-  position: relative;
-  
-  width: 100%;
-  height:285px;
-  top:-82px;
-  margin:0;
-  /*background:url(../img/Img-3.jpg);*/
-  
-}
-
-#slide ul li img {
-  position: absolute;
-  height:290px;
-  opacity: 0;
-  left: 0;
-  transition: opacity 1s ease-out;
-  top:0px;
-  width:2000px;
-  
-}
-
-#slide ul li label {
-  position: relative;
-  border: 5px solid gray;
-  z-index: 3;
-  float: left;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background: gray;
-  cursor: pointer;
-  border-radius: 100%;
-  left:610px;
-  top:260px;
+.myslide img{
+  position:relative;
+  width:1500px;
+  height:315px;
 }
 
 
-#slide ul li label:active {
-  border: 5px solid magenta;
-  
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: silver;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
 }
 
-#slide ul li input {
-  display: none;
+.next{
+  position:relative;
+	right: 0;
+  left:1300px;
+  top:-170px;
 }
 
-#slide ul li input#boton-1:checked~#foto01 {
-  opacity: 1;
+.prev{
+  position:relative;
+  left:10px;
+  top:-180px;
 }
 
-#slide ul li input#boton-2:checked~#foto02 {
-  opacity: 1;
+
+.Dirrecion{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid black;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+  top:-80px;
 }
 
-#slide ul li input#boton-3:checked~#foto03 {
-  opacity: 1;
+.Dirrecion:hover{
+	background-color: black;
 }
 
-#slide ul li input#boton-4:checked~#foto04 {
-  opacity: 1;
-}
-
-#slide ul li input#boton-5:checked~#foto05 {
-  opacity: 1;
-}
 
 /*------------------------------SLIDE---------*/
 
@@ -191,7 +167,7 @@ header .Nav-Opciones {
   position: relative;
   border-bottom: 3px solid black;
   text-align: left;
-  top: -435px;
+  top: -430px;
   width: 97%;
   left: 20px;
   height: 200px;
