@@ -6,8 +6,8 @@
 -- Tiempo de generación: 30-05-2021 a las 15:55:45
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
-CREATE DATABASE perfumes2;
-USE perfumes2;
+CREATE DATABASE perfumes;
+USE perfumes;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
