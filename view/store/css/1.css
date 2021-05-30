@@ -1,6 +1,3 @@
-.Pagina_Principal {
-  background: url("/img/1.png")
-}
 
 * {
   position: relative;
@@ -92,17 +89,29 @@ header .Nav-Opciones {
 /*-------------SLIDE--------------------------------*/
 .slider{
 	position: relative;
-
+  background-color:#f9f9f9;
 	width: 98%;
+  height:350px;
   top:-100px;
   left:12px;
 }
+
 .myslide{
-  background-color:black;
-	height: 300px;
+  position:relative;
+	height: 340px;
+  width:100%;
 	display: none;
 	overflow: hidden;
+  left:7px;
 }
+
+.myslide img{
+  position:relative;
+  width:1500px;
+  height:315px;
+}
+
+
 
 .prev, .next{
 	position: absolute;
@@ -137,10 +146,11 @@ header .Nav-Opciones {
 	display: inline-block;
 	width: 15px;
 	height: 15px;
-	border: 3px solid Maroon;
+	border: 3px solid black;
 	border-radius: 50%;
 	margin: 0 10px;
 	cursor: pointer;
+  top:-80px;
 }
 
 .Dirrecion:hover{
@@ -157,7 +167,7 @@ header .Nav-Opciones {
   position: relative;
   border-bottom: 3px solid black;
   text-align: left;
-  top: -435px;
+  top: -430px;
   width: 97%;
   left: 20px;
   height: 200px;
