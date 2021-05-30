@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Perfumes</title>
   <meta charset="UTF-8">
@@ -10,7 +9,7 @@
   <link href="css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" >
   </head>
-  <body class="Pagina_Principal">
+  <body background="img/Fondo_Principal.png">
   <div class="Div-Principal">
     <br> <br> <br> <br>
     <header class="Cabecera">
@@ -31,39 +30,41 @@
       </h1>
       <input class="Buscar" type="text" placeholder=" Buscar Productos">
     </div>
-    <div class="Div-Slide" id="slide">
-      <h3>Para ver la publicidad dale click aqui </h3>
-      <h3><i class="fas fa-arrow-down"></i></h3>
-      <ul>
-        <li>
-          <input type="radio" id="boton-1" name="in">
-          <label for="boton-1"></label>
-          <img src="img/slide-2.jpg" width="100%" id="foto01">
-        </li>
-        <li>
-          <input type="radio" id="boton-2" name="in">
-          <label for="boton-2"></label>
-          <img src="img/Img-2.jpg" width="100%" id="foto02">
-        </li>
-
-        <li>
-          <input type="radio" id="boton-3" name="in">
-          <label for="boton-3"></label>
-          <img src="img/Img-3.jpg" width="100%" id="foto03">
-        </li>
-        <li>
-          <input type="radio" id="boton-4" name="in">
-          <label for="boton-4"></label>
-          <img src="img/Img-4.jpg" width="100%" id="foto04">
-        </li>
-        <li>
-          <input type="radio" id="boton-5" name="in">
-          <label for="boton-5"></label>
-          <img src="img/Img-5.jpg" width="100%" id="foto05">
-        </li>
-      </ul>
+    <div class="slider">
+      <!-- fade css -->
+      <div class="myslide fade">
+        <img src="img/Img-1.jpg">
+      </div>
+      
+      <div class="myslide fade">
+        <img src="img/Img-2.jpg">
+      </div>
+      
+      <div class="myslide fade">
+        <img src="img/Img-3.jpg">
+      </div>
+      
+      <div class="myslide fade">
+        <img src="img/Img-4.jpg">
+      </div>
+      
+      <div class="myslide fade">
+        <img src="img/Img-5.jpg">
+      </div>
+      <!-- /fade css -->
+      
+      <!-- onclick js -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      <div class="dotsbox" style="text-align:center">
+        <span class="Dirrecion" onclick="currentSlide(1)"></span>
+        <span class="Dirrecion" onclick="currentSlide(2)"></span>
+        <span class="Dirrecion" onclick="currentSlide(3)"></span>
+        <span class="Dirrecion" onclick="currentSlide(4)"></span>
+        <span class="Dirrecion" onclick="currentSlide(5)"></span>
+      </div>
     </div>
-  </div>
   </div>
   <div class="Top-Favoritos">
     <table class="Perfumes-Favoritos">
@@ -298,6 +299,6 @@
     </div>
   </div>
   </div>
+  <script type="text/javascript" src="js/1.js"></script>
   </body>
-
 </html>
