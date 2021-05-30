@@ -3,12 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2021 a las 07:02:05
+-- Tiempo de generación: 30-05-2021 a las 15:55:45
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
-
-CREATE DATABASE perfumes;
-USE perfumes;
+CREATE DATABASE perfumes2;
+USE perfumes2;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -35,7 +34,7 @@ CREATE TABLE `clientes` (
   `apellido` varchar(15) NOT NULL,
   `numero_movil` varchar(14) NOT NULL,
   `password` varchar(30) NOT NULL,
-  `email` varchar(20) NOT NULL
+  `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -43,7 +42,9 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `numero_movil`, `password`, `email`) VALUES
-(1, 'yojay', 'esteban', '3045981961', '1234', 'yojay1000@gmail.com');
+(1, 'yojay', 'esteban', '3045981961', '12345678', 'yojay1000@gmail.com'),
+(2, 'pedro', 'sarmiento', '1234512', '12345678', 'pedro@gmail.com'),
+(3, 'juan', 'pedrozo', '+25151515', '12345678', 'juanp@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -82,16 +83,27 @@ CREATE TABLE `pedidos` (
 CREATE TABLE `productos` (
   `id_producto` int(11) NOT NULL,
   `stock_disponible` int(5) NOT NULL,
-  `nombre_producto` varchar(20) NOT NULL,
-  `precio_producto` int(15) NOT NULL
+  `nombre_producto` varchar(60) NOT NULL,
+  `precio_producto` int(15) NOT NULL,
+  `descripcion` text NOT NULL,
+  `tipo` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id_producto`, `stock_disponible`, `nombre_producto`, `precio_producto`) VALUES
-(1, 12, 'colonia normalita', 325000);
+INSERT INTO `productos` (`id_producto`, `stock_disponible`, `nombre_producto`, `precio_producto`, `descripcion`, `tipo`) VALUES
+(1, 5, 'PERFUME DOLCE EDP 75 ML DOLCE & GABBANA 75 ML', 290, 'Esta fragancia femenina está inspirada en la belleza legendariamente noble de Sicilia, con sus jardines colmados de frescas flores blancas. Dolce es un Eau de Parfum atemporal que combina lo mejor del glamour clásico con la innovación contemporánea.', 'F'),
+(2, 7, 'PERFUME THE ONE 75ML DE DOLCE & GABBANA', 250, '75 M/L.(ONZ).THE ONE fue creado en el 2006. Como fue previsto por los diseñadores, es una fragancia para una mujer excepcional que inmediatamente llama la atención, no sólo con su aspecto, sino también con sus modales, postura y el mundo interior.', 'F'),
+(3, 12, 'PERFUME LANCOME TRESOR PARA MUJER SIZE 100 ML', 240, 'Perfumes para mujeres Tresor Eau De Parfum Lumineuse De Lancome, su aroma es jovial, dulce sofisticado, con unas arrolladoras notas acarameladas, dedicada a mujeres apasionadas, modernas, sofisticadas y alegres', 'F'),
+(4, 6, 'TRÉSOR MIDNIGHT ROSE DE LANCÔMEN', 100, 'Este maravilloso perfume que pertenece a la familia olfativa Almizcle-Floral-Amaderado. Su bella botella rosada, alargada y con un moño de rosa en el cuello, se destaca de sus predecesores de la línea trésor que suelen venir en un envase con forma de pirámide invertida.', 'F'),
+(5, 12, 'PERFUME LA VIE EST BELLE', 150, 'La Vie Est Belle de Lancome es una fragancia de la familia olfativa Floral Frutal Gourmand para Mujeres. La Vie Est Belle se lanzó en 2012. La Vie Est Belle fue creada por Olivier Polge, Dominique Ropion y Anne Flipo. Las Notas de Salida son grosellas negras y pera; las Notas de Corazón son iris, jazmín y flor de azahar del naranjo.', 'F'),
+(6, 4, 'SKY DE GIOIA DE GIORGIO ARMANI', 240, 'Perfume The One Dolce Gabbana Hombre Eau De Parfum es una fragancia de la familia olfativa Amaderada Especiada para Hombres. The One se lanzó en 2008. La Nariz detrás de esta fragrancia es Olivier Polge. Las Notas de Salida son cilantro, albahaca y toronja (pomelo); las Notas de Corazón son jengibre, flor de azahar del naranjo y cardamomo.', 'F'),
+(7, 7, 'STRONGER WITH YOU DE GIORGIO ARMANI', 110, 'Stronger with you se inspira en un hombre que vive en el presente, moldeado por la energía de la modernidad. Es impredecible y original, al igual que el acorde picante de la fragancia: una mezcla de cardamomo, pimienta rosa y hojas de violeta.', 'M'),
+(8, 6, 'PERFUME LOCIÓN ACQUA DI GIO', 410, 'ACQUA DI GIÒ PROFONDO de Giorgio Armani es un Eau de Parfum masculino perteneciente a la familia olfativa Aromática Acuática. Se trata de la interpretación contemporánea e intensa de Acqua di Giò, que busca remontarse a los orígenes: el mar.', 'M'),
+(9, 5, 'DOLCE & GABBANA- THE ONE FOR MEN', 210, 'Dolce & Gabbana ha sorprendido al mundo en no pocas ocasiones, con aromas rompedores, novedosos y extremadamente gustables. De ello The One for Men es un caso paradigmático, cumple con 2 de los requisitos importantes para encontrar una buena fragancia', 'M'),
+(10, 6, 'DOLCE & GABBANA POUR HOMEE HOMBRE PH053', 370, 'Lanzado en 1994, Dolce y Gabbana Pour Homme es un signo de masculinidad, personalidad, y distinción. Tan único como la imagen de Dolce y Gabbana, Pour Homme es una mezcla de ironía, verdad e informalidad. La frescura dinámica que expresa su personalidad a través de olores cítricos con un poco de flores frescas y maderas.', 'M');
 
 --
 -- Índices para tablas volcadas
@@ -136,7 +148,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
@@ -154,7 +166,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas

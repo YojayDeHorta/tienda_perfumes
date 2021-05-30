@@ -2,13 +2,21 @@
         
         require_once (__DIR__."/../MDB/mdbProducto.php");
         
-        $productos_activos=null;
-        $productos_activos=leerproductos();
-        /*
-        prueba
-	echo "a";	
-        $nombreproducto=$productos_activos[0]->getNombre_producto();
-        echo "$nombreproducto";    
-        echo $productos_activos[0]->getNombre_producto();*/
+        $array_clases_productos=null;
+        $array_clases_productos=(array)leerproductos();
+
+
+        //funcion para cambiar el array de clases a array de objetos
+        $objetos_productos=[];
+        for ($i=0; $i < sizeof($array_clases_productos) ; $i++) { 
+                array_push(
+                        $objetos_productos,
+                        array(
+                                $array_clases_productos[$i]->toArray()
+                        )
+                );
+        }
         
+
+        echo json_encode($objetos_productos);
 ?>

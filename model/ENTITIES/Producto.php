@@ -14,7 +14,7 @@ class Producto{
     
     
 
-    public function __construct($id_producto,$stock_disponible,$nombre_producto,$precio_producto,$descripcion,tipo){
+    public function __construct($id_producto,$stock_disponible,$nombre_producto,$precio_producto,$descripcion,$tipo){
         $this->id_producto = $id_producto;
         $this->stock_disponible = $stock_disponible;
         $this->nombre_producto = $nombre_producto;
@@ -89,7 +89,10 @@ class Producto{
         $this->tipo = $tipo;
 
         return $this;
-    }   
+    }  
+    public function toJSON(){
+        return json_encode($this);
+    }
 
     public function toArray() {
         $vars = get_object_vars ( $this );
@@ -99,5 +102,6 @@ class Producto{
         }
         return $array;
     }
+
 }
 

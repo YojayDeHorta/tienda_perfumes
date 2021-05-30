@@ -36,35 +36,42 @@
     <div class="content">
       <input type="radio" name="radio" id="Registrate" checked>
       <div class="Tabs-1">
-        <form class="Formulario" id="Registrar" action="../../controller/ACTIONS/act_register.php" method="POST">
+        <form class="Formulario" id="Registrar" >
           <legend>
             <h1>REGÍSTRATE <br> <i class="fas fa-user-plus"></i></h1>
           </legend>
-          <input class="Input-Registrate" type="text" name="Nombre" placeholder="Nombre">&nbsp  &nbsp 
-          <input class="Input-Registrate" type="text" name="Apellido" placeholder="Apellido">&nbsp  &nbsp  <br> <br> <br>
-          <input class="Input-Registrate" type="tel" name="Telefono" placeholder="Telefono"> &nbsp  &nbsp  
-          <input class="Input-Registrate" type="tel" name="Email" placeholder="Email">&nbsp  &nbsp   <br> <br> <br>
-          <input class="Input-Registrate" type="tel" name="Contraseña" placeholder="Contraseña">&nbsp &nbsp  
-          <input class="Input-Registrate" type="tel" placeholder="Confirmar Contraseña"> &nbsp  &nbsp 
+          <input class="Input-Registrate" type="text" name="Nombre" minlength="2" maxlength="15" pattern="[A-Za-z]+" placeholder="Nombre " required >&nbsp  &nbsp 
+          <input class="Input-Registrate" type="text" name="Apellido" minlength="2" maxlength="15" pattern="[A-Za-z]+" placeholder="Apellido" required>&nbsp  &nbsp  <br> <br> <br>
+          <input class="Input-Registrate" type="text" name="Telefono" minlength="2" maxlength="14" pattern="[0-9+?]+" placeholder="Telefono" required> &nbsp  &nbsp  
+          <input class="Input-Registrate" type="email" name="Email"  maxlength="30" placeholder="Email" required>&nbsp  &nbsp   <br> <br> <br>
+          <input class="Input-Registrate" type="password" name="Contraseña" minlength="8" maxlength="30" pattern="[A-Za-z0-9]+" id="pass" placeholder="Contraseña" required>&nbsp &nbsp  
+          <input class="Input-Registrate" type="password" name="Confirmar_contraseña" minlength="8" pattern="[A-Za-z0-9]+" maxlength="30" id="passconfirm" placeholder="Confirmar Contraseña" required> &nbsp  &nbsp 
+          <button type="button" onclick="mostrarContra()">mostrar</button> <!-- este es el boton de mostrar y ocultar-->
           <br><br>
+          <h4  id="alerta_registro"> </h4> <!-- este es el lugar donde sale el mensaje en registro-->
           <input type="submit" value="Registrarme" id="btn-registrar" class="Botton-Enviar"/>
           <br>
         </form>
       </div>
       <input type="radio" name="radio" id="Login" checked>
       <div class="Tabs-2">
-        <form  class="Formulario" id="Iniciar" action="../../controller/ACTIONS/act_login.php" method="POST">
+        <form  class="Formulario" id="Iniciar"  >
           <h1>Bienvenido a Perfumes <br> <i class="fas fa-users"><br></i></h1>
           <br> <br>
-          <input id="Telefono" class="Input" type="text" name="Email" placeholder="Numero de telefono o Email"> <br> <br>
-          <input id="Contraseña" class="Input" type="text" name="Contraseña" placeholder="Contraseña">
+          <input id="Telefono" class="Input" type="email" name="Email" placeholder=" Email"> <br> <br>
+          <input id="Contraseña" class="Input" type="text" name="Contraseña" minlength="8" maxlength="30" pattern="[A-Za-z0-9]+" placeholder="Contraseña">
           <h1 class="Usuario" id="Contraseña"><a href="">¿PERDISTE TU CONTRASEÑA?</a></h1> <br>
+          <h4  id="alerta_login"> </h4><!-- este es el lugar donde sale el mensaje en login-->
           <input type="submit" value="Ingresar" class="Botton-Enviar"/>
+          
         </form>
+        
       </div>
     </div>
   </div>
   </div>
+  <script src="js/login.js"></script>
+  <script src="js/registro.js"></script>
 </body>
 
 </html>

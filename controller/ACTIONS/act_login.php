@@ -1,7 +1,6 @@
 <?php
         session_start();
         require_once (__DIR__."/../MDB/mdbCliente.php");	
-		$errMsg = 'OK';
 	
 		$Email = $_POST['Email'];
 		$password = $_POST['Contraseña'];
@@ -21,19 +20,15 @@
                 $_SESSION['EMAIL_CLIENTE'] = $cliente->getEmail();
 
 
-                echo'<script type="text/javascript">
-                alert("INICIO DE SESION CORRECTAMENTE");
-                window.location.href="../../view/store/";
-                </script>';
+                echo json_encode('INICIO DE SESION CORRECTAMENTE');
+                
                         
                 //header("Location: ../../view/store/");
             }else{
-                $errMsg .= 'usuario y/o contraseña no válido';
 
-                echo'<script type="text/javascript">
-                alert("Inicio de sesion fallido, cliente no encontrado");
-                window.location.href="../../view/store/registrate.html";
-                </script>';
+                echo json_encode('Inicio de sesion fallido,email o contraseña incorrecta');
+
+                
 
                 //header("Location: ../../view/store/"); 
             }
