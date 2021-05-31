@@ -9,6 +9,109 @@
   box-sizing: border-box;
 }
 
+/*------Ventana Modal---------*/
+.Ventana-Modal{
+  position:relative;
+  background: rgba(10, 10, 10, 0.9);
+  position: fixed;
+  top: -120px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+
+}
+
+.Sub-Ventana_Modal{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  transform: scale(0.6);
+  opacity: 0;
+  transition: .3s ease all;
+  top:60px;
+
+}
+
+.Div-Modal_Bienvenida{
+  position: relative;
+  height: 400px;
+  width: 80%;
+  background-image: url('../img/Ventana_Emergente_Principal.jpg');
+}
+
+.Div-Modal_Bienvenida::after{
+  content: '';
+  position: absolute;
+  background: rgba(128, 128, 128, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.Div-Modal_Bienvenida h2{
+  position: relative;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  top: 55px;
+  font-family: 'Bradley Hand ITC';
+}
+
+.Div-Frase_Modal{
+  position: relative;
+  background: silver;
+  color: black;
+  height: 400px;
+  width:70%;
+  align-items: center;
+  border-top: 10px solid Purple;
+  border-bottom: 10px solid Purple;
+}
+
+.Div-Frase_Modal h2{
+  position: relative;
+  text-align: center;
+  top: 100px;
+  left:3px;
+  font-size: 27px;
+  font-family: 'Courgette';
+}
+
+#close{
+  position: absolute;
+  top: 10px;
+  left: 380px;
+  font-size: 35px;
+  color: black;
+  cursor: pointer;
+}
+
+#close:hover{
+  color: white;
+}
+
+.Ventana-Modal.show{
+  visibility: visible;
+}
+
+.Sub-Ventana_Modal.show{
+  transform: scale(1);
+  opacity: 1;
+}
+
+/*------Ventana Modal---------*/
+
+
+
+
+
 /*--------INDEX--------*/
 .Div-Principal {
   width: 100%;
@@ -16,6 +119,7 @@
 }
 
 header {
+
   width: 100%;
   top: -85px;
 }
@@ -57,7 +161,7 @@ header .Nav-Opciones {
 .Publicidad-1 {
   position: relative;
   background-color: gray;
-  z-index: 1;
+  z-index: 0;
   width: 98%;
   height: 150px;
   top: -104px;
@@ -79,7 +183,7 @@ header .Nav-Opciones {
 .Publicidad-1 .Buscar {
   position: relative;
   background-color: white;
-  left: 1140px;
+  left: 1170px;
   width: 18%;
   height: 40px;
   border-radius: 10px;
@@ -93,7 +197,7 @@ header .Nav-Opciones {
 	width: 98%;
   height:350px;
   top:-100px;
-  left:12px;
+  left:15px;
 }
 
 .myslide{
@@ -111,38 +215,30 @@ header .Nav-Opciones {
   height:315px;
 }
 
-
-
-.prev, .next{
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
-	font-size: 50px;
-	padding: 15px;
-	cursor: pointer;
-	color: silver;
-	transition: 0.1s;
-	user-select: none;
-}
-.prev:hover, .next:hover{
-	color: #00a7ff; /* blue */
-}
-
 .next{
   position:relative;
-	right: 0;
-  left:1300px;
-  top:-170px;
+  font-size: 50px;
+  left:1350px;
+  top:-215px;
+  cursor: pointer;
+	color: silver;
 }
 
 .prev{
   position:relative;
-  left:10px;
-  top:-180px;
+  font-size: 50px;
+  left:35px;
+  top:-215px;
+  cursor: pointer;
+	color: silver;
 }
 
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
 
 .Dirrecion{
+  position: relative;
 	display: inline-block;
 	width: 15px;
 	height: 15px;
@@ -151,6 +247,7 @@ header .Nav-Opciones {
 	margin: 0 10px;
 	cursor: pointer;
   top:-80px;
+  left:-40px;
 }
 
 .Dirrecion:hover{
