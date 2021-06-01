@@ -23,6 +23,7 @@
   align-items: center;
   visibility: hidden;
   z-index: 100;
+  box-shadow: 0px 0px 10px 0px;
 }
 
 .Sub-Ventana_Modal{
@@ -488,6 +489,7 @@ header .Nav-Opciones {
 }
 
 /*---------------REGISTRATE-------------------*/
+
 #Registrar {
   position: relative;
   background-color: #f9f9f9;
@@ -516,7 +518,7 @@ legend h1 {
   position: relative;
   border-right: none;
   background-color: transparent;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 0px;
   margin: 0px;
   border-left: none;
@@ -527,9 +529,37 @@ legend h1 {
   height: 40px;
 }
 
+#Registrar-Contraseña_1{
+  position: relative;
+  left:25px;
+}
+
+#Registrar-Contraseña_2{
+  position: relative;
+  left:35px;
+}
+
+
+.Mostrar-Contraseña{
+  position:relative;
+  background-color:transparent;
+  border:0;
+  text-decoration: none;
+  color:black;
+  font-size:25px;
+  top:40px;
+  left:15px;
+}
+
+.Mostrar-Contraseña:hover{
+ color:navy;
+}
+
+
 .Input-Registrate:hover {
-  background-color: white;
+  background-color: transparent;
   border-radius: 10px;
+  border: transparent;
 }
 
 
@@ -542,7 +572,7 @@ legend h1 {
   width: 50%;
   height: 35px;
   color: trasparent;
-  top: 60px;
+  top: 50px;
   color: black;
 }
 
@@ -553,7 +583,9 @@ legend h1 {
 
 #btn-registrar{
   position: relative;
-  top:70px;
+  top:40px;
+  width:30%;
+  height:50px;
 }
 
 
@@ -599,6 +631,31 @@ legend h1 {
 
 #Iniciar .Usuario a {
   color: black;
+}
+
+#Telefono{
+  position: relative;
+}
+
+#Contraseña{
+  position:relative;
+  top:30px;
+}
+
+#Olvidaste-contraseña{
+  position: relative;
+  background-color:navy;
+  text-decoration: none;
+  width:100%;
+  color:black;
+  font-size:20px;
+  top:120px;
+}
+
+#btn-Login{
+  position:relative;
+  top:100px;
+  background-color:red;
 }
 
 /*----------LOGIN------------*/

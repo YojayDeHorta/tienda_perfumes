@@ -1,3 +1,5 @@
+
+
 var registro = document.getElementById("Registrar"); //boton registro
 var alerta_registro = document.getElementById("alerta_registro"); //alerta del registro
 registro.addEventListener("submit", function (e) {
