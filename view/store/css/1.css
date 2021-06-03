@@ -480,6 +480,7 @@ form input{
 }
 
 
+
 /*------------TABS REGISTRARTE-----------------*/
 
 #Registrar {
@@ -568,74 +569,6 @@ legend h1 {
 
 /*------------TABS REGISTRARTE-----------------*/
 
-
-/*----------LOGIN------------*/
-#Iniciar {
-  position: relative;
-  background-color: #f9f9f9;
-  width: 32%;
-  left: 479px;
-  height: 490px;
-  box-shadow: 0px 0px 10px 0px;
-}
-
-#Iniciar h1 {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  color: black;
-}
-
-.Input {
-  position: relative;
-  border-right: none;
-  background-color: transparent;
-  padding: 0px;
-  margin: 0px;
-  border-left: none;
-  border-top: none;
-  text-decoration: none;
-  top: 5px;
-  width: 70%;
-  height: 40px;
-}
-
-#Iniciar .Usuario {
-  position: relative;
-  font-size: 15px;
-  top: 35px;
-}
-
-#Iniciar .Usuario a {
-  color: black;
-}
-
-#Telefono{
-  position: relative;
-}
-
-#Contraseña{
-  position:relative;
-  top:30px;
-}
-
-#Olvidaste-contraseña{
-  position: relative;
-  background-color:navy;
-  text-decoration: none;
-  width:100%;
-  color:black;
-  font-size:20px;
-  top:120px;
-}
-
-#btn-Login{
-  position:relative;
-  top:100px;
-  background-color:red;
-}
-
-/*----------LOGIN------------*/
 
 /*--------Pestaña Session-----------*/
 
@@ -776,6 +709,10 @@ legend h1 {
   top:70px;
 }
 
+
+
+
+
 /*----------LOGIN------------*/
 #Iniciar {
   position: relative;
@@ -792,6 +729,7 @@ legend h1 {
   text-align: center;
   font-size: 40px;
   color: black;
+  top:15px;
 }
 
 .Input {
@@ -817,6 +755,47 @@ legend h1 {
 #Iniciar .Usuario a {
   color: black;
 }
+
+
+#Email{
+  position: relative;
+  top:25px;
+  width:85%;
+  left:5px;
+}
+
+#Contraseña{
+  position:relative;
+  top:60px;
+  left:-10px;
+  left:5px;
+  width:85%;
+}
+
+#Olvidaste-contraseña{
+  position: relative;
+  text-decoration: none;
+  width:100%;
+  color:black;
+  font-size:20px;
+  top:120px;
+}
+
+#btn-Login{
+  position:relative;
+  background-color:silver;
+  top:160px;
+  width:35%;
+  height:40px;
+}
+
+#btn-Login:hover{
+  position:relative;
+  background-color:black;
+  top:160px;
+}
+
+
 
 /*----------LOGIN------------*/
 
