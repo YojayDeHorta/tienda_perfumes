@@ -118,8 +118,8 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
     <!-- Tab links -->
     <div class="tabs">
       <nav class="tab-list">
-        <a class="tab active" href="#tab-1">PERFUMES &nbsp;  PARA &nbsp; ÉL</a>
-        <a class="tab" href="#tab-2">PERFUMES &nbsp;  PARA &nbsp;ELLA</a>
+        <a class="tab " href="#tab-1">PERFUMES &nbsp;  PARA &nbsp; ÉL</a>
+        <a class="tab active" href="#tab-2">PERFUMES &nbsp;  PARA &nbsp;ELLA</a>
       </nav>
       <div id="tab-1" class="tab-content ">
         <div class="Catalogo-Producto" id="Productos-Caballeros">
