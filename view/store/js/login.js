@@ -12,5 +12,8 @@ sesion.addEventListener("submit", function (e) {
     .then((data) => {
       console.log(data);
       alerta.innerHTML = data;
+      if (data == "INICIO DE SESION CORRECTAMENTE") {
+        window.location.replace("/../");
+      }
     });
 });
