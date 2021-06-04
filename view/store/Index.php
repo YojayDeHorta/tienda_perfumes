@@ -9,6 +9,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Perfumes</title>
   <meta charset="UTF-8">
@@ -17,13 +18,14 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
   <link href="css/1.css" rel="stylesheet">
   <link href="css/all.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  </head>
-  <body background="img/Fondo_Principal.png">
-    <br><br><br><br><br>
+</head>
+
+<body background="img/Fondo_Principal.png">
+  <br><br><br><br><br>
   <div class="Div-Principal">
     <header class="Cabecera">
       <nav class="Nav-Opciones">
-        <a href="index.php">
+        <a href="Index.php">
           <h1 class="Logo-Perfumes">PERFUMERÍA</h1>
         </a>
         <ul>
@@ -49,28 +51,28 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
       <div class="myslide">
         <img src="img/Slider-1.jpg">
       </div>
-      
+
       <div class="myslide">
         <img src="img/Slider-2.jpg">
       </div>
-      
+
       <div class="myslide">
         <img src="img/Slider-3.jpg">
       </div>
-      
+
       <div class="myslide">
         <img src="img/Slider-4.jpg">
       </div>
-      
+
       <div class="myslide">
         <img src="img/Slider-5.jpg">
       </div>
       <!-- /fade css -->
-      
+
       <!-- onclick js -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
       <div class="dotsbox" style="text-align:center">
         <span class="Dirrecion" onclick="currentSlide(1)"></span>
         <span class="Dirrecion" onclick="currentSlide(2)"></span>
@@ -79,80 +81,59 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         <span class="Dirrecion" onclick="currentSlide(5)"></span>
       </div>
     </div>
-  </div>
-  <br>
-  <div class="Top-Favoritos">
-    <table class="Perfumes-Favoritos">
-      <tr>
-        <td class="Perfumes" id="Perfume_1">
-          <h1 class="Letra-Top">LO + TOP</h1>
-        </td>
-        <td class="Perfumes" id="Perfume_2">
-          <img src="img/Catalogo-1.png" alt=""><br>
-          <h3>
-            GIORGIO ARMANI
-          </h3>
-        </td>
-        <td class="Perfumes" id="Perfume_3">
-          <img src="img/Catalogo-2.png" alt=""><br>
-          <h3>
-            ACQUA DI GIO
-          </h3>
-        </td>
-        <td class="Perfumes" id="Perfume_4">
-          <img src="img/Catalogo-9.png" alt=""><br>
-          <h3>
-            LANCOME TRESOR
-          </h3>
-        </td>
-        <td class="Perfumes" id="Perfume_5">
-          <img src="img/Catalogo-10.png" alt=""><br>
-          <h3>
-            LANCOME TRESOR
-          </h3>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <br>
-  <div class="Categoria">
-    <h1 id="Indicacion-Mensaje">NUESTROS PERFUMES</h1>
-    <div class="Formulario-P" id="Opciones-Productos">
-      <div class="Tabs-Usuario" id="Secciones-Productos">
-        <label for="Registrate" id="label-Productos">
-          <h3>PARA &nbsp; ÉL</h3>
-        </label>
-        <label for="Login" id="label-Productos">
-          <h3>PARA &nbsp; ELLA</h3>
-        </label>
-      </div>
-      <div class="content">
-        <input type="radio" name="radio" id="Registrate" checked>
-        <div class="Tabs-1">
-          <table class="Tabla-Perfumes" id="Tabla-Hombres">
-            <tr class="Seccion-Perfumes" id="Perfumes-Hombres">
-              
-            </tr>
-            <tr class="Seccion-Perfumes" id="Perfumes-Hombres2">
-              
-            </tr>
-          </table>
+    <br>
+    <div class="Top-Favoritos">
+      <table class="Perfumes-Favoritos">
+        <tr>
+          <td id="Perfume_1">
+            <h1 class="Letra-Top">LO + TOP</h1>
+          </td>
+          <td class="Perfumes" id="Perfume_2">
+            <img src="img/Catalogo-1.png" alt=""><br>
+            <h3>
+              GIORGIO ARMANI
+            </h3>
+          </td>
+          <td class="Perfumes" id="Perfume_3">
+            <img src="img/Catalogo-2.png" alt=""><br>
+            <h3>
+              ACQUA DI GIO
+            </h3>
+          </td>
+          <td class="Perfumes" id="Perfume_4">
+            <img src="img/Catalogo-9.png" alt=""><br>
+            <h3>
+              LANCOME TRESOR
+            </h3>
+          </td>
+          <td class="Perfumes" id="Perfume_5">
+            <img src="img/Catalogo-10.png" alt=""><br>
+            <h3>
+              LANCOME TRESOR
+            </h3>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- Tab links -->
+    <div class="tabs">
+      <nav class="tab-list">
+        <a class="tab active" href="#tab-1">PERFUMES &nbsp;  PARA &nbsp; ÉL</a>
+        <a class="tab" href="#tab-2">PERFUMES &nbsp;  PARA &nbsp;ELLA</a>
+      </nav>
+      <div id="tab-1" class="tab-content ">
+        <div class="Catalogo-Producto" id="Productos-Caballeros">
+          
         </div>
-        <input type="radio" name="radio" id="Login" checked>
-        <div class="Tabs-2">
-          <table class="Tabla-Perfumes" id="Tabla-Damas">
-            <tr class="Seccion-Perfumes" id="Perfumes-Damas">
-              
-            </tr>
-            <tr class="Seccion-Perfumes" id="Perfumes-Hombres">
-              
-            </tr>
-          </table>
+      </div>
+      <div id="tab-2" class="tab-content show">
+        <div class="Catalogo-Producto" id="Productos-Damas">
+          
         </div>
       </div>
     </div>
-  </div>
-  </div>
+
+  
   <div class="Ventana-Modal">
     <div class="Sub-Ventana_Modal">
         <div class="Div-Modal_Bienvenida">
@@ -165,10 +146,9 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
                 </h2>
         </div>
     </div>
-</div>
+</div> 
+    <script src="js/productos.js" charset="uft-8"></script>
+    <script type="text/javascript" src="js/1.js"></script>
+</body>
 
-
-  <script src="js/productos.js" charset="uft-8"></script>
-  <script type="text/javascript" src="js/1.js"></script>
-  </body>
 </html>

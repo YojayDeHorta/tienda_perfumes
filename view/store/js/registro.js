@@ -1,5 +1,3 @@
-
-
 var registro = document.getElementById("Registrar"); //boton registro
 var alerta_registro = document.getElementById("alerta_registro"); //alerta del registro
 registro.addEventListener("submit", function (e) {
@@ -47,8 +45,9 @@ function passwordsiguales(con1, con2) {
   }
 }
 function mostrarContra() {
-  var tipo = document.getElementById("pass");
-  var tipo2 = document.getElementById("passconfirm");
+  console.log("ca");
+  var tipo = document.getElementById("Registrar-Contraseña_1");
+  var tipo2 = document.getElementById("Registrar-Contraseña_2");
   if (tipo.type == "password") {
     tipo.type = "text";
     tipo2.type = "text";
