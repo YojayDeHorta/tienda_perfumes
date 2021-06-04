@@ -1,6 +1,4 @@
 
-
-
 /*-------------------VENTANA MODAL---------------------------*/
 $(document).ready(function () {
 
@@ -28,7 +26,7 @@ const myslide = document.querySelectorAll(".myslide"),
 let counter = 1;
 slidefun(counter);
 
-let timer = setInterval(autoSlide, 5000);
+let timer = setInterval(autoSlide, 3000);
 
 function autoSlide() {
   counter += 1;
@@ -71,3 +69,36 @@ function slidefun(n) {
 }
 
 //-----------------------------SLIDE---------------------------------------------
+
+
+
+/*--------------TABS----------------*/
+$(".tab-list").on("click", ".tab", function(event) {
+	event.preventDefault();
+
+  $(".tab").removeClass("active");
+	$(".tab-content").removeClass("show");
+
+	$(this).addClass("active");
+	$($(this).attr('href')).addClass("show");	
+});
+
+/*--------------TABS----------------*/
+
+/*--------------TABS----------------*/
+
+$(".tab-list").on("click", ".tab", function(event) {
+	event.preventDefault();
+
+  $(".tab").removeClass("active");
+	$(".tab-content").removeClass("show");
+
+	$(this).addClass("active");
+	$($(this).attr('href')).addClass("show");	
+});
+
+
+
+
+
+/*--------------TABS----------------*/

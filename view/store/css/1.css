@@ -1,19 +1,26 @@
 * {
   position: relative;
-  max-width: 99%;
-  left: 5px;
-  top: 5px;
   text-decoration: none;
   list-style: none;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Div-Principal {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  height: 2000px;
+  overflow: hidden;
+  top: -130px;
 }
 
 /*------Ventana Modal---------*/
 .Ventana-Modal {
-  position: relative;
+  position: absolute;
   background: rgba(10, 10, 10, 0.9);
-  position: fixed;
-  top: -120px;
+  width: 100%;
+  height: 105%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -21,6 +28,9 @@
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  z-index: 100;
+  box-shadow: 0px 0px 10px 0px;
+  top: 60px;
 }
 
 .Sub-Ventana_Modal {
@@ -31,7 +41,7 @@
   transform: scale(0.6);
   opacity: 0;
   transition: 0.3s ease all;
-  top: 60px;
+  top: -700px;
 }
 
 .Div-Modal_Bienvenida {
@@ -39,6 +49,8 @@
   height: 400px;
   width: 80%;
   background-image: url("../img/Ventana_Emergente_Principal.jpg");
+  border-top: 10px solid Purple;
+  border-bottom: 10px solid Purple;
 }
 
 .Div-Modal_Bienvenida::after {
@@ -56,7 +68,7 @@
   text-align: center;
   font-size: 70px;
   color: white;
-  top: 55px;
+  top: 125px;
   font-family: "Bradley Hand ITC";
 }
 
@@ -74,16 +86,16 @@
 .Div-Frase_Modal h2 {
   position: relative;
   text-align: center;
-  top: 100px;
-  left: 3px;
-  font-size: 27px;
+  top: 140px;
+  left: -5px;
+  font-size: 28px;
   font-family: "Courgette";
 }
 
 #close {
   position: absolute;
   top: 10px;
-  left: 380px;
+  left: 360px;
   font-size: 35px;
   color: black;
   cursor: pointer;
@@ -102,17 +114,12 @@
   opacity: 1;
 }
 
-/*------Ventana Modal---------*/
-
-/*--------INDEX--------*/
-.Div-Principal {
-  width: 100%;
-  height: 1000px;
-}
+/*------------Barra Principal ( Header - Nav ) -------------------*/
 
 header {
+  position: relative;
   width: 100%;
-  top: -85px;
+  top: 45px;
 }
 
 header .Logo-Perfumes {
@@ -120,16 +127,17 @@ header .Logo-Perfumes {
   font-family: Yellowtail;
   font-size: 25px;
   color: bisque;
-  top: -2px;
+  top: 2px;
+  left: 20px;
 }
 
 header .Nav-Opciones {
   position: relative;
   background-color: black;
   text-align: right;
-  width: 100%;
   height: 40px;
-  top: 0px;
+  box-shadow: 2px 2px 4px #000000;
+  top: 10px;
 }
 
 .Nav-Opciones ul li {
@@ -137,26 +145,27 @@ header .Nav-Opciones {
   display: inline;
   margin-left: 50px;
   font-size: 25px;
-  left: -20px;
-  top: -66px;
+  left: -29px;
+  top: -27px;
 }
 
 .Nav-Opciones a {
-  color: silver;
+  color: bisque;
 }
 
 .Nav-Opciones a:hover {
   color: white;
 }
+/*------------Barra Principal ( Header - Nav ) -------------------*/
 
+/*-----------------Buscar Productos -------------------------*/
 .Publicidad-1 {
   position: relative;
   background-color: gray;
   z-index: 0;
-  width: 98%;
+  width: 100%;
   height: 150px;
-  top: -104px;
-  left: 10px;
+  top: 56px;
 }
 
 .Publicidad-1 #Letra-Publicidad {
@@ -165,104 +174,109 @@ header .Nav-Opciones {
   text-transform: uppercase;
   color: white;
   text-align: center;
-  left: 140px;
+  left: 200px;
   max-width: 70%;
   font-size: 4vh;
-  top: 20px;
+  top: 15px;
 }
 
 .Publicidad-1 .Buscar {
   position: relative;
-  background-color: white;
-  left: 1170px;
-  width: 18%;
+  background: white;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  color: black;
+  padding-left: 5px;
+  border-radius: 8px;
+  width: 250px;
   height: 40px;
-  border-radius: 10px;
-  top: -90px;
+  left: 1249px;
+  top: -60px;
 }
+/*-----------------Buscar Productos -------------------------*/
 
 /*-------------SLIDE--------------------------------*/
 .slider {
   position: relative;
-  background-color: #f9f9f9;
-  width: 98%;
+  border-top: 5px solid #b7a09f;
+  width: 100%;
   height: 350px;
-  top: -100px;
-  left: 15px;
+  top: 52px;
 }
 
 .myslide {
   position: relative;
+  text-align: left;
   height: 340px;
   width: 100%;
   display: none;
   overflow: hidden;
-  left: 7px;
+  top: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .myslide img {
   position: relative;
-  width: 1500px;
+  width: 1520px;
   height: 315px;
 }
 
 .next {
   position: relative;
   font-size: 50px;
-  left: 1350px;
-  top: -215px;
+  left: 1440px;
+  top: -220px;
   cursor: pointer;
-  color: silver;
+  color: navy;
 }
 
 .prev {
   position: relative;
   font-size: 50px;
-  left: 35px;
-  top: -215px;
+  left: 25px;
+  top: -220px;
   cursor: pointer;
-  color: silver;
-}
-
-.prev:hover,
-.next:hover {
-  color: #00a7ff; /* blue */
+  color: navy;
 }
 
 .Dirrecion {
   position: relative;
   display: inline-block;
   width: 15px;
-  height: 15px;
+  height: 12px;
   border: 3px solid black;
   border-radius: 50%;
   margin: 0 10px;
   cursor: pointer;
   top: -80px;
-  left: -40px;
+  left: 0px;
 }
 
 .Dirrecion:hover {
   background-color: black;
 }
-
 /*------------------------------SLIDE---------*/
 
 /*-------PERFUMES FAVORITOS--------*/
 
 .Top-Favoritos {
   position: relative;
-  border-bottom: 3px solid black;
+  border-bottom: 5px solid silver;
   text-align: left;
-  top: -430px;
-  width: 97%;
-  left: 20px;
-  height: 200px;
+  top: 90px;
+  width: 100%;
+  height: 210px;
+  left: 0px;
 }
 
 .Perfumes-Favoritos {
-  top: -7px;
+  position: relative;
+  left: 30px;
+  top: 5px;
   color: black;
+  font-size: 22px;
 }
 
 #Perfume_1 {
@@ -270,19 +284,19 @@ header .Nav-Opciones {
   width: 5%;
   color: black;
   top: -20px;
-  font-size: 22px;
 }
 
 .Perfumes .Letra-Top {
   width: 51%;
-  top: -20px;
+  top: 8px;
+  padding: 10px;
 }
 
 .Perfumes {
   position: relative;
   text-align: center;
   width: 10%;
-  top: -0px;
+  top: -10px;
 }
 
 .Perfumes img {
@@ -294,140 +308,269 @@ header .Nav-Opciones {
 .Perfumes h3 {
   position: relative;
   font-size: 15px;
-  top: -30px;
+  top: -18px;
 }
 
 /*--------------------------------------*/
 
-/**----------TABLA CATEGORIAS--------------------**/
+/*  -------------- TABS - PESTAÑAS ---------------  */
 
-.Categoria {
+.tabs {
   position: relative;
-  width: 97%;
-  left: 20px;
-  top: -420px;
-}
-
-.Categoria #Indicacion-Mensajes {
-  font-size: 30px;
-  border-bottom: 5px solid navy;
-  background-color: white;
-  width: 25%;
+  margin: 0 auto;
   color: black;
-}
-
-#Opciones-Productos {
-  position: relative;
-  top: 10px;
   width: 100%;
+  top: 150px;
 }
 
-#Opciones-Productos #Secciones-Productos {
+.tabs nav a {
   position: relative;
-  background-color: #f9f9f9;
-  height: 35px;
+  left: 140px;
+  font-size: 30px;
+  font-family: "Yellowtail";
 }
 
-#Opciones-Productos #Secciones-Productos h3 {
-  position: relative;
+.tab-list {
+  padding-bottom: 0.6rem;
+}
+
+.tab {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 150px;
+  font-weight: 600;
   color: black;
-  font-size: 25px;
-  top: 10px;
 }
 
-#Opciones-Productos #Secciones-Productos h3:hover {
+.tab.active {
   border-bottom: 5px solid red;
 }
 
-#Secciones-Productos #label-Productos {
-  position: relative;
-  margin-left: 200px;
-  left: -110px;
-  color: white;
-  top: -50px;
-  width: 20%;
+.tab-content {
+  display: none;
+  padding: 1.5rem;
 }
 
-#Opciones-Productos label:hover {
-  border: 0;
+.tab-content.show {
+  display: block;
 }
-/**----------TABLA CATEGORIAS--------------------**/
-/**-----------------TABLA DE PRODUCTOS------------------------------**/
 
-.Tabla-Perfumes {
+/*  -------------- TABS - PESTAÑAS ---------------  */
+
+/**-----------------DIV  DE PRODUCTOS-------------------**/
+
+#Catalogo_Productos {
   position: relative;
-  text-align: center;
+  top: -400px;
+}
+
+.Catalogo-Producto {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
   width: 100%;
   height: 700px;
-  border-spacing: 50px;
-  border-collapse: separate;
-  top: 10px;
+  left: 70px;
 }
 
-.Tabla-Perfumes .Seccion-Perfumes {
+.Producto {
   position: relative;
-  background-color: trasparent;
-}
-
-.Tabla-Perfumes .Producto {
-  border-bottom: 5px solid bisque;
-  width: 30%;
-}
-
-.Tabla-Perfumes .Producto:hover {
-  border: 2px solid black;
-  background-color: #eeeeee;
-  color: black;
-  border-radius: 20px;
-}
-
-.Tabla-Perfumes .Titulo {
-  width: 100%;
-  font-size: 15px;
-}
-
-.Tabla-Perfumes .Precio {
-  position: relative;
-  width: 100%;
-  border: none;
-  top: -20px;
-  font-size: 15px;
-}
-
-.Tabla-Perfumes .Descripcion {
-  position: relative;
-  top: -20px;
   text-align: center;
-  font-size: 15px;
+  background-color: transparent;
+  margin: 15px;
+  width: 29%;
+  height: 455px;
+  border-bottom: 3px solid bisque;
 }
 
-.Tabla-Perfumes .Img-Producto {
-  position: relative;
-  width: 40%;
+.Producto:hover {
+  border-radius: 20px;
+  background-color: silver;
+  border: 2px solid black;
 }
-.Tabla-Perfumes .Compra {
+
+.Titulo {
+  position: relative;
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+
+.Img-Producto {
+  position: relative;
+  width: 120px;
+  top: -10px;
+  padding-bottom: 10px;
+}
+
+.Precio {
+  position: relative;
+  font-size: 18px;
+  top: -35px;
+  padding-bottom: 15px;
+}
+
+.Descripcion {
+  position: relative;
+  justify-content: center;
+  font-size: 17px;
+  top: -40px;
+  width: 97%;
+  left: 10px;
+  padding-bottom: 30px;
+}
+
+.Compra {
   position: relative;
   background-color: white;
-  border-radius: 10px;
-  outline: none;
+  border-radius: 15px;
   color: black;
-  width: 60%;
-  height: 40px;
-  top: -10px;
+  top: -48px;
+  height: 52px;
+  width: 40%;
+  font-family: arial black;
 }
 
-.Tabla-Perfumes .Compra:hover {
-  background-color: black;
+.Compra:hover {
   color: bisque;
+  background-color: black;
 }
 
-.Tabla-Perfumes .Compra h3 {
+/**-----------------DIV  DE PRODUCTOS-------------------**/
+
+/*--------Pestaña Session-----------*/
+
+#Tabs-Usuario {
   position: relative;
-  top: -6px;
+  top: -60px;
 }
-/**-----------------TABLA DE PRODUCTOS------------------------------**/
 
-/*-------- TABLA --------*/
+#Boton-Registrar {
+  position: relative;
+  left: 150px;
+}
+
+#Boton-Iniciar {
+  position: relative;
+  left: -150px;
+}
+
+form input {
+  border-left: none;
+  border-top: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  border-right: none;
+  background-color: transparent;
+}
+
+/*------------TABS REGISTRARTE-----------------*/
+
+#Registrar {
+  position: relative;
+  background-color: #f9f9f9;
+  width: 40%;
+  left: 470px;
+  height: 450px;
+  box-shadow: 0px 0px 10px 0px;
+}
+
+legend {
+  /*background-color: silver;*/
+  border-radius: 10px;
+  font-size: 15px;
+  color: black;
+  width: 100%;
+  height: 85px;
+}
+
+legend h1 {
+  position: relative;
+  top: 20px;
+}
+
+.Input-Registrate {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  top: 40px;
+  width: 40%;
+  height: 40px;
+}
+
+#Registrar-Contraseña_1 {
+  position: relative;
+  left: 25px;
+}
+
+#Registrar-Contraseña_2 {
+  position: relative;
+  left: 35px;
+}
+
+.Mostrar-Contraseña {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  top: 40px;
+  left: 15px;
+}
+
+.Mostrar-Contraseña:hover {
+  color: navy;
+}
+
+.Botton-Enviar {
+  position: relative;
+  background-color: silver;
+  border: 0;
+  border-radius: 15px;
+  font-size: 25px;
+  width: 50%;
+  height: 35px;
+  color: trasparent;
+  top: 50px;
+  color: black;
+}
+
+.Botton-Enviar:hover {
+  color: bisque;
+  background-color: black;
+}
+
+#btn-registrar {
+  position: relative;
+  top: 40px;
+  width: 30%;
+  height: 50px;
+}
+
+/*------------TABS REGISTRARTE-----------------*/
+
+/*--------Pestaña Session-----------*/
+
+.Div_Principal_Registrar_Login {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  top: -44px;
+}
+#Cabecera_Pagina_Registrar {
+  position: relative;
+  background-color: white;
+  height: 52px;
+}
+
+#Nav_Pagina_Registrar {
+  position: relative;
+  top: 15px;
+}
+
+/*--------------TABS REGISTRAR Y LOGIN--------------------------*/
 .Formulario-P {
   position: relative;
   text-align: center;
@@ -435,15 +578,17 @@ header .Nav-Opciones {
   height: 600px;
   z-index: 1;
   left: 15px;
-  top: -80px;
+  top: -160px;
 }
 
 .Tabs-Usuario label {
+  position: relative;
   display: inline-block;
   padding: 20px;
   color: black;
   cursor: pointer;
   font-size: 25px;
+  top: -20px;
 }
 
 .Tabs-Usuario label:hover {
@@ -452,6 +597,7 @@ header .Nav-Opciones {
 
 .content {
   position: relative;
+  top: 10px;
 }
 
 .content div {
@@ -473,13 +619,12 @@ header .Nav-Opciones {
   visibility: visible;
   transform: scale(1);
 }
-
 /*---------------REGISTRATE-------------------*/
 #Registrar {
   position: relative;
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
   width: 40%;
-  left: 410px;
+  left: 440px;
   height: 450px;
   top: -10px;
   box-shadow: 0px 0px 10px 0px;
@@ -547,7 +692,7 @@ legend h1 {
   position: relative;
   background-color: #f9f9f9;
   width: 32%;
-  left: 479px;
+  left: 509px;
   height: 490px;
   top: -20px;
   box-shadow: 0px 0px 10px 0px;
@@ -558,6 +703,7 @@ legend h1 {
   text-align: center;
   font-size: 40px;
   color: black;
+  top: 15px;
 }
 
 .Input {
@@ -584,6 +730,44 @@ legend h1 {
   color: black;
 }
 
+#Email {
+  position: relative;
+  top: 25px;
+  width: 85%;
+  left: 5px;
+}
+
+#Contraseña {
+  position: relative;
+  top: 60px;
+  left: -10px;
+  left: 5px;
+  width: 85%;
+}
+
+#Olvidaste-contraseña {
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  top: 120px;
+}
+
+#btn-Login {
+  position: relative;
+  background-color: silver;
+  top: 160px;
+  width: 35%;
+  height: 40px;
+}
+
+#btn-Login:hover {
+  position: relative;
+  background-color: black;
+  top: 160px;
+}
+
 /*----------LOGIN------------*/
 
-/*--------SLIDE---------*/
+/*--------------TABS REGISTRAR Y LOGIN--------------------------*/
