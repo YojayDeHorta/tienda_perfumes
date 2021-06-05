@@ -156,6 +156,7 @@ header .Nav-Opciones {
 .Nav-Opciones a:hover {
   color: white;
 }
+
 /*------------Barra Principal ( Header - Nav ) -------------------*/
 
 /*-----------------Buscar Productos -------------------------*/
@@ -194,6 +195,7 @@ header .Nav-Opciones {
   left: 1249px;
   top: -60px;
 }
+
 /*-----------------Buscar Productos -------------------------*/
 
 /*-------------SLIDE--------------------------------*/
@@ -257,6 +259,7 @@ header .Nav-Opciones {
 .Dirrecion:hover {
   background-color: black;
 }
+
 /*------------------------------SLIDE---------*/
 
 /*-------PERFUMES FAVORITOS--------*/
@@ -437,24 +440,54 @@ header .Nav-Opciones {
 
 /**-----------------DIV  DE PRODUCTOS-------------------**/
 
-/*--------Pestaña Session-----------*/
+/*----------------------Pestaña Session Usuario------------------------*/
 
-#Tabs-Usuario {
+#Div_Principal_Registro {
   position: relative;
-  top: -60px;
+  height:100vh;
+  top: -2px;
 }
 
-#Boton-Registrar {
+#Cabecera_Pagina_Registrar {
   position: relative;
-  left: 150px;
+  background-color: white;
+  height: 60px;
+  top: -5px;
 }
 
-#Boton-Iniciar {
+#Cabecera_Pagina_Registrar nav {
   position: relative;
-  left: -150px;
+  top: 25px;
 }
 
-form input {
+#Div_Tabs_Pagina_Registro {
+  position: relative;
+  width: 100%;
+  top: 70px;
+  left: 50px;
+}
+
+#Div_Tabs_Pagina_Registro button {
+  position: relative;
+  margin-left: 90px;
+  font-family: Yellowtail;
+  font-size: 40px;
+  left: 370px;
+}
+
+#Registrar{
+  position:relative;
+  width:100%;
+  top:-160px;
+}
+
+#Iniciar{
+  position:relative;
+  width:100%;
+  top:-160px;
+}
+
+.Formulario input{
   border-left: none;
   border-top: none;
   border-bottom: 2px solid black;
@@ -464,18 +497,17 @@ form input {
 }
 
 /*------------TABS REGISTRARTE-----------------*/
-
-#Registrar {
+#Registrar{
   position: relative;
+  text-align:center;
   background-color: #f9f9f9;
   width: 40%;
-  left: 470px;
+  left: 450px;
   height: 450px;
   box-shadow: 0px 0px 10px 0px;
 }
 
 legend {
-  /*background-color: silver;*/
   border-radius: 10px;
   font-size: 15px;
   color: black;
@@ -490,8 +522,6 @@ legend h1 {
 
 .Input-Registrate {
   position: relative;
-  padding: 0px;
-  margin: 0px;
   top: 40px;
   width: 40%;
   height: 40px;
@@ -549,152 +579,14 @@ legend h1 {
 
 /*------------TABS REGISTRARTE-----------------*/
 
-/*--------Pestaña Session-----------*/
-
-.Div_Principal_Registrar_Login {
-  position: relative;
-  background-color: transparent;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  top: -44px;
-}
-#Cabecera_Pagina_Registrar {
-  position: relative;
-  background-color: white;
-  height: 52px;
-}
-
-#Nav_Pagina_Registrar {
-  position: relative;
-  top: 15px;
-}
-
-/*--------------TABS REGISTRAR Y LOGIN--------------------------*/
-.Formulario-P {
-  position: relative;
-  text-align: center;
-  width: 98%;
-  height: 600px;
-  z-index: 1;
-  left: 15px;
-  top: -160px;
-}
-
-.Tabs-Usuario label {
-  position: relative;
-  display: inline-block;
-  padding: 20px;
-  color: black;
-  cursor: pointer;
-  font-size: 25px;
-  top: -20px;
-}
-
-.Tabs-Usuario label:hover {
-  border-bottom: 5px solid red;
-}
-
-.content {
-  position: relative;
-  top: 10px;
-}
-
-.content div {
-  position: absolute;
-  width: 100%;
-  transition: all 600ms ease;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#Registrate,
-#Login {
-  display: none;
-}
-
-#Registrate:checked ~ .Tabs-1,
-#Login:checked ~ .Tabs-2 {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-}
-/*---------------REGISTRATE-------------------*/
-#Registrar {
-  position: relative;
-  background-color: #f5f5f5;
-  width: 40%;
-  left: 440px;
-  height: 450px;
-  top: -10px;
-  box-shadow: 0px 0px 10px 0px;
-}
-
-legend {
-  /*background-color: silver;*/
-  border-radius: 10px;
-  font-size: 15px;
-  color: black;
-  width: 100%;
-  height: 85px;
-}
-
-legend h1 {
-  position: relative;
-  top: 20px;
-}
-
-.Input-Registrate {
-  position: relative;
-  border-right: none;
-  background-color: transparent;
-  margin-left: 20px;
-  padding: 0px;
-  margin: 0px;
-  border-left: none;
-  border-top: none;
-  text-decoration: none;
-  top: 40px;
-  width: 40%;
-  height: 40px;
-}
-
-.Input-Registrate:hover {
-  background-color: white;
-  border-radius: 10px;
-}
-
-.Botton-Enviar {
-  position: relative;
-  background-color: silver;
-  border: 0;
-  border-radius: 15px;
-  font-size: 25px;
-  width: 50%;
-  height: 35px;
-  color: trasparent;
-  top: 60px;
-  color: black;
-}
-
-.Botton-Enviar:hover {
-  color: bisque;
-  background-color: black;
-}
-
-#btn-registrar {
-  position: relative;
-  top: 70px;
-}
-
 /*----------LOGIN------------*/
+
 #Iniciar {
   position: relative;
   background-color: #f9f9f9;
-  width: 32%;
-  left: 509px;
-  height: 490px;
-  top: -20px;
+  width: 40%;
+  left: 470px;
+  height: 450px;
   box-shadow: 0px 0px 10px 0px;
 }
 
@@ -770,4 +662,271 @@ legend h1 {
 
 /*----------LOGIN------------*/
 
-/*--------------TABS REGISTRAR Y LOGIN--------------------------*/
+
+/*----------------------Pestaña Session Usuario------------------------*/
+
+/*--------------TABS GENERAL ADMIN--------------------------*/
+.Titulo_Admin {
+  position: relative;
+  text-align: center;
+  font-family: Yellowtail;
+  font-size: 42px;
+  width: 100%;
+  top: 110px;
+}
+
+.Div-Tabs {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  top: 280px;
+}
+
+.Div-Tabs button {
+  position: relative;
+  background-color: inherit;
+  margin-left: 190px;
+  left: 220px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px;
+  font-size: 20px;
+}
+
+.Div-Tabs button.active {
+  border-bottom: 5px solid red;
+}
+
+/* Style the tab content */
+.tabcontent {
+  position: relative;
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  top: 240px;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+/*--------------TABS GENERAL ADMIN--------------------------*/
+
+
+/*-------------------------DATOS - ADMIN --------------------*/
+
+.Div-Admin {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  top: 00px;
+  height: 100vh;
+}
+
+.Div-Admin .Letra {
+  position: relative;
+  font-family: Yellowtail;
+  font-size: 35px;
+
+}
+
+.Div-Admin button {
+  position: relative;
+  text-decoration: none;
+  border-radius: 10px;
+  outline: none;
+  height: 35px;
+  width: 10%;
+  font-family: arial black;
+  color: white;
+}
+
+.Boton_Crear {
+  position: relative;
+  background-color: #094293;
+  right: 500px;
+  top: 65px;
+  left: -635px;
+}
+
+.Tabla-Admin {
+  position: relative;
+  width: 95%;
+  top: 85px;
+  left: 35px;
+}
+
+.Tabla-Admin th {
+  border-right: 5px solid black;
+  background-color: Grey;
+}
+
+.Flex_Datos {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 95%;
+  height: 100px;
+  top: 86px;
+  left: 30px;
+}
+
+.Datos_Tabla {
+  position: relative;
+  text-align: center;
+  background-color: bisque;
+  overflow: scroll;
+  margin: 1px;
+  width: 11%;
+  height: 60px;
+  top: 20px;
+}
+
+#Boton_Enviar {
+  position: relative;
+  background-color: #094293;
+}
+
+#Boton_Borrar {
+  position: relative;
+  background-color: red;
+}
+
+/*-------------------------DATOS - ADMIN --------------------*/
+
+
+/*-------------PRODUCTOS ADMIN-------------------------*/
+
+#Datos_1 {
+  position: relative;
+  width: 5%;
+  left: 4px;
+}
+
+#Datos_2 {
+  position: relative;
+  width: 16.5%;
+  left: 7px;
+}
+
+#Datos_3 {
+  position: relative;
+  width: 27.0%;
+  left: 10px;
+}
+
+#Datos_4 {
+  position: relative;
+  width: 15.1%;
+  left: 13px;
+}
+
+#Datos_5 {
+  position: relative;
+  width: 14.0%;
+  left: 15px;
+}
+
+#Datos_6 {
+  position: relative;
+  width: 21%;
+  left: 17px;
+}
+
+.Datos_Tabla .Boton_Datos {
+  position: relative;
+  width: 45%;
+  top: 4px;
+}
+
+/*-------------PRODUCTOS ADMIN-------------------------*/
+
+
+
+/*--------------------------FLEX CLIENTE-------------------------------------------*/
+
+#Tabla_Admin_Clientes {
+  position: relative;
+  width: 95%;
+}
+
+.Datos_Tabla_Cliente {
+  position: relative;
+  text-align: center;
+  background-color: bisque;
+  overflow: scroll;
+  margin: 3px;
+  width: 8%;
+  height: 60px;
+  top: 20px;
+}
+
+#Datos_7 {
+  position: relative;
+  width: 4.5%;
+}
+
+#Datos_8 {
+  position: relative;
+  width: 13.5%;
+}
+
+#Datos_9 {
+  position: relative;
+  width: 16%;
+  left: -4px;
+}
+
+#Datos_10 {
+  position: relative;
+  width: 17%;
+  left: -7px;
+}
+
+#Datos_11 {
+  position: relative;
+  width: 20.5%;
+  left: -7px;
+}
+
+#Datos_12 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 11%;
+  left: -5px;
+}
+
+#Datos_13 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 15.6%;
+  left: 0px;
+}
+
+#Boton_Cliente_Modificar {
+  position: relative;
+  background-color: #094293;
+  width: 40%;
+  top: 5px;
+}
+
+#Boton_Cliente_Borrar {
+  position: relative;
+  background-color: red;
+  width: 40%;
+  top: 5px;
+}
+
+
+/*--------------------------FLEX CLIENTE-------------------------------------------*/
+
+
+
+
+
+
+/*------------------------ADMIN GENERAL------------------------------------*/
