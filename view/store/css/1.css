@@ -475,16 +475,11 @@ header .Nav-Opciones {
   left: 370px;
 }
 
-#Registrar{
+.Formulario{
   position:relative;
-  width:100%;
-  top:-160px;
-}
-
-#Iniciar{
-  position:relative;
-  width:100%;
-  top:-160px;
+  text-align: center;
+  background-color: #f9f9f9;
+  top:-170px;
 }
 
 .Formulario input{
@@ -496,11 +491,27 @@ header .Nav-Opciones {
   background-color: transparent;
 }
 
+.Botton-Enviar {
+  position: relative;
+  background-color: white;
+  border: 0;
+  border-radius: 15px;
+  font-size: 25px;
+  width: 50%;
+  height: 35px;
+  color: trasparent;
+  top: 50px;
+  color: black;
+}
+
+.Botton-Enviar:hover {
+  color: bisque;
+  background-color: black;
+}
 /*------------TABS REGISTRARTE-----------------*/
+
 #Registrar{
   position: relative;
-  text-align:center;
-  background-color: #f9f9f9;
   width: 40%;
   left: 450px;
   height: 450px;
@@ -511,6 +522,7 @@ legend {
   border-radius: 10px;
   font-size: 15px;
   color: black;
+ 
   width: 100%;
   height: 85px;
 }
@@ -529,7 +541,7 @@ legend h1 {
 
 #Registrar-Contraseña_1 {
   position: relative;
-  left: 25px;
+  left: 10px;
 }
 
 #Registrar-Contraseña_2 {
@@ -552,27 +564,9 @@ legend h1 {
   color: navy;
 }
 
-.Botton-Enviar {
-  position: relative;
-  background-color: silver;
-  border: 0;
-  border-radius: 15px;
-  font-size: 25px;
-  width: 50%;
-  height: 35px;
-  color: trasparent;
-  top: 50px;
-  color: black;
-}
-
-.Botton-Enviar:hover {
-  color: bisque;
-  background-color: black;
-}
-
 #btn-registrar {
   position: relative;
-  top: 40px;
+  top: 60px;
   width: 30%;
   height: 50px;
 }
@@ -583,17 +577,13 @@ legend h1 {
 
 #Iniciar {
   position: relative;
-  background-color: #f9f9f9;
-  width: 40%;
-  left: 470px;
+  width: 33%;
+  left: 510px;
   height: 450px;
   box-shadow: 0px 0px 10px 0px;
 }
 
 #Iniciar h1 {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
   color: black;
   top: 15px;
 }
@@ -643,21 +633,19 @@ legend h1 {
   width: 100%;
   color: black;
   font-size: 20px;
-  top: 120px;
+  top: 100px;
 }
 
 #btn-Login {
   position: relative;
   background-color: silver;
-  top: 160px;
+  top: 140px;
   width: 35%;
   height: 40px;
 }
 
 #btn-Login:hover {
-  position: relative;
   background-color: black;
-  top: 160px;
 }
 
 /*----------LOGIN------------*/

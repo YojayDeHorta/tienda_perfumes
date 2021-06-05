@@ -29,7 +29,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
           <h1 class="Logo-Perfumes">PERFUMERÍA</h1>
         </a>
         <ul>
-          <li><a href=""><i class="fas fa-user-cog"></i></a></li>
+          <li><a href="Admin.html"><i class="fas fa-user-cog"></i></a></li>
           <li><a href=""><i class="fas fa-cart-plus"></i></a></li>
           <li><a href=<?php echo $login;?>><?php echo $_SESSION['NOMBRE_CLIENTE'];?><i class="far fa-user-circle"></i></a></li>
           <?php
