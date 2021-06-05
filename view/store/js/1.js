@@ -85,19 +85,20 @@ $(".tab-list").on("click", ".tab", function(event) {
 
 /*--------------TABS----------------*/
 
-/*--------------TABS----------------*/
-
-$(".tab-list").on("click", ".tab", function(event) {
-	event.preventDefault();
-
-  $(".tab").removeClass("active");
-	$(".tab-content").removeClass("show");
-
-	$(this).addClass("active");
-	$($(this).attr('href')).addClass("show");	
-});
-
-
+/*--------------TABS-Admin----------------*/
+function Tabs_Principal(evt, Tabs) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(Tabs).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
 
 
