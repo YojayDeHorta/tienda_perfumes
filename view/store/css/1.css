@@ -479,7 +479,7 @@ header .Nav-Opciones {
   position:relative;
   text-align: center;
   background-color: #f9f9f9;
-  top:-170px;
+  top:-90px;
 }
 
 .Formulario input{
@@ -660,14 +660,14 @@ legend h1 {
   font-family: Yellowtail;
   font-size: 42px;
   width: 100%;
-  top: 110px;
+  top: 80px;
 }
 
 .Div-Tabs {
   position: relative;
   width: 100%;
   overflow: hidden;
-  top: 280px;
+  top: 250px;
 }
 
 .Div-Tabs button {
@@ -693,7 +693,7 @@ legend h1 {
   display: none;
   padding: 6px 12px;
   border-top: none;
-  top: 240px;
+  top: 170px;
 }
 
 .tabcontent.active {
@@ -783,6 +783,7 @@ legend h1 {
 }
 
 /*-------------------------DATOS - ADMIN --------------------*/
+
 
 
 /*-------------PRODUCTOS ADMIN-------------------------*/
