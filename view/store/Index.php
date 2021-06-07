@@ -133,7 +133,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
       </div>
     </div>
 
-  <!--
+  
   <div class="Ventana-Modal">
     <div class="Sub-Ventana_Modal">
         <div class="Div-Modal_Bienvenida">
@@ -147,9 +147,10 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         </div>
     </div>
 </div> 
--->
+
     <script src="js/productos.js" charset="uft-8"></script>
     <script type="text/javascript" src="js/1.js"></script>
+    
 </body>
 
 </html>

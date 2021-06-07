@@ -761,16 +761,6 @@ legend h1 {
   left: 30px;
 }
 
-.Datos_Tabla {
-  position: relative;
-  text-align: center;
-  background-color: bisque;
-  overflow: scroll;
-  margin: 1px;
-  width: 11%;
-  height: 60px;
-  top: 20px;
-}
 
 #Boton_Enviar {
   position: relative;
@@ -787,6 +777,65 @@ legend h1 {
 
 
 /*-------------PRODUCTOS ADMIN-------------------------*/
+
+.Datos_Tabla_Producto {
+  position: relative;
+  text-align: center;
+  background-color: #d4d4d4;
+  overflow: hidden;
+  margin: 1px;
+  width: 120px;
+  height: 160px;
+  top: 20px;
+}
+
+.Img_Producto{
+  position:relative;
+  width:120px;
+  height:155px;
+  top:-10px;
+}
+
+.Admin_Input_Producto{
+  position: relative;
+  background-color:white;
+  width:90%;
+  text-decoration: none;
+  border:none;
+  outline:none;
+}
+
+.Precio_Producto{
+  position: relative;
+  top:60px;
+}
+
+.Boton_Datos_Producto{
+  position: relative;
+  top:55px;
+}
+
+#Input_Producto_1,#Input_Producto_4,#Input_Producto_5{
+  position:relative;
+  background-color: transparent;
+  border-bottom: 5px solid black;
+  padding-left: 15px;
+  top:55px;
+}
+
+#Input_Producto_2{
+  position:relative;
+  top:-29px;
+}
+
+#Input_Producto_3{
+  position:relative;
+  overflow:scroll;
+  width:98%;
+  height:140px;
+  top:10px;
+  left:0px;
+}
 
 #Datos_1 {
   position: relative;
@@ -824,10 +873,16 @@ legend h1 {
   left: 17px;
 }
 
-.Datos_Tabla .Boton_Datos {
+#Boton_Producto_Modificar{
   position: relative;
-  width: 45%;
-  top: 4px;
+  background-color: #094293;
+  width: 40%;
+}
+
+#Boton_Producto_Borrar {
+  position: relative;
+  background-color: red;
+  width: 40%;
 }
 
 /*-------------PRODUCTOS ADMIN-------------------------*/
@@ -844,17 +899,38 @@ legend h1 {
 .Datos_Tabla_Cliente {
   position: relative;
   text-align: center;
-  background-color: bisque;
-  overflow: scroll;
+  background-color: silver;
   margin: 3px;
   width: 8%;
   height: 60px;
   top: 20px;
 }
 
+.Admin_Input_Cliente{
+  position: relative;
+  background-color:white;
+  width:80%;
+  text-decoration: none;
+  border:none;
+  outline:none;
+  position:relative;
+  background-color: transparent;
+  border-bottom: 5px solid black;
+  padding-left: 15px;
+  top:10px;
+}
+
+#Input_Cliente_1{
+  width:70%;
+  top:10px;
+}
+
 #Datos_7 {
   position: relative;
+  background-color: silver;
   width: 4.5%;
+  height: 60px;
+  top:22px;
 }
 
 #Datos_8 {
@@ -900,14 +976,15 @@ legend h1 {
   position: relative;
   background-color: #094293;
   width: 40%;
-  top: 5px;
+  top: 13px;
 }
+
 
 #Boton_Cliente_Borrar {
   position: relative;
   background-color: red;
   width: 40%;
-  top: 5px;
+  top: 13px;
 }
 
 
