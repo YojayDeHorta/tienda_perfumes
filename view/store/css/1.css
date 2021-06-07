@@ -444,7 +444,7 @@ header .Nav-Opciones {
 
 #Div_Principal_Registro {
   position: relative;
-  height:100vh;
+  height: 100vh;
   top: -2px;
 }
 
@@ -475,14 +475,14 @@ header .Nav-Opciones {
   left: 370px;
 }
 
-.Formulario{
-  position:relative;
+.Formulario {
+  position: relative;
   text-align: center;
   background-color: #f9f9f9;
-  top:-90px;
+  top: -90px;
 }
 
-.Formulario input{
+.Formulario input {
   border-left: none;
   border-top: none;
   border-bottom: 2px solid black;
@@ -508,9 +508,10 @@ header .Nav-Opciones {
   color: bisque;
   background-color: black;
 }
+
 /*------------TABS REGISTRARTE-----------------*/
 
-#Registrar{
+#Registrar {
   position: relative;
   width: 40%;
   left: 450px;
@@ -522,7 +523,7 @@ legend {
   border-radius: 10px;
   font-size: 15px;
   color: black;
- 
+
   width: 100%;
   height: 85px;
 }
@@ -789,52 +790,54 @@ legend h1 {
   top: 20px;
 }
 
-.Img_Producto{
-  position:relative;
-  width:120px;
-  height:155px;
-  top:-10px;
+.Img_Producto {
+  position: relative;
+  width: 120px;
+  height: 155px;
+  top: -10px;
 }
 
-.Admin_Input_Producto{
+.Admin_Input_Producto {
   position: relative;
-  background-color:white;
-  width:90%;
+  background-color: white;
+  width: 90%;
   text-decoration: none;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
 }
 
-.Precio_Producto{
+.Precio_Producto {
   position: relative;
-  top:60px;
+  top: 60px;
 }
 
-.Boton_Datos_Producto{
+.Boton_Datos_Producto {
   position: relative;
-  top:55px;
+  top: 55px;
 }
 
-#Input_Producto_1,#Input_Producto_4,#Input_Producto_5{
-  position:relative;
+#Input_Producto_1,
+#Input_Producto_4,
+#Input_Producto_5 {
+  position: relative;
   background-color: transparent;
   border-bottom: 5px solid black;
   padding-left: 15px;
-  top:55px;
+  top: 55px;
 }
 
-#Input_Producto_2{
-  position:relative;
-  top:-29px;
+#Input_Producto_2 {
+  position: relative;
+  top: -29px;
 }
 
-#Input_Producto_3{
-  position:relative;
-  overflow:scroll;
-  width:98%;
-  height:140px;
-  top:10px;
-  left:0px;
+#Input_Producto_3 {
+  position: relative;
+  overflow: scroll;
+  width: 98%;
+  height: 140px;
+  top: 10px;
+  left: 0px;
 }
 
 #Datos_1 {
@@ -873,7 +876,7 @@ legend h1 {
   left: 17px;
 }
 
-#Boton_Producto_Modificar{
+#Boton_Producto_Modificar {
   position: relative;
   background-color: #094293;
   width: 40%;
@@ -906,23 +909,23 @@ legend h1 {
   top: 20px;
 }
 
-.Admin_Input_Cliente{
+.Admin_Input_Cliente {
   position: relative;
-  background-color:white;
-  width:80%;
+  background-color: white;
+  width: 80%;
   text-decoration: none;
-  border:none;
-  outline:none;
-  position:relative;
+  border: none;
+  outline: none;
+  position: relative;
   background-color: transparent;
   border-bottom: 5px solid black;
   padding-left: 15px;
-  top:10px;
+  top: 10px;
 }
 
-#Input_Cliente_1{
-  width:70%;
-  top:10px;
+#Input_Cliente_1 {
+  width: 70%;
+  top: 10px;
 }
 
 #Datos_7 {
@@ -930,7 +933,7 @@ legend h1 {
   background-color: silver;
   width: 4.5%;
   height: 60px;
-  top:22px;
+  top: 22px;
 }
 
 #Datos_8 {
@@ -992,7 +995,110 @@ legend h1 {
 
 
 
-
-
-
 /*------------------------ADMIN GENERAL------------------------------------*/
+
+
+
+/*-----------------TABLA COMPRAS---------------------*/
+
+
+.Titulo_Carrito{
+  position:relative;
+  text-align: center;
+  font-family: Yellowtail;
+  width:100%;
+  top:150px;
+  font-size: 40px;
+}
+
+
+.Flex_Compras {
+  position: relative;
+  background-color: #b9b9b9;
+  display: flex;
+  flex-flow: row wrap;
+  width: 37%;
+  height: 225px;
+  top: 235px;
+  left: 140px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.Datos_Carrito {
+  position: relative;
+  text-align: center;
+  width: 40%;
+  height: 60px;
+  top: 3px;
+  left: 20px;
+
+}
+
+.Titulo_Sub_Total,
+.Precio_Sub_Total {
+  position: relative;
+  top: 100px;
+  left: 125px;
+}
+
+.Compra_Total_Carrito {
+  font-family: Yellowtail;
+  position: relative;
+  background-color: #d4d4d4;
+  text-align: center;
+  width: 30%;
+  height: 228px;
+  top: -1807px;
+  left: 850px;
+  border-style: inset;
+  box-shadow: 5px 5px 5px black;
+}
+
+.Comprar_Buttom{
+  position:relative;
+  text-decoration: none;
+  font-family: Yellowtail;
+  background-color:black;
+  color:bisque;
+  width:90%;
+  height:35px;
+  top:45px;
+  border-radius: 10px;
+  font-size:20px;
+  left:1px;
+}
+
+.Contenido_Compra{
+  position:relative;
+  top:20px;
+}
+
+
+#Cantidad_Producto {
+  position: relative;
+  top: -30px;
+}
+
+#Input_Cantidad {
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  background-color: #e4e4e4;
+  outline: none;
+  width: 15%;
+  top: 2px;
+}
+
+
+#Icon_Compras {
+  position: relative;
+  margin-left: 20px;
+  left: 140px;
+  top: 5px;
+  font-size: 25px;
+  color: darkred;
+}
+
+
+/*-----------------TABLA COMPRAS---------------------*/
