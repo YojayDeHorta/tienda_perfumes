@@ -19,5 +19,8 @@
   "homepage": "https://github.com/nder1996/Responsive-Perfumes#readme",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "alertifyjs": "^1.13.1"
   }
 }

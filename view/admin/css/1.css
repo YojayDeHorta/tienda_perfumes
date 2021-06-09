@@ -14,6 +14,10 @@
   overflow: hidden;
   top: -130px;
 }
+table thead {
+  background-color: #0a4f70;
+  color: white;
+}
 
 /*------Ventana Modal---------*/
 .Ventana-Modal {
@@ -651,7 +655,6 @@ legend h1 {
 
 /*----------LOGIN------------*/
 
-
 /*----------------------Pestaña Session Usuario------------------------*/
 
 /*--------------TABS GENERAL ADMIN--------------------------*/
@@ -703,7 +706,6 @@ legend h1 {
 
 /*--------------TABS GENERAL ADMIN--------------------------*/
 
-
 /*-------------------------DATOS - ADMIN --------------------*/
 
 .Div-Admin {
@@ -718,7 +720,6 @@ legend h1 {
   position: relative;
   font-family: Yellowtail;
   font-size: 35px;
-
 }
 
 .Div-Admin button {
@@ -735,11 +736,13 @@ legend h1 {
 .Boton_Crear {
   position: relative;
   background-color: #094293;
-  right: 500px;
-  top: 65px;
-  left: -635px;
 }
-
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #094293 !important;
+}
 .Tabla-Admin {
   position: relative;
   width: 95%;
@@ -762,7 +765,6 @@ legend h1 {
   left: 30px;
 }
 
-
 #Boton_Enviar {
   position: relative;
   background-color: #094293;
@@ -774,8 +776,6 @@ legend h1 {
 }
 
 /*-------------------------DATOS - ADMIN --------------------*/
-
-
 
 /*-------------PRODUCTOS ADMIN-------------------------*/
 
@@ -854,7 +854,7 @@ legend h1 {
 
 #Datos_3 {
   position: relative;
-  width: 27.0%;
+  width: 27%;
   left: 10px;
 }
 
@@ -866,7 +866,7 @@ legend h1 {
 
 #Datos_5 {
   position: relative;
-  width: 14.0%;
+  width: 14%;
   left: 15px;
 }
 
@@ -889,8 +889,6 @@ legend h1 {
 }
 
 /*-------------PRODUCTOS ADMIN-------------------------*/
-
-
 
 /*--------------------------FLEX CLIENTE-------------------------------------------*/
 
@@ -982,7 +980,6 @@ legend h1 {
   top: 13px;
 }
 
-
 #Boton_Cliente_Borrar {
   position: relative;
   background-color: red;
@@ -990,27 +987,20 @@ legend h1 {
   top: 13px;
 }
 
-
 /*--------------------------FLEX CLIENTE-------------------------------------------*/
-
-
 
 /*------------------------ADMIN GENERAL------------------------------------*/
 
-
-
 /*-----------------TABLA COMPRAS---------------------*/
 
-
-.Titulo_Carrito{
-  position:relative;
+.Titulo_Carrito {
+  position: relative;
   text-align: center;
   font-family: Yellowtail;
-  width:100%;
-  top:150px;
+  width: 100%;
+  top: 150px;
   font-size: 40px;
 }
-
 
 .Flex_Compras {
   position: relative;
@@ -1032,7 +1022,6 @@ legend h1 {
   height: 60px;
   top: 3px;
   left: 20px;
-
 }
 
 .Titulo_Sub_Total,
@@ -1055,25 +1044,24 @@ legend h1 {
   box-shadow: 5px 5px 5px black;
 }
 
-.Comprar_Buttom{
-  position:relative;
+.Comprar_Buttom {
+  position: relative;
   text-decoration: none;
   font-family: Yellowtail;
-  background-color:black;
-  color:bisque;
-  width:90%;
-  height:35px;
-  top:45px;
+  background-color: black;
+  color: bisque;
+  width: 90%;
+  height: 35px;
+  top: 45px;
   border-radius: 10px;
-  font-size:20px;
-  left:1px;
+  font-size: 20px;
+  left: 1px;
 }
 
-.Contenido_Compra{
-  position:relative;
-  top:20px;
+.Contenido_Compra {
+  position: relative;
+  top: 20px;
 }
-
 
 #Cantidad_Producto {
   position: relative;
@@ -1090,7 +1078,6 @@ legend h1 {
   top: 2px;
 }
 
-
 #Icon_Compras {
   position: relative;
   margin-left: 20px;
@@ -1099,6 +1086,5 @@ legend h1 {
   font-size: 25px;
   color: darkred;
 }
-
 
 /*-----------------TABLA COMPRAS---------------------*/

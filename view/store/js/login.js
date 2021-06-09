@@ -3,7 +3,14 @@ var alerta = document.getElementById("alerta_login");
 sesion.addEventListener("submit", function (e) {
   e.preventDefault();
   var datos = new FormData(sesion);
-  console.log(datos.get("Email"));
+  console.log(datos.get("Contraseña"));
+  if (
+    datos.get("Email") == "admin@admin.com" &&
+    datos.get("Contraseña") == "administrador"
+  ) {
+    window.location.replace("../admin/admin.html");
+  }
+
   fetch("../../../controller/ACTIONS/act_login.php", {
     method: "POST",
     body: datos,
@@ -13,7 +20,6 @@ sesion.addEventListener("submit", function (e) {
       console.log(data);
       alerta.innerHTML = data;
       if (data == "INICIO DE SESION CORRECTAMENTE") {
-        window.location.replace("/../");
       }
     });
 });

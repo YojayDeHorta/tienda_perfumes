@@ -9,8 +9,9 @@
         $password = $_POST['Contraseña'];
         $email = $_POST['Email'];
 
-        $cliente = autenticarCliente($email, $password);
-		if($cliente == null){
+        $clientemovil=buscarClientePornumeromovil($numero_movil);
+        $clienteemail=buscarClientePoremail($email);
+        if($clientemovil==NULL&&$clienteemail==NULL){
 
             $nuevocliente=NULL;
             $nuevocliente= new Cliente('',$nombre,$apellido,$numero_movil,$password,$email);
@@ -19,12 +20,9 @@
             echo json_encode('registrado correctamente');
             
                     
-		}else{
-             echo json_encode('telefono y/o contraseña no válido o existente');
-             
-
- 
-		}
+	}else{
+            echo json_encode('error');
+	}
 
     
         

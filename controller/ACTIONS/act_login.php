@@ -7,10 +7,7 @@
         
         $cliente = autenticarCliente($Email, $password);
         
-        if($Email == "admin" ){
-            
-            header("Location: ../../view/admin/");
-        }else{
+        
             if($cliente != null){
 
                 $_SESSION['ID_CLIENTE'] = $cliente->getId_cliente();
@@ -33,7 +30,7 @@
                 //header("Location: ../../view/store/"); 
             }
 
-        }
+        
 		
 
     
