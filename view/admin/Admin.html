@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Administrador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/1.css">
+  <link rel="icon" href="img/Icon-Admin.png">
+  <link rel="stylesheet" href="css/all.min.css">
+  <meta name="google" content="notranslate"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body background="img/Fondo_Principal.png">
+  <br><br><br><br><br>
+  <div class="Div-Principal">
+    <header class="Cabecera">
+      <nav class="Nav-Opciones">
+        <a href="Index.php">
+          <h1 class="Logo-Perfumes">PERFUMERÍA</h1>
+        </a>
+        <ul>
+          <li><a href="Admin.html"><i class="fas fa-user-cog"></i></a></li>
+          <li><a href="Compras.html"><i class="fas fa-cart-plus"></i></a></li>
+          <li><a href="Registrate.html"><i class="far fa-user-circle"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="Div-Tabs">
+      <button class="tablinks" onclick="Tabs_Principal(event, 'Tabs_1')"  >Administrar Productos</button>
+      <button class="tablinks" onclick="Tabs_Principal(event, 'Tabs_2')">Administrar Clientes</button>
+    </div>
+    <h3 class="Titulo_Admin">ADMINISTRADOR</h3>
+    <div id="Tabs_1" class="tabcontent ">
+      <div class="Div-Admin" id="Div_Productos">
+        <button class="Boton_Crear">Agregar Producto</button>
+        <table class="Tabla-Admin">
+          <tr class="Nombres_Indicadores">
+            <th>ID</th>
+            <th>IMAGEN</th>
+            <th>DESCRIPCIÓN</th>
+            <th>PRECIO</th>
+            <th>STOCK</th>
+            <th>ACCIONES</th>
+          </tr>
+        </table>
+        <div class="Flex_Datos">
+          <div class="Datos_Tabla_Producto" id="Datos_1">
+            <input type="text" class="Admin_Input_Producto" id="Input_Producto_1" placeholder="ID">
+          </div>
+          <div class="Datos_Tabla_Producto" id="Datos_2">
+            <img src="img/Catalogo-1.png" width="120" height="140" class="Img_Producto" id="Img_Producto_1">
+            <input type="file" class="Admin_Input_Producto" id="Input_Producto_2" name="avatar" accept="image/png, image/jpeg">
+          </div>
+          <div class="Datos_Tabla_Producto" id="Datos_3">
+            <textarea name="DESCRIPCIÓN" rows="10" cols="40" class="Admin_Input_Producto" id="Input_Producto_3"></textarea>
+          </div>
+          <div class="Datos_Tabla_Producto" id="Datos_4">
+            <input type="text" placeholder="Precio" class="Admin_Input_Producto" id="Input_Producto_4">
+          </div>
+          <div class="Datos_Tabla_Producto" id="Datos_5">
+            <input type="text" placeholder="Stock" class="Admin_Input_Producto" id="Input_Producto_5">
+          </div>
+          <div class="Datos_Tabla_Producto" id="Datos_6">
+            <button class="Boton_Datos_Producto" id="Boton_Producto_Modificar">Modificar</button>
+            <button class="Boton_Datos_Producto" id="Boton_Producto_Borrar">Borrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Tabs_2" class="tabcontent active">
+      <div class="Div-Admin" id="Div_Clientes">
+        <button class="Boton_Crear" >Agregar Cliente</button>
+        <table class="Tabla-Admin" id="Tabla_Admin_Clientes" >
+          <tr class="Nombres_Indicadores">
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>TELÉFONO</th>
+            <th>CONTRASEÑA</th>
+            <th>EMAIL</th>
+            <th>ACCIONES</th>
+          </tr>
+        </table>
+        <div class="Flex_Datos" id="Flex_Cliente">
+          <div class="Datos_Tabla" id="Datos_7">
+             <input type="text" class="Admin_Input_Cliente" id="Input_Cliente_1" placeholder="ID">
+          </div>
+          <div class="Datos_Tabla_Cliente" id="Datos_8">
+            <input type="text" class="Admin_Input_Cliente" id="Input_Cliente_2" placeholder="Nombre">
+          </div>
+          <div class="Datos_Tabla_Cliente" id="Datos_9">
+            <input type="text" class="Admin_Input_Cliente" id="Input_Cliente_3" placeholder="Apellido">
+          </div>
+          <div class="Datos_Tabla_Cliente" id="Datos_10">
+            <input type="text" class="Admin_Input_Cliente" id="Input_Cliente_4" placeholder="Teléfono">
+          </div>
+          <div class="Datos_Tabla_Cliente" id="Datos_11">
+              <h4>El administrador solo podrá ver la contraseña , pero no podrá modificarla</h4>
+          </div>
+          <div class="Datos_Tabla_Cliente" id="Datos_12">
+            <input type="text" class="Admin_Input_Cliente" id="Input_Cliente_5" placeholder="Email">
+          </div>
+          <div class="Datos_Tabla_Cliente" id="Datos_13">
+            <button class="Boton_Datos_Cliente" id="Boton_Cliente_Modificar">Modificar</button>
+            <button class="Boton_Datos_Cliente" id="Boton_Cliente_Borrar">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/1.js"></script>
+</body>
+
+</html>
