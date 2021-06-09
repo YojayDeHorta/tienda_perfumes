@@ -30,7 +30,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         </a>
         <ul>
           <li><a href="Admin.html"><i class="fas fa-user-cog"></i></a></li>
-          <li><a href=""><i class="fas fa-cart-plus"></i></a></li>
+          <li><a href="Compras.html"><i class="fas fa-cart-plus"></i></a></li>
           <li><a href=<?php echo $login;?>><?php echo $_SESSION['NOMBRE_CLIENTE'];?><i class="far fa-user-circle"></i></a></li>
           <?php
           if($_SESSION['NOMBRE_CLIENTE']!="inicia sesion o registrate!"){
