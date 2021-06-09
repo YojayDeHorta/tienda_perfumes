@@ -160,8 +160,9 @@ Element_2.className="Compra_Total_Carrito";
 Element_2.innerHTML =`
       <h1>RESUMEN DEL PEDIDO</h1>
       <br> 
-      <h3 class="Total_Producto" id="Precio_Final">Subtotal :  $ 0 USD</h3>
-      <h4 class="Total_Envio" id="Precio_Envio">Envío :  $ 10 USD</h4>
+      <h4 class="Total_Producto" id="Precio_Final"><p>Subtotal</p>$ 0 USD</h4>
+      <h4 class="Total_Producto" id="Precio_Envio"><p>Envío</p>$ 10 USD</h4>
+      <h4 class="Total_Producto" id="Precio"><p>Total</p>$ 10 USD</h4>
     <button class="Comprar_Buttom">COMPRAR</button>`;
 
 document.getElementById("Factura_Compra").appendChild(Element_2);
@@ -172,16 +173,6 @@ function Eliminar_Elemento(Articulo) {
     Padre = Articulo.parentNode;
     Padre.remove();
 }
-
-/*----------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-/*--------------------------------------*/
-
-
-
 
 /*----------------------------------------------------------------------------------------------------------------------*/
 
@@ -207,56 +198,34 @@ function Factura_Final(){
 
  let Perfumes = document.querySelectorAll('.Sub_Total')
 
+  /*
+  `
+      <h1>RESUMEN DEL PEDIDO</h1>
+      <br> 
+      <h4 class="Total_Producto" id="Precio_Final"><p>Subtotal</p>$ 0 USD</h4>
+      <h4 class="Total_Producto" id="Precio_Envio"><p>Envío</p>$ 10 USD</h4>
+      <h4 class="Total_Producto" id="Precio"><p>Total</p>$ 10 USD</h4>
+    <button class="Comprar_Buttom">COMPRAR</button>`;
+  */
+
+
  for (let i=0 ; i<Perfumes.length;i++){
     Texto = Perfumes[i].textContent;
-    console.log(Texto);
-    
- }
+    Texto = Texto.split(" ",4)[3];
+    Valor_Final = Valor_Final + parseInt(Texto);
+    Nuevo_h4 = document.createElement("h4");
+    Actual_h4 = document.getElementById("Precio_Final");
+    Actual = Actual_h4.parentNode;
+    Nuevo_h4.className="Total_Producto"; Nuevo_h4.id="Precio_Final";
+    Nuevo_h4.innerHTML = `<p>Subtotal</p> ${Valor_Final} USD`
+    Actual.replaceChild(Nuevo_h4, Actual_h4);
+    console.log(Nuevo_h4)
 
+ }
+ Valor_Final = 0;
 
 
 }
-
-
-
-/*
-    Nuevo_h3 = document.createElement("h3");
-
-    Nuevo_h3.className="Total_Producto"; Nuevo_h3.id="Precio_Final";
-
-    Nuevo_h3.innerHTML = `Subtotal :  ${Valor_Final} USD`
-    */
- 
-
-
-
-
-
-
- 
-/*
-Precio_Producto.push(Valor);
-
-    
-    Valor_Final =  Valor + Valor_Final ; 
-    
-    Nuevo_h3 = document.createElement("h3");
-    
-    Nuevo_h3.className="Total_Producto"; 
-
-    Nuevo_h3.id="Precio_Final";
-    
-    Nuevo_h3.innerHTML = `Subtotal :  ${Valor_Final} USD`
-    
-    Actual_h3 = document.getElementById("Precio_Final")
-     
-    Actual = Actual_h3.parentNode;
-   
-    Actual.replaceChild(Nuevo_h3, Actual_h3);
-
-   */
-
-
 
 /*-------------------------------------------------------------*/
 
