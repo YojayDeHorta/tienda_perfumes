@@ -198,15 +198,6 @@ function Factura_Final(){
 
  let Perfumes = document.querySelectorAll('.Sub_Total')
 
-  /*
-  `
-      <h1>RESUMEN DEL PEDIDO</h1>
-      <br> 
-      <h4 class="Total_Producto" id="Precio_Final"><p>Subtotal</p>$ 0 USD</h4>
-      <h4 class="Total_Producto" id="Precio_Envio"><p>Envío</p>$ 10 USD</h4>
-      <h4 class="Total_Producto" id="Precio"><p>Total</p>$ 10 USD</h4>
-    <button class="Comprar_Buttom">COMPRAR</button>`;
-  */
 
 
  for (let i=0 ; i<Perfumes.length;i++){
@@ -215,16 +206,29 @@ function Factura_Final(){
     Valor_Final = Valor_Final + parseInt(Texto);
     Nuevo_h4 = document.createElement("h4");
     Actual_h4 = document.getElementById("Precio_Final");
+    console.log("Nuevo Precio",Actual_h4);
     Actual = Actual_h4.parentNode;
     Nuevo_h4.className="Total_Producto"; Nuevo_h4.id="Precio_Final";
     Nuevo_h4.innerHTML = `<p>Subtotal</p> ${Valor_Final} USD`
     Actual.replaceChild(Nuevo_h4, Actual_h4);
-    console.log(Nuevo_h4)
-
  }
+
+  Precio_Final = Valor_Final + 10 ;
+  
+  Actual_Final = document.getElementById("Precio");
+  
+  Nuevo_Final = document.createElement("h4");
+
+ Nuevo_Final.className="Total_Producto"; Nuevo_Final.id="Precio";
+
+ Nuevo_Final.innerHTML = `<p>Total</p> ${Precio_Final} USD`;
+
+  Actual = Actual_Final.parentNode;
+  Actual.replaceChild(Nuevo_Final, Actual_Final);
+  
+
  Valor_Final = 0;
-
-
+ Precio_Final = 0 ;
 }
 
 /*-------------------------------------------------------------*/
