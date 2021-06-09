@@ -1001,104 +1001,171 @@ legend h1 {
 
 /*-----------------TABLA COMPRAS---------------------*/
 
-
-.Titulo_Carrito{
-  position:relative;
+.Titulo_Carrito {
+  position: relative;
   text-align: center;
   font-family: Yellowtail;
-  width:100%;
-  top:150px;
+  width: 100%;
+  top: 150px;
   font-size: 40px;
+}
+
+.Agregar_Producto{
+	position: relative;
+	text-decoration: none;
+	outline: none;
+	background-color:Bisque;
+	width:12%;
+	height: 50px;
+	border-radius: 20px;
+	font-size: 25px;
+	font-family: Yellowtail;
+	left: 140px;
+	top: 170px;
 }
 
 
 .Flex_Compras {
   position: relative;
-  background-color: #b9b9b9;
+  font-family: Cookie;
+  background-color: #e9e9e9;
+  color:black/*#256d7b*/;
+  text-align: center;
   display: flex;
   flex-flow: row wrap;
-  width: 37%;
-  height: 225px;
-  top: 235px;
+  width: 40%;
+  height: 305px;
+  top: 205px;
   left: 140px;
   margin-bottom: 30px;
   box-shadow: 5px 5px 5px black;
 }
 
-.Datos_Carrito {
+.Flex_Compras h3 {
   position: relative;
+  margin-left: 10px;;
+  width: 50%;
+  font-size:28px;
+  top: 10px;
+}
+
+.Flex_Compras img{
+  position:relative;
+  left:-255px;
+  top:70px;
+  padding-bottom: 40px;
+  width: 128px;
+  height: 198px;
+
+}
+
+.Flex_Compras form{
+  position: relative;
+  font-size: 25px;
+  width:100%;
+  left:-178px;
+  top:10px;
+}
+
+.Flex_Compras form input{
+  position:relative;
+  width:12%;
   text-align: center;
-  width: 40%;
-  height: 60px;
-  top: 3px;
-  left: 20px;
-
+  text-decoration: none;
+  outline: none;
+  border-radius:10px; 
 }
 
-.Titulo_Sub_Total,
-.Precio_Sub_Total {
+
+.Flex_Compras #Icon_Compras{
+  position:relative;
+  text-decoration:none;
+  color:black;
+  font-size:25px;
+  margin-left:15px;
+  left:580px;
+  top:-280px;
+}
+
+.Flex_Compras #Icon_Compras:hover{
+  color:red;
+}
+
+
+.Flex_Compras h2{
   position: relative;
-  top: 100px;
-  left: 125px;
+  top:-50px;
+  left:480px;
 }
+
 
 .Compra_Total_Carrito {
-  font-family: Yellowtail;
-  position: relative;
-  background-color: #d4d4d4;
+  position: fixed;
+  font-family:Eras Bold ITC;
+  background-color: #FFFFFF;
   text-align: center;
   width: 30%;
-  height: 228px;
-  top: -1807px;
-  left: 850px;
-  border-style: inset;
+  height: 318px;
+  top: 270px;
+  left: 1000px;
   box-shadow: 5px 5px 5px black;
+  border-radius: 20px;;
 }
 
-.Comprar_Buttom{
-  position:relative;
-  text-decoration: none;
-  font-family: Yellowtail;
-  background-color:black;
-  color:bisque;
-  width:90%;
-  height:35px;
-  top:45px;
-  border-radius: 10px;
-  font-size:20px;
-  left:1px;
-}
-
-.Contenido_Compra{
-  position:relative;
-  top:20px;
-}
-
-
-#Cantidad_Producto {
-  position: relative;
-  top: -30px;
-}
-
-#Input_Cantidad {
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  background-color: #e4e4e4;
-  outline: none;
-  width: 15%;
-  top: 2px;
-}
-
-
-#Icon_Compras {
-  position: relative;
-  margin-left: 20px;
-  left: 140px;
-  top: 5px;
+.Compra_Total_Carrito h1{
   font-size: 25px;
-  color: darkred;
+  width:100%;
+  font-family: Goudy Stout;
+  top:10px;
 }
+
+.Compra_Total_Carrito h4{
+  position: relative;
+  text-align: right;
+  font-size: 20px;
+  width: 95%;
+  top:20px;
+  left:15px;
+}
+
+.Total_Producto p{
+  position: relative;
+  text-align: left;
+  top:22px;
+} 
+
+#Precio_Envio{
+  position: relative;
+  border-bottom: 5px solid red;
+  height:58px;
+}
+
+#Precio{
+  position: relative;
+  height: 20px;
+  top:15px;
+}
+
+.Compra_Total_Carrito button{
+  position:relative;
+  background-color:	black;
+  font-family: Goudy Stout;
+  color:bisque;
+  font-size:20px;
+  border-radius:5px;
+  width: 50%;
+  top:55px;
+}
+
+.Compra_Total_Carrito button:hover{
+  background-color:#DC3545;
+  color:black;
+}
+
+
+
+
+
 
 
 /*-----------------TABLA COMPRAS---------------------*/
