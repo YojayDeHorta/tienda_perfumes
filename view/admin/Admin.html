@@ -51,20 +51,22 @@
       <h3 class="Titulo_Admin">ADMINISTRADOR</h3>
       <div id="Tabs_1" class="tabcontent">
         <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded" id="Div_Productos">
-          <button class="btn btn-primary" type="button" >Agregar Producto </button>
+          <button class="btn btn-primary" id="btnProducto" type="button" data-bs-toggle="modal">Agregar Producto </button>
 
           <table class="table mt-2 table-bordered table-striped">
             <thead>
               <tr class="Nombres_Indicadores text-center">
                 <th>ID</th>
+                <th>TIPO</th>
                 <th>IMAGEN</th>
+                <th>PRODUCTO</th>
                 <th>DESCRIPCIÓN</th>
                 <th>PRECIO</th>
                 <th>STOCK</th>
                 <th>ACCIONES</th>
               </tr>
             </thead>
-            <tbody ></tbody>
+            <tbody id="contenedor-productos"></tbody>
           </table>
         </div>
       </div>
@@ -91,7 +93,7 @@
     <!-- Bootstrap ventana-->
 
     
-
+    <!-- modal usuarios-->
     <div id="modalArticulo" class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -137,6 +139,57 @@
       </div>
     </div>
 
+    <!-- modal productos-->
+    <div id="modalProductos" class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+      <div class="modal-dialog">
+        <form id="formulario-producto">
+          <div class="modal-content">
+          <div class="modal-header bg-primary text-dark">
+            <h5 class="modal-title" id="exampleModalLabel2">Tabla Producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" >
+            
+              <div class="mb-3 bg-danger"id="divAvisoProducto">
+              </div>
+              <div class="mb-3" id="divId_producto">
+                <label for="id_producto" class="col-form-label">id:</label>
+                <input type="number" class="form-control" id="id_producto" name="Id_producto" readonly autofocus>
+              </div>
+              <div class="mb-3">
+                <label for="tipo" class="col-form-label">tipo:</label>
+                <input type="text" class="form-control" id="tipo" name="Tipo" autofocus>
+              </div>
+              <div class="mb-3">
+                <label for="imagen" class="col-form-label">imagen:</label>
+                <input type="text" class="form-control" id="imagen" name="Imagen" autofocus>
+              </div>
+              <div class="mb-3">
+                <label for="producto" class="col-form-label">nombre del producto:</label>
+                <input type="text" class="form-control" id="producto"  name="Producto" autofocus>
+              </div>
+              <div class="mb-3">
+                <label for="descripcion" class="col-form-label">descripcion:</label>
+                <input type="text" class="form-control" id="descripcion" name="Descripcion" autofocus>
+              </div>
+              <div class="mb-3">
+                <label for="precio" class="col-form-label">precio:</label>
+                <input type="number" class="form-control" id="precio" name="Precio" autofocus>
+              </div>
+              <div class="mb-3" >
+                <label for="stock" class="col-form-label">stock:</label>
+                <input type="number" class="form-control" id="stock" name="Stock" autofocus>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Guardar producto</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="js/1.js"></script>
     
     <script src="node_modules/alertifyjs/build/alertify.min.js"></script>
@@ -148,5 +201,6 @@
       crossorigin="anonymous"
     ></script>
     <script  src="js/admin.js"></script>
+    <script  src="js/productos.js"></script>
   </body>
 </html>

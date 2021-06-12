@@ -88,8 +88,15 @@ class ProductoDAO{
         
         return $resultado;
     }
+
     
-    
+    public function borrarproducto($id_producto){
+        $data_source = new DataSource();
+        $producto=  buscarproductoporid($id_producto);
+        $resultado= $data_source->ejecutarActualizacion("DELETE FROM productos WHERE id_producto = :id_producto", array('id_producto'=>$id_producto));
+        
+        return $producto;
+    }
     
     
     

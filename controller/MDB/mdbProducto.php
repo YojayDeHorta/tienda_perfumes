@@ -30,5 +30,11 @@
         $resultado=$dao->modificarproducto($producto);
         return $resultado;
     }
+    function borrarproducto($id_producto){
+        require_once(__DIR__."/../../model/DAO/ProductoDAO.php");
+        $dao=new ProductoDAO();
+        $producto = $dao->borrarproducto($id_producto);
+        return $producto;
+    }
 
     ?>   
