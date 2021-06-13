@@ -1205,7 +1205,7 @@ legend h1 {
   width: 100%;
   background-color: #9f9f9f;
   top: 56px;
-  height: 26%;
+  height: 17.4%;
 }
 
 .Img_Contacto img{
@@ -1370,20 +1370,76 @@ margin-left: 10px;
   width: 50%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-----------------------------------------------------*/
+
+.Formulario_Contacto{
+  position: relative;
+  background-color: silver;
+  text-align: center;
+  top: 56px;
+  height: 500px;
+}
+
+.Formulario_Contacto form{
+  position: relative;
+  margin-bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  border: 2px solid silver;
+  top: 40px;
+  width: 50%;
+  height: 430px;
+  left: 350px;
+  box-shadow: 1px 2px 2px  black;
+}   
+
+
+.Formulario_Contacto form h1{
+  font-family:Yellowtail ; 
+  font-size: 47px;
+  color: white;
+}  
+
+
+
+.Formulario_Contacto form input{
+  width: 30%;
+  border-left: none;
+  border-top: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  border-right: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+}
+
+.Formulario_Contacto form select{
+  background-color:red;
+}
+
+.Formulario_Contacto form option{
+  background-color: red;
+}
+
+.Formulario_Contacto form textarea{
+  background-color: red;
+}
+
+.Formulario_Contacto form .Botton-Enviar{
+  background-color: transparent;
+  width: 20%;
+  height:35px;
+  border: none;
+  border-bottom: 5px solid red;
+  border-radius: 15px;
+  color:bisque;
+  top: 0px;
+}
+
+
+.Formulario_Contacto form.Botton-Enviar:hover{
+  color:bisque;
+  background-color:black;
+}
+

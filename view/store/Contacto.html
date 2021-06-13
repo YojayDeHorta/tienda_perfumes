@@ -30,7 +30,7 @@
         <h1>CONTACTA CON NOSOTROS</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ex neque voluptatibus voluptates iste atque vitae praesentium, vero a facere? Nulla incidunt impedit, possimus dicta, hic reprehenderit minima ab eligendi.</p>
 
-      <button class="btn-contact" id="btn_mensaje">CONSULTE AQUÍ</button>
+      <button class="btn-contact" id="btn_mensaje" onclick="Formulario_Peticion()">CONSULTE AQUÍ</button>
       <div class="Info-contact">
       <h1 class="Informacion_Contacto" id="Titulo">DATOS DE CONTACTO</h1>
       <h2><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;VISITANOS
@@ -52,6 +52,41 @@
       </div>
     </div>
     </div>
+    <div class ="Formulario_Contacto">
+      <form><br>
+            <h1>CONTÁCTANOS</h1> <br>
+            <br>
+            <input type="text" placeholder="Nombre Completo">&nbsp
+            <input type="email" placeholder="Email"> &nbsp
+            <label>Sexo</label>
+            <select name="select">
+                <option value="value1" disabled>Sexo</option>
+                <option value="value2">Hombre</option> 
+                <option value="value3">Mujer</option>
+            </select>
+            <br><br>
+            <label>Edad </label>
+            <select name="select">
+                <option value="value1" disabled>Elige tu edad</option>
+                <option value="value2">18-25 Años</option> 
+                <option value="value3">25-35 Años</option>
+                <option value="value3">35-50 Años</option>
+                <option value="value3">50-75 Años</option>
+            </select>&nbsp;&nbsp
+            <label>Tipo de consulta</label>
+            <select name="select-1">
+              <option value="value1" disabled>¿Qué deseas?</option>
+              <option value="value2">Interesado en un producto</option> 
+              <option value="value3">Reclamos o Quejas</option>
+            </select> <br> <br>
+            <textarea name="textarea" rows="10" cols="50" placeholder="Escribe lo que quieras"></textarea>
+            <br><br>
+            <button class="Botton-Enviar">Enviar</button>
+    </form>
+    </div>
+
+
+
         <h1 class="Titulo_Marcas">MARCAS QUE AMAMOS</h1>
         <div class="Caja-Logos">
           <div class="Logo">
@@ -71,7 +106,7 @@
             <a href="https://www.lancome.com.mx/perfumes/perfumes-de-mujer/" target="_blank"><img src="img/4-Perfume.png" alt=""></a>
           </div>
  </div>
-
   </div>
+  <script src="js/Contacto.js"></script>
 </body>
 </html>
