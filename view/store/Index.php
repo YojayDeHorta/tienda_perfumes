@@ -132,6 +132,57 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         </div>
       </div>
     </div>
+ <h1 class="Titulo_Marcas" id="Title_Videos">OPINIONES</h1>
+<table class="Tabla_Videos">
+  <tr>
+    <th>
+       <iframe  src="https://www.youtube.com/embed/_L2ZbsSH5oI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>  
+        </iframe>
+        <br> <br>
+        <a  href="https://www.youtube.com/watch?v=L83CqwkeHxM" target="_blank">VER VIDEO</a>
+    </th>
+    <th>
+              <iframe  src="https://www.youtube.com/embed/1ZNPZAiBQSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <br> <br>
+        <a  href="https://www.youtube.com/watch?v=1ZNPZAiBQSM" target="_blank">VER VIDEO</a>
+    </th>
+    <th>
+              <iframe  src="https://www.youtube.com/embed/_L2ZbsSH5oI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>  
+        </iframe>
+        <br> <br>
+        <a  href="https://www.youtube.com/watch?v=L83CqwkeHxM" target="_blank">VER VIDEO</a>
+    </th>
+    <th>        <iframe  src="https://www.youtube.com/embed/NdxOlzg58jA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br> <br>
+        <a  href="https://www.youtube.com/watch?v=NdxOlzg58jA" target="_blank">VER VIDEO</a></th>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!--
   <div class="Ventana-Modal">

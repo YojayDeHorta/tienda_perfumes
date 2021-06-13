@@ -60,17 +60,13 @@ header .Nav-Opciones {
   left: -17px;
 }
 
-.Nav-Opciones ul li {
-  position: relative;
-  display: inline;
-  margin-left: 50px;
-  font-size: 25px;
-  left: -40px;
-  top: -40px;
-}
 
-.Nav-Opciones a {
+.Nav-Opciones i {
+  position: relative;
   color: bisque;
+  font-size: 25px;
+  top: -32px;
+  left: -40px;
 }
 
 .Nav-Opciones a:hover {

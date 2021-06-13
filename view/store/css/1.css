@@ -10,7 +10,7 @@
   position: relative;
   background-color: transparent;
   width: 100%;
-  height: 2000px;
+  height: 3000px;
   overflow: hidden;
   top: -130px;
 }
@@ -437,6 +437,37 @@ header .Nav-Opciones {
   color: bisque;
   background-color: black;
 }
+
+#Title_Videos{
+  position: relative;
+  top: 440px;
+  font-size: 50px;
+  left: 50px;
+}
+
+.Tabla_Videos{
+  position: relative;
+  width: 90%;
+  top: 450px;
+  left: 65px;
+}
+
+.Tabla_Videos th{
+  position: relative;
+  width:30%;
+  height: 250px;
+}
+
+.Tabla_Videos a{
+  font-size: 25px;
+  height: 70px;
+  text-decoration: none;
+  border: 1px solid black;
+  color: bisque;
+  background-color: black;
+  border-radius: 10px;
+}
+
 
 /**-----------------DIV  DE PRODUCTOS-------------------**/
 
@@ -1162,10 +1193,197 @@ legend h1 {
   color:black;
 }
 
-
-
-
-
-
-
 /*-----------------TABLA COMPRAS---------------------*/
+
+
+
+/*----------------------Contacto-------------------------------*/
+
+
+.Img_Contacto{
+  position: relative;
+  width: 100%;
+  background-color: #9f9f9f;
+  top: 56px;
+  height: 26%;
+}
+
+.Img_Contacto img{
+  position: relative;
+  opacity:0.4;
+  width: 60%;
+  height: 519.5px;
+  top: 0px;
+}
+/*
+.Img_Contacto img:hover{
+  filter: blur(5px);
+}
+*/
+
+.Img_Contacto h1{
+  position: relative;
+  border-left: 5px solid red;
+  font-family:Yellowtail ;
+  padding: 0px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  width: 45%;
+  top: -350px;
+  left: 20px;
+}
+
+.Img_Contacto p{
+  position: relative;
+  text-align: justify;
+  color: white;
+  width: 35%;
+  top: -330px;
+  left: 25px;
+}
+
+.btn-contact{
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: bisque;
+  border-radius: 10px;
+}
+
+#btn_mensaje{
+  position: relative;
+  font-family:Forte;
+  width: 12%;
+  height: 40px;
+  top: -280px;
+  left: 20px;
+  font-size: 21px;
+    background-color: white;
+    color: black;
+}
+#btn_mensaje:hover{
+  position: relative;
+  background-color: black;
+  color: bisque;
+}
+
+.Info-contact{
+  position: relative;
+  width: 40%;
+  height: 520px;
+  background-color:#2c2c2c;
+  left: 911px;
+  top: -688px;
+}
+
+
+.Info-contact #Titulo{
+  position: relative;
+  width: 75%;
+  color: white;
+  font-weight:  bolder;
+  border: none;
+  left: 75px;
+  font-size: 32px;
+  top: 50px;
+}
+
+.Info-contact h2{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: white;
+  top: 105px;
+  font-size: 20px;
+}
+
+.Info-contact h2 p{
+  position: relative;
+  text-align: justify;
+  width: 80%;
+  color: bisque;
+  font-size: 15px;
+  top: 25px;
+  left: 140px;
+}
+
+#Horario{
+  position: relative;
+  top: 160px;
+}
+
+#Chat{
+  position: relative;
+  top: 221px;
+}
+
+#icon-info{
+  position: relative;
+  text-align: center;
+  color: white;
+  top: 290px;
+  font-size: 25px;
+}
+
+#icon-info i{
+position: relative;
+margin-left: 10px;
+}
+/*-----------MARCAS-----------------*/
+
+.Titulo_Marcas{
+  position: relative;
+  text-align: left; 
+  font-family:Yellowtail ; 
+  padding-left:15px ;
+  font-size: 35px;
+  color: black;
+  width: 33%;
+  top: 80px; 
+  left: 10px;
+}
+
+
+.Caja-Logos{
+  position: relative;
+  align-items: center;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-flow:  wrap;
+  top: 110px;
+  height: 110px;
+  padding: 0;
+  margin: 0;
+}
+
+.Logo{
+  width:25%;
+  margin: 0px;
+  padding: 0;
+  left: 80px;
+}
+
+.Logo img{
+  position: relative;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------*/
