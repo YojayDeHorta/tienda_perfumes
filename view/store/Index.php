@@ -29,7 +29,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
           <h1 class="Logo-Perfumes">PERFUMERÍA</h1>
         </a>
         <ul>
-          <li><a href="Admin.html"><i class="fas fa-user-cog"></i></a></li>
+          <li><a href="Contacto.html"><i class="fas fa-address-book"></i></a></li>
           <li><a href="Compras.html"><i class="fas fa-cart-plus"></i></a></li>
           <li><a href=<?php echo $login;?>><?php echo $_SESSION['NOMBRE_CLIENTE'];?><i class="far fa-user-circle"></i></a></li>
           <?php
@@ -133,7 +133,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
       </div>
     </div>
 
-  
+  <!--
   <div class="Ventana-Modal">
     <div class="Sub-Ventana_Modal">
         <div class="Div-Modal_Bienvenida">
@@ -146,13 +146,13 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
                 </h2>
         </div>
     </div>
-</div> 
+</div> -->
     <script>
     var clienteid =<?php echo $_SESSION['ID_CLIENTE']; ?>;
     </script>
+
     <script src="js/productos.js" charset="uft-8"></script>
-    <script type="text/javascript" src="js/1.js"></script>
-    
+    <script type="text/javascript" src="js/Pagina_Principal.js"></script>
 </body>
 
 </html>

@@ -1,132 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-/*-------------------VENTANA MODAL---------------------------*/
-/*
-$(document).ready(function () {
-
-  function showPopup(){
-      $('.Ventana-Modal').addClass('show');
-      $('.Sub-Ventana_Modal').addClass('show');
-  }
-
-  $("#close").click(function(){
-      $('.Ventana-Modal').removeClass('show');
-      $('.Sub-Ventana_Modal').removeClass('show');
-  });
-
-  $(".btn-abrir").click(showPopup);
-
-  setTimeout(showPopup, 1000);
-
-});
-
-//-------------------VENTANA MODAL--------------------------
-*/
-//-----------------------------SLIDE---------------------------------------------
-/*
-const myslide = document.querySelectorAll(".myslide"),
-  dot = document.querySelectorAll(".Dirrecion");
-let counter = 1;
-slidefun(counter);
-
-let timer = setInterval(autoSlide, 3000);
-
-function autoSlide() {
-  counter += 1;
-  slidefun(counter);
-}
-
-function plusSlides(n) {
-  counter += n;
-  slidefun(counter);
-  resetTimer();
-}
-
-function currentSlide(n) {
-  counter = n;
-  slidefun(counter);
-  resetTimer();
-}
-
-function resetTimer() {
-  clearInterval(timer);
-  timer = setInterval(autoSlide, 1000);
-}
-
-function slidefun(n) {
-  let i;
-  for (i = 0; i < myslide.length; i++) {
-    myslide[i].style.display = "none";
-  }
-  for (i = 0; i < dot.length; i++) {
-    dot[i].className = dot[i].className.replace(" active", "");
-  }
-  if (n > myslide.length) {
-    counter = 1;
-  }
-  if (n < 1) {
-    counter = myslide.length;
-  }
-  myslide[counter - 1].style.display = "block";
-  dot[counter - 1].className += " active";
-}
-
-//-----------------------------SLIDE---------------------------------------------
-
-
-
-/*--------------TABS----------------*/
-/*
-$(".tab-list").on("click", ".tab", function(event) {
-	event.preventDefault();
-
-  $(".tab").removeClass("active");
-	$(".tab-content").removeClass("show");
-
-	$(this).addClass("active");
-	$($(this).attr('href')).addClass("show");	
-});
-
-/*--------------TABS----------------*/
-
-/*--------------TABS-Admin----------------*/
-/*
-function Tabs_Principal(evt, Tabs) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(Tabs).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-/*--------------TABS----------------*/
-
-
-/*-----------------------------SECCION CARRITO DE COMPRAS---------------------------------------*/
-
-/*--------------------------------Eliminar y Agregar--------------------------------------------------------------------------------------*/
-
-
-
 var Precio = [290, 250, 240, 100, 150, 240, 110, 410, 210, 370];
 
 var Precio_Producto = [] ; 
@@ -167,11 +38,10 @@ Element_2.innerHTML =`
 
 document.getElementById("Factura_Compra").appendChild(Element_2);
 
-console.log(A_Producto);
-
 function Eliminar_Elemento(Articulo) {
     Padre = Articulo.parentNode;
     Padre.remove();
+    Factura_Final();
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
@@ -197,16 +67,12 @@ function Valor_Total(Cantidad, SubPrecio) {
 function Factura_Final(){
 
  let Perfumes = document.querySelectorAll('.Sub_Total')
-
-
-
  for (let i=0 ; i<Perfumes.length;i++){
     Texto = Perfumes[i].textContent;
     Texto = Texto.split(" ",4)[3];
     Valor_Final = Valor_Final + parseInt(Texto);
     Nuevo_h4 = document.createElement("h4");
     Actual_h4 = document.getElementById("Precio_Final");
-    console.log("Nuevo Precio",Actual_h4);
     Actual = Actual_h4.parentNode;
     Nuevo_h4.className="Total_Producto"; Nuevo_h4.id="Precio_Final";
     Nuevo_h4.innerHTML = `<p>Subtotal</p> ${Valor_Final} USD`
@@ -226,17 +92,18 @@ function Factura_Final(){
   Actual = Actual_Final.parentNode;
   Actual.replaceChild(Nuevo_Final, Actual_Final);
   
+    if(Perfumes.length===0){
+        Nuevo_h4 = document.createElement("h4");
+        /*<h4 class="Total_Producto" id="Precio_Final"><p>Subtotal</p>$ 0 USD</h4>*/
+        Nuevo_h4.className = "Total_Producto"; Nuevo_h4.id='Precio_Final';
+        Nuevo_h4.innerHTML = `<p>Subtotal</p>$ 0 USD`;
+        Actual_h4 = document.getElementById('Precio_Final');
+        Actual = Actual_h4.parentNode;
+        Actual.replaceChild(Nuevo_h4, Actual_h4);
+    } 
+
+
 
  Valor_Final = 0;
  Precio_Final = 0 ;
 }
-
-/*-------------------------------------------------------------*/
-
-
-
-
-
-
-/*-----------------------------SECCION CARRITO DE COMPRAS---------------------------------------*/
-
