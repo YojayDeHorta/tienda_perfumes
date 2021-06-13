@@ -38,11 +38,10 @@ Element_2.innerHTML =`
 
 document.getElementById("Factura_Compra").appendChild(Element_2);
 
-console.log(A_Producto);
-
 function Eliminar_Elemento(Articulo) {
     Padre = Articulo.parentNode;
     Padre.remove();
+    Factura_Final();
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
@@ -74,7 +73,6 @@ function Factura_Final(){
     Valor_Final = Valor_Final + parseInt(Texto);
     Nuevo_h4 = document.createElement("h4");
     Actual_h4 = document.getElementById("Precio_Final");
-    console.log("Nuevo Precio",Actual_h4);
     Actual = Actual_h4.parentNode;
     Nuevo_h4.className="Total_Producto"; Nuevo_h4.id="Precio_Final";
     Nuevo_h4.innerHTML = `<p>Subtotal</p> ${Valor_Final} USD`
@@ -94,6 +92,17 @@ function Factura_Final(){
   Actual = Actual_Final.parentNode;
   Actual.replaceChild(Nuevo_Final, Actual_Final);
   
+    if(Perfumes.length===0){
+        Nuevo_h4 = document.createElement("h4");
+        /*<h4 class="Total_Producto" id="Precio_Final"><p>Subtotal</p>$ 0 USD</h4>*/
+        Nuevo_h4.className = "Total_Producto"; Nuevo_h4.id='Precio_Final';
+        Nuevo_h4.innerHTML = `<p>Subtotal</p>$ 0 USD`;
+        Actual_h4 = document.getElementById('Precio_Final');
+        Actual = Actual_h4.parentNode;
+        Actual.replaceChild(Nuevo_h4, Actual_h4);
+    } 
+
+
 
  Valor_Final = 0;
  Precio_Final = 0 ;
