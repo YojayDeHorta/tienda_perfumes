@@ -1,0 +1,66 @@
+[13-Jun-2021 05:10:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Compra" not found in C:\xampp\htdocs\controller\ACTIONS\act_add-Compras.php:18
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\controller\ACTIONS\act_add-Compras.php on line 18
+[13-Jun-2021 05:10:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`perfumes`.`compras`, CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\model\DAO\DataSource.php:59
+Stack trace:
+#0 C:\xampp\htdocs\model\DAO\DataSource.php(59): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\model\DAO\CompraDAO.php(122): DataSource->ejecutarActualizacion('INSERT INTO com...', Array)
+#2 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#3 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras.php(23): insertarcompra(Object(Compra))
+#4 {main}
+  thrown in C:\xampp\htdocs\model\DAO\DataSource.php on line 59
+[13-Jun-2021 05:14:20 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`perfumes`.`compras`, CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\model\DAO\DataSource.php:59
+Stack trace:
+#0 C:\xampp\htdocs\model\DAO\DataSource.php(59): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\model\DAO\CompraDAO.php(122): DataSource->ejecutarActualizacion('INSERT INTO com...', Array)
+#2 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#3 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras.php(23): insertarcompra(Object(Compra))
+#4 {main}
+  thrown in C:\xampp\htdocs\model\DAO\DataSource.php on line 59
+[13-Jun-2021 05:14:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`perfumes`.`compras`, CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\model\DAO\DataSource.php:59
+Stack trace:
+#0 C:\xampp\htdocs\model\DAO\DataSource.php(59): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\model\DAO\CompraDAO.php(122): DataSource->ejecutarActualizacion('INSERT INTO com...', Array)
+#2 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#3 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras.php(23): insertarcompra(Object(Compra))
+#4 {main}
+  thrown in C:\xampp\htdocs\model\DAO\DataSource.php on line 59
+[13-Jun-2021 05:36:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class Compra could not be converted to string in C:\xampp\htdocs\model\DAO\CompraDAO.php:127
+Stack trace:
+#0 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#1 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras.php(23): insertarcompra(Object(Compra))
+#2 {main}
+  thrown in C:\xampp\htdocs\model\DAO\CompraDAO.php on line 127
+[13-Jun-2021 05:48:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`perfumes`.`compras`, CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\model\DAO\DataSource.php:59
+Stack trace:
+#0 C:\xampp\htdocs\model\DAO\DataSource.php(59): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\model\DAO\CompraDAO.php(122): DataSource->ejecutarActualizacion('INSERT INTO com...', Array)
+#2 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#3 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras2.php(20): insertarcompra(Object(Compra))
+#4 {main}
+  thrown in C:\xampp\htdocs\model\DAO\DataSource.php on line 59
+[13-Jun-2021 05:48:16 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`perfumes`.`compras`, CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\model\DAO\DataSource.php:59
+Stack trace:
+#0 C:\xampp\htdocs\model\DAO\DataSource.php(59): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\model\DAO\CompraDAO.php(122): DataSource->ejecutarActualizacion('INSERT INTO com...', Array)
+#2 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#3 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras2.php(20): insertarcompra(Object(Compra))
+#4 {main}
+  thrown in C:\xampp\htdocs\model\DAO\DataSource.php on line 59
+[13-Jun-2021 05:48:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`perfumes`.`compras`, CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\model\DAO\DataSource.php:59
+Stack trace:
+#0 C:\xampp\htdocs\model\DAO\DataSource.php(59): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\model\DAO\CompraDAO.php(122): DataSource->ejecutarActualizacion('INSERT INTO com...', Array)
+#2 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#3 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras2.php(17): insertarcompra(Object(Compra))
+#4 {main}
+  thrown in C:\xampp\htdocs\model\DAO\DataSource.php on line 59
+[13-Jun-2021 05:49:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`perfumes`.`compras`, CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\model\DAO\DataSource.php:59
+Stack trace:
+#0 C:\xampp\htdocs\model\DAO\DataSource.php(59): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\model\DAO\CompraDAO.php(123): DataSource->ejecutarActualizacion('INSERT INTO com...', Array)
+#2 C:\xampp\htdocs\controller\MDB\mdbCompra.php(33): CompraDAO->insertarcompra(Object(Compra))
+#3 C:\xampp\htdocs\controller\ACTIONS\act_add-Compras2.php(17): insertarcompra(Object(Compra))
+#4 {main}
+  thrown in C:\xampp\htdocs\model\DAO\DataSource.php on line 59
