@@ -1377,18 +1377,18 @@ margin-left: 10px;
   background-color: silver;
   text-align: center;
   top: 56px;
-  height: 500px;
+  height: 600px;
+
 }
 
 .Formulario_Contacto form{
   position: relative;
-  margin-bottom: 100px;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
   border: 2px solid silver;
   top: 40px;
   width: 50%;
-  height: 430px;
+  height: 530px;
   left: 350px;
   box-shadow: 1px 2px 2px  black;
 }   
@@ -1403,7 +1403,22 @@ margin-left: 10px;
 
 
 .Formulario_Contacto form input{
+  padding-left: 10px;
+  padding-bottom: 7px;
   width: 30%;
+  border-left: none;
+  border-top: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  border-right: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  width: 40%;
+  top: 20px;
+}
+
+.Formulario_Contacto form select{
   border-left: none;
   border-top: none;
   border-bottom: 2px solid black;
@@ -1412,29 +1427,84 @@ margin-left: 10px;
   background-color: transparent;
   color: white;
   font-size: 20px;
+  top: 40px;
 }
 
-.Formulario_Contacto form select{
-  background-color:red;
+.Formulario_Contacto form #select_edad{
+  position: relative;
+  top: -9px;
+  left: -90px;
+}
+
+.Formulario_Contacto form #label_edad{
+  position: relative;
+  top: -7px;
+  font-size: 20px;
+  left: -90px;
+  color: white;
+}
+
+.Formulario_Contacto form #label_consulta{
+  position: relative;
+  top: -5px;
+  left: 90px;
+  font-size: 20px;
+}
+
+.Formulario_Contacto form #select_sexo{
+  position: relative;
+  margin-left: 10px;
+  top:55px;
+  left: -38px;
+}
+
+.Formulario_Contacto form #label_sexo{
+  position: relative;
+  top: 55px;
+  left: -30px;
+  font-size: 20px;
+  color: white;
+}
+
+.Formulario_Contacto form #tipo_consulta{
+  position: relative;
+  top: -8px;
+  left: 89px;
 }
 
 .Formulario_Contacto form option{
-  background-color: red;
+   border-left: none;
+  border-top: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  border-right: none;
+  background-color: black;
+  color: white;
+  font-size: 20px;
 }
 
 .Formulario_Contacto form textarea{
-  background-color: red;
+  border-left: none;
+  border-top: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  border-right: none;
+  background-color: transparent;
+  color: white;
+  border: 2px solid black;
+  font-size: 20px;
+  top: 5px;
 }
+
 
 .Formulario_Contacto form .Botton-Enviar{
   background-color: transparent;
   width: 20%;
   height:35px;
-  border: none;
   border-bottom: 5px solid red;
-  border-radius: 15px;
-  color:bisque;
-  top: 0px;
+  border-radius:0;
+  color:white;
+  top: -10px;
 }
 
 

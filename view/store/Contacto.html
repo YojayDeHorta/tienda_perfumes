@@ -53,36 +53,77 @@
     </div>
     </div>
     <div class ="Formulario_Contacto">
+      <!---->
       <form><br>
             <h1>CONTÁCTANOS</h1> <br>
             <br>
-            <input type="text" placeholder="Nombre Completo">&nbsp
-            <input type="email" placeholder="Email"> &nbsp
-            <label>Sexo</label>
-            <select name="select">
+            <input class="Input_contact" type="text" placeholder="Nombre Completo">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="Input_contact" type="email" placeholder="Email"> &nbsp <br>
+            <label id="label_sexo">Sexo</label>
+            <select class="select_contact" id="select_sexo" name="select">
                 <option value="value1" disabled>Sexo</option>
                 <option value="value2">Hombre</option> 
                 <option value="value3">Mujer</option>
             </select>
-            <br><br>
-            <label>Edad </label>
-            <select name="select">
+            <br><br> <br>
+            <label id="label_edad">Edad </label>
+            <select class="select_contact" id="select_edad" name="select">
                 <option value="value1" disabled>Elige tu edad</option>
                 <option value="value2">18-25 Años</option> 
                 <option value="value3">25-35 Años</option>
                 <option value="value3">35-50 Años</option>
                 <option value="value3">50-75 Años</option>
             </select>&nbsp;&nbsp
-            <label>Tipo de consulta</label>
-            <select name="select-1">
+            <select class="select_contact" id="tipo_consulta" name="select-1">
               <option value="value1" disabled>¿Qué deseas?</option>
               <option value="value2">Interesado en un producto</option> 
               <option value="value3">Reclamos o Quejas</option>
             </select> <br> <br>
-            <textarea name="textarea" rows="10" cols="50" placeholder="Escribe lo que quieras"></textarea>
+            <textarea name="textarea" rows="9" cols="50" placeholder="Escribe lo que quieras"></textarea>
             <br><br>
             <button class="Botton-Enviar">Enviar</button>
     </form>
+    <!---->
+
+            <!--
+
+           <form class="Formulario" id="Registrar">
+      <legend>
+        <h1>REGÍSTRATE <br> <i class="fas fa-user-plus"></i></h1>
+      </legend>
+      <input class="Input-Registrate" type="text" name="Nombre" minlength="2" maxlength="15" pattern="[A-Za-z]+"
+        placeholder="Nombre " required>&nbsp &nbsp
+      <input class="Input-Registrate" type="text" name="Apellido" minlength="2" maxlength="15" pattern="[A-Za-z]+"
+        placeholder="Apellido" required>&nbsp &nbsp <br> <br> <br>
+      <input class="Input-Registrate" type="text" name="Telefono" minlength="2" maxlength="14" pattern="[0-9+?]+"
+        placeholder="Telefono" required> &nbsp &nbsp
+      <input class="Input-Registrate" type="email" name="Email" maxlength="30" placeholder="Email" required><br>
+      <br> <br>
+      <input class="Input-Registrate" id="Registrar-Contraseña_1" type="password" name="Contraseña" minlength="8"
+        maxlength="30" pattern="[A-Za-z0-9]+" id="pass" placeholder="Contraseña" required>
+      <input class="Input-Registrate" id="Registrar-Contraseña_2" type="password" name="Confirmar_contraseña"
+        minlength="8" pattern="[A-Za-z0-9]+" maxlength="30" id="passconfirm" placeholder="Confirmar Contraseña"
+        required> &nbsp &nbsp
+      <a onclick="mostrarContra()" class="Mostrar-Contraseña"><i class="fas fa-eye"></i></a>
+       este es el boton de mostrar y ocultar-->
+      <!--
+      <br><br>
+      <h4 id="alerta_registro"> </h4> este es el lugar donde sale el mensaje en registro-->
+      <!--
+      <input type="submit" value="Registrarme" id="btn-registrar" class="Botton-Enviar" />
+      <br>
+    </form>
+-->
+
+
+
+
+
+
+
+
+
+
     </div>
 
 
