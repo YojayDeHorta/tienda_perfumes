@@ -4,6 +4,9 @@ $login="index.php";
 if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia sesion o registrate!") {
     $_SESSION['NOMBRE_CLIENTE']="inicia sesion o registrate!";
     $login="Registrate.html";
+    ?> 
+    <script>var clienteid=0;</script>
+    <?php
 }
 
 ?>
@@ -132,21 +135,21 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         </div>
       </div>
     </div>
-
-  <!--
-  <div class="Ventana-Modal">
-    <div class="Sub-Ventana_Modal">
-        <div class="Div-Modal_Bienvenida">
-            <h2>Bienvenido a Perfumes</h2>
-        </div>
-        <div class="Div-Frase_Modal">
-            <i class="far fa-times-circle" id="close"></i>
-                <h2>
-                  ¡ Encontrarás todo lo necesario para ti, un perfume único y exclusivo !
-                </h2>
-        </div>
-    </div>
-</div> -->
+        
+          <!--
+          <div class="Ventana-Modal">
+            <div class="Sub-Ventana_Modal">
+                <div class="Div-Modal_Bienvenida">
+                    <h2>Bienvenido a Perfumes</h2>
+                </div>
+                <div class="Div-Frase_Modal">
+                    <i class="far fa-times-circle" id="close"></i>
+                        <h2>
+                          ¡ Encontrarás todo lo necesario para ti, un perfume único y exclusivo !
+                        </h2>
+                </div>
+            </div>-->
+  </div> 
     <script>
     var clienteid =<?php echo $_SESSION['ID_CLIENTE']; ?>;
     </script>

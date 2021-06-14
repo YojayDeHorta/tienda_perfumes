@@ -1,9 +1,9 @@
 <?php
 
-    function buscarcompraporidusuario($id_usuario){
+    function buscarcompraporidusuario($id_cliente){
         require_once(__DIR__."/../../model/DAO/CompraDAO.php");
         $dao=new CompraDAO();
-        $compras = $dao->buscarcompraporidusuario($id_usuario);
+        $compras = $dao->buscarcompraporidusuario($id_cliente);
         return $compras;
     }
     function buscarcompraporidproducto($id_producto){
@@ -12,10 +12,16 @@
         $compras = $dao->buscarcompraporidproducto($id_producto);
         return $compras;
     }
-    function buscarcomprarepetido($id_usuario,$id_producto){
+    function buscarcomprarepetidoARRAY($id_cliente,$id_producto){
         require_once(__DIR__."/../../model/DAO/CompraDAO.php");
         $dao=new CompraDAO();
-        $compra = $dao->buscarcomprarepetido($id_usuario,$id_producto);
+        $compra = $dao->buscarcomprarepetida($id_cliente,$id_producto);
+        return $compra;
+    }
+    function buscarcomprarepetida($id_cliente,$id_producto){
+        require_once(__DIR__."/../../model/DAO/CompraDAO.php");
+        $dao=new CompraDAO();
+        $compra = $dao->buscarcomprarepetida($id_cliente ,$id_producto);
         return $compra;
     }
     function leercompras(){

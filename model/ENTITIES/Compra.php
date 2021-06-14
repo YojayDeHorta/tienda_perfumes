@@ -6,16 +6,18 @@
  */
 class Compra{
     private $id_compra;
-    private $id_cliente;
+    
     private $id_producto;
+    private $id_cliente;
     private $cantidad_compra;
 
     
 
-    public function __construct($id_compra,$id_cliente,$id_producto,$cantidad_compra){
+    public function __construct($id_compra,$id_producto,$id_cliente,$cantidad_compra){
         $this->id_compra = $id_compra;
-        $this->id_cliente = $id_cliente;
+       
         $this->id_producto = $id_producto;
+        $this->id_cliente = $id_cliente ;
     	$this->cantidad_compra = $cantidad_compra;
         
     }

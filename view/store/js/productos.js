@@ -72,25 +72,29 @@ const on = (element, event, selector, handler) => {
 };
 
 on(document, "click", "#botonCompra", (e) => {
-  const fila = e.target.parentNode.parentNode;
-  const id = fila.firstElementChild.innerHTML;
-  formData = new FormData();
-  precio_especifico = document.getElementById(
-    "precioProducto" + e.target.value
-  );
-  formData.append("id_cliente", clienteid);
-  formData.append("id_producto", e.target.value);
-  formData.append("precio", precio_especifico.getAttribute("value"));
-  formData.append("cantidad", 1);
+  if (clienteid != 0) {
+    const fila = e.target.parentNode.parentNode;
+    const id = fila.firstElementChild.innerHTML;
+    formData = new FormData();
+    precio_especifico = document.getElementById(
+      "precioProducto" + e.target.value
+    );
+    formData.append("id_cliente", clienteid);
+    formData.append("id_producto", e.target.value);
+    formData.append("precio", precio_especifico.getAttribute("value"));
+    formData.append("cantidad", 1);
 
-  console.log(precio_especifico);
-  console.log(formData);
-  fetch("../../../controller/ACTIONS/act_add-Compras.php", {
-    method: "POST",
-    body: formData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      alert(data);
-    });
+    console.log(clienteid);
+    console.log(formData);
+    fetch("../../../controller/ACTIONS/act_add-Compras.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data);
+      });
+  } else {
+    alert("primero registrate o inicia sesion antes de comprar");
+  }
 });

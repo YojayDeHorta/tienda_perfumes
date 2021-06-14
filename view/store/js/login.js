@@ -1,4 +1,3 @@
-
 /*--------------TABS-Admin----------------*/
 
 function Tabs_Principal(evt, Tabs) {
@@ -16,9 +15,6 @@ function Tabs_Principal(evt, Tabs) {
 }
 /*--------------TABS----------------*/
 /**------------------------------------ */
-
-
-
 
 var sesion = document.getElementById("Iniciar");
 var alerta = document.getElementById("alerta_login");
@@ -42,6 +38,7 @@ sesion.addEventListener("submit", function (e) {
       console.log(data);
       alerta.innerHTML = data;
       if (data == "INICIO DE SESION CORRECTAMENTE") {
+        window.location.replace("index.php");
       }
     });
 });

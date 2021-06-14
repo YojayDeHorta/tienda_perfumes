@@ -11,7 +11,7 @@ require_once (__DIR__."/../ENTITIES/Compra.php");
 class CompraDAO {
     
     
-    public function buscarcompraporidusuario($id_cliente){
+    public function buscarcompraporidcliente($id_cliente){
         $data_source = new DataSource();
         //password_hash("rasmuslerdorf", PASSWORD_DEFAULT)
         $data_table= $data_source->ejecutarConsulta("SELECT * FROM compras WHERE id_cliente = :id_cliente", 
@@ -41,21 +41,23 @@ class CompraDAO {
         if(count($data_table)==1){
             foreach($data_table as $indice => $valor){
                 $compra = new compra(
-                        $data_table[$indice]["id_cliente"],
-                        $data_table[$indice]["id_producto"],
-                        $data_table[$indice]["cantidad"],
+                    $data_table[$indice]["id_compra"],
+                    $data_table[$indice]["id_producto"],
+                    $data_table[$indice]["id_cliente"],
+                    $data_table[$indice]["cantidad_compra"]
                         );
                         
             }
             return $compra;
         }else{
+            echo ($id_producto);
             return null;
         }
     } 
-    public function buscarcomprarepetido($id_cliente,$id_producto){
+    public function buscarcomprarepetida($id_cliente,$id_producto){
         $data_source = new DataSource();
         //password_hash("rasmuslerdorf", PASSWORD_DEFAULT)
-        $data_table= $data_source->ejecutarConsulta("SELECT * FROM compras WHERE id_cliente = :id_cliente AND id_producto = :id_producto", 
+        $data_table= $data_source->ejecutarConsulta("SELECT * FROM compras WHERE id_cliente = :id_cliente AND id_producto=:id_producto", 
                                                     array(':id_cliente'=>$id_cliente,':id_producto'=>$id_producto));
         $compra=null;
         if(count($data_table)==1){
@@ -64,12 +66,15 @@ class CompraDAO {
                     $data_table[$indice]["id_compra"],
                     $data_table[$indice]["id_producto"],
                     $data_table[$indice]["id_cliente"],
-                    $data_table[$indice]["cantidad_compra"],
+                    $data_table[$indice]["cantidad_compra"]
                     );
                         
             }
+            
             return $compra;
         }else{
+            
+
             return null;
         }
     } 

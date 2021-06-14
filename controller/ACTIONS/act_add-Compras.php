@@ -12,20 +12,21 @@ $id_producto = $_POST['id_producto'];
 $precio = $_POST['precio'];
 $cantidad= $_POST['cantidad'];
 
-//$comprarepetida=buscarcomprarepetido($id_cliente,$id_producto);
-$comprarepetida=0;
-//echo $comprarepetida->getcantidad_compra();
-//console_log($id_producto);
-if($comprarepetida==0){
+$comprarepetida=NULL;
+$comprarepetida=buscarcomprarepetida($id_cliente,$id_producto);
+
+if($comprarepetida==NULL){
     $compranueva=new Compra('',$id_producto,$id_cliente,$cantidad);
 
-
-    $a=insertarcompra($compranueva);
+    //echo json_encode($compranueva->getid_cliente());
+    insertarcompra($compranueva);
+    echo json_encode("producto nuevo añadido exitosamente");
 }else{
-    //$comprarepetida->setcantidad_compra($comprarepetida->getcantidad_compra()+1);
-    //modificarcompra($comprarepetida);
+    $comprarepetida->setcantidad_compra($comprarepetida->getcantidad_compra()+1);
+    modificarcompra($comprarepetida);
+    echo json_encode("producto ya agregado, sumado");
 }
-echo json_encode($a);
+
 
 
 

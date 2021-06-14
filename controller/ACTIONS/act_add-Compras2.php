@@ -8,15 +8,16 @@ ini_set('error_log',dirname(__FILE__).'/log.txt');
 error_reporting(E_ALL);
 
 
+$comprarepetida=new Compra('','2','2','2');
+$comprarepetida=buscarcomprarepetida(1,1);
+buscarcompraporidproducto(1);
+    $compranueva=new Compra(91,1,1,4);
+    $comprarepetida->setcantidad_compra($comprarepetida->getcantidad_compra()+1);
 
-//$comprarepetida=buscarcomprarepetido($id_cliente,$id_producto);
+    //insertarcompra($compranueva);
+    modificarcompra($comprarepetida);
 
-    $compranueva=new Compra('',0,1,2);
-
-
-    $a=insertarcompra($compranueva);
-
-echo json_encode($a);
+echo ($comprarepetida->getcantidad_compra());
 
 
 
