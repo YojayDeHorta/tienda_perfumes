@@ -58,7 +58,7 @@ function Agregar_Producto() {
           <h4>Cantidad</h4>
           <input type="number" name="Cantidad" min="1" max="10" step="1" required="required" placeholder="1" class="Input_Cantidad" id="Input_Cantidad_${A_Producto}" onclick='Valor_Total(this,"Sub_Total_${A_Producto}")'>
         </form>
-        <i class="far fa-smile-beam" id="Icon_Compras"></i>
+        <i class="fas fa-heart" id="Icon_Compras"></i>
         <i class="far fa-trash-alt" id="Icon_Compras" onclick='Eliminar_Elemento(this)'></i>
         <br> <br>
         <h2 class="Sub_Total" id="Sub_Total_${A_Producto}">SUB TOTAL <br> ${
