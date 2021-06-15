@@ -16,11 +16,11 @@ xhr.onload = function () {
           <div class="Producto" >
             <h1 class="Titulo" >${item[0].nombre_producto}</h1>
             <img class="Img-Producto"  src="img/Catalogo-${item[0].id_producto}.png">
-            <h4 class="Precio">$ ${item[0].precio_producto} USD</h4>
+            <h4 class="Precio" id="precioProducto${item[0].id_producto}" value="${item[0].precio_producto}">$ ${item[0].precio_producto} USD</h4>
             <p class="Descripcion" ">
             ${item[0].descripcion}
             </p>
-            <button class="Compra" id="Compra_${item[0].id_producto}">
+            <button class="Compra" id="botonCompra" value="${item[0].id_producto}">
               AGREGAR AL CARRITO
             </button>
           </div>`;
