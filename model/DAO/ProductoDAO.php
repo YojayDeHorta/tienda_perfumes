@@ -31,8 +31,7 @@ class ProductoDAO{
         }else{
             return null;
         }
-    }
-    
+    } 
 
 
     public function leerproductos(){

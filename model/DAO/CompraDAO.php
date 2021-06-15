@@ -11,7 +11,7 @@ require_once (__DIR__."/../ENTITIES/Compra.php");
 class CompraDAO {
     
     
-    public function buscarcompraporidcliente($id_cliente){
+    public function buscarcomprasporidcliente($id_cliente){
         $data_source = new DataSource();
         //password_hash("rasmuslerdorf", PASSWORD_DEFAULT)
         $data_table= $data_source->ejecutarConsulta("SELECT * FROM compras WHERE id_cliente = :id_cliente", 
@@ -21,9 +21,10 @@ class CompraDAO {
         
             foreach($data_table as $indice => $valor){
                 $compra = new Compra(
-                        $data_table[$indice]["id_cliente"],
-                        $data_table[$indice]["id_producto"],
-                        $data_table[$indice]["cantidad"],
+                    $data_table[$indice]["id_compra"],
+                    $data_table[$indice]["id_producto"],
+                    $data_table[$indice]["id_cliente"],
+                    $data_table[$indice]["cantidad_compra"]
                         
                         );
                         array_push($compras,$compra);
@@ -50,7 +51,6 @@ class CompraDAO {
             }
             return $compra;
         }else{
-            echo ($id_producto);
             return null;
         }
     } 
@@ -149,10 +149,10 @@ class CompraDAO {
     
     
     
-       public function borrarcompras($id_producto){
+       public function borrarcompras($id_cliente,$id_producto){
         $data_source = new DataSource();
-        $producto=  buscarcompraporidproducto($id_producto);
-        $resultado= $data_source->ejecutarActualizacion("DELETE FROM compras WHERE id_producto = :id_producto", array('id_producto'=>$id_producto));
+        $producto=  buscarcomprarepetida($id_cliente,$id_producto);
+        $resultado= $data_source->ejecutarActualizacion("DELETE FROM compras WHERE id_cliente=:id_cliente AND id_producto = :id_producto", array(':id_cliente'=>$id_cliente,'id_producto'=>$id_producto));
         
         return $resultado;
     }

@@ -1,9 +1,9 @@
 <?php
 
-    function buscarcompraporidusuario($id_cliente){
+    function buscarcomprasporidcliente($id_cliente){
         require_once(__DIR__."/../../model/DAO/CompraDAO.php");
         $dao=new CompraDAO();
-        $compras = $dao->buscarcompraporidusuario($id_cliente);
+        $compras = $dao->buscarcomprasporidcliente($id_cliente);
         return $compras;
     }
     function buscarcompraporidproducto($id_producto){
@@ -47,9 +47,9 @@
     }
 
 
-    function borrarcompras($id_producto){
+    function borrarcompras($id_cliente,$id_producto){
         require_once(__DIR__."/../../model/DAO/CompraDAO.php");
         $dao=new CompraDAO();
-        $resultado=$dao->borrarcompras($id_producto);
+        $resultado=$dao->borrarcompras($id_cliente,$id_producto);
         return $resultado;
     }
