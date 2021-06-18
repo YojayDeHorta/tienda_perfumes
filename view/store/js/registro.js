@@ -1,6 +1,5 @@
 /*-------------------------- */
 
-
 function Tabs_Principal(evt, Tabs) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -17,9 +16,7 @@ function Tabs_Principal(evt, Tabs) {
 
 /*-------------------------- */
 
-
-
-
+/*--------------FUNCIONES DEL REGISTRO------------ */
 var registro = document.getElementById("Registrar"); //boton registro
 var alerta_registro = document.getElementById("alerta_registro"); //alerta del registro
 registro.addEventListener("submit", function (e) {
@@ -78,3 +75,29 @@ function mostrarContra() {
     tipo2.type = "password";
   }
 }
+/*-------------------------- */
+
+/*-------------VALIDACIONES------------- */
+
+var input = document.getElementById("nombre");
+var form = document.getElementById("Registrar");
+var elem = document.createElement("span");
+elem.id = "notify";
+elem.style.display = "none";
+form.appendChild(elem);
+
+input.addEventListener("invalid", function (event) {
+  event.preventDefault();
+  if (!event.target.validity.valid) {
+    elem.textContent = "el nombre solo puede contener letras, ej:john";
+    elem.className = "error";
+    elem.style.display = "block";
+    input.className = "invalid animated shake";
+  }
+});
+input.addEventListener("input", function (event) {
+  if ("block" === elem.style.display) {
+    input.className = "";
+    elem.style.display = "none";
+  }
+});
