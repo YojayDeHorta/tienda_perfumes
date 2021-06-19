@@ -1,3 +1,4 @@
+/**----------------IMPRIMIR PRODUCTOS-------------------- */
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "/../../controller/ACTIONS/act_read-Productos.php", true);
 xhr.onload = function () {
@@ -53,16 +54,8 @@ xhr.onload = function () {
 };
 xhr.send();
 
-/*   <form class="formProducto">       <form>
-type="submit
 
-Procedimiento Borrar
-const formArticulo = document.getElementById("formProducto");
-formArticulo.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert(id);
-});
-*/
+/**----------------FUNCION AGREGAR A CARRITO-------------------- */
 const on = (element, event, selector, handler) => {
   element.addEventListener(event, (e) => {
     if (e.target.closest(selector)) {

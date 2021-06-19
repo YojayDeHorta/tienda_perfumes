@@ -3,11 +3,11 @@
         require_once (__DIR__."/../MDB/mdbCliente.php");	
 
 	
-        $numero_movil = $_POST['Telefono'];
-        $nombre = $_POST['Nombre'];
-        $apellido = $_POST['Apellido'];        
-        $password = $_POST['Contraseña'];
-        $email = $_POST['Email'];
+        $numero_movil = $_POST['telefono'];
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];        
+        $password = $_POST['password'];
+        $email = $_POST['correo'];
 
         $clientemovil=buscarClientePornumeromovil($numero_movil);
         $clienteemail=buscarClientePoremail($email);

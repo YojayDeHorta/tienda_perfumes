@@ -2,11 +2,11 @@
         require_once (__DIR__."/../MDB/mdbCliente.php");	
         require_once (__DIR__."/../../model/ENTITIES/Cliente.php");
         $id_usuario = $_POST['Id_usuario'];
-        $numero_movil = $_POST['Telefono'];
-        $nombre = $_POST['Nombre'];
-        $apellido = $_POST['Apellido'];        
-        $email = $_POST['Email'];
-        $password = $_POST['Contraseña'];
+        $numero_movil = $_POST['telefono'];
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];        
+        $password = $_POST['password'];
+        $email = $_POST['correo'];
 
         /*$clientemovil=buscarClientePornumeromovil($numero_movil);
         $clienteemail=buscarClientePoremail($email);
