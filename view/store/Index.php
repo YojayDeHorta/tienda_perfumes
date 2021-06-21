@@ -167,32 +167,6 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
   </tr>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!--
   <div class="Ventana-Modal">
     <div class="Sub-Ventana_Modal">

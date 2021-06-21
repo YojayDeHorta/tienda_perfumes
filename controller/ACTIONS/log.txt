@@ -1,6 +1,0 @@
-[15-Jun-2021 02:40:25 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CompraDAO::borrarcompras(), 1 passed in C:\xampp\htdocs\controller\MDB\mdbCompra.php on line 53 and exactly 2 expected in C:\xampp\htdocs\model\DAO\CompraDAO.php:152
-Stack trace:
-#0 C:\xampp\htdocs\controller\MDB\mdbCompra.php(53): CompraDAO->borrarcompras('1')
-#1 C:\xampp\htdocs\controller\ACTIONS\act_delete-Compras.php(14): borrarcompras('1', '1')
-#2 {main}
-  thrown in C:\xampp\htdocs\model\DAO\CompraDAO.php on line 152

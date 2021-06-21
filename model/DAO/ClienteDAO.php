@@ -146,7 +146,7 @@ class ClienteDAO {
                     $data_table[$indice]["email"]
 
                     );
-                array_push($clientes,$cliente);
+                array_push($clientes,$cliente->toArray());
         }
         return $clientes;   
     }

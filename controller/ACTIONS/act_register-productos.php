@@ -10,11 +10,11 @@
         $stock = $_POST['Stock'];
 
 
-            $nuevoproducto=NULL;
-            $nuevoproducto= new Producto('',$stock,$nombreproducto,$Precio,$descripcion,$tipo);
-            insertarproducto($nuevoproducto);
+        $nuevoproducto=NULL;
+        $nuevoproducto= new Producto('',$stock,$nombreproducto,$Precio,$descripcion,$tipo);
+        insertarproducto($nuevoproducto);
  
-            echo json_encode('registrado correctamente');
+        echo json_encode('registrado correctamente');
             
                     
 

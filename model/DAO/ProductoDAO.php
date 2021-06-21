@@ -49,7 +49,7 @@ class ProductoDAO{
                     $data_table[$indice]["tipo"],
 
                     );
-                array_push($productos,$producto);
+                array_push($productos,$producto->toArray());
         }
         return $productos;   
     }

@@ -27,7 +27,7 @@ class CompraDAO {
                     $data_table[$indice]["cantidad_compra"]
                         
                         );
-                        array_push($compras,$compra);
+                        array_push($compras,$compra->toArray());
             }
             return $compras;
         
@@ -93,7 +93,7 @@ class CompraDAO {
                         $data_table[$indice]["id_cliente"],
                         $data_table[$indice]["cantidad_compra"],
                         );
-                        array_push($compras,$compra);
+                        array_push($compras,$compra->toArray());
             }
             return $compras;
         }else{
@@ -112,7 +112,7 @@ class CompraDAO {
                 $data_table[$indice]["id_producto"],
                 $data_table[$indice]["cantidad"],
                 );
-                array_push($compras,$compra);
+                array_push($compras,$compra->toArray());
         }
         return $compras;   
     }
