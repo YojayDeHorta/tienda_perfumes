@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2021 a las 15:55:45
+-- Tiempo de generación: 21-06-2021 a las 15:34:34
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
 CREATE DATABASE perfumes;
@@ -33,7 +33,7 @@ CREATE TABLE `clientes` (
   `nombre` varchar(15) NOT NULL,
   `apellido` varchar(15) NOT NULL,
   `numero_movil` varchar(14) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -42,9 +42,9 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `numero_movil`, `password`, `email`) VALUES
-(1, 'yojay', 'esteban', '3045981961', '12345678', 'yojay1000@gmail.com'),
-(2, 'pedro', 'sarmiento', '1234512', '12345678', 'pedro@gmail.com'),
-(3, 'juan', 'pedrozo', '+25151515', '12345678', 'juanp@gmail.com');
+(1, 'yojay', 'esteban', '3045981961', '$2y$10$vuVHlVSpDwOsohk7KRGAFenTpRtat9nmgbCxa9KWaRhFoZmM49vX2', 'yojay1000@gmail.com'),
+(2, 'pedro', 'ramirez', '3014342345', '$2y$10$vnjr1bU9IjINFwligZ32tOiTKNaFLsyz6cdUbMr4m6JXIiB.28yCq', 'pedro@gmail.com'),
+(3, 'juan', 'alfonso', '3043233424', '$2y$10$GlnwVwfvN2rhGRIhh24Wbu.q1wydY5Sf3NoLhNm.9kFg7Zo02sh1y', 'juan@juan.com');
 
 -- --------------------------------------------------------
 
@@ -58,6 +58,15 @@ CREATE TABLE `compras` (
   `id_cliente` int(11) NOT NULL,
   `cantidad_compra` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`id_compra`, `id_producto`, `id_cliente`, `cantidad_compra`) VALUES
+(6, 2, 2, 2),
+(8, 1, 1, 1),
+(9, 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -94,7 +103,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `stock_disponible`, `nombre_producto`, `precio_producto`, `descripcion`, `tipo`) VALUES
-(1, 5, 'PERFUME DOLCE EDP 75 ML DOLCE & GABBANA 75 ML', 290, 'Esta fragancia femenina está inspirada en la belleza legendariamente noble de Sicilia, con sus jardines colmados de frescas flores blancas. Dolce es un Eau de Parfum atemporal que combina lo mejor del glamour clásico con la innovación contemporánea.', 'F'),
+(1, 5, 'PERFUME DOLCE EDP 75 ML DOLCE &amp; GABBANA 75 ML', 290, 'Esta fragancia femenina está inspirada en la belleza legendariamente noble de Sicilia, con sus jardines colmados de frescas flores blancas. Dolce es un Eau de Parfum atemporal que combina lo mejor del glamour clásico con la innovación contemporánea.', 'F'),
 (2, 7, 'PERFUME THE ONE 75ML DE DOLCE & GABBANA', 250, '75 M/L.(ONZ).THE ONE fue creado en el 2006. Como fue previsto por los diseñadores, es una fragancia para una mujer excepcional que inmediatamente llama la atención, no sólo con su aspecto, sino también con sus modales, postura y el mundo interior.', 'F'),
 (3, 12, 'PERFUME LANCOME TRESOR PARA MUJER SIZE 100 ML', 240, 'Perfumes para mujeres Tresor Eau De Parfum Lumineuse De Lancome, su aroma es jovial, dulce sofisticado, con unas arrolladoras notas acarameladas, dedicada a mujeres apasionadas, modernas, sofisticadas y alegres', 'F'),
 (4, 6, 'TRÉSOR MIDNIGHT ROSE DE LANCÔMEN', 100, 'Este maravilloso perfume que pertenece a la familia olfativa Almizcle-Floral-Amaderado. Su bella botella rosada, alargada y con un moño de rosa en el cuello, se destaca de sus predecesores de la línea trésor que suelen venir en un envase con forma de pirámide invertida.', 'F'),
@@ -154,7 +163,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -166,7 +175,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas
