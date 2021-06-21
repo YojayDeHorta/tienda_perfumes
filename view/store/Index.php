@@ -7,6 +7,12 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
     ?> 
     <script>var clienteid=0;</script>
     <?php
+}else{
+  ?>
+  
+  <script>var clienteid =<?php echo $_SESSION['ID_CLIENTE']; ?>;</script>
+  
+  <?php
 }
 
 ?>
@@ -201,9 +207,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         </div>
     </div>
 </div> -->
-    <script>
-    var clienteid =<?php echo $_SESSION['ID_CLIENTE']; ?>;
-    </script>
+   
 
     <script src="js/productos.js" charset="uft-8"></script>
     <script type="text/javascript" src="js/Pagina_Principal.js"></script>

@@ -23,10 +23,12 @@ btnAdmin.addEventListener("click", () => {
   telefono.value = "";
   email.value = "";
   password.value = "";
+  password.readOnly = false;
   modalArticulo.show();
   divId.style.display = "none";
   divAviso.style.display = "none";
   opcion = "crear";
+
 });
 
 //procedimiento mostrar
@@ -37,12 +39,12 @@ xhr.onload = function () {
     let datos = JSON.parse(xhr.responseText);
     for (let item of datos) {
       contenedor.innerHTML += `<tr>
-        <td>${item[0].id_cliente}</td>
-        <td>${item[0].nombre}</td>
-        <td>${item[0].apellido}</td>
-        <td>${item[0].numero_movil}</td>
-        <td>${item[0].email}</td>
-        <td>${item[0].password}</td>
+        <td>${item.id_cliente}</td>
+        <td>${item.nombre}</td>
+        <td>${item.apellido}</td>
+        <td>${item.numero_movil}</td>
+        <td>${item.email}</td>
+        <td>${item.password}</td>
         <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Borrar</a></td>
         </tr>
         `;
@@ -91,6 +93,7 @@ on(document, "click", "#editar_usuario", (e) => {
   email.value = emailForm;
   id_usuario.value = idForm;
   password.value = passForm;
+  password.readOnly = true;
   opcion = "editar";
   modalArticulo.show();
   divId.style.display = "block";

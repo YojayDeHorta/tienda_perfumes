@@ -22,7 +22,7 @@
   <div class="Div-Principal mt-4 shadow-lg p-3 mb-5  rounded">
     <header class="Cabecera">
       <nav class="Nav-Opciones">
-        <a class="a-Logo" href="Index.php">
+        <a class="a-Logo" href="../store/">
           <h1 class="Logo-Perfumes">PERFUMERÍA</h1>
         </a>
         <i class="fas fa-user-cog"></i>
@@ -99,23 +99,29 @@
             </div>
             <div class="mb-3">
               <label for="nombre" class="col-form-label">nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombre" autofocus>
+              <input type="text" class="form-control" id="nombre" name="nombre" minlength="2" maxlength="15"
+                title="el nombre puede tener letras, maximo 15" pattern="[A-Za-z]+" required autofocus>
             </div>
             <div class="mb-3">
               <label for="apellido" class="col-form-label">apellido:</label>
-              <input type="text" class="form-control" id="apellido" name="apellido" autofocus>
+              <input type="text" class="form-control" id="apellido" name="apellido" minlength="2" maxlength="15"
+                title="el apellido puede tener letras, maximo 15" pattern="[A-Za-z]+" required autofocus>
             </div>
             <div class="mb-3">
               <label for="telefono" class="col-form-label">telefono:</label>
-              <input type="text" class="form-control" id="telefono" name="telefono" autofocus>
+              <input type="text" class="form-control" id="telefono" name="telefono" minlength="2" maxlength="14"
+                title="El telefono puede tener numeros, maximo 14" pattern="[0-9+?]+" required autofocus>
             </div>
             <div class="mb-3">
               <label for="email" class="col-form-label">email:</label>
-              <input type="email" class="form-control" id="email" name="correo" autofocus>
+              <input type="email" class="form-control" id="email" name="correo" maxlength="30" title="El correo solo puede contener letras, numeros, puntos, guiones bajos,
+                guion y @." required autofocus>
             </div>
             <div class="mb-3" id="divpass">
               <label for="password" class="col-form-label">password:</label>
-              <input type="text" class="form-control" id="password" name="password" autofocus>
+              <input type="text" class="form-control" id="password" name="password" minlength="8" maxlength="30"
+                title="La contraseña tiene que tener un minimo de 8 caracteres numeros o letras"
+                pattern="[A-Za-z0-9]{8,30}" required autofocus>
             </div>
         </div>
         <div class="modal-footer">
@@ -146,7 +152,8 @@
             </div>
             <div class="mb-3">
               <label for="tipo" class="col-form-label">tipo:</label>
-              <input type="text" class="form-control" id="tipo" name="Tipo" autofocus>
+              <input type="text" class="form-control" id="tipo" name="Tipo" minlength="1" maxlength="1"
+                title="el tipo solo puede ser masculino=M o femenino=F" pattern="[MF]+" required autofocus>
             </div>
             <div class="mb-3">
               <label for="imagen" class="col-form-label">imagen:</label>
@@ -154,19 +161,23 @@
             </div>
             <div class="mb-3">
               <label for="producto" class="col-form-label">nombre del producto:</label>
-              <input type="text" class="form-control" id="producto" name="Producto" autofocus>
+              <input type="text" class="form-control" id="producto" name="Producto" minlength="3" maxlength="60"
+                title="El nombre del producto puede tener un minimo de 5 caracteres y maximo 60" required autofocus>
             </div>
             <div class="mb-3">
               <label for="descripcion" class="col-form-label">descripcion:</label>
-              <input type="text" class="form-control" id="descripcion" name="Descripcion" autofocus>
+              <input type="text" class="form-control" id="descripcion" name="Descripcion" minlength="5" required
+                autofocus>
             </div>
             <div class="mb-3">
               <label for="precio" class="col-form-label">precio:</label>
-              <input type="number" class="form-control" id="precio" name="Precio" autofocus>
+              <input type="text" class="form-control" id="precio" name="Precio" minlength="1" maxlength="15"
+                title="El precio puede tener numeros, maximo 15" pattern="[0-9]+" required autofocus>
             </div>
             <div class="mb-3">
               <label for="stock" class="col-form-label">stock:</label>
-              <input type="number" class="form-control" id="stock" name="Stock" autofocus>
+              <input type="text" class="form-control" id="stock" name="Stock" minlength="1" maxlength="3"
+                title="El stock puede tener maximo 999 productos, solo numeros" pattern="[0-9]+" required autofocus>
             </div>
           </div>
           <div class="modal-footer">

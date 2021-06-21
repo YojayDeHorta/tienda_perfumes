@@ -13,8 +13,8 @@ class ClienteDAO {
     public function autenticarCliente($email, $pass){
         $data_source = new DataSource();
      
-        $data_table= $data_source->ejecutarConsulta("SELECT * FROM clientes WHERE email = :email AND password = :pass", 
-                                                    array(':email'=>$email,':pass'=>$pass));
+        $data_table= $data_source->ejecutarConsulta("SELECT * FROM clientes WHERE email = :email ", 
+                                                    array(':email'=>$email));
         $cliente=null;
         if(count($data_table)==1){
             foreach($data_table as $indice => $valor){
@@ -27,7 +27,11 @@ class ClienteDAO {
                         $data_table[$indice]["email"],
                         );
             }
-            return $cliente;
+            if(password_verify($pass,$cliente->getPassword())){
+                return $cliente;
+            }else{
+                return null;
+            } 
         }else{
             return null;
         }

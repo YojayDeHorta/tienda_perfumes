@@ -33,7 +33,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         </a>
         <ul>
          <li><a href="Contacto.html"><i class="fas fa-address-book"></i></a></li>
-          <li><a href="Compras.html"><i class="fas fa-cart-plus"></i></a></li>
+          <li><a href="Compras.php"><i class="fas fa-cart-plus"></i></a></li>
           <li><a href=<?php echo $login;?>><?php echo $_SESSION['NOMBRE_CLIENTE'];?><i class="far fa-user-circle"></i></a></li>
           <?php
           if($_SESSION['NOMBRE_CLIENTE']!="inicia sesion o registrate!"){
@@ -56,6 +56,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         <button class="Comprar_Buttom">COMPRAR</button>
       </div>
     </div>
+    
   <script>
     var clienteid =<?php echo $_SESSION['ID_CLIENTE']; ?>;
   </script>

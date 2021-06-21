@@ -11,35 +11,35 @@ xhr.onload = function () {
     damas.innerHTML = "";
     let conthombres = 0;
     let contmujeres = 0;
+
     for (let item of datos) {
-      if (item[0].tipo == "M" && conthombres < 6) {
+      if (item.tipo == "M" && conthombres < 6) {
         hombres.innerHTML += `
           <div class="Producto" >
-            <h1 class="Titulo" >${item[0].nombre_producto}</h1>
-            <img class="Img-Producto"  src="img/Catalogo-${item[0].id_producto}.png">
-            <h4 class="Precio" id="precioProducto${item[0].id_producto}" value="${item[0].precio_producto}">$ ${item[0].precio_producto} USD</h4>
+            <h1 class="Titulo" >${item.nombre_producto}</h1>
+            <img class="Img-Producto"  src="img/Catalogo-${item.id_producto}.png">
+            <h4 class="Precio" id="precioProducto${item.id_producto}" value="${item.precio_producto}">$ ${item.precio_producto} USD</h4>
             <p class="Descripcion" ">
-            ${item[0].descripcion}
+            ${item.descripcion}
             </p>
-            <button class="Compra" id="botonCompra" value="${item[0].id_producto}">
+            <button class="Compra" id="botonCompra" value="${item.id_producto}">
               AGREGAR AL CARRITO
             </button>
           </div>`;
         conthombres++;
       }
-      if (item[0].tipo == "F" && contmujeres < 6) {
-        console.log(conthombres);
+      if (item.tipo == "F" && contmujeres < 6) {
         damas.innerHTML += `
         
           <div class="Producto" >
           
-            <h1 class="Titulo" >${item[0].nombre_producto}</h1>
-            <img class="Img-Producto"  src="img/Catalogo-${item[0].id_producto}.png">
-            <h4 class="Precio" id="precioProducto${item[0].id_producto}" value="${item[0].precio_producto}">$ ${item[0].precio_producto} USD</h4>
+            <h1 class="Titulo" >${item.nombre_producto}</h1>
+            <img class="Img-Producto"  src="img/Catalogo-${item.id_producto}.png">
+            <h4 class="Precio" id="precioProducto${item.id_producto}" value="${item.precio_producto}">$ ${item.precio_producto} USD</h4>
             <p class="Descripcion" ">
-            ${item[0].descripcion}
+            ${item.descripcion}
             </p>
-            <button class="Compra"  id="botonCompra" value="${item[0].id_producto}" >
+            <button class="Compra"  id="botonCompra" value="${item.id_producto}" >
               AGREGAR AL CARRITO
             </button>
           </div>

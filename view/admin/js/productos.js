@@ -34,13 +34,13 @@ btnProducto.addEventListener("click", () => {
 const mostrar = (articulos) => {
   articulos.forEach((articulo) => {
     resultados += `<tr>
-        <td>${articulo[0].id_producto}</td>
-        <td>${articulo[0].tipo}</td>
+        <td>${articulo.id_producto}</td>
+        <td>${articulo.tipo}</td>
         <td></td>
-        <td>${articulo[0].nombre_producto}</td>
-        <td>${articulo[0].descripcion}</td>
-        <td>${articulo[0].precio_producto}</td>
-        <td>${articulo[0].stock_disponible}</td>
+        <td>${articulo.nombre_producto}</td>
+        <td>${articulo.descripcion}</td>
+        <td>${articulo.precio_producto}</td>
+        <td>${articulo.stock_disponible}</td>
         <td class="text-center"><a class="btnEditarProducto btn btn-primary" id="editar_producto">Editar</a><a class="btnBorrarProducto btn btn-danger" id="borrar_producto">Borrar</a></td>
         </tr>
                   `;
@@ -69,7 +69,7 @@ recharge(document, "click", "#borrar_producto", (e) => {
   alertify.confirm("esta seguro que quiere borrar?", function () {
     fetch(
       "/../../controller/ACTIONS/act_delete-Productos.php?id_producto=" +
-        id_editar
+      id_editar
     )
       .then((res) => res.json())
       .then((salida) => {

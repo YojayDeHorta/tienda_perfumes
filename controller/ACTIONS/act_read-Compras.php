@@ -20,18 +20,18 @@
         for ($i=0; $i < sizeof($array_clases_compras) ; $i++) { 
                 array_push(
                         $objetos_compras,
-                        array(
-                                $array_clases_compras[$i]->toArray()
-                        )
+                        
+                        $array_clases_compras[$i]->toArray()
+                        
                 );
         }
         $objetos_productos=[];
         for ($i=0; $i < sizeof($productos_usuario) ; $i++) { 
                 array_push(
                         $objetos_productos,
-                        array(
-                                $productos_usuario[$i]->toArray()
-                        )
+                        
+                        $productos_usuario[$i]->toArray()
+                        
                 );
         }
         

@@ -36,9 +36,15 @@ sesion.addEventListener("submit", function (e) {
     .then((respuesta) => respuesta.json())
     .then((data) => {
 
-      alerta.innerHTML = data;
+
       if (data == "INICIO DE SESION CORRECTAMENTE") {
+        alerta.innerHTML = data;
         window.location.replace("index.php");
+      } else {
+        alerta.innerHTML = data;
+        setTimeout(() => {
+          alerta.innerHTML = "";
+        }, 4000);
       }
     });
 });
