@@ -44,7 +44,9 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
       </nav>
     </header>
     <h1 class="Titulo_Carrito">CARRITO DE COMPRAS</h1>
+    
     <div class=".Container_Compras" id="Compras">
+      
     </div>
     <div class="Factura" id="Factura_Compra">
       <div class="Compra_Total_Carrito">
@@ -52,8 +54,18 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         <br> 
         <h4 class="Total_Producto" id="Precio_Subtotal"></h4>
         <h4 class="Total_Producto" id="Precio_Envio"></h4>
+        <h4 class="Total_Producto" id="Cupon_Envio"></h4>
         <h4 class="Total_Producto" id="Precio_Total"></h4>
+        
         <button class="Comprar_Buttom">COMPRAR</button>
+      </div>
+      <div class="Compra_Total_Cupon">
+        <form id="formularioCupon">
+          <label for="lname">Cupon:</label>
+          <input type="text" id="nombre_cupon" name="nombre_cupon" minlength="3" maxlength="15"
+            pattern="[A-Za-z0-9_-]{3,15}" required><br><br>
+          <button class="Comprar_Buttom">COMPRAR</button>
+        </form>
       </div>
     </div>
     

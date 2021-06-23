@@ -64,7 +64,7 @@ class Compra{
 
     public function setid_producto($id_producto)
     {
-        $this->id_producto = $caltegoria;
+        $this->id_producto = $id_producto;
 
         return $this;
     }

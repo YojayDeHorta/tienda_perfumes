@@ -20,13 +20,14 @@
         $regexpprecio= '/^[0-9]{1,15}$/';
         $regexpstock= '/^[0-9]{1,3}$/';
         
-        $producto=buscarproductopornombre($nombre_producto);
+        
         
         if (!preg_match($regexpdescripcion, $descripcion)||!preg_match($regexpprecio, $precio)||!preg_match($regexpstock,$stock)
                 ||!preg_match($regexptipo,$tipo)||!preg_match($regexpnombre_producto,$nombre_producto) ){
                 echo json_encode('Registro fallido,valores no validos ');
                 return 0;
         }else{
+                $producto=buscarproductopornombre($nombre_producto);
                 
                 if($producto==NULL){
                         $nuevoproducto=NULL;

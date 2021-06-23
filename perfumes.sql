@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2021 a las 15:34:34
+-- Tiempo de generación: 23-06-2021 a las 21:39:12
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
 CREATE DATABASE perfumes;
@@ -44,7 +44,11 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `numero_movil`, `password`, `email`) VALUES
 (1, 'yojay', 'esteban', '3045981961', '$2y$10$vuVHlVSpDwOsohk7KRGAFenTpRtat9nmgbCxa9KWaRhFoZmM49vX2', 'yojay1000@gmail.com'),
 (2, 'pedro', 'ramirez', '3014342345', '$2y$10$vnjr1bU9IjINFwligZ32tOiTKNaFLsyz6cdUbMr4m6JXIiB.28yCq', 'pedro@gmail.com'),
-(3, 'juan', 'alfonso', '3043233424', '$2y$10$GlnwVwfvN2rhGRIhh24Wbu.q1wydY5Sf3NoLhNm.9kFg7Zo02sh1y', 'juan@juan.com');
+(3, 'juana', 'alfonso', '3043233424', '$2y$10$GlnwVwfvN2rhGRIhh24Wbu.q1wydY5Sf3NoLhNm.9kFg7Zo02sh1y', 'juan@juan.com'),
+(4, 'juana', 'esteban', '305430432411', '$2y$10$iCuIj2lvgM7dS3o3lsNgE.CjfwiwzlCj3v1Gh8OZVAdsk8NxsHB/.', 'juanin@gmail.com'),
+(20, 'juana', 'juaninaz', '1234124121', '$2y$10$BqIqKyCkgQXe9YenBciC2u4Wn/82iyj8qMEiUanBjWvqv0Okl6iue', 'povenah12398@0ranges.com'),
+(21, 'juana', 'esteban', '3054304322411', '$2y$10$grT7YzvCiEQI9dp2HtJUteSXOs3hf7aPhy6tmdIjCY72kW73nppyS', 'yojay10020@gmail.com'),
+(24, 'juana', 'juaninaz', '305431234', '$2y$10$kuU0UcecQVsFR4xyckGWk.zhjadGLCzygZAlSbBi07RB0Q5ti7ma2', 'yojay10030@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -66,7 +70,7 @@ CREATE TABLE `compras` (
 INSERT INTO `compras` (`id_compra`, `id_producto`, `id_cliente`, `cantidad_compra`) VALUES
 (6, 2, 2, 2),
 (8, 1, 1, 1),
-(9, 3, 1, 1);
+(9, 3, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -157,7 +161,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
@@ -175,7 +179,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- Restricciones para tablas volcadas
