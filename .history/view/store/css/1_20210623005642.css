@@ -1,0 +1,1548 @@
+    @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+    * {
+        position: relative;
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .Div-Principal {
+        position: relative;
+        background-color: transparent;
+        width: 100%;
+        height: 3000px;
+        overflow: hidden;
+    }
+
+    header {
+        position: relative;
+        background-color: black;
+        top: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    header nav {
+        position: relative;
+        height: 40px;
+    }
+
+    header nav a{
+        color:bisque;
+    }
+
+    header nav a:hover{
+        color:white;
+    }
+
+    header nav h1[class='Logo-a'].{
+        position:relative;
+        background-color: white;
+        width: 0px;
+        height: 100%;
+    }
+
+
+    .Logo-a h1{
+        position:relative;
+        font-family: Yellowtail;
+        background-color: red;
+        font-size: 30px;
+        width: 15%;
+    }
+
+    header nav ul[class='Icons-ul']{
+        position: relative;
+        background-color: red;
+        left:1100px;
+        width: 26%;
+        top:-33px;
+        font-size: 22px;
+    }
+
+
+    header nav ul[class='Icons-ul'] li {
+        position: relative;
+        display: inline-block;
+        font-family: Yellowtail;
+        text-transform: uppercase;
+        background-color: bisque;
+        
+     
+    }
+
+    /*-----FRASE Y bUSQUEDA------*/
+
+
+    div[class='Frase_Busqueda']{
+        position:relative;
+        background-color:silver;
+        text-align: center;
+        top:10px;
+        height: 70px;
+    }
+
+    div[class='Frase_Busqueda'] h1{
+        position:relative;
+        font-family: Yellowtail;
+        font-size: 40px;
+        top:3px;
+        left:-40px;
+    }
+
+    div[class='Frase_Busqueda'] input{
+        position:relative;
+        border-radius: 10px;
+        padding-left: 39px;
+        outline: none;
+        left:620px;
+        top:-43px;
+        width:17%;
+        height: 40px;
+
+    }
+
+    div[class='Frase_Busqueda'] i{
+        position:relative;
+        font-size: 25px;
+        cursor:pointer;
+        left:370px;
+        top:-39px;
+    }
+
+    div[class='Frase_Busqueda'] i:hover{
+        color:red;
+    }
+
+    /*--------------------------------------------------*/
+/*---------slider-----------------*/
+    div[class='slider']{
+        position: relative;
+        border-top: 5px solid #b7a09f;
+        width: 100%;
+        height: 350px;
+        top: 2px;
+    }
+
+    div[class='slider'] .myslide {
+        position: relative;
+        text-align: center;
+        height: 400px;
+        width: 100%;
+        display: none;
+        overflow: hidden;
+        top: 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    div[class='slider'] .next {
+        position: relative;
+        background-color: BLACK;
+        font-size: 50px;
+        left: 1440px;
+        top: -220px;
+        cursor: pointer;
+        color:bisque;
+    }
+
+    div[class='slider'] .prev {
+        position: relative;
+        background-color: black;
+        font-size: 50px;
+        left: 25px;
+        top: -220px;
+        cursor: pointer;
+        color: bisque;
+    }
+
+    div[class='slider'] .Dirrecion {
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 12px;
+        border: 3px solid black;
+        border-radius: 50%;
+        margin: 0 10px;
+        cursor: pointer;
+        top: -60px;
+        left: 0px;
+    }
+
+    div[class='slider'] .Dirrecion:hover {
+        background-color: black;
+    }
+
+    /*---------slider-----------------*/
+
+    div[class='Top-Favoritos']{
+        position: relative;
+        border-bottom: 5px solid silver;
+        text-align: center;
+        width: 100%;
+        height: 250px;
+        top:90px;
+    }
+
+    .Top-Favoritos table[class='Perfumes-Favoritos']{
+        position: relative;
+        width: 100%;
+        color: black;
+        font-size: 22px;
+    }
+
+    table[class='Perfumes-Favoritos'] td{
+        position:relative;
+        text-align: center;
+        font-size: 15px;
+        font-family: Yellowtail;
+    }
+
+    table[class='Perfumes-Favoritos'] td img{
+        position:relative;
+        width: 30%;
+        padding-bottom: 0px;
+    }
+
+    table[class='Perfumes-Favoritos'] td button{
+        position:relative;
+        outline: none;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top:10px;
+        width:30%;
+        height: 20px;
+        background-color: black;
+        color:bisque;
+    }
+
+
+    table[class='Perfumes-Favoritos'] td button:hover{
+        background-color: white;
+        color:black;
+    }
+
+
+
+
+
+    /*  -------------- TABS - PESTAÑAS ---------------  */
+
+    .tabs {
+        position: relative;
+        margin: 0 auto;
+        color: black;
+        width: 100%;
+        top: 150px;
+    }
+
+    .tabs nav a {
+        position: relative;
+        left: 140px;
+        font-size: 30px;
+        font-family: "Yellowtail";
+    }
+
+    .tab-list {
+        padding-bottom: 0.6rem;
+    }
+
+    .tab {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 150px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .tab.active {
+        border-bottom: 5px solid red;
+    }
+
+    .tab-content {
+        display: none;
+        padding: 1.5rem;
+    }
+
+    .tab-content.show {
+        display: block;
+    }
+
+    /*  -------------- TABS - PESTAÑAS ---------------  */
+    /**-----------------DIV  DE PRODUCTOS-------------------**/
+
+    #Catalogo_Productos {
+        position: relative;
+        top: -400px;
+    }
+
+    .Catalogo-Producto {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        height: 700px;
+        left: 70px;
+    }
+
+    .Producto {
+        position: relative;
+        text-align: center;
+        background-color: transparent;
+        margin: 15px;
+        width: 29%;
+        height: 455px;
+        border-bottom: 3px solid bisque;
+    }
+
+    .Producto:hover {
+        border-radius: 20px;
+        background-color: silver;
+        border: 2px solid black;
+    }
+
+    .Titulo {
+        position: relative;
+        font-size: 16px;
+        padding-bottom: 30px;
+    }
+
+    .Img-Producto {
+        position: relative;
+        width: 120px;
+        top: -10px;
+        padding-bottom: 10px;
+    }
+
+    .Precio {
+        position: relative;
+        font-size: 18px;
+        top: -35px;
+        padding-bottom: 15px;
+    }
+
+    .Descripcion {
+        position: relative;
+        justify-content: center;
+        font-size: 17px;
+        top: -40px;
+        width: 97%;
+        left: 10px;
+        padding-bottom: 30px;
+    }
+
+    .Compra {
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
+        color: black;
+        top: -48px;
+        height: 52px;
+        width: 40%;
+        font-family: arial black;
+    }
+
+    .Compra:hover {
+        color: bisque;
+        background-color: black;
+    }
+
+    #Title_Videos {
+        position: relative;
+        top: 440px;
+        font-size: 50px;
+        left: 50px;
+    }
+
+    .Tabla_Videos {
+        position: relative;
+        width: 90%;
+        top: 450px;
+        left: 65px;
+    }
+
+    .Tabla_Videos th {
+        position: relative;
+        width: 30%;
+        height: 250px;
+    }
+
+    .Tabla_Videos a {
+        font-size: 25px;
+        height: 70px;
+        text-decoration: none;
+        border: 1px solid black;
+        color: bisque;
+        background-color: black;
+        border-radius: 10px;
+    }
+    /**-----------------DIV  DE PRODUCTOS-------------------**/
+
+
+
+
+    
+    /*----------------------Pestaña Session Usuario------------------------*/
+
+
+
+    #Div_Tabs_Pagina_Registro {
+        position: relative;
+        width: 100%;
+        top: 70px;
+        left: 50px;
+    }
+
+    #Div_Tabs_Pagina_Registro button {
+        position: relative;
+        margin-left: 90px;
+        font-family: Yellowtail;
+        font-size: 40px;
+        left: 370px;
+    }
+
+    .Formulario {
+        position: relative;
+        text-align: center;
+        background-color: #f9f9f9;
+        top: -90px;
+    }
+
+    .Formulario input {
+        border-left: none;
+        border-top: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        border-right: none;
+        background-color: transparent;
+    }
+
+    .Botton-Enviar {
+        position: relative;
+        background-color: white;
+        border: 0;
+        border-radius: 15px;
+        font-size: 25px;
+        width: 50%;
+        height: 35px;
+        color: trasparent;
+        top: 50px;
+        color: black;
+    }
+
+    .Botton-Enviar:hover {
+        color: bisque;
+        background-color: black;
+    }
+
+    /*------------TABS REGISTRARTE-----------------*/
+
+    #formulario {
+        position: relative;
+        width: 40%;
+        left: 450px;
+        height: 450px;
+        box-shadow: 0px 0px 10px 0px;
+    }
+
+    legend {
+        border-radius: 10px;
+        font-size: 15px;
+        color: black;
+        width: 85%;
+        height: 40px;
+    }
+
+    legend h1 {
+        position: relative;
+        top: 20px;
+    }
+
+    .Input-Registrate {
+        position: relative;
+        top: 40px;
+        width: 40%;
+        height: 40px;
+    }
+
+    #Registrar-Contraseña_1 {
+        position: relative;
+        left: 10px;
+    }
+
+    #Registrar-Contraseña_2 {
+        position: relative;
+        left: 35px;
+    }
+
+    .Mostrar-Contraseña {
+        position: relative;
+        background-color: transparent;
+        border: 0;
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        top: 40px;
+        left: 15px;
+    }
+
+    .Mostrar-Contraseña:hover {
+        color: navy;
+    }
+
+    #btn-registrar {
+        position: relative;
+        top: 60px;
+        width: 30%;
+        height: 50px;
+    }
+
+    /*------------TABS REGISTRARTE-----------------*/
+    /*----------LOGIN------------*/
+
+    #Iniciar {
+        position: relative;
+        width: 33%;
+        left: 510px;
+        height: 450px;
+        box-shadow: 0px 0px 10px 0px;
+    }
+
+    #Iniciar h1 {
+        color: black;
+        top: 15px;
+    }
+
+    .Input {
+        position: relative;
+        border-right: none;
+        background-color: transparent;
+        padding: 0px;
+        margin: 0px;
+        border-left: none;
+        border-top: none;
+        text-decoration: none;
+        top: 5px;
+        width: 70%;
+        height: 40px;
+    }
+
+    #Iniciar .Usuario {
+        position: relative;
+        font-size: 15px;
+        top: 35px;
+    }
+
+    #Iniciar .Usuario a {
+        color: black;
+    }
+
+    #Email {
+        position: relative;
+        top: 25px;
+        width: 85%;
+        left: 5px;
+    }
+
+    #Contraseña {
+        position: relative;
+        top: 60px;
+        left: -10px;
+        left: 5px;
+        width: 85%;
+    }
+
+    #Olvidaste-contraseña {
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+        color: black;
+        font-size: 20px;
+        top: 100px;
+    }
+
+    #btn-Login {
+        position: relative;
+        background-color: silver;
+        top: 140px;
+        width: 35%;
+        height: 40px;
+    }
+
+    #btn-Login:hover {
+        background-color: black;
+    }
+
+    /*----------LOGIN------------*/
+    /*----------------------Pestaña Session Usuario------------------------*/
+    /*--------------TABS GENERAL ADMIN--------------------------*/
+
+    .Titulo_Admin {
+        position: relative;
+        text-align: center;
+        font-family: Yellowtail;
+        font-size: 42px;
+        width: 100%;
+        top: 80px;
+    }
+
+    .Div-Tabs {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        top: 250px;
+    }
+
+    .Div-Tabs button {
+        position: relative;
+        background-color: inherit;
+        margin-left: 190px;
+        left: 220px;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px;
+        font-size: 20px;
+    }
+
+    .Div-Tabs button.active {
+        border-bottom: 5px solid red;
+    }
+
+    /* Style the tab content */
+
+    .tabcontent {
+        position: relative;
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+        top: 170px;
+    }
+
+    .tabcontent.active {
+        display: block;
+    }
+
+    /*--------------TABS GENERAL ADMIN--------------------------*/
+    /*-------------------------DATOS - ADMIN --------------------*/
+
+    .Div-Admin {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        top: 00px;
+        height: 100vh;
+    }
+
+    .Div-Admin .Letra {
+        position: relative;
+        font-family: Yellowtail;
+        font-size: 35px;
+    }
+
+    .Div-Admin button {
+        position: relative;
+        text-decoration: none;
+        border-radius: 10px;
+        outline: none;
+        height: 35px;
+        width: 10%;
+        font-family: arial black;
+        color: white;
+    }
+
+    .Boton_Crear {
+        position: relative;
+        background-color: #094293;
+        right: 500px;
+        top: 65px;
+        left: -635px;
+    }
+
+    .Tabla-Admin {
+        position: relative;
+        width: 95%;
+        top: 85px;
+        left: 35px;
+    }
+
+    .Tabla-Admin th {
+        border-right: 5px solid black;
+        background-color: Grey;
+    }
+
+    .Flex_Datos {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        width: 95%;
+        height: 100px;
+        top: 86px;
+        left: 30px;
+    }
+
+    #Boton_Enviar {
+        position: relative;
+        background-color: #094293;
+    }
+
+    #Boton_Borrar {
+        position: relative;
+        background-color: red;
+    }
+
+    /*-------------------------DATOS - ADMIN --------------------*/
+    /*-------------PRODUCTOS ADMIN-------------------------*/
+
+    .Datos_Tabla_Producto {
+        position: relative;
+        text-align: center;
+        background-color: #d4d4d4;
+        overflow: hidden;
+        margin: 1px;
+        width: 120px;
+        height: 160px;
+        top: 20px;
+    }
+
+    .Img_Producto {
+        position: relative;
+        width: 120px;
+        height: 155px;
+        top: -10px;
+    }
+
+    .Admin_Input_Producto {
+        position: relative;
+        background-color: white;
+        width: 90%;
+        text-decoration: none;
+        border: none;
+        outline: none;
+    }
+
+    .Precio_Producto {
+        position: relative;
+        top: 60px;
+    }
+
+    .Boton_Datos_Producto {
+        position: relative;
+        top: 55px;
+    }
+
+    #Input_Producto_1,
+    #Input_Producto_4,
+    #Input_Producto_5 {
+        position: relative;
+        background-color: transparent;
+        border-bottom: 5px solid black;
+        padding-left: 15px;
+        top: 55px;
+    }
+
+    #Input_Producto_2 {
+        position: relative;
+        top: -29px;
+    }
+
+    #Input_Producto_3 {
+        position: relative;
+        overflow: scroll;
+        width: 98%;
+        height: 140px;
+        top: 10px;
+        left: 0px;
+    }
+
+    #Datos_1 {
+        position: relative;
+        width: 5%;
+        left: 4px;
+    }
+
+    #Datos_2 {
+        position: relative;
+        width: 16.5%;
+        left: 7px;
+    }
+
+    #Datos_3 {
+        position: relative;
+        width: 27%;
+        left: 10px;
+    }
+
+    #Datos_4 {
+        position: relative;
+        width: 15.1%;
+        left: 13px;
+    }
+
+    #Datos_5 {
+        position: relative;
+        width: 14%;
+        left: 15px;
+    }
+
+    #Datos_6 {
+        position: relative;
+        width: 21%;
+        left: 17px;
+    }
+
+    #Boton_Producto_Modificar {
+        position: relative;
+        background-color: #094293;
+        width: 40%;
+    }
+
+    #Boton_Producto_Borrar {
+        position: relative;
+        background-color: red;
+        width: 40%;
+    }
+
+    /*-------------PRODUCTOS ADMIN-------------------------*/
+    /*--------------------------FLEX CLIENTE-------------------------------------------*/
+
+    #Tabla_Admin_Clientes {
+        position: relative;
+        width: 95%;
+    }
+
+    .Datos_Tabla_Cliente {
+        position: relative;
+        text-align: center;
+        background-color: silver;
+        margin: 3px;
+        width: 8%;
+        height: 60px;
+        top: 20px;
+    }
+
+    .Admin_Input_Cliente {
+        position: relative;
+        background-color: white;
+        width: 80%;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        position: relative;
+        background-color: transparent;
+        border-bottom: 5px solid black;
+        padding-left: 15px;
+        top: 10px;
+    }
+
+    #Input_Cliente_1 {
+        width: 70%;
+        top: 10px;
+    }
+
+    #Datos_7 {
+        position: relative;
+        background-color: silver;
+        width: 4.5%;
+        height: 60px;
+        top: 22px;
+    }
+
+    #Datos_8 {
+        position: relative;
+        width: 13.5%;
+    }
+
+    #Datos_9 {
+        position: relative;
+        width: 16%;
+        left: -4px;
+    }
+
+    #Datos_10 {
+        position: relative;
+        width: 17%;
+        left: -7px;
+    }
+
+    #Datos_11 {
+        position: relative;
+        width: 20.5%;
+        left: -7px;
+    }
+
+    #Datos_12 {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 11%;
+        left: -5px;
+    }
+
+    #Datos_13 {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 15.6%;
+        left: 0px;
+    }
+
+    #Boton_Cliente_Modificar {
+        position: relative;
+        background-color: #094293;
+        width: 40%;
+        top: 13px;
+    }
+
+    #Boton_Cliente_Borrar {
+        position: relative;
+        background-color: red;
+        width: 40%;
+        top: 13px;
+    }
+
+    /*--------------------------FLEX CLIENTE-------------------------------------------*/
+    /*------------------------ADMIN GENERAL------------------------------------*/
+    /*-----------------TABLA COMPRAS---------------------*/
+
+    .Titulo_Carrito {
+        position: relative;
+        text-align: center;
+        font-family: Yellowtail;
+        width: 100%;
+        top: 150px;
+        font-size: 40px;
+    }
+
+    .Agregar_Producto {
+        position: relative;
+        text-decoration: none;
+        outline: none;
+        background-color: Bisque;
+        width: 12%;
+        height: 50px;
+        border-radius: 20px;
+        font-size: 25px;
+        font-family: Yellowtail;
+        left: 140px;
+        top: 170px;
+    }
+
+    .Flex_Compras {
+        position: relative;
+        font-family: Cookie;
+        background-color: #e9e9e9;
+        color: black
+            /*#256d7b*/
+        ;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        width: 40%;
+        height: 305px;
+        top: 205px;
+        left: 140px;
+        margin-bottom: 30px;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .Flex_Compras h3 {
+        position: relative;
+        margin-left: 10px;
+        width: 50%;
+        font-size: 28px;
+        top: 10px;
+    }
+
+    .Flex_Compras img {
+        position: relative;
+        left: -255px;
+        top: 70px;
+        padding-bottom: 40px;
+        width: 128px;
+        height: 198px;
+    }
+
+    .Flex_Compras form {
+        position: relative;
+        font-size: 25px;
+        width: 100%;
+        left: -178px;
+        top: 10px;
+    }
+
+    .Flex_Compras form input {
+        position: relative;
+        width: 12%;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border-radius: 10px;
+    }
+
+    .Flex_Compras #Icon_Compras {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        margin-left: 15px;
+        left: 520px;
+        top: -280px;
+    }
+
+    .Flex_Compras #Icon_Compras:hover {
+        color: red;
+    }
+
+    .Flex_Compras h2 {
+        position: relative;
+        top: -50px;
+        left: 410px;
+    }
+
+    .Compra_Total_Carrito {
+        position: fixed;
+        font-family: Eras Bold ITC;
+        background-color: #ffffff;
+        text-align: center;
+        width: 30%;
+        height: 318px;
+        top: 270px;
+        left: 1000px;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 20px;
+    }
+
+    .Compra_Total_Carrito h1 {
+        font-size: 25px;
+        width: 100%;
+        font-family: Goudy Stout;
+        top: 10px;
+    }
+
+    .Compra_Total_Carrito h4 {
+        position: relative;
+        text-align: right;
+        font-size: 20px;
+        width: 95%;
+        top: 20px;
+        left: 15px;
+    }
+
+    .Total_Producto p {
+        position: relative;
+        text-align: left;
+        top: 22px;
+    }
+
+    #Precio_Envio {
+        position: relative;
+        border-bottom: 5px solid red;
+        height: 58px;
+    }
+
+    #Precio {
+        position: relative;
+        height: 20px;
+        top: 15px;
+    }
+
+    .Compra_Total_Carrito button {
+        position: relative;
+        background-color: black;
+        font-family: Goudy Stout;
+        color: bisque;
+        font-size: 20px;
+        border-radius: 5px;
+        width: 50%;
+        top: 55px;
+    }
+
+    .Compra_Total_Carrito button:hover {
+        background-color: #dc3545;
+        color: black;
+    }
+
+    /*-----------------TABLA COMPRAS---------------------*/
+    /*----------------------Contacto-------------------------------*/
+
+    .Fondo_Info {
+        position: relative;
+        background-color: #9f9f9f;
+        width: 100%;
+        height: 500px;
+        top: 56px;
+    }
+
+    .Info_1 {
+        position: relative;
+        width: 52.7%;
+        height: 100%;
+        background-color: #9f9f9f;
+        top: 0px;
+    }
+
+    .Info_1 img {
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+
+    .Info_1 form {
+        position: relative;
+        background-color: rgb(0, 0, 0, 0.4);
+        color: white;
+        text-align: center;
+        height: 500px;
+        top: -505px;
+    }
+
+    .Info_1 form h1 {
+        position: relative;
+        font-family: Yellowtail;
+        font-size: 40px;
+    }
+
+    .Info_1 form p {
+        color: #d4d4d4;
+    }
+
+    .Info_2 {
+        position: relative;
+        /*background-color: #2c2c2c;*/
+        background-color: #f9f9f9;
+        width: 50%;
+        height: 500px;
+        left: 800px;
+        top: -500px;
+    }
+
+    .Info_2 form {
+        position: relative;
+        background-color: #848484;
+        text-align: center;
+        width: 94.9%;
+        height: 500px;
+    }
+
+    .Info_2 form h1 {
+        font-family: Yellowtail;
+        color: black;
+        font-size: 45px;
+    }
+
+    .Info_2 form h1 p {
+        font-size: 15px;
+        text-align: center;
+        width: 95%;
+        left: 15px;
+        top: 10px;
+        color: black;
+    }
+
+    .Info_2 form input {
+        background-color: transparent;
+        border-bottom: 3px solid black;
+        padding-left: 10px;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        outline: none;
+        width: 42%;
+        height: 30px;
+        left: 2px;
+        color: black;
+    }
+
+    .Info_2 ::placeholder {
+        color: black;
+        font-size: 17px;
+    }
+
+    .Info_2 form select {
+        background-color: transparent;
+        border-bottom: 3px solid black;
+        width: 70%;
+        color: black;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        outline: none;
+        font-size: 17px;
+        top: 5px;
+    }
+
+    .Info_2 form option {
+        background-color: transparent;
+        width: 70%;
+        color: black;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        outline: none;
+        font-size: 17px;
+        top: 5px;
+    }
+
+    .Info_2 form textarea {
+        background-color: transparent;
+        width: 70%;
+        color: black;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        outline: none;
+        font-size: 17px;
+        top: 5px;
+        border: 1px solid black;
+    }
+
+    .Info_2 form button {
+        position: relative;
+        background-color: black;
+        color: white;
+        top: -5px;
+        width: 30%;
+    }
+
+    .Info_2 form button:hover {
+        background-color: bisque;
+        color: black;
+    }
+
+    /*-----------MARCAS-----------------*/
+
+    .Titulo_Marcas {
+        position: relative;
+        text-align: left;
+        font-family: Yellowtail;
+        padding-left: 15px;
+        font-size: 35px;
+        color: black;
+        width: 33%;
+        top: 80px;
+        left: 10px;
+    }
+
+    .Caja-Logos {
+        position: relative;
+        align-items: center;
+        background-color: #d9d9d9;
+        display: flex;
+        flex-flow: wrap;
+        top: 110px;
+        height: 110px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .Logo {
+        width: 25%;
+        margin: 0px;
+        padding: 0;
+        left: 80px;
+    }
+
+    .Logo img {
+        position: relative;
+        width: 50%;
+    }
+
+    /*-----------------------------------------------------*/
+
+    .Formulario_Contacto {
+        position: relative;
+        background-color: silver;
+        text-align: center;
+        top: 56px;
+        height: 600px;
+    }
+
+    .Formulario_Contacto form {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        border: 2px solid silver;
+        top: 40px;
+        width: 50%;
+        height: 530px;
+        left: 350px;
+        box-shadow: 1px 2px 2px black;
+    }
+
+    .Formulario_Contacto form h1 {
+        font-family: Yellowtail;
+        font-size: 47px;
+        color: white;
+    }
+
+    .Formulario_Contacto form input {
+        padding-left: 10px;
+        padding-bottom: 7px;
+        width: 30%;
+        border-left: none;
+        border-top: none;
+        border-bottom: 2px solid white;
+        outline: none;
+        border-right: none;
+        background-color: transparent;
+        color: white;
+        font-size: 20px;
+        width: 40%;
+        top: 20px;
+    }
+
+    .Formulario_Contacto form select {
+        border-left: none;
+        border-top: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        border-right: none;
+        background-color: transparent;
+        color: white;
+        font-size: 20px;
+        top: 40px;
+    }
+
+    .Formulario_Contacto form #select_edad {
+        position: relative;
+        top: -9px;
+        left: -90px;
+    }
+
+    .Formulario_Contacto form #label_edad {
+        position: relative;
+        top: -7px;
+        font-size: 20px;
+        left: -90px;
+        color: white;
+    }
+
+    .Formulario_Contacto form #label_consulta {
+        position: relative;
+        top: -5px;
+        left: 90px;
+        font-size: 20px;
+    }
+
+    .For mulario_Contacto form #select_sexo {
+        position: relative;
+        margin-left: 10px;
+        top: 55px;
+        left: -38px;
+    }
+
+    .For mulario_Contacto form #label_sexo {
+        position: relative;
+        top: 55px;
+        left: -30px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .For mulario_Contacto form #tipo_consulta {
+        position: relative;
+        top: -8px;
+        left: 89px;
+    }
+
+    .For mulario_Contacto form option {
+        border-left: none;
+        border-top: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        border-right: none;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+    }
+
+    .For mulario_Contacto form textarea {
+        border-left: none;
+        border-top: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        border-right: none;
+        background-color: transparent;
+        color: white;
+        border: 2px solid black;
+        font-size: 20px;
+
+        .Formulario_Contacto form .Botton-Enviar {
+            background-color: transparent;
+            width: 20%;
+            height: 35px;
+            border-bottom: 5px solid red;
+            border-radius: 0;
+            color: white;
+            top: -10px;
+        }
+
+        .For mulario_Contacto form.Botton-Enviar:hover {
+            color: bisque;
+            background-color: black;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+        .Caja-Logos {
+            position: relative;
+            align-items: center;
+            background-color: #d9d9d9;
+            display: flex;
+            flex-flow: wrap;
+            top: 110px;
+            height: 110px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .Logo {
+            width: 25%;
+            margin: 0px;
+            padding: 0;
+            left: 80px;
+        }
+
+        .Log o img {
+            position: relative;
+
+            /*-----------------------------------------------------*/
+            .For mulario_Contacto {
+                position: relative;
+                background-color: silver;
+                text-align: center;
+                top: 56px;
+                height: 600px;
+            }
+
+            .Formulario_Contacto form {
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.7);
+                text-align: center;
+                border: 2px solid silver;
+                top: 40px;
+                width: 50%;
+                height: 530px;
+                left: 350px;
+                box-shadow: 1px 2px 2px black;
+            }
+
+            .For mulario_Contacto form h1 {
+                font-family: Yellowtail;
+                font-size: 47px;
+                color: white;
+            }
+
+            .Formulario_Contacto form input {
+                padding-left: 10px;
+                padding-bottom: 7px;
+                width: 30%;
+                border-left: none;
+                border-top: none;
+                border-bottom: 2px solid white;
+                outline: none;
+                border-right: none;
+                background-color: transparent;
+                color: white;
+                font-size: 20px;
+                width: 40%;
+                top: 20px;
+            }
+
+            .Formulario_Contacto form select {
+                border-left: none;
+                border-top: none;
+                border-bottom: 2px solid black;
+                outline: none;
+                border-right: none;
+                background-color: transparent;
+                color: white;
+                font-size: 20px;
+                top: 40px;
+            }
+
+            .For mulario_Contacto form #select_edad {
+                position: relative;
+                top: -9px;
+                left: -90px;
+            }
+
+            .Formulario_Contacto form #label_edad {
+                position: relative;
+                top: -7px;
+                font-size: 20px;
+                left: -90px;
+                color: white;
+            }
+
+            .Formulario_Contacto form #label_consulta {
+                position: relative;
+                top: -5px;
+                left: 90px;
+                font-size: 20px;
+            }
+
+            .Formulario_Contacto form #select_sexo {
+                position: relative;
+                margin-left: 10px;
+                top: 55px;
+                left: -38px;
+            }
+
+            .For mulario_Contacto form #label_sexo {
+                position: relative;
+                top: 55px;
+                left: -30px;
+                font-size: 20px;
+                color: white;
+            }
+
+            .For mulario_Contacto form #tipo_consulta {
+                position: relative;
+                top: -8px;
+                left: 89px;
+            }
+
+            .For mulario_Contacto form option {
+                border-left: none;
+                border-top: none;
+                border-bottom: 2px solid black;
+                outline: none;
+                border-right: none;
+                background-color: black;
+                color: white;
+                font-size: 20px;
+            }
+
+            .Formulario_Contacto form textarea {
+                border-left: none;
+                border-top: none;
+                border-bottom: 2px solid black;
+                outline: none;
+                border-right: none;
+                background-color: transparent;
+                color: white;
+                border: 2px solid black;
+                font-size: 20px;
+                top: 5px;
+            }
+
+            .Formulario_Contacto form .Botton-Enviar {
+                background-color: transparent;
+                width: 20%;
+                height: 35px;
+                border-bottom: 5px solid red;
+                border-radius: 0;
+                color: white;
+                top: -10px;
+            }
+
+            .Formulario_Contacto form.Botton-Enviar:hover {
+                color: bisque;
+                background-color: black;
+            }
+
