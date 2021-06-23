@@ -27,15 +27,15 @@ const expresiones = {
   apellido: /^[a-zA-ZÀ-ÿ\s]{3,15}$/, // Letras, numeros, guion y guion_bajo
   nombre: /^[a-zA-ZÀ-ÿ\s]{3,15}$/, // Letras y espacios, pueden llevar acentos.
   password: /^[A-Za-z0-9]{8,30}$/, // 8 a 30 digitos.
-  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+  email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  numero_movil: /^\d{7,14}$/, // 7 a 14 numeros.
 };
 const campos = {
-  usuario: false,
+  apellido: false,
   nombre: false,
   password: false,
-  correo: false,
-  telefono: false
+  email: false,
+  numero_movil: false
 }
 
 
@@ -54,11 +54,11 @@ const validarFormulario = (e) => {
     case "password2":
       validarPassword2();
       break;
-    case "correo":
-      validarCampo(expresiones.correo, e.target, 'correo');
+    case "email":
+      validarCampo(expresiones.email, e.target, 'email');
       break;
-    case "telefono":
-      validarCampo(expresiones.telefono, e.target, 'telefono');
+    case "numero_movil":
+      validarCampo(expresiones.numero_movil, e.target, 'numero_movil');
       break;
   }
 }
@@ -116,7 +116,7 @@ formulario.addEventListener('submit', (e) => {
   e.preventDefault();
   var datos_registro = new FormData(formulario);
   const terminos = document.getElementById('terminos');
-  if (campos.apellido && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked) {
+  if (campos.apellido && campos.nombre && campos.password && campos.email && campos.numero_movil && terminos.checked) {
     fetch("../../../controller/ACTIONS/act_register.php", {
       method: "POST",
       body: datos_registro,
@@ -124,7 +124,7 @@ formulario.addEventListener('submit', (e) => {
       .then((res) => res.json())
       .then((data) => {
 
-        if (data == "registrado correctamente") {
+        if (typeof data === 'object' && data !== null) {
           formulario.reset();
           comprobacionbd = false;
           updateClock();
@@ -141,6 +141,9 @@ formulario.addEventListener('submit', (e) => {
 
 
         } else {
+          document.getElementById('formulario__mensaje-bd').innerHTML = `
+          <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> `+ data + `</p>`
+
           document.getElementById('formulario__mensaje-bd').classList.add('formulario__mensaje-activo');
           setTimeout(() => {
             document.getElementById('formulario__mensaje-bd').classList.remove('formulario__mensaje-activo');

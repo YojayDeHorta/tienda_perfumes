@@ -95,7 +95,7 @@
             </div>
             <div class="mb-3" id="divId">
               <label for="Id_usuario" class="col-form-label">id:</label>
-              <input type="text" class="form-control" id="id_usuario" name="Id_usuario" readonly autofocus>
+              <input type="text" class="form-control" id="id_cliente" name="id_cliente" readonly autofocus>
             </div>
             <div class="mb-3">
               <label for="nombre" class="col-form-label">nombre:</label>
@@ -109,12 +109,12 @@
             </div>
             <div class="mb-3">
               <label for="telefono" class="col-form-label">telefono:</label>
-              <input type="text" class="form-control" id="telefono" name="telefono" minlength="2" maxlength="14"
+              <input type="text" class="form-control" id="numero_movil" name="numero_movil" minlength="2" maxlength="14"
                 title="El telefono puede tener numeros, maximo 14" pattern="[0-9+?]+" required autofocus>
             </div>
             <div class="mb-3">
               <label for="email" class="col-form-label">email:</label>
-              <input type="email" class="form-control" id="email" name="correo" maxlength="30" title="El correo solo puede contener letras, numeros, puntos, guiones bajos,
+              <input type="email" class="form-control" id="email" name="email" maxlength="30" title="El correo solo puede contener letras, numeros, puntos, guiones bajos,
                 guion y @." required autofocus>
             </div>
             <div class="mb-3" id="divpass">
@@ -153,7 +153,7 @@
             <div class="mb-3">
               <label for="tipo" class="col-form-label">tipo:</label>
               <input type="text" class="form-control" id="tipo" name="Tipo" minlength="1" maxlength="1"
-                title="el tipo solo puede ser masculino=M o femenino=F" pattern="[MF]+" required autofocus>
+                title="el tipo solo puede ser masculino=M o femenino=F" pattern="[MF]{1}" required autofocus>
             </div>
             <div class="mb-3">
               <label for="imagen" class="col-form-label">imagen:</label>
@@ -161,13 +161,13 @@
             </div>
             <div class="mb-3">
               <label for="producto" class="col-form-label">nombre del producto:</label>
-              <input type="text" class="form-control" id="producto" name="Producto" minlength="3" maxlength="60"
-                title="El nombre del producto puede tener un minimo de 5 caracteres y maximo 60" required autofocus>
+              <input type="text" class="form-control" id="producto" name="Producto" minlength="4" maxlength="60"
+                title="El nombre del producto puede tener un minimo de 4 caracteres y maximo 60" required autofocus>
             </div>
             <div class="mb-3">
               <label for="descripcion" class="col-form-label">descripcion:</label>
-              <input type="text" class="form-control" id="descripcion" name="Descripcion" minlength="5" required
-                autofocus>
+              <input type="text" class="form-control" id="descripcion" name="Descripcion" minlength="5" maxlength="255"
+                required autofocus>
             </div>
             <div class="mb-3">
               <label for="precio" class="col-form-label">precio:</label>

@@ -32,7 +32,27 @@ class ProductoDAO{
             return null;
         }
     } 
-
+    public function buscarproductopornombre($nombre_producto){
+        $data_source = new DataSource();
+        $data_table= $data_source->ejecutarConsulta("SELECT * FROM productos WHERE nombre_producto = :nombre_producto", 
+                                                    array(':nombre_producto'=>$nombre_producto));
+        $producto=null;
+        if(count($data_table)==1){
+            foreach($data_table as $indice => $valor){
+                $producto = new Producto(
+                        $data_table[$indice]["id_producto"],
+                        $data_table[$indice]["stock_disponible"],
+                        $data_table[$indice]["nombre_producto"],
+                        $data_table[$indice]["precio_producto"],
+                        $data_table[$indice]["descripcion"],
+                        $data_table[$indice]["tipo"],
+                        );
+            }
+            return $producto;
+        }else{
+            return null;
+        }
+    } 
 
     public function leerproductos(){
         $data_source = new DataSource();

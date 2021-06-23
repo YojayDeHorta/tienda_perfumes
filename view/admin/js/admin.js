@@ -5,16 +5,16 @@ const modalArticulo = new bootstrap.Modal(
 const contenedor = document.getElementById("contenedor-clientes");
 
 const formArticulo = document.getElementById("formulario-usuario");
-const id_usuario = document.getElementById("id_usuario");
+const id_usuario = document.getElementById("id_cliente");
 const nombre = document.getElementById("nombre");
 const apellido = document.getElementById("apellido");
-const telefono = document.getElementById("telefono");
+const telefono = document.getElementById("numero_movil");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const divId = document.getElementById("divId");
 const divAviso = document.getElementById("divAviso");
 let opcion = "";
-let resultados = "";
+let resultadosuser = "";
 //btncliente = document.getElementById("btnCliente");
 
 btnAdmin.addEventListener("click", () => {
@@ -31,29 +31,28 @@ btnAdmin.addEventListener("click", () => {
 
 });
 
-//procedimiento mostrar
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/../../controller/ACTIONS/act_read-Clientes.php", true);
-xhr.onload = function () {
-  if (xhr.status == 200) {
-    let datos = JSON.parse(xhr.responseText);
-    for (let item of datos) {
-      contenedor.innerHTML += `<tr>
-        <td>${item.id_cliente}</td>
-        <td>${item.nombre}</td>
-        <td>${item.apellido}</td>
-        <td>${item.numero_movil}</td>
-        <td>${item.email}</td>
-        <td>${item.password}</td>
-        <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Borrar</a></td>
-        </tr>
-        `;
-    }
-  } else {
-    console.log("existe un error de tipo: " + xhr.status);
-  }
+const mostrarclientes = (articulos) => {
+  articulos.forEach((articulo) => {
+    resultadosuser += `<tr>
+    <td>${articulo.id_cliente}</td>
+    <td>${articulo.nombre}</td>
+    <td>${articulo.apellido}</td>
+    <td>${articulo.numero_movil}</td>
+    <td>${articulo.email}</td>
+    <td>${articulo.password}</td>
+    <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Borrar</a></td>
+    </tr>`;
+  });
+  contenedor.innerHTML = resultadosuser;
 };
-xhr.send();
+
+//Procedimiento Mostrar
+fetch("/../../controller/ACTIONS/act_read-Clientes.php")
+  .then((response) => response.json())
+  .then((data) => mostrarclientes(data))
+  .catch((error) => console.log(error));
+
+
 //Procedimiento Borrar
 const on = (element, event, selector, handler) => {
   element.addEventListener(event, (e) => {
@@ -71,7 +70,8 @@ on(document, "click", "#borrar_usuario", (e) => {
       .then((res) => res.json())
       .then((salida) => {
         alertify.alert(salida, function () {
-          location.reload();
+          fila.style.display = "none";
+          //location.reload();
         });
       });
   });
@@ -105,6 +105,10 @@ formArticulo.addEventListener("submit", (e) => {
   var datos = new FormData(formArticulo);
   const fila = e.target.parentNode.parentNode;
   idForm = fila.children[0].innerHTML;
+
+  //cambiar formdata a object para añadir
+
+
   //submit de creacion
   if (opcion == "crear") {
     fetch("../../../controller/ACTIONS/act_register.php", {
@@ -114,14 +118,17 @@ formArticulo.addEventListener("submit", (e) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data == "registrado correctamente") {
-          alertify.alert(data, function () {
-            location.reload();
+        if (typeof data === 'object' && data !== null) {
+          alertify.alert("cliente registrado correctamente", function () {
+            const nuevousuario = [];
+            nuevousuario.push(data);
+            mostrarclientes(nuevousuario);
+            modalArticulo.hide();
           });
         } else {
           divAviso.style.display = "block";
           divAviso.innerHTML =
-            "<p>error, correo o telefono no valido o existente</p>";
+            "<p>" + data + "</p>";
         }
       });
   }
@@ -138,7 +145,7 @@ formArticulo.addEventListener("submit", (e) => {
             location.reload();
           });
         }
-        if (data == "numero o email existente") {
+        else {
           alertify.alert(data);
         }
       });

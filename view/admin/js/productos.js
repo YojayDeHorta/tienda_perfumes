@@ -16,6 +16,7 @@ const stock = document.getElementById("stock");
 const divIdproducto = document.getElementById("divId_producto");
 const divAvisoProducto = document.getElementById("divAvisoProducto");
 let opcionProducto = "";
+let resultados = "";
 btnProducto.addEventListener("click", () => {
   id_producto.value = "";
   tipo.value = "";
@@ -31,7 +32,7 @@ btnProducto.addEventListener("click", () => {
   opcionProducto = "crear";
 });
 
-const mostrar = (articulos) => {
+const mostrarproductos = (articulos) => {
   articulos.forEach((articulo) => {
     resultados += `<tr>
         <td>${articulo.id_producto}</td>
@@ -48,10 +49,10 @@ const mostrar = (articulos) => {
   contenedorProductos.innerHTML = resultados;
 };
 
-//Procedimiento Mostrar
+//Procedimiento Mostrarproductos
 fetch("/../../controller/ACTIONS/act_read-Productos.php?id=" + id_producto)
   .then((response) => response.json())
-  .then((data) => mostrar(data))
+  .then((data) => mostrarproductos(data))
   .catch((error) => console.log(error));
 
 //Procedimiento Borrar
@@ -74,7 +75,7 @@ recharge(document, "click", "#borrar_producto", (e) => {
       .then((res) => res.json())
       .then((salida) => {
         alertify.alert(salida, function () {
-          location.reload();
+          fila.style.display = "none";
         });
       });
   });
@@ -116,13 +117,17 @@ formProducto.addEventListener("submit", (e) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data == "registrado correctamente") {
-          alertify.alert(data, function () {
-            location.reload();
+        if (typeof data === 'object' && data !== null) {
+          alertify.alert("producto agregado exitosamente", function () {
+            const nuevoproducto = [];
+            nuevoproducto.push(data);
+            mostrarproductos(nuevoproducto);
+            modalProductos.hide();
           });
+
         } else {
           divAvisoProducto.style.display = "block";
-          divAvisoProducto.innerHTML = "<p>error, verifique los datos</p>";
+          divAvisoProducto.innerHTML = "<p>" + data + "</p>";
         }
       });
   }
@@ -138,8 +143,7 @@ formProducto.addEventListener("submit", (e) => {
           alertify.alert(data, function () {
             location.reload();
           });
-        }
-        if (data == "error") {
+        } else {
           alertify.alert(data);
         }
       });

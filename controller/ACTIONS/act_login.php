@@ -4,7 +4,26 @@
 	
 		$Email = $_POST['Email'];
 		$password = $_POST['Contraseña'];
-        
+        //reg ex 
+        if($Email=="" || $password==""){
+            echo json_encode('Inicio de sesion fallido,email o contraseña no valido');
+            return 0;
+        }
+            
+        if(strpos($Email, '@') === false) {
+            echo json_encode('Inicio de sesion fallido,email o contraseña no valido');
+            return 0;
+        }  
+        $regexpuser = '/^[-!#$%&\'*+\\.\/0-9=?A-Z^_`{|}~]+@([-0-9A-Z]+\.)+([0-9A-Z]){2,7}$/i';
+        $regexppass= '/^[A-Za-z0-9]{8,30}$/';
+        if (!preg_match($regexpuser, $Email)||!preg_match($regexppass, $password)){
+            echo json_encode('Inicio de sesion fallido,email o contraseña no valido');
+            return 0;
+        }
+            
+      
+
+
         $cliente = autenticarCliente($Email, $password);
         
         
@@ -19,12 +38,12 @@
 
                 echo json_encode('INICIO DE SESION CORRECTAMENTE');
                 
-                        
+                return 1;           
                 //header("Location: ../../view/store/");
             }else{
 
                 echo json_encode('Inicio de sesion fallido,email o contraseña incorrecta');
-
+                return 0;
                 
 
                 //header("Location: ../../view/store/"); 

@@ -6,7 +6,12 @@
         $producto = $dao->buscarproductoporid($id_producto);
         return $producto;
     }
-
+    function buscarproductopornombre($nombre_producto){
+        require_once(__DIR__."/../../model/DAO/ProductoDAO.php");
+        $dao=new ProductoDAO();
+        $producto = $dao->buscarproductopornombre($nombre_producto);
+        return $producto;
+    }
     function leerproductos(){
         require_once(__DIR__."/../../model/DAO/ProductoDAO.php");
         $dao=new ProductoDAO();
