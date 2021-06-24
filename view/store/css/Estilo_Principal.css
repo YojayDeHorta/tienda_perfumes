@@ -13,7 +13,7 @@ div[class='Div-Principal']{
     position: relative;
     background-color: transparent;
     width: 100%;
-    height: 300%;
+    height: 3000px;
     overflow: hidden;
 }
 
@@ -22,7 +22,7 @@ header {
     background-color: black;
     top: 10px;
     width: 100%;
-    height: 2%;
+    height: 1.35%;
 }
 
 header nav {
@@ -130,7 +130,7 @@ div[class='slider'] {
     width: 100%;
     height: 19%;
     top: 2px;
-    margin-bottom: 3%;
+    margin-bottom: -7.5%;
 }
 
 div[class='slider'] .myslide {
@@ -189,7 +189,7 @@ div[class='Top-Favoritos'] {
     background-color: #d9d9d9 ;
     text-align: center;
     width: 100%;
-    height: 9.5%;
+    height: 8%;
     box-shadow: 0px 0px 0px 10px;
     margin-bottom: -30px;
 }
@@ -198,13 +198,13 @@ div[class='Top-Favoritos'] {
     position: relative;
     width: 100%;
     color: black;
-    font-size: 25px;
+    
 }
 
 table[class='Perfumes-Favoritos'] td {
     position: relative;
     text-align: center;
-    font-size: 15px;
+    font-size: 22px;
 
 }
 
@@ -1234,140 +1234,3 @@ table[class='Perfumes-Favoritos'] td button:hover {
         .Log o img {
             position: relative;
 
-            /*-----------------------------------------------------*/
-/*
-            .For mulario_Contacto {
-                position: relative;
-                background-color: silver;
-                text-align: center;
-                top: 56px;
-                height: 600px;
-            }
-
-            .Formulario_Contacto form {
-                position: relative;
-                background-color: rgba(0, 0, 0, 0.7);
-                text-align: center;
-                border: 2px solid silver;
-                top: 40px;
-                width: 50%;
-                height: 530px;
-                left: 350px;
-                box-shadow: 1px 2px 2px black;
-            }
-
-            .For mulario_Contacto form h1 {
-                font-family: Yellowtail;
-                font-size: 47px;
-                color: white;
-            }
-
-            .Formulario_Contacto form input {
-                padding-left: 10px;
-                padding-bottom: 7px;
-                width: 30%;
-                border-left: none;
-                border-top: none;
-                border-bottom: 2px solid white;
-                outline: none;
-                border-right: none;
-                background-color: transparent;
-                color: white;
-                font-size: 20px;
-                width: 40%;
-                top: 20px;
-            }
-
-            .Formulario_Contacto form select {
-                border-left: none;
-                border-top: none;
-                border-bottom: 2px solid black;
-                outline: none;
-                border-right: none;
-                background-color: transparent;
-                color: white;
-                font-size: 20px;
-                top: 40px;
-            }
-
-            .For mulario_Contacto form #select_edad {
-                position: relative;
-                top: -9px;
-                left: -90px;
-            }
-
-            .Formulario_Contacto form #label_edad {
-                position: relative;
-                top: -7px;
-                font-size: 20px;
-                left: -90px;
-                color: white;
-            }
-
-            .Formulario_Contacto form #label_consulta {
-                position: relative;
-                top: -5px;
-                left: 90px;
-                font-size: 20px;
-            }
-
-            .Formulario_Contacto form #select_sexo {
-                position: relative;
-                margin-left: 10px;
-                top: 55px;
-                left: -38px;
-            }
-
-            .For mulario_Contacto form #label_sexo {
-                position: relative;
-                top: 55px;
-                left: -30px;
-                font-size: 20px;
-                color: white;
-            }
-
-            .For mulario_Contacto form #tipo_consulta {
-                position: relative;
-                top: -8px;
-                left: 89px;
-            }
-
-            .For mulario_Contacto form option {
-                border-left: none;
-                border-top: none;
-                border-bottom: 2px solid black;
-                outline: none;
-                border-right: none;
-                background-color: black;
-                color: white;
-                font-size: 20px;
-            }
-
-            .Formulario_Contacto form textarea {
-                border-left: none;
-                border-top: none;
-                border-bottom: 2px solid black;
-                outline: none;
-                border-right: none;
-                background-color: transparent;
-                color: white;
-                border: 2px solid black;
-                font-size: 20px;
-                top: 5px;
-            }
-
-            .Formulario_Contacto form .Botton-Enviar {
-                background-color: transparent;
-                width: 20%;
-                height: 35px;
-                border-bottom: 5px solid red;
-                border-radius: 0;
-                color: white;
-                top: -10px;
-            }
-
-            .Formulario_Contacto form.Botton-Enviar:hover {
-                color: bisque;
-                background-color: black;
-            }
->>>>>>> Stashed changes

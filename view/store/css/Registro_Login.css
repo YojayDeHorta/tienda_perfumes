@@ -1,5 +1,11 @@
 /*---------------PESTAÑA DE REGISTRAR Y USUARIO----------------------*/
 
+#Pagina_Registro{
+    position: relative;
+    height: 2900px;
+}
+
+
 form[id='Formulario_Registro'] {
     position: relative;
     background-color: #f9f9f9;
@@ -80,7 +86,7 @@ form[id='Formulario_Iniciar'] {
     margin: 0;
     border: 5px solid black;
     width: 35%;
-    height: 330px;
+    height: 370px;
     left: 495px;
     box-shadow: 0px 0px 10px 0px;
     top:20px;
@@ -121,42 +127,3 @@ form[id='Formulario_Iniciar'] .Botton-Enviar {
     font-size: 25px;
 }
 
-
-
-
-/*
- form[class='Formulario'] h1{
-     position:relative;
- }
-
- form[class='Formulario'] label{
-    position:relative;
-    top:30px;
-    left:-200px;
-}
-
- form[class='Formulario'] input{
-    width: 18%;
-}
- 
-form[class='Formulario'] p{
-    position: relative;
-    font-size:15px;
-    top:-27px;
-
-}
-
-form[class='Formulario'] #Validacion_Nombre{
-    position:relative;
-    top:0px;
-    left:-30px;
-}
-
-form[id='Registro']{
-    position:relative;
-    background-color: red;
-    width: 53%;
-    top:20px;
-    
-    
-}

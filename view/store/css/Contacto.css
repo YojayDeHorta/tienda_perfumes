@@ -1,0 +1,100 @@
+
+
+ div[class='img_contacto'] {
+     position: relative;
+     border: 1px solid silver;
+     top: 12px;
+ }
+
+
+div[class='Escribenos']{
+    position: relative;
+    width: 25%;
+    text-align: center;
+    top: 90px;
+    left: 30px;
+}
+
+div[class='Escribenos'] h1{
+    position: relative;
+    font-family: Yellowtail;
+    font-size: 45px;
+}
+
+div[class='Escribenos'] h2{
+    position: relative;
+    font-size: 20px;
+    text-transform: lowercase;
+}
+
+
+
+ div[class='Formulario_Contacto'] {
+     position: relative;
+     background-color: rgb(0,0,0,0.4);
+     border: 2px solid black;
+     text-align: center;
+     width: 43%;
+     top: -60px;
+     left: 800px;
+ }
+
+ div[class='Formulario_Contacto'] form {
+     position: relative;
+     color: black;
+     
+ }
+
+
+
+ div[class='Formulario_Contacto'] form h1 {
+     position: relative;
+     font-size: 25px;
+     font-family: Yellowtail;
+     color: black;
+ }
+
+ div[class='Formulario_Contacto'] form input {
+     position: relative;
+     width: 37%;
+     border-left: none;
+     border-top: none;
+     border-bottom: 2px solid black;
+     outline: none;
+     border-right: none;
+     background-color: transparent;
+ }
+
+ div[class='Formulario_Contacto'] form select {
+     background-color: transparent;
+     color: black;
+     width: 37%;
+     outline: none;
+     border-right: none;
+     border-left: none;
+     border-top: none;
+     border-bottom: 2px solid black;
+ }
+
+  div[class='Formulario_Contacto'] form select option {
+     background-color: transparent;
+     outline: none;
+ }
+
+   div[class='Formulario_Contacto'] form textarea{
+     background-color: transparent;
+     outline: none;
+     width: 83%;
+     height: 190px;
+
+ }
+
+    div[class='Formulario_Contacto'] form button{
+     background-color: black;
+     border-radius: 10px;
+     outline: none;
+     width: 15%;
+     height: 30px;
+     color: bisque;
+     top: -10px;
+ }
