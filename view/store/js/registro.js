@@ -9,7 +9,7 @@ function Tabs_Principal(evt, Pestaña) {
      tabs_bottom.style = 'border:none';
   }
 
-  console.log('1',tabs,'2',Pestaña)
+  /*console.log('1',tabs,'2',Pestaña)*/
 
   if (tabs==Pestaña){
          tabs_bottom.style = 'border-bottom:5px solid red'

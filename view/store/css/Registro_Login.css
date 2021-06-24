@@ -1,12 +1,12 @@
 /*---------------PESTAÑA DE REGISTRAR Y USUARIO----------------------*/
-
+/*
 #Pagina_Registro{
     position: relative;
     height: 2900px;
 }
 
 
-form[id='Formulario_Registro'] {
+form[id='Registro'] {
     position: relative;
     background-color: #f9f9f9;
     display: flex;
@@ -22,7 +22,7 @@ form[id='Formulario_Registro'] {
     top:20px;
 }
 
-form[id='Formulario_Registro'] .Formulario_Grupo input {
+form[id='Registro'] .Formulario_Grupo input {
     position: relative;
     width: 90%;
     border-left: none;
@@ -33,7 +33,7 @@ form[id='Formulario_Registro'] .Formulario_Grupo input {
     background-color: transparent;
 }
 
-form[id='Formulario_Registro'] h1 {
+form[id='Registro'] h1 {
     position: relative;
     text-align: center;
     width: 100%;
@@ -43,22 +43,22 @@ form[id='Formulario_Registro'] h1 {
 
 
 
-form[id='Formulario_Registro'] p {
+form[id='Registro'] p {
     position: relative;
 }
 
-form[id='Formulario_Registro'] #Validacion {
+form[id='Registro'] #Validacion {
     position: relative;
     left: -24px;
     top: -5px;
 }
 
-form[id='Formulario_Registro'] label {
+form[id='Registro'] label {
     position: relative;
 
 }
 
-form[id='Formulario_Registro'] .Formulario_Grupo {
+form[id='Registro'] .Formulario_Grupo {
     position: relative;
     width: 40%;
     padding: 0;
@@ -68,7 +68,7 @@ form[id='Formulario_Registro'] .Formulario_Grupo {
     margin-left: 50px;
 }
 
-form[id='Formulario_Registro'] #formulario__mensaje {
+form[id='Registro'] #formulario__mensaje {
     position: relative;
     text-align: center;
     background-color: red;

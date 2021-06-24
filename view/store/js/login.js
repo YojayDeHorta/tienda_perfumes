@@ -5,11 +5,12 @@ var alerta = document.getElementById("alerta_login");
 sesion.addEventListener("submit", function (e) {
   e.preventDefault();
   var datos = new FormData(sesion);
-  //console.log(datos.get("Contraseña"));
+  /*console.log(datos.get("Contraseña"));*/
   if (
     datos.get("Email") == "admin@admin.com" &&
     datos.get("Contraseña") == "administrador"
   ) {
+    alert('ola mundo')
     window.location.replace("../admin/admin.html");
   }
 
