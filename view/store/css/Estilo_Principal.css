@@ -9,11 +9,11 @@
     padding: 0;
 }
 
-.Div-Principal {
+div[class='Div-Principal']{
     position: relative;
     background-color: transparent;
     width: 100%;
-    height: 3000px;
+    height: 300%;
     overflow: hidden;
 }
 
@@ -22,12 +22,12 @@ header {
     background-color: black;
     top: 10px;
     width: 100%;
-    height: 40px;
+    height: 2%;
 }
 
 header nav {
     position: relative;
-    height: 40px;
+    height: 2px;
 }
 
 header nav a {
@@ -87,7 +87,7 @@ div[class='Frase_Busqueda'] {
     background-color: silver;
     text-align: center;
     top: 10px;
-    height: 70px;
+    height: 3.5%;
 }
 
 div[class='Frase_Busqueda'] h1 {
@@ -128,14 +128,14 @@ div[class='slider'] {
     position: relative;
     border-top: 5px solid #b7a09f;
     width: 100%;
-    height: 350px;
+    height: 19%;
     top: 2px;
+    margin-bottom: 3%;
 }
 
 div[class='slider'] .myslide {
     position: relative;
     text-align: center;
-    height: 400px;
     width: 100%;
     display: none;
     overflow: hidden;
@@ -168,7 +168,7 @@ div[class='slider'] .Dirrecion {
     position: relative;
     display: inline-block;
     width: 15px;
-    height: 12px;
+    height: 3%;
     border: 3px solid black;
     border-radius: 50%;
     margin: 0 10px;
@@ -186,24 +186,26 @@ div[class='slider'] .Dirrecion:hover {
 div[class='Top-Favoritos'] {
     position: relative;
     border-bottom: 5px solid silver;
+    background-color: #d9d9d9 ;
     text-align: center;
     width: 100%;
-    height: 250px;
-    top: 90px;
+    height: 9.5%;
+    box-shadow: 0px 0px 0px 10px;
+    margin-bottom: -30px;
 }
 
 .Top-Favoritos table[class='Perfumes-Favoritos'] {
     position: relative;
     width: 100%;
     color: black;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 table[class='Perfumes-Favoritos'] td {
     position: relative;
     text-align: center;
     font-size: 15px;
-    font-family: Yellowtail;
+
 }
 
 table[class='Perfumes-Favoritos'] td img {
@@ -271,63 +273,6 @@ table[class='Perfumes-Favoritos'] td button:hover {
 }
 
 
-
-
-
-
-
-/*---------------------------------------------------------------------*/
-
-
-/*---------------PESTAÑA DE REGISTRAR Y USUARIO----------------------*/
-
-
-
-
-
-/*
-    .tabs {
-        position: relative;
-        margin: 0 auto;
-        color: black;
-        width: 100%;
-        top: 150px;
-    }
-
-    .tabs nav a {
-        position: relative;
-        left: 140px;
-        font-size: 30px;
-        font-family: "Yellowtail";
-    }
-
-    .tab-list {
-        padding-bottom: 0.6rem;
-    }
-
-    .tab {
-        display: inline-block;
-        text-decoration: none;
-        margin-left: 150px;
-        font-weight: 600;
-        color: black;
-    }
-
-    .tab.active {
-        border-bottom: 5px solid red;
-    }
-
-    .tab-content {
-        display: none;
-        padding: 1.5rem;
-        top: 500px;
-    }
-
-    .tab-content.show {
-        display: block;
-    }
-
-    /*  -------------- TABS - PESTAÑAS ---------------  */
 /**-----------------DIV  DE PRODUCTOS-------------------**/
 
 #Catalogo_Productos {
@@ -406,6 +351,9 @@ table[class='Perfumes-Favoritos'] td button:hover {
     background-color: black;
 }
 
+
+
+/**/
 #Title_Videos {
     position: relative;
     top: 440px;
@@ -442,219 +390,6 @@ table[class='Perfumes-Favoritos'] td button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    #Div_Tabs_Pagina_Registro {
-        position: relative;
-        width: 100%;
-        top: 70px;
-        left: 50px;
-    }
-
-    #Div_Tabs_Pagina_Registro button {
-        position: relative;
-        margin-left: 90px;
-        font-family: Yellowtail;
-        font-size: 40px;
-        left: 370px;
-    }
-*/
-/*
-
-    .Formulario {
-        position: relative;
-        text-align: center;
-        background-color: #f9f9f9;
-        top: 20px;
-    }
-/*
-    .Formulario input {
-        border-left: none;
-        border-top: none;
-        border-bottom: 2px solid black;
-        outline: none;
-        border-right: none;
-        background-color: transparent;
-    }
-
-    .Botton-Enviar {
-        position: relative;
-        background-color: white;
-        border: 0;
-        border-radius: 15px;
-        font-size: 25px;
-        width: 50%;
-        height: 35px;
-        color: trasparent;
-        top: 50px;
-        color: black;
-    }
-
-    .Botton-Enviar:hover {
-        color: bisque;
-        background-color: black;
-    }
-
-    /*------------TABS REGISTRARTE-----------------*/
-
-
-
-
-
-/*
-    #formulario {
-        position: relative;
-        width: 40%;
-        left: 450px;
-        height: 450px;
-        box-shadow: 0px 0px 10px 0px;
-        top: 500px;
-    }
-
-    legend {
-        border-radius: 10px;
-        font-size: 15px;
-        color: black;
-        width: 85%;
-        height: 40px;
-
-    }
-
-    legend h1 {
-        position: relative;
-        top: 20px;
-    }
-
-    .Input-Registrate {
-        position: relative;
-        top: 40px;
-        width: 40%;
-        height: 40px;
-    }
-
-    #Registrar-Contraseña_1 {
-        position: relative;
-        left: 10px;
-    }
-
-    #Registrar-Contraseña_2 {
-        position: relative;
-        left: 35px;
-    }
-
-    .Mostrar-Contraseña {
-        position: relative;
-        background-color: transparent;
-        border: 0;
-        text-decoration: none;
-        color: black;
-        font-size: 25px;
-        top: 40px;
-        left: 15px;
-    }
-
-    .Mostrar-Contraseña:hover {
-        color: navy;
-    }
-
-    #btn-registrar {
-        position: relative;
-        top: 60px;
-        width: 30%;
-        height: 50px;
-    }
-
-    /*------------TABS REGISTRARTE-----------------*/
-/*----------LOGIN------------*/
-/*
-    #Iniciar {
-        position: relative;
-        width: 33%;
-        left: 510px;
-        height: 450px;
-        box-shadow: 0px 0px 10px 0px;
-    }
-
-    #Iniciar h1 {
-        color: black;
-        top: 15px;
-    }
-
-    .Input {
-        position: relative;
-        border-right: none;
-        background-color: transparent;
-        padding: 0px;
-        margin: 0px;
-        border-left: none;
-        border-top: none;
-        text-decoration: none;
-        top: 5px;
-        width: 70%;
-        height: 40px;
-    }
-
-    #Iniciar .Usuario {
-        position: relative;
-        font-size: 15px;
-        top: 35px;
-    }
-
-    #Iniciar .Usuario a {
-        color: black;
-    }
-
-    #Email {
-        position: relative;
-        top: 25px;
-        width: 85%;
-        left: 5px;
-    }
-
-    #Contraseña {
-        position: relative;
-        top: 60px;
-        left: -10px;
-        left: 5px;
-        width: 85%;
-    }
-
-    #Olvidaste-contraseña {
-        position: relative;
-        text-decoration: none;
-        width: 100%;
-        color: black;
-        font-size: 20px;
-        top: 100px;
-    }
-
-    #btn-Login {
-        position: relative;
-        background-color: silver;
-        top: 140px;
-        width: 35%;
-        height: 40px;
-    }
-
-    #btn-Login:hover {
-        background-color: black;
-    }
 
     /*----------LOGIN------------*/
 /*----------------------Pestaña Session Usuario------------------------*/

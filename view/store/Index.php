@@ -27,7 +27,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/Icon-Perfume.jpg">
-  <link href="css/1.css" rel="stylesheet">
+  <link href="css/Estilo_Principal.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -122,23 +122,23 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
         </tr>
       </table>
     </div>
-    <!-- Tab links -->
-    <div class="tabs">
-      <nav class="tab-list">
-        <a class="tab " href="#tab-1">PERFUMES &nbsp; PARA &nbsp; ÉL</a>
-        <a class="tab active" href="#tab-2">PERFUMES &nbsp; PARA &nbsp;ELLA</a>
-      </nav>
-      <div id="tab-1" class="tab-content ">
-        <div class="Catalogo-Producto" id="Productos-Caballeros">
-
+        <div class="tab">
+      <button class="tablinks" id='pestaña_1' onclick="Tabs_Principal(event, 'Pestaña_1')">PERFUMES &nbsp; PARA &nbsp; ÉL</button>
+      <button class="tablinks" id='pestaña_2' onclick="Tabs_Principal(event, 'Pestaña_2')">PERFUMES &nbsp; PARA &nbsp;ELLA</button>
+    </div> <br> <br> <br>
+    <div class="tabcontent" id="Pestaña_1">
+              <div class="Catalogo-Producto" id="Productos-Caballeros">
         </div>
-      </div>
-      <div id="tab-2" class="tab-content show">
-        <div class="Catalogo-Producto" id="Productos-Damas">
-
-        </div>
-      </div>
     </div>
+
+    <div class="tabcontent" id="Pestaña_2">
+              <div class="Catalogo-Producto" id="Productos-Damas">
+        </div>
+    </div>
+
+
+
+<!--
     <h1 class="Titulo_Marcas" id="Title_Videos">OPINIONES</h1>
     <table class="Tabla_Videos">
       <tr>
