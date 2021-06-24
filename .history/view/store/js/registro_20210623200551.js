@@ -1,10 +1,7 @@
-
-
 /*-------------------------- */
-var tabs_bottom=null, tabs_contenido=null;
+var tabs_bottom, tabs_contenido;
 
 function Tabs_Principal(evt, Pestaña) {
-
   if (tabs_bottom!=null){
      tabs_bottom.style = 'border:none';
   }
