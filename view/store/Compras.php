@@ -64,7 +64,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
           <label for="lname">Cupon:</label>
           <input type="text" id="nombre_cupon" name="nombre_cupon" minlength="3" maxlength="15"
             pattern="[A-Za-z0-9_-]{3,15}" required><br><br>
-          <button class="Comprar_Buttom">COMPRAR</button>
+          <button class="Comprar_Buttom">añadir</button>
         </form>
       </div>
     </div>
