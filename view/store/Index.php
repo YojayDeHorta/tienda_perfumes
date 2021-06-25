@@ -38,13 +38,14 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
         <h1 class='Logo-h1'><a href="Index.php">PERFUMERÍA</a></h1>
         <ul class='Icons-ul'>
           <li><a href="Contacto.html"><i class="fas fa-address-book"></i></a></li> &nbsp; &nbsp; &nbsp;
-          <li><a href=<?php echo $login; ?>><?php echo $_SESSION['NOMBRE_CLIENTE']; ?><i class="far fa-user-circle"></i></a></li>
+            <li><a href=<?php echo $login; ?>><?php echo $_SESSION['NOMBRE_CLIENTE']; ?><i class="far fa-user-circle"></i></a></li>
           <?php
           if ($_SESSION['NOMBRE_CLIENTE'] != "inicia sesion o registrate!") {
             echo '<li><a href="Compras.php"><i class="fas fa-cart-plus"></i></a></li>
                 <li><a href="/../../controller/ACTIONS/act_logout.php">cerrar sesion<i class="far fa-user-circle"></i></a></li>';
           }
           ?>
+        
         </ul>
       </nav>
     </header>

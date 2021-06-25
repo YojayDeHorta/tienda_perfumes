@@ -98,3 +98,56 @@ div[class='Escribenos'] h2{
      color: bisque;
      top: -10px;
  }
+
+ /*
+
+
+    /*-----------MARCAS-----------------*/
+/*
+    .Titulo_Marcas {
+        position: relative;
+        text-align: left;
+        font-family: Yellowtail;
+        padding-left: 15px;
+        font-size: 35px;
+        color: black;
+        width: 33%;
+        top: 80px;
+        left: 10px;
+    }
+
+    .Caja-Logos {
+        position: relative;
+        align-items: center;
+        background-color: #d9d9d9;
+        display: flex;
+        flex-flow: wrap;
+        top: 110px;
+        height: 110px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .Logo {
+        width: 25%;
+        margin: 0px;
+        padding: 0;
+        left: 80px;
+    }
+
+    .Logo img {
+        position: relative;
+        width: 50%;
+    }
+
+    /*-----------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+ */
