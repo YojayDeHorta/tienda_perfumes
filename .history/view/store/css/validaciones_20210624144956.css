@@ -5,15 +5,10 @@ div[class='tabs']{
   margin-bottom: 230px;
 }
 
-/*
-div[id='Productos-Caballeros']{
-  position: relative;
-  display:block;
-}*/
-
 
 div[id='Pestaña_1']{
   position:relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -57,7 +52,7 @@ form[id='Iniciar'] input{
   outline: none;
   border-right: none;
   background-color: transparent;
-  left:120px;
+  left:150px;
   top:-30px;
 }
 
@@ -74,14 +69,6 @@ form[id='Iniciar'] #btn-Login{
   top:30px;
   width: 33%;
   left:220px;
-  font-size: 25px;
-  border-radius: 10px;
-}
-
-form[id='Iniciar'] #btn-Login:hover{
-  border:1px solid black;
-  background-color: black;
-  color:bisque;
 }
 
 

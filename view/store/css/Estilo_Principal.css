@@ -65,8 +65,9 @@ header nav ul[class='Icons-ul'] li {
 
 
 header nav ul[class='Icons-ul_2'] {
-     position: relative;
+    position: relative;
     left: 1290px;
+    height: 2.5%;
     width: 26%;
     top: -35px;
     font-size: 30px;

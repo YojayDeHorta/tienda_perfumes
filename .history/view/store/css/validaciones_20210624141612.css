@@ -5,15 +5,10 @@ div[class='tabs']{
   margin-bottom: 230px;
 }
 
-/*
-div[id='Productos-Caballeros']{
-  position: relative;
-  display:block;
-}*/
-
 
 div[id='Pestaña_1']{
   position:relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -30,59 +25,8 @@ form[class='Formu']{
 }
 
 
-form[id='Iniciar']{
-  position:relative;
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  justify-content: center;
-  background-color:#f4f4f4;
-  left:450px;
-  height: 400px;
-}
+form[id='']
 
-form[id='Iniciar'] h1{
-  position:relative;
-  top:-40px;
-  font-size: 35px;
-}
-
-form[id='Iniciar'] input{
-  position: relative;
-  width: 60%;
-  height: 30px;
-  border-left: none;
-  border-top: none;
-  border-bottom: 2px solid black;
-  outline: none;
-  border-right: none;
-  background-color: transparent;
-  left:120px;
-  top:-30px;
-}
-
-form[id='Iniciar'] a{
-  position: relative;
-  top:5px;
-}
-
-form[id='Iniciar'] #btn-Login{
-  position: relative;
-  border:1px solid black;
-  background-color: white;
-  color:black;
-  top:30px;
-  width: 33%;
-  left:220px;
-  font-size: 25px;
-  border-radius: 10px;
-}
-
-form[id='Iniciar'] #btn-Login:hover{
-  border:1px solid black;
-  background-color: black;
-  color:bisque;
-}
 
 
 form[id='Registro']{
@@ -239,9 +183,4 @@ form[id='Registro'] input{
 }
 .formulario__grupo-incorrecto .formulario__input {
   background-color: rgb(255, 0, 0,0.3);
-}
-
-a[id='Olvidaste-contraseña']{
-  position:relative;
-  top:40px;
 }
