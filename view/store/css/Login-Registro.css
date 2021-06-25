@@ -1,6 +1,6 @@
 /*ESTILOS DE LAS VALIDACIONES*/
 
-div[class='tabs']{
+div[class="tabs"] {
   position: relative;
   margin-bottom: 230px;
 }
@@ -11,43 +11,41 @@ div[id='Productos-Caballeros']{
   display:block;
 }*/
 
-
-div[id='Pestaña_1']{
-  position:relative;
+div[id="Pestaña_1"] {
+  position: relative;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
 }
 
-form[class='Formu']{
-  position:relative;
+form[class="Formu"] {
+  position: relative;
   box-shadow: 0px 0px 10px 0px;
   display: flex;
   flex-wrap: wrap;
   width: 43%;
-  border:2px solid black;
+  border: 2px solid black;
 }
 
-
-form[id='Iniciar']{
-  position:relative;
+form[id="Iniciar"] {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 40%;
   justify-content: center;
-  background-color:#f4f4f4;
-  left:450px;
+  background-color: #f4f4f4;
+  left: 450px;
   height: 400px;
 }
 
-form[id='Iniciar'] h1{
-  position:relative;
-  top:-40px;
+form[id="Iniciar"] h1 {
+  position: relative;
+  top: -40px;
   font-size: 35px;
 }
 
-form[id='Iniciar'] input{
+form[id="Iniciar"] input {
   position: relative;
   width: 60%;
   height: 30px;
@@ -57,43 +55,42 @@ form[id='Iniciar'] input{
   outline: none;
   border-right: none;
   background-color: transparent;
-  left:120px;
-  top:-30px;
+  left: 120px;
+  top: -30px;
 }
 
-form[id='Iniciar'] a{
+form[id="Iniciar"] a {
   position: relative;
-  top:5px;
+  top: 5px;
 }
 
-form[id='Iniciar'] #btn-Login{
+form[id="Iniciar"] #btn-Login {
   position: relative;
-  border:1px solid black;
+  border: 1px solid black;
   background-color: white;
-  color:black;
-  top:30px;
+  color: black;
+  top: 30px;
   width: 33%;
-  left:220px;
+  left: 220px;
   font-size: 25px;
   border-radius: 10px;
 }
 
-form[id='Iniciar'] #btn-Login:hover{
-  border:1px solid black;
+form[id="Iniciar"] #btn-Login:hover {
+  border: 1px solid black;
   background-color: black;
-  color:bisque;
+  color: bisque;
 }
 
-
-form[id='Registro']{
-  position:relative;
-  background-color:#f4f4f4;
+form[id="Registro"] {
+  position: relative;
+  background-color: #f4f4f4;
   width: 43%;
   height: 590px;
-  left:450px;
+  left: 450px;
 }
 
-form[id='Registro'] input{
+form[id="Registro"] input {
   position: relative;
   width: 70%;
   border-left: none;
@@ -104,21 +101,17 @@ form[id='Registro'] input{
   background-color: transparent;
 }
 
-
-
-.Formu h1{
+.Formu h1 {
   position: relative;
   width: 100%;
-  color:black;
-  top:30px;
+  color: black;
+  top: 30px;
   margin-bottom: 50px;
 }
 
-
 .formulario__grupo {
   width: 48%;
-  left:15px;
-
+  left: 15px;
 }
 .formulario__label {
   display: block;
@@ -160,7 +153,7 @@ form[id='Registro'] input{
   z-index: 100;
   font-size: 16px;
   opacity: 0;
-  left:270px;
+  left: 270px;
 }
 .formulario__checkbox {
   margin-right: 10px;
@@ -171,8 +164,8 @@ form[id='Registro'] input{
   width: 100%;
 }
 
-.formulario__grupo-terminos input{
-  position:relative;
+.formulario__grupo-terminos input {
+  position: relative;
   display: inline;
   background-color: green;
   width: 103%;
@@ -218,7 +211,7 @@ form[id='Registro'] input{
   font-size: 20px;
   color: #119200;
   display: none;
-  left:20px;
+  left: 20px;
 }
 
 .formulario__mensaje-exito-activo {
@@ -238,10 +231,13 @@ form[id='Registro'] input{
   opacity: 1;
 }
 .formulario__grupo-incorrecto .formulario__input {
-  background-color: rgb(255, 0, 0,0.3);
+  background-color: rgb(255, 0, 0, 0.3);
 }
 
-a[id='Olvidaste-contraseña']{
-  position:relative;
-  top:40px;
+a[id="Olvidaste-contraseña"] {
+  position: relative;
+  top: 40px;
+}
+#alerta_login {
+  margin-bottom: 40px;
 }
