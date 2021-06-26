@@ -1,21 +1,15 @@
 /*ESTILOS DE LAS VALIDACIONES*/
 
+div[class="tabs"] {
+  position: relative;
+  margin-bottom: 250px;
+}
+
 /*
 div[id='Productos-Caballeros']{
   position: relative;
   display:block;
 }*/
-
-div[id='Pestaña_Usuario']{
-  position:relative;
-  left:400px;
-  margin-bottom:150px;
-}
-
-div[id='Pestaña_Usuario'] button{
-  position:relative;
-  font-size:45px;
-}
 
 div[id="Pestaña_1"] {
   position: relative;
