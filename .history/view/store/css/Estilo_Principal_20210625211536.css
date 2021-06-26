@@ -50,10 +50,12 @@ header nav h1[class='Logo-h1'] {
 header nav ul[class='Icons-ul'] {
     position: relative;
     text-align:left;
-    width: 35%;
+    background-color:red;
+    width: 30%;
     top: -33px;
     font-size: 22px;
-    left:970px;
+    left:1100px;
+    margin-right:300px;
 }
 
 
@@ -240,7 +242,7 @@ table[class='Perfumes-Favoritos'] td button:hover {
     position: relative;
     overflow: hidden;
     top: 120px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     left:200px;
 }
 

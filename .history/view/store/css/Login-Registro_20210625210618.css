@@ -8,13 +8,14 @@ div[id='Productos-Caballeros']{
 
 div[id='Pestaña_Usuario']{
   position:relative;
-  left:400px;
-  margin-bottom:150px;
+  left:450px;
+  font-size:35px;
 }
 
 div[id='Pestaña_Usuario'] button{
   position:relative;
-  font-size:45px;
+  l
+  font-size:35px;
 }
 
 div[id="Pestaña_1"] {

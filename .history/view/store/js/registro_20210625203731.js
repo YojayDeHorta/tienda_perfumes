@@ -35,7 +35,7 @@ function Tabs_Principal(evt, Pestaña) {
 
 var tabs = JSON.parse(localStorage.getItem("Tabs"));
 
-localStorage.removeItem('Tabs');
+storage.removeItem("Tabs");
 
 tabs_bottom = document.getElementById(tabs.toLowerCase());
 
