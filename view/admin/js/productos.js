@@ -3,7 +3,6 @@ const modalProductos = new bootstrap.Modal(
 );
 
 const contenedorProductos = document.getElementById("contenedor-productos");
-
 const formProducto = document.getElementById("formulario-producto");
 const id_producto = document.getElementById("id_producto");
 const tipo = document.getElementById("tipo");
@@ -15,6 +14,11 @@ const precio = document.getElementById("precio");
 const stock = document.getElementById("stock");
 const divIdproducto = document.getElementById("divId_producto");
 const divAvisoProducto = document.getElementById("divAvisoProducto");
+
+button = document.getElementById("imagenbtn");
+
+let file;
+
 let opcionProducto = "";
 let resultados = "";
 btnProducto.addEventListener("click", () => {
@@ -37,7 +41,7 @@ const mostrarproductos = (articulos) => {
     resultados += `<tr>
         <td>${articulo.id_producto}</td>
         <td>${articulo.tipo}</td>
-        <td></td>
+        <td><img src="/view/store/img/productos/Catalogo-${articulo.id_producto}.png " width="50" height="60"></td>
         <td>${articulo.nombre_producto}</td>
         <td>${articulo.descripcion}</td>
         <td>${articulo.precio_producto}</td>
@@ -93,7 +97,7 @@ on(document, "click", "#editar_producto", (e) => {
   const precioForm = fila.children[5].innerHTML;
   const stockForm = fila.children[6].innerHTML;
   tipo.value = tipoForm;
-  imagen.value = imagenForm;
+  imagen.value = "";
   producto.value = productoForm;
   descripcion.value = descripcionForm;
   id_producto.value = idproductoForm;
@@ -150,3 +154,34 @@ formProducto.addEventListener("submit", (e) => {
     modalProductos.hide();
   }
 });
+
+
+//Procedimiento para la imagen
+button.onclick = () => {
+  imagen.click(); //if user click on the button then the imagen also clicked
+}
+imagen.addEventListener("change", function () {
+  //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+  file = this.files[0];
+  //dropArea.classList.add("active");
+  showFile(); //calling function
+});
+
+function showFile() {
+  let productoimg = document.getElementById("productoimg");
+  let fileType = file.type;
+  let validador = ["image/jpeg", "image/jpg", "image/png"];
+  if (validador.includes(fileType)) {
+
+    let fileReader = new FileReader();
+    fileReader.onload = () => {
+      let fileURL = fileReader.result;
+      let imgTag = `<img src="${fileURL}"  class="img-thumbnail mx-auto d-block" alt="Responsive image" width="50%" height="60%">`;
+      productoimg.innerHTML = imgTag;
+    }
+    fileReader.readAsDataURL(file);
+  } else {
+    alert("This is not an Image File!");
+    imagen.value = "";
+  }
+}

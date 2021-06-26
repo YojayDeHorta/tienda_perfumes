@@ -17,7 +17,7 @@ xhr.onload = function () {
         hombres.innerHTML += `
           <div class="Producto" >
             <h1 class="Titulo" >${item.nombre_producto}</h1>
-            <img class="Img-Producto"  src="img/Catalogo-${item.id_producto}.png">
+            <img class="Img-Producto"  src="img/productos/Catalogo-${item.id_producto}.png">
             <h4 class="Precio" id="precioProducto${item.id_producto}" value="${item.precio_producto}">$ ${item.precio_producto} USD</h4>
             <p class="Descripcion" ">
             ${item.descripcion}
@@ -34,7 +34,7 @@ xhr.onload = function () {
           <div class="Producto" >
           
             <h1 class="Titulo" >${item.nombre_producto}</h1>
-            <img class="Img-Producto"  src="img/Catalogo-${item.id_producto}.png">
+            <img class="Img-Producto"  src="img/productos/Catalogo-${item.id_producto}.png">
             <h4 class="Precio" id="precioProducto${item.id_producto}" value="${item.precio_producto}">$ ${item.precio_producto} USD</h4>
             <p class="Descripcion" ">
             ${item.descripcion}

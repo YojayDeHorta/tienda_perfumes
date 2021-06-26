@@ -6,8 +6,6 @@
         
 		 $user = $_POST['email'];
 		 $password = $_POST['password'];
-        //  $user = "12345678";
-		//  $password = "12345678";
         //reg ex 
         if($user=="" || $password==""){
             echo json_encode('Inicio de sesion fallido,email / telefono o contraseña vacio');

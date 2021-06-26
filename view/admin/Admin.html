@@ -73,6 +73,7 @@
               <th>ACCIONES</th>
             </tr>
           </thead>
+
           <tbody id="contenedor-clientes"></tbody>
         </table>
       </div>
@@ -155,10 +156,7 @@
               <input type="text" class="form-control" id="tipo" name="Tipo" minlength="1" maxlength="1"
                 title="el tipo solo puede ser masculino=M o femenino=F" pattern="[MF]{1}" required autofocus>
             </div>
-            <div class="mb-3">
-              <label for="imagen" class="col-form-label">imagen:</label>
-              <input type="text" class="form-control" id="imagen" name="Imagen" autofocus>
-            </div>
+
             <div class="mb-3">
               <label for="producto" class="col-form-label">nombre del producto:</label>
               <input type="text" class="form-control" id="producto" name="Producto" minlength="4" maxlength="60"
@@ -179,6 +177,15 @@
               <input type="text" class="form-control" id="stock" name="Stock" minlength="1" maxlength="3"
                 title="El stock puede tener maximo 999 productos, solo numeros" pattern="[0-9]+" required autofocus>
             </div>
+            <div class="mb-3">
+              <label for="imagen" id="imagenbtn" class="col-form-label">imagen:</label>
+              <input type="file" class="form-control" id="imagen" name="Imagen" required autofocus>
+              <h7 class="col-form-label">vista previa:</h7> <br>
+              <div id="productoimg">
+                <h7 class="col-form-label">aun no ha elegido una imagen</h7> <br>
+              </div>
+            </div>
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

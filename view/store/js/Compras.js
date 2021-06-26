@@ -24,7 +24,7 @@ const mostrar = (articulos) => {
     resultados += `
     <div class="Flex_Compras" id="Producto_${articulo.id_producto}">
         <h3>${articulo.nombre_producto}</h3>
-        <img src="img/Catalogo-${articulo.id_producto}.png" class="Img_Producto" id="Img_Compra_1">
+        <img src="img/productos/Catalogo-${articulo.id_producto}.png" class="Img_Producto" id="Img_Compra_1">
         <form name="Cantidad_Producto" action="" method="" id="Cantidad_Producto">
             <h4>Cantidad</h4>
             <input type="number" name="Cantidad" min="1" max="${articulo.stock_disponible}" 

@@ -8,7 +8,7 @@ sesion.addEventListener("submit", function (e) {
   /*console.log(datos.get("Contraseña"));*/
   if (
     datos.get("email") == "admin@admin.com" &&
-    datos.get("password") == "administrador"
+    datos.get("password") == "admin"
   ) {
 
     window.location.replace("../admin/admin.html");
