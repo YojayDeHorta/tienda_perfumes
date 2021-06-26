@@ -10,11 +10,37 @@ require_once (__DIR__."/../ENTITIES/Cliente.php");
  */
 class ClienteDAO {
     
-    public function autenticarCliente($email, $pass){
+    public function autenticarClientePorEmail($email, $pass){
         $data_source = new DataSource();
      
         $data_table= $data_source->ejecutarConsulta("SELECT * FROM clientes WHERE email = :email ", 
                                                     array(':email'=>$email));
+        $cliente=null;
+        if(count($data_table)==1){
+            foreach($data_table as $indice => $valor){
+                $cliente = new Cliente(
+                        $data_table[$indice]["id_cliente"],
+                        $data_table[$indice]["nombre"],
+                        $data_table[$indice]["apellido"],
+                        $data_table[$indice]["numero_movil"],
+                        $data_table[$indice]["password"],
+                        $data_table[$indice]["email"],
+                        );
+            }
+            if(password_verify($pass,$cliente->getPassword())){
+                return $cliente;
+            }else{
+                return null;
+            } 
+        }else{
+            return null;
+        }
+    }
+    public function autenticarClientePorNumero_movil($numero_movil, $pass){
+        $data_source = new DataSource();
+     
+        $data_table= $data_source->ejecutarConsulta("SELECT * FROM clientes WHERE numero_movil = :numero_movil ", 
+                                                    array(':numero_movil'=>$numero_movil));
         $cliente=null;
         if(count($data_table)==1){
             foreach($data_table as $indice => $valor){

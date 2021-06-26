@@ -1,30 +1,34 @@
 <?php
         session_start();
         require_once (__DIR__."/../MDB/mdbCliente.php");	
-	
-		$Email = $_POST['Email'];
-		$password = $_POST['Contraseña'];
+        
+            
+        
+		 $user = $_POST['email'];
+		 $password = $_POST['password'];
+        //  $user = "12345678";
+		//  $password = "12345678";
         //reg ex 
-        if($Email=="" || $password==""){
-            echo json_encode('Inicio de sesion fallido,email o contraseña no valido');
+        if($user=="" || $password==""){
+            echo json_encode('Inicio de sesion fallido,email / telefono o contraseña vacio');
             return 0;
         }
-            
-        if(strpos($Email, '@') === false) {
-            echo json_encode('Inicio de sesion fallido,email o contraseña no valido');
-            return 0;
-        }  
-        $regexpuser = '/^[-!#$%&\'*+\\.\/0-9=?A-Z^_`{|}~]+@([-0-9A-Z]+\.)+([0-9A-Z]){2,7}$/i';
+        $regexpemail = '/^[-!#$%&\'*+\\.\/0-9=?A-Z^_`{|}~]+@([-0-9A-Z]+\.)+([0-9A-Z]){2,7}$/i';
         $regexppass= '/^[A-Za-z0-9]{8,30}$/';
-        if (!preg_match($regexpuser, $Email)||!preg_match($regexppass, $password)){
-            echo json_encode('Inicio de sesion fallido,email o contraseña no valido');
+        $regexptelefono= '/^[0-9+?]{7,14}$/';
+        
+        if (!(strpos($user, '@') === false) && preg_match($regexpemail, $user) && preg_match($regexppass, $password)) {
+            //in case of login with mail
+            $cliente = autenticarClientePorEmail($user, $password);
+        }else if(preg_match($regexptelefono, $user) && preg_match($regexppass, $password)){
+             //in case of login with phone
+            $cliente = autenticarClientePorNumero_movil($user, $password);
+        }else{
+            
+            echo json_encode('Inicio de sesion fallido,email / telefono o contraseña no valido');
             return 0;
         }
-            
-      
-
-
-        $cliente = autenticarCliente($Email, $password);
+        
         
         
             if($cliente != null){
@@ -42,7 +46,7 @@
                 //header("Location: ../../view/store/");
             }else{
 
-                echo json_encode('Inicio de sesion fallido,email o contraseña incorrecta');
+                echo json_encode('Inicio de sesion fallido,email / telefono o contraseña incorrecta');
                 return 0;
                 
 

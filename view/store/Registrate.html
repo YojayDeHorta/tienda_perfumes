@@ -129,7 +129,7 @@
                     </p>
                 </div>
                 <div class="formulario__mensaje" id="formulario__mensaje-bd">
-                    
+
                 </div>
                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                     <button type="submit" class="formulario__btn">Enviar</button>
@@ -146,9 +146,10 @@
                 <h4 id="alerta_login"> </h4>
 
                 <!-- este es el lugar donde sale el mensaje en login-->
-                <input id="Email" class="Input" type="email" name="Email" placeholder=" Email" title="El correo solo puede contener letras, numeros, puntos, guiones bajos,
-        guion y @." required> <br> <br>
-                <input id="Contraseña" class="Input" type="password" name="Contraseña" minlength="8" maxlength="30"
+                <input id="Email" class="Input" type="text" name="email" placeholder=" Email o telefono"
+                    title="solo se aceptan correos o telefonos(7-14 numeros), ej:juan@mail.com o 30012345678"
+                    pattern="^(?:\d{7,14}|\w+@\w+\.\w{2,3})$" required> <br> <br>
+                <input id="Contraseña" class="Input" type="password" name="password" minlength="8" maxlength="30"
                     pattern="[A-Za-z0-9]{8,30}" placeholder="Contraseña"
                     title="La contraseña tiene que tener un minimo de 8 caracteres numeros o letras" required>
                 <a href="" id="Olvidaste-contraseña">¿PERDISTE TU CONTRASEÑA?</a>

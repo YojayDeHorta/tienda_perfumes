@@ -1,8 +1,14 @@
 <?php
-    function autenticarCliente($telefono_movil, $password){
+    function autenticarClientePorEmail($email, $password){
         require_once(__DIR__."/../../model/DAO/ClienteDAO.php");
         $dao=new ClienteDAO();
-        $cliente = $dao->autenticarCliente($telefono_movil, $password);
+        $cliente = $dao->autenticarClientePorEmail($email, $password);
+        return $cliente;
+    }
+    function autenticarClientePorNumero_movil($telefono_movil, $password){
+        require_once(__DIR__."/../../model/DAO/ClienteDAO.php");
+        $dao=new ClienteDAO();
+        $cliente = $dao->autenticarClientePorNumero_movil($telefono_movil, $password);
         return $cliente;
     }
     function insertarCliente($cliente){
