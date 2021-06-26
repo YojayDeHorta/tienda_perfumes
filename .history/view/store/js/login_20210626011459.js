@@ -7,13 +7,9 @@ sesion.addEventListener("submit", function (e) {
   var datos = new FormData(sesion);
   /*console.log(datos.get("Contraseña"));*/
   if (
-    datos.get("email") == "admin@admin.com" &&
-    datos.get("password") == "administrador"
+    datos.get("Email") == "admin@admin.com" &&
+    datos.get("Contraseña") == "administrador"
   ) {
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
     window.location.replace("../admin/admin.html");
   }
 
