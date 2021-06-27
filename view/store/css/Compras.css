@@ -147,10 +147,10 @@ div[class='Compra_Total_Cupon'] {
   font-family: Eras Bold ITC;
   background-color: silver;
   text-align: center;
-  width: 30%;
-  height: 60px;
+  width: 28%;
+  height: 55px;
   top: 620px;
-  left: 1000px;
+  left: 1020px;
   box-shadow: 5px 5px 5px black;
   border-radius: 20px;
 }
@@ -158,8 +158,8 @@ div[class='Compra_Total_Cupon'] {
 div[class='Compra_Total_Cupon']  label {
   font-size: 20px;
   width: 100%;
-  top: 20px;
-  left: -50px;
+  top: 18px;
+  left: -60px;
 }
 
 div[class='Compra_Total_Cupon']  input {
@@ -167,8 +167,8 @@ div[class='Compra_Total_Cupon']  input {
     outline: none;
     text-decoration: none;
     border: 2px solid green;
-    left: -45px;
-    top: 17px;
+    left: -55px;
+    top: 15px;
     height: 20px;
 }
 
@@ -180,7 +180,7 @@ div[class='Compra_Total_Cupon']  button {
  outline: none;
  text-decoration: none;
  border-radius: 5px;
- left: 150px;
+ left: 135px;
  top: -28px;
  width: 25%;
  font-size: 18px;
