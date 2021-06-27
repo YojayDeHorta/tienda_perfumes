@@ -1,4 +1,4 @@
-    .Titulo_Carrito {
+    h1[class='Titulo_Carrito']{
         position: relative;
         text-align: center;
         font-family: Yellowtail;
@@ -8,9 +8,8 @@
     }
 
 
-    .Flex_Compras {
+    div[class='Flex_Compras']{
         position: relative;
-        font-family: Cookie;
         background-color: #e9e9e9;
         color: black;
         text-align: center;
@@ -24,32 +23,32 @@
         box-shadow: 5px 5px 5px black;
     }
 
-    .Flex_Compras h3 {
+    div[class='Flex_Compras'] h3 {
         position: relative;
         margin-left: 10px;
         width: 50%;
-        font-size: 28px;
+        font-size: 18px;
         top: 10px;
     }
 
-    .Flex_Compras img {
+    div[class='Flex_Compras'] img {
         position: relative;
         left: -255px;
-        top: 70px;
-        padding-bottom: 40px;
+        top: 50px;
+        padding-bottom: 50px;
         width: 128px;
         height: 198px;
     }
 
-    .Flex_Compras form {
+   div[class='Flex_Compras'] form {
         position: relative;
         font-size: 25px;
         width: 100%;
         left: -178px;
-        top: 10px;
+        top: -5px;
     }
 
-    .Flex_Compras form input {
+   div[class='Flex_Compras'] form input {
         position: relative;
         width: 12%;
         text-align: center;
@@ -58,24 +57,25 @@
         border-radius: 10px;
     }
 
-    .Flex_Compras #Icon_Compras {
+    div[class='Flex_Compras'] #Icon_Compras {
         position: relative;
         text-decoration: none;
         color: black;
         font-size: 25px;
         margin-left: 15px;
         left: 520px;
-        top: -280px;
+        top: -290px;
     }
 
-    .Flex_Compras #Icon_Compras:hover {
+   div[class='Flex_Compras'] #Icon_Compras:hover {
         color: red;
     }
 
-    .Flex_Compras h2 {
+    div[class='Flex_Compras'] h2 {
         position: relative;
-        top: -50px;
-        left: 410px;
+        top: -55px;
+        left: 420px;
+        font-size: 18px;
     }
 
     .Compra_Total_Carrito {
@@ -125,7 +125,7 @@
         top: 15px;
     }
 
-    .Compra_Total_Carrito button {
+    div[class='Compra_Total_Carrito'] button {
         position: relative;
         background-color: black;
         font-family: Goudy Stout;
@@ -136,28 +136,57 @@
         top: 32px;
     }
 
-    .Compra_Total_Carrito button:hover {
+   div[class='Compra_Total_Carrito'] button:hover {
         background-color: #dc3545;
         color: black;
     }
 
 
-.Compra_Total_Cupon {
+div[class='Compra_Total_Cupon'] {
   position: fixed;
   font-family: Eras Bold ITC;
-  background-color: #ffffff;
+  background-color: silver;
   text-align: center;
   width: 30%;
-  height: 88px;
+  height: 60px;
   top: 620px;
   left: 1000px;
   box-shadow: 5px 5px 5px black;
   border-radius: 20px;
 }
-.Compra_Total_Cupon label {
-  font-size: 25px;
+
+div[class='Compra_Total_Cupon']  label {
+  font-size: 20px;
   width: 100%;
-  font-family: Goudy Stout;
-  top: 10px;
+  top: 20px;
+  left: -50px;
 }
 
+div[class='Compra_Total_Cupon']  input {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border: 2px solid green;
+    left: -45px;
+    top: 17px;
+    height: 20px;
+}
+
+
+div[class='Compra_Total_Cupon']  button {
+ position: relative;
+ background-color: black;
+ color: bisque;
+ outline: none;
+ text-decoration: none;
+ border-radius: 5px;
+ left: 150px;
+ top: -28px;
+ width: 25%;
+ font-size: 18px;
+}
+
+div[class='Compra_Total_Cupon']  button:hover {
+ background-color: rgb(40, 167, 69);
+ color: black;
+}

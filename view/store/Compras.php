@@ -58,10 +58,10 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
       </div>
       <div class="Compra_Total_Cupon">
         <form id="formularioCupon">
-          <label for="lname">Cupon:</label>
+          <label for="lname">CUPÓN : </label>
           <input type="text" id="nombre_cupon" name="nombre_cupon" minlength="3" maxlength="15"
             pattern="[A-Za-z0-9_-]{3,15}" required><br><br>
-          <button class="Comprar_Buttom">añadir</button>
+          <button class="Comprar_Buttom">Añadir</button>
         </form>
       </div>
     </div>
