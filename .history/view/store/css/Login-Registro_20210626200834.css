@@ -1,10 +1,8 @@
 /*ESTILOS DE LAS VALIDACIONES*/
-header{
-  height:40px;
-}
+
 
 div[id='Pagina_Registro_Login']{
-  height: 1000px;
+  height: 1500px;
 }
 
 div[id='Pestaña_Usuario']{
@@ -41,7 +39,6 @@ form[id="Iniciar"] {
   flex-direction: column;
   width: 40%;
   justify-content: center;
-  align-items:center;
   background-color: #f4f4f4;
   left: 450px;
   height: 400px;
@@ -49,7 +46,7 @@ form[id="Iniciar"] {
 
 form[id="Iniciar"] h1 {
   position: relative;
-  top: -20px;
+  top: -40px;
   font-size: 35px;
 }
 
@@ -63,12 +60,13 @@ form[id="Iniciar"] input {
   outline: none;
   border-right: none;
   background-color: transparent;
-  top: -60px;
+  left: 120px;
+  top: -30px;
 }
 
 form[id="Iniciar"] a {
   position: relative;
-  top: -25px;
+  top: 5px;
 }
 
 form[id="Iniciar"] #btn-Login {
@@ -76,8 +74,9 @@ form[id="Iniciar"] #btn-Login {
   border: 1px solid black;
   background-color: white;
   color: black;
-  top: 10px;
+  top: 30px;
   width: 33%;
+  left: 220px;
   font-size: 25px;
   border-radius: 10px;
 }
@@ -92,7 +91,7 @@ form[id="Registro"] {
   position: relative;
   background-color: #f4f4f4;
   width: 43%;
-  height: 600px;
+  height: 590px;
   left: 450px;
 }
 
@@ -106,8 +105,6 @@ form[id="Registro"] input {
   border-right: none;
   background-color: transparent;
 }
-
-
 
 .Formu h1 {
   position: relative;
@@ -208,7 +205,6 @@ form[id="Registro"] input {
   color: trasparent;
   color: black;
   cursor: pointer;
-  top:-10px;
 }
 
 .formulario__btn:hover {
