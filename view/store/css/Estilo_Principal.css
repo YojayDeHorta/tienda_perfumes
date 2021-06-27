@@ -40,7 +40,7 @@ header nav a:hover {
 
 header nav h1[class='Logo-h1'] {
     position: relative;
-    font-family: Yellowtail;
+     font-family: Yellowtail;
     cursor: pointer;
     font-size: 30px;
     width: 10%;
@@ -49,8 +49,9 @@ header nav h1[class='Logo-h1'] {
 
 header nav ul[class='Icons-ul'] {
     position: relative;
+    text-transform:uppercase;
     text-align:left;
-    width: 35%;
+    width: 40%;
     top: -33px;
     font-size: 22px;
     left:970px;
@@ -60,7 +61,7 @@ header nav ul[class='Icons-ul'] {
 header nav ul[class='Icons-ul'] li {
     position: relative;
     display: inline-block;
-    font-family: Yellowtail;
+    font-family: arial;
     text-transform: uppercase;
     padding-left: 35px;
 }
