@@ -48,7 +48,7 @@ tabs_bottom.style = 'border-bottom:5px solid red'
 
 tabs_contenido.style.display = 'block';
 if(tabs=='Pestaña_1'){
-  document.getElementById('Pestaña_2').style.display = "none";
+  document.getElementById('Pestaña_2').style.display = "block";
 }
 
 

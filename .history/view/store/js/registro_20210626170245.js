@@ -10,9 +10,8 @@ function Tabs_Principal(evt, Pestaña) {
   }
   
   if (Pestaña===tabs){
-    tabs_bottom.style = 'border-bottom:5px solid red'
-  }
-
+    tabs_bottom.style.border-bottom = '5px solid red';
+}
 
 
   
@@ -46,12 +45,9 @@ tabs_contenido = document.getElementById(tabs);
 
 tabs_bottom.style = 'border-bottom:5px solid red'
 
-tabs_contenido.style.display = 'block';
-if(tabs=='Pestaña_1'){
-  document.getElementById('Pestaña_2').style.display = "none";
-}
+tabs_contenido.style.display = 'block'
 
-
+/*
 //console.log('Prueba', tabs_bottom);*/
 
 

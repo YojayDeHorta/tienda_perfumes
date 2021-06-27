@@ -4,20 +4,16 @@
 var tabs_bottom=null, tabs_contenido=null , tabs = null;
 
 function Tabs_Principal(evt, Pestaña) {
-
+/*
   if (tabs_bottom!=null){
-     tabs_bottom.style.border = 'none';
-  }
-  
-  if (Pestaña===tabs){
-    tabs_bottom.style = 'border-bottom:5px solid red'
+     tabs_bottom.style = 'border:none';
   }
 
+  /*console.log('1',tabs,'2',Pestaña)*/
 
-
-  
-
-
+  /*if (tabs==Pestaña){
+         tabs_bottom.style = 'border-bottom:5px solid red'
+  }*/
 
   var i, tabcontent, tablinks;
 
@@ -40,17 +36,15 @@ function Tabs_Principal(evt, Pestaña) {
 
 var tabs = JSON.parse(localStorage.getItem("Tabs"));
 
+/*
+
 tabs_bottom = document.getElementById(tabs.toLowerCase());
 
 tabs_contenido = document.getElementById(tabs);
 
 tabs_bottom.style = 'border-bottom:5px solid red'
 
-tabs_contenido.style.display = 'block';
-if(tabs=='Pestaña_1'){
-  document.getElementById('Pestaña_2').style.display = "none";
-}
-
+tabs_contenido.style.display = 'block'
 
 //console.log('Prueba', tabs_bottom);*/
 

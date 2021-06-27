@@ -93,7 +93,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             <h1 class="Letra-Top">LO + TOP</h1>
           </td>
           <td class="Perfumes" id="Perfume_2">
-            <img src="img/Catalogo-1.png" alt=""><br>
+            <img src="img/productos/Catalogo-1.png" alt=""><br>
             <h3>
               GIORGIO ARMANI <br>
               USD $120 <br>
@@ -101,7 +101,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             </h3>
           </td>
           <td class="Perfumes" id="Perfume_3">
-            <img src="img/Catalogo-2.png" alt=""><br>
+            <img src="img/productos/Catalogo-2.png" alt=""><br>
             <h3>
               ACQUA DI GIO <br>
               USD $120 <br>
@@ -109,7 +109,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             </h3>
           </td>
           <td class="Perfumes" id="Perfume_4">
-            <img src="img/Catalogo-9.png" alt=""><br>
+            <img src="img/productos/Catalogo-9.png" alt=""><br>
             <h3>
               LANCOME TRESOR <br>
               USD $120 <br>
@@ -117,7 +117,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             </h3>
           </td>
           <td class="Perfumes" id="Perfume_5">
-            <img src="img/Catalogo-10.png" alt=""><br>
+            <img src="img/productos/Catalogo-10.png" alt=""><br>
             <h3>
               LANCOME TRESOR <br>
               USD $120 <br>

@@ -46,12 +46,14 @@ tabs_contenido = document.getElementById(tabs);
 
 tabs_bottom.style = 'border-bottom:5px solid red'
 
-tabs_contenido.style.display = 'block';
-if(tabs=='Pestaña_1'){
-  document.getElementById('Pestaña_2').style.display = "none";
+tabs_contenido.style.display = 'block'
+
+if (tabs=='Pestaña_2'){
+  console_log('ola mundo')
 }
 
 
+/*
 //console.log('Prueba', tabs_bottom);*/
 
 
