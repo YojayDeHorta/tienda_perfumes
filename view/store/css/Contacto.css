@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&family=Tinos:ital,wght@1,700&display=swap');
+
 
 
  div[class='img_contacto'] {
      position: relative;
-     border: 1px solid silver;
-     top: 12px;
+     border-top: 10px solid silver;
+     top: 10px;
  }
+
+  div[class='img_contacto'] img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
 
 
 div[class='Escribenos']{
@@ -17,7 +25,7 @@ div[class='Escribenos']{
 
 div[class='Escribenos'] h1{
     position: relative;
-    font-family: Yellowtail;
+    color: black;
     font-size: 45px;
 }
 
@@ -31,9 +39,11 @@ div[class='Escribenos'] h2{
 
  div[class='Formulario_Contacto'] {
      position: relative;
-     background-color: rgb(0,0,0,0.4);
+     /*background-color: rgb(0,0,0);*/
+     background-color: #d4d4d4;
      border: 2px solid black;
      text-align: center;
+     box-shadow: 0 0 0 1px;
      width: 43%;
      top: -60px;
      left: 800px;
@@ -50,7 +60,6 @@ div[class='Escribenos'] h2{
  div[class='Formulario_Contacto'] form h1 {
      position: relative;
      font-size: 25px;
-     font-family: Yellowtail;
      color: black;
  }
 
@@ -99,55 +108,48 @@ div[class='Escribenos'] h2{
      top: -10px;
  }
 
- /*
+div[class='Ofertas']{
+    position: relative;
+    text-align: center;
+    height: 350px;
+    border: 5px solid red;
+}
+
+div[class='Ofertas'] img{
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
 
 
-    /*-----------MARCAS-----------------*/
-/*
-    .Titulo_Marcas {
-        position: relative;
-        text-align: left;
-        font-family: Yellowtail;
-        padding-left: 15px;
-        font-size: 35px;
-        color: black;
-        width: 33%;
-        top: 80px;
-        left: 10px;
-    }
+div[class='Ofertas'] h1{
+    position: relative;
+    font-family: Shrikhand;
+    width: 90%;
+    color: black;
+    left: 100px;
+    background-color: rgb(255, 255, 255,0.5);
+    text-transform: uppercase;
+    font-size: 45px;
+    top: -340px;
+}
 
-    .Caja-Logos {
-        position: relative;
-        align-items: center;
-        background-color: #d9d9d9;
-        display: flex;
-        flex-flow: wrap;
-        top: 110px;
-        height: 110px;
-        padding: 0;
-        margin: 0;
-    }
+div[class='Ofertas'] input{
+    position: relative;
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 10px;
+    width: 20%;
+    height: 30px;
+    top: -240px;
+}
 
-    .Logo {
-        width: 25%;
-        margin: 0px;
-        padding: 0;
-        left: 80px;
-    }
-
-    .Logo img {
-        position: relative;
-        width: 50%;
-    }
-
-    /*-----------------------------------------------------*/
-
-
-
-
-
-
-
-
-
- */
+div[class='Ofertas'] button{
+    position: relative;
+    background-color: black;
+    color: bisque;
+    border-radius: 10px;
+    width: 5%;
+    height: 30px;
+    top: -240px;
+}
