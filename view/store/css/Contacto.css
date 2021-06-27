@@ -146,14 +146,14 @@ div[class='Ofertas'] {
     position: relative;
     background-color: silver;
     text-align: center;
-    height: 150px;
+    height: 230px;
     border: 2px solid silver;
 }
 
 div[class='Ofertas'] img {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 230px;
 }
 
 
@@ -166,7 +166,7 @@ div[class='Ofertas'] h1 {
     background-color: rgb(255, 255, 255, 0.5);
     text-transform: uppercase;
     font-size: 25px;
-    top: -130px;
+    top: -180px;
 
 }
 
@@ -179,7 +179,7 @@ div[class='Ofertas'] input {
     border-radius: 10px;
     width: 20%;
     height: 30px;
-    top: -105px;
+    top: -135px;
 }
 
 div[class='Ofertas'] button {
@@ -189,5 +189,5 @@ div[class='Ofertas'] button {
     border-radius: 10px;
     width: 7%;
     height: 30px;
-    top: -105px;
+    top: -135px;
 }
