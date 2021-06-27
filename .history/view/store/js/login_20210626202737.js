@@ -10,9 +10,10 @@ sesion.addEventListener("submit", function (e) {
     datos.get("email") == "admin@admin.com" &&
     datos.get("password") == "admin"
   ) {
+<<<<<<< Updated upstream
 
-
-
+=======
+>>>>>>> Stashed changes
     window.location.replace("../admin/admin.html");
   }
 
