@@ -29,15 +29,15 @@
       </nav>
     </header>
     <div class="Div-Tabs">
-      <button class="tablinks" onclick="Tabs_Principal(event, 'Tabs_1')">
+      <button class="tablinks" id='pestaña_1' onclick="Tabs_Principal(event, 'Pestaña_1')">
         Administrar Productos
       </button>
-      <button class="tablinks" onclick="Tabs_Principal(event, 'Tabs_2')">
+      <button class="tablinks" id='pestaña_2' onclick="Tabs_Principal(event, 'Pestaña_2')">
         Administrar Clientes
       </button>
     </div>
     <h3 class="Titulo_Admin">ADMINISTRADOR</h3>
-    <div id="Tabs_1" class="tabcontent">
+    <div id="Pestaña_1" class="tabcontent">
       <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded" id="Div_Productos">
         <button class="btn btn-primary" id="btnProducto" type="button" data-bs-toggle="modal">Agregar Producto </button>
 
@@ -58,7 +58,7 @@
         </table>
       </div>
     </div>
-    <div id="Tabs_2" class="tabcontent active">
+    <div id="Pestaña_2" class="tabcontent" style='display:block'>
       <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded" id="Div_Clientes">
         <button id="btnAdmin" type="button" class="btn btn-primary" data-bs-toggle="modal"> Agregar Cliente</button>
         <table class=" table mt-2 table-bordered table-striped" id="Tabla_Admin_Clientes">

@@ -14,11 +14,6 @@ function Tabs_Principal(evt, Pestaña) {
   }
 
 
-
-  
-
-
-
   var i, tabcontent, tablinks;
 
   tabcontent = document.getElementsByClassName("tabcontent");
