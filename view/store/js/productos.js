@@ -76,9 +76,6 @@ on(document, "click", "#botonCompra", (e) => {
     formData.append("id_producto", e.target.value);
     formData.append("precio", precio_especifico.getAttribute("value"));
     formData.append("cantidad", 1);
-
-    console.log(clienteid);
-    console.log(formData);
     fetch("../../../controller/ACTIONS/act_add-Compras.php", {
       method: "POST",
       body: formData,

@@ -14,7 +14,6 @@ let cupon_valor = 0;
 const mostrar = (articulos) => {
   productosArticulo = articulos[1];
   comprasArticulo = articulos[0];
-  //resultados += `<div class="Flex_Compras" ><h3>cupon</h3></div>  `;
   comprasArticulo.forEach((compras) => {
     cantidadcompra[compras.id_producto] = compras.cantidad_compra;
   });
@@ -113,8 +112,6 @@ function Eliminar_Compra(id_producto) {
 formularioCupon.addEventListener("submit", function (e) {
   e.preventDefault();
   var datos = new FormData(formularioCupon);
-  //console.log(datos.get("Contraseña"));
-  console.log("hola");
   fetch("../../../controller/ACTIONS/act_read-Cupones.php", {
     method: "POST",
     body: datos,
