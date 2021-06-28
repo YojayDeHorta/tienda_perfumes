@@ -28,14 +28,14 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
   <div class="Div-Principal">
     <header>
       <nav>
-            <h1 class='Logo-h1'><a href="Index.php">PERFUMERÍA</a></h1>
+          <h1 class='Logo-h1'><a href="Index.php"><i class="fas fa-home"></i>&nbsp;INICIO</a></h1>
         <ul class='Icons-ul'>
-         <li><a href="Contacto.html"><i class="fas fa-address-book"></i></a></li>
-          <li><a href="Compras.php"><i class="fas fa-cart-plus"></i></a></li>
-          <li><a href=<?php echo $login;?>><?php echo $_SESSION['NOMBRE_CLIENTE'];?><i class="far fa-user-circle"></i></a></li>
+         <li><a href="Contacto.html">CONTACTO &nbsp;<i class="fas fa-address-book"></i></a></li>
+          <li><a href="Compras.php">CARRITO &nbsp;<i class="fas fa-cart-plus"></i></a></li>
+          <li><a href=<?php echo $login;?>><?php echo $_SESSION['NOMBRE_CLIENTE'];?>&nbsp;&nbsp;<i class="far fa-user-circle"></i></a></li>
           <?php
           if($_SESSION['NOMBRE_CLIENTE']!="inicia sesion o registrate!"){
-            echo '<li><a href="/../../controller/ACTIONS/act_logout.php">cerrar sesion<i class="far fa-user-circle"></i></a></li>';
+            echo '<li><a href="/../../controller/ACTIONS/act_logout.php">cerrar sesion &nbsp;<i class="far fa-user-circle"></i></a></li>';
           }
           ?>
         </ul>
@@ -58,7 +58,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
       </div>
       <div class="Compra_Total_Cupon">
         <form id="formularioCupon">
-          <label for="lname">CUPÓN : </label>
+          <label for="lname">CUPÓN</label>
           <input type="text" id="nombre_cupon" name="nombre_cupon" minlength="3" maxlength="15"
             pattern="[A-Za-z0-9_-]{3,15}" required><br><br>
           <button class="Comprar_Buttom">Añadir</button>

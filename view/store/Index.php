@@ -35,16 +35,16 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
   <div class="Div-Principal">
     <header>
       <nav>
-        <h1 class='Logo-h1'><a href="Index.php">PERFUMERÍA</a></h1>
+        <!--<h1 class='Logo-h1'><a href="Index.php"><i class="fas fa-home"></i>&nbsp;INICIO</a></h1>-->
+         <h1 class='Logo-h1'><a href="Index.php">PERFUMES</a></h1>
         <ul class='Icons-ul'>
-          <li><a href="Contacto.html"><i class="fas fa-address-book"></i></a></li> &nbsp; &nbsp; &nbsp;
-            
+          <li><a href="Contacto.html">CONTACTO &nbsp; <i class="fas fa-address-book"></i></a></li> &nbsp; &nbsp; &nbsp;
           <?php
           if ($_SESSION['NOMBRE_CLIENTE'] != "inicia sesion o registrate!") {
-            echo '<li><a href="Compras.php"><i class="fas fa-cart-plus"></i></a></li>
+            echo '<li><a href="Compras.php">CARRITO &nbsp; <i class="fas fa-cart-plus"></i></a></li>
               <li><a href='.$login.'>'.$_SESSION["NOMBRE_CLIENTE"].'
-              <i class="far fa-user-circle"></i></a></li>
-                <li><a href="/../../controller/ACTIONS/act_logout.php">cerrar sesion<i class="far fa-user-circle"></i></a></li>';
+              &nbsp;<i class="far fa-user-circle"></i></a></li>
+                <li><a href="/../../controller/ACTIONS/act_logout.php">cerrar sesion &nbsp;<i class="far fa-user-circle"></i></a></li>';
           }else{
             echo '<li><a href='.$login.'>'.$_SESSION["NOMBRE_CLIENTE"].'<i class="far fa-user-circle"></i></a></li>';
           }
@@ -97,7 +97,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             <h3>
               GIORGIO ARMANI <br>
               USD $120 <br>
-              <button>Comprar</button>
+              <button>Agregar al carrito</button>
             </h3>
           </td>
           <td class="Perfumes" id="Perfume_3">
@@ -105,7 +105,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             <h3>
               ACQUA DI GIO <br>
               USD $120 <br>
-              <button>COMPRAR</button>
+              <button>Agregar al carrito</button>
             </h3>
           </td>
           <td class="Perfumes" id="Perfume_4">
@@ -113,7 +113,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             <h3>
               LANCOME TRESOR <br>
               USD $120 <br>
-              <button>COMPRAR</button>
+              <button>Agregar al carrito</button>
             </h3>
           </td>
           <td class="Perfumes" id="Perfume_5">
@@ -121,7 +121,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
             <h3>
               LANCOME TRESOR <br>
               USD $120 <br>
-              <button>COMPRAR</button>
+              <button>Agregar al carrito</button>
             </h3>
           </td>
         </tr>

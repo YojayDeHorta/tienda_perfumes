@@ -84,9 +84,9 @@ function ActualizarTotal(sumaArticulos) {
   total = (sumaArticulos + Valor_Envio);
   descuento = 0;
   descuento = total * (cupon_valor / 100)
-  Precio_Subtotal.innerHTML = `<p>Subtotal Todo:</p>$ ${sumaArticulos} USD`;
+  Precio_Subtotal.innerHTML = `<p>Subtotal</p>$ ${sumaArticulos} USD`;
   Precio_Envio.innerHTML = `<p>Envío</p>$ ${Valor_Envio} USD`;
-  Cupon_id.innerHTML = `<p><p>cupon</p>$ ${cupon_valor} %`;
+  Cupon_id.innerHTML = `<p><p>Cupón</p>$ ${cupon_valor} %`;
   Precio_Total.innerHTML = `<p>Total</p>$ ${~~(total - descuento)} USD`;
 }
 function Eliminar_Compra(id_producto) {
