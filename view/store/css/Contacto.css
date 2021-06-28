@@ -16,9 +16,9 @@ div[class='img_contacto'] img {
 
 div[class='Escribenos'] {
     position: relative;
-    background-color: green;
+    background-color: #9f9f9f;
     width: 35%;
-    height: 500px;
+    height: 630px;
     text-align: center;
     top: 90px;
     left: 30px;
@@ -26,14 +26,18 @@ div[class='Escribenos'] {
 
 div[class='Escribenos'] h1 {
     position: relative;
+     font-family: Bradley Hand ITC;
     color: black;
-    font-size: 45px;
+    font-size: 37px;
+    top: 20px;
+    margin-bottom: 50px;
 }
 
-div[class='Escribenos'] h2 {
+div[class='Escribenos'] h4 {
     position: relative;
     font-size: 20px;
-    text-transform: lowercase;
+    top: -10px;
+    color: white;
 }
 
 
@@ -51,7 +55,7 @@ div[class='Formulario_Contacto'] {
     margin-bottom: 80px;
     border-radius: 10px;
     left: 700px;
-    top: -400px;
+    top: -540px;
 }
 
 div[class='Formulario_Contacto'] form {
