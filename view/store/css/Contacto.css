@@ -153,6 +153,15 @@ div[class='Formulario_Contacto'] form textarea {
 
 }
 
+
+div[class='Formulario_Contacto'] form textarea::placeholder {
+    position: relative;
+    color: black;
+    font-size: 20px;
+}
+
+
+
 div[class='Formulario_Contacto'] form button {
     background-color: black;
     border-radius: 10px;
