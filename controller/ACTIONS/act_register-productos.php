@@ -19,8 +19,8 @@
          }
 
         $regexptipo= '/^[MF]{1}$/i'; 
-        $regexpnombre_producto=  '/^[\w., -]{3,60}$/i';
-        $regexpdescripcion = '/^[\w., -]{3,255}$/i';
+        $regexpnombre_producto=  '/^[^$|<>]{3,60}$/i';
+        $regexpdescripcion = '/^[^$|<>]{3,255}$/i';
         $regexpprecio= '/^[0-9]{1,15}$/';
         $regexpstock= '/^[0-9]{1,3}$/';
         

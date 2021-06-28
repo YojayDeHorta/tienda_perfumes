@@ -79,7 +79,7 @@ recharge(document, "click", "#borrar_producto", (e) => {
       .then((res) => res.json())
       .then((salida) => {
         alertify.alert(salida, function () {
-          fila.style.display = "none";
+          fila.innerHTML = "";
         });
       });
   });
