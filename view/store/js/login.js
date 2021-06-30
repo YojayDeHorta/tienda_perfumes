@@ -37,13 +37,37 @@ sesion.addEventListener("submit", function (e) {
     });
 });
 
+
+$(document).ready(function() {
+
+    function showPopup() {
+        $('.Ventana-Modal').addClass('show');
+        $('.Sub-Ventana_Modal').addClass('show');
+    }
+
+    $(".btn-abrir").click(showPopup);
+
+    Mensaje = 'No se ha podido iniciar tu sesión, <br>email o contraseña incorrecta';
+
+    Alerta_Mensaje(Mensaje)
+
+});
+
+function Close() {
+    $('.Ventana-Modal').removeClass('show');
+    $('.Sub-Ventana_Modal').removeClass('show');
+}
+
+
+
 function Alerta_Mensaje(Texto) {
-  var Contenedor_Alerta = document.getElementById('Modal_Mensaje');
-  Contenedor_Alerta.style.display = "block";
-  console.log(Texto);
-  Contenedor_Alerta.innerHTML = `
-  <h2 id='Mensaje'> ${Texto} </h2>
-  <div onclick="togglePopup()" class="Close-btn" id='Close'><i class="far fa-times-circle"></i></div>
-  <button> <h1>Aceptar</h1></button> 
+    var Contenedor_Alerta = document.getElementById('Alerta_Modal');
+    console.log(Texto);
+    console.log(Contenedor_Alerta)
+    Contenedor_Alerta.innerHTML = `
+   <i class="far fa-times-circle" id="close" onclick="Close()"></i>
+    <h2 id='Mensaje'> ${Texto} </h2>
+    <button>Aceptar</button>
+
   `
 }
