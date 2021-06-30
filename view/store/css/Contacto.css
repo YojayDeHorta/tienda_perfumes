@@ -17,6 +17,8 @@ div[class='img_contacto'] img {
 div[class='Escribenos'] {
     position: relative;
     background-color: #9f9f9f;
+     box-shadow: 0 0 0 5px;
+    border-radius: 10px;
     width: 35%;
     height: 630px;
     text-align: center;
@@ -60,7 +62,7 @@ div[class='Formulario_Contacto'] {
 
 div[class='Formulario_Contacto'] form {
     position: relative;
-    background-color:   #848484;
+    background-color:   rgb(159, 159, 159);
     border-radius: 10px;
     height: 640px;
     width: 100%;
@@ -110,7 +112,7 @@ div[class='Formulario_Contacto'] form input {
 
 div[class='Formulario_Contacto'] form input::placeholder {
     position: relative;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
@@ -119,7 +121,7 @@ div[class='Formulario_Contacto'] form input::placeholder {
 
 div[class='Formulario_Contacto'] form select {
     background-color: transparent;
-    color: white;
+    color: black;
     width: 60%;
     outline: none;
     border-right: none;
@@ -141,7 +143,8 @@ div[class='Formulario_Contacto'] form select option {
 div[class='Formulario_Contacto'] form textarea {
     position: relative;
     color: white;
-    background-color: #353535;
+    border: 1px solid black;
+    background-color: rgb(159, 159, 159);
     outline: none;
     text-decoration: none;
     width: 83%;
@@ -150,12 +153,22 @@ div[class='Formulario_Contacto'] form textarea {
 
 }
 
+
+div[class='Formulario_Contacto'] form textarea::placeholder {
+    position: relative;
+    color: black;
+    font-size: 20px;
+}
+
+
+
 div[class='Formulario_Contacto'] form button {
     background-color: black;
     border-radius: 10px;
+    font-size: 25px;
     outline: none;
-    width: 20%;
-    height: 35px;
+    width: 25%;
+    height: 40px;
     color: bisque;
 /*    top: -500px;*/
 }
