@@ -19,14 +19,14 @@ const mostrar = (articulos) => {
       let descuento = 0;
       if (typeof descuentosproductos[item.id_producto] !== 'undefined') {
         producto.innerHTML += `<div class="ribbon one"><span>${descuentosproductos[item.id_producto]}%</span></div>`
-        descuento = item.precio_producto * (descuentosproductos[item.id_producto] / 100);
+        descuento = Math.trunc(item.precio_producto * (descuentosproductos[item.id_producto] / 100));
       }
       producto.innerHTML += `
           <div class="contenedor_nombre">
             <h1 class="Titulo two" >${item.nombre_producto}</h1>
           </div >   
           <img class="Img-Producto"  src="img/productos/Catalogo-${item.id_producto}.png">
-          <h4 class="Precio" id="precioProducto${item.id_producto}" value="${item.precio_producto}">$ ${Math.trunc(item.precio_producto - descuento)} USD</h4>
+          <h4 class="Precio" id="precioProducto${item.id_producto}" value="${item.precio_producto}">$ ${item.precio_producto - descuento} USD</h4>
           <p class="Descripcion" ">${item.descripcion}</p> 
           <button class="Compra" id="botonCompra" value="${item.id_producto}">AGREGAR AL CARRITO </button>
         `;

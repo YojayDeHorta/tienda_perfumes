@@ -26,48 +26,39 @@ sesion.addEventListener("submit", function (e) {
         Alerta_Mensaje(data);
 
         //alerta.innerHTML = data;
-        window.location.replace("index.php");
+        setTimeout(() => {
+          window.location.replace("index.php");
+        }, 3000);
+
       } else {
         //alerta.innerHTML = data;
         Alerta_Mensaje('No se ha podido iniciar tu sesión, <br>email o contraseña incorrecta');
         setTimeout(() => {
-          alerta.innerHTML = "";
-        }, 4000);
+          Close();
+        }, 8000);
       }
     });
 });
 
 
-$(document).ready(function() {
-
-    function showPopup() {
-        $('.Ventana-Modal').addClass('show');
-        $('.Sub-Ventana_Modal').addClass('show');
-    }
-
-    $(".btn-abrir").click(showPopup);
-
-    Mensaje = 'No se ha podido iniciar tu sesión, <br>email o contraseña incorrecta';
-
-    Alerta_Mensaje(Mensaje)
-
-});
 
 function Close() {
-    $('.Ventana-Modal').removeClass('show');
-    $('.Sub-Ventana_Modal').removeClass('show');
+  $('.Ventana-Modal').removeClass('show');
+  $('.Sub-Ventana_Modal').removeClass('show');
 }
 
 
 
 function Alerta_Mensaje(Texto) {
-    var Contenedor_Alerta = document.getElementById('Alerta_Modal');
-    console.log(Texto);
-    console.log(Contenedor_Alerta)
-    Contenedor_Alerta.innerHTML = `
+  $('.Ventana-Modal').addClass('show');
+  $('.Sub-Ventana_Modal').addClass('show');
+  var Contenedor_Alerta = document.getElementById('Alerta_Modal');
+  console.log(Texto);
+  console.log(Contenedor_Alerta)
+  Contenedor_Alerta.innerHTML = `
    <i class="far fa-times-circle" id="close" onclick="Close()"></i>
     <h2 id='Mensaje'> ${Texto} </h2>
-    <button>Aceptar</button>
+    <button onclick="Close()">Aceptar</button>
 
   `
 }

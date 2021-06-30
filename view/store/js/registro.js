@@ -210,3 +210,39 @@ function updateClock() {
     setTimeout("updateClock()", 1000);
   }
 }
+//modal terminos
+
+
+
+function close_Terminos() {
+  $('.Ventana-Modal').removeClass('show');
+  $('.Sub-Ventana_Modal').removeClass('show');
+}
+
+
+
+function Alerta_Terminos() {
+  $('.Ventana-Modal').addClass('show');
+  $('.Sub-Ventana_Modal').addClass('show');
+  var Contenedor_Alerta = document.getElementById('Alerta_Terminos');
+  console.log(Contenedor_Alerta)
+  Contenedor_Alerta.innerHTML = `
+ <i class="far fa-times-circle" id="close_Terminos" onclick="close_Terminos()"></i>
+   <div class='Terminos_div'>
+     <p id='Error'>
+     Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Tempora molestias dignissimos rem atque, eligendi! A numquam animi voluptatum rem
+      expedita culpa vero reprehenderit, dolor, quod quos tempore asperiores placeat corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing 
+      elit. Laudantium nisi ullam, dignissimos in placeat adipisci incidunt, fuga obcaecati quam ab laborum iure, doloribus at possimus quibusdam 
+      rem soluta numquam vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores totam unde quibusdam eos ex sapiente iste
+       assumenda qui, magnam ullam, veniam perferendis accusamus sint aliquid excepturi cum odio sequi nemo!
+              Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Tempora molestias dignissimos rem atque, eligendi! A numquam animi voluptatum rem
+      expedita culpa vero reprehenderit, dolor, quod quos tempore asperiores placeat corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing 
+      elit. Laudantium nisi ullam, dignissimos in placeat adipisci incidunt, fuga obcaecati quam ab laborum iure, doloribus at possimus quibusdam 
+      rem soluta numquam vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores totam unde quibusdam eos ex sapiente iste
+       assumenda qui, magnam ullam, veniam perferendis accusamus sint aliquid excepturi cum odio sequi nemo!
+     </p>
+  </div> <br>
+  <button onclick="close_Terminos()"> <h1>Aceptar</h1></button><button onclick="close_Terminos()"> <h1>Cancelar</h1></button>
+
+`
+}

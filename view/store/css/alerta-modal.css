@@ -1,8 +1,8 @@
-.Ventana-Modal{
-  position:absolute;
+.Ventana-Modal {
+  position: absolute;
   background: rgba(10, 10, 10, 0.9);
-  width:100%;
-  height:105% ;
+  width: 100%;
+  height: 105%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -13,20 +13,19 @@
   z-index: 100;
 }
 
-.Sub-Ventana_Modal{
+.Sub-Ventana_Modal {
   position: relative;
   display: flex;
   align-items: center;
   width: 60%;
   transform: scale(0.6);
   opacity: 0;
-  transition: .3s ease all;
-  top:10px;
+  transition: 0.3s ease all;
+  top: 10px;
   left: 100px;
 }
 
-
-.Div-Frase_Modal{
+.Div-Frase_Modal {
   position: relative;
   border: 5px solid black;
   border-radius: 10px;
@@ -34,22 +33,21 @@
   background: silver;
   color: black;
   height: 200px;
-  width:50%;
+  width: 50%;
   align-items: center;
   left: 150px;
 }
 
-
-.Div-Frase_Modal h2{
+.Div-Frase_Modal h2 {
   position: relative;
   text-align: center;
   top: 36px;
-  left:3px;
+  left: 3px;
   font-size: 28px;
   font-family: Bradley Hand ITC;
 }
 
-.Div-Frase_Modal button{
+.Div-Frase_Modal button {
   position: relative;
   text-align: center;
   border-radius: 10px;
@@ -58,13 +56,12 @@
   background-color: black;
   color: bisque;
   top: 30px;
-  left:3px;
+  left: 3px;
   font-size: 25px;
   font-family: Bradley Hand ITC;
 }
 
-
-#close{
+#close {
   position: absolute;
   top: 7px;
   left: 415px;
@@ -73,14 +70,124 @@
   cursor: pointer;
 }
 
-
-.Ventana-Modal.show{
+.Ventana-Modal.show {
   visibility: visible;
 }
 
-.Sub-Ventana_Modal.show{
+.Sub-Ventana_Modal.show {
   transform: scale(1);
   opacity: 1;
 }
 
+/*terminos y condiciones*/
+.Ventana-Terminos {
+  position: absolute;
+  background: rgba(10, 10, 10, 0.9);
+  width: 100%;
+  height: 105%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  z-index: 100;
+}
 
+.Sub-Ventana_Terminos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  transform: scale(0.6);
+  opacity: 0;
+  transition: 0.3s ease all;
+  top: 10px;
+  left: 100px;
+}
+
+.Div-Frase_Terminos {
+  position: relative;
+  border: 5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background: silver;
+  color: black;
+  height: 630px;
+  width: 90%;
+  align-items: center;
+  left: -50px;
+}
+
+div.Div-Frase_Terminos p {
+  position: relative;
+  text-align: justify;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: #f4f4f4;
+  color: black;
+  border: 1px solid black;
+  overflow: scroll;
+  width: 93%;
+  height: 400px;
+  font-size: 25px;
+  top: 15px;
+  left: 22px;
+}
+
+div.Div-Frase_Terminos label {
+  position: relative;
+  font-size: 22px;
+  top: -10px;
+}
+
+div.Div-Frase_Terminos #label_Suscribirme {
+  position: relative;
+  top: 7px;
+  padding-left: 0px;
+  left: 0px;
+}
+
+.Div-Frase_Terminos button {
+  position: relative;
+  text-align: center;
+  margin-left: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  outline: none;
+  background-color: black;
+  width: 22%;
+  height: 30px;
+  color: bisque;
+  top: 33px;
+  left: -3px;
+  font-size: 15px;
+  font-family: Bradley Hand ITC;
+}
+
+.Div-Frase_Terminos button h1 {
+  position: relative;
+  top: -26px;
+}
+
+#close_Terminos {
+  position: absolute;
+  top: 7px;
+  left: 705px;
+  font-size: 35px;
+  color: black;
+  cursor: pointer;
+}
+
+.Ventana-Terminos.show {
+  visibility: visible;
+}
+
+.Sub-Ventana_Terminos.show {
+  transform: scale(1);
+  opacity: 1;
+}
