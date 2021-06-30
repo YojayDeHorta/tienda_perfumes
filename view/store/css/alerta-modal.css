@@ -36,12 +36,13 @@
   width: 50%;
   align-items: center;
   left: 150px;
+  top: -70px;
 }
 
 .Div-Frase_Modal h2 {
   position: relative;
   text-align: center;
-  top: 36px;
+  top: 38px;
   left: 3px;
   font-size: 28px;
   font-family: Bradley Hand ITC;
@@ -55,7 +56,7 @@
   outline: none;
   background-color: black;
   color: bisque;
-  top: 30px;
+  top: 70px;
   left: 3px;
   font-size: 25px;
   font-family: Bradley Hand ITC;
@@ -79,12 +80,13 @@
   opacity: 1;
 }
 
+
 /*terminos y condiciones*/
 .Ventana-Terminos {
-  position: absolute;
+  position:absolute;
   background: rgba(10, 10, 10, 0.9);
-  width: 100%;
-  height: 105%;
+  width:100%;
+  height:105% ;
   bottom: 0;
   left: 0;
   right: 0;
@@ -102,8 +104,8 @@
   width: 60%;
   transform: scale(0.6);
   opacity: 0;
-  transition: 0.3s ease all;
-  top: 10px;
+  transition: .3s ease all;
+  top:10px;
   left: 100px;
 }
 
@@ -115,28 +117,28 @@
   background: silver;
   color: black;
   height: 630px;
-  width: 90%;
+  width:90%;
   align-items: center;
   left: -50px;
 }
 
 div.Div-Frase_Terminos p {
-  position: relative;
-  text-align: justify;
-  border-radius: 10px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  background-color: #f4f4f4;
-  color: black;
-  border: 1px solid black;
-  overflow: scroll;
-  width: 93%;
-  height: 400px;
-  font-size: 25px;
-  top: 15px;
-  left: 22px;
+    position: relative;
+    text-align: justify;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color:red;
+    color: black;
+    border: 1px solid black;
+    overflow: scroll;
+    width: 93%;
+    height: 400px;
+    font-size: 25px;
+    top: 15px;
+    left: 22px;
 }
 
 div.Div-Frase_Terminos label {
@@ -191,3 +193,5 @@ div.Div-Frase_Terminos #label_Suscribirme {
   transform: scale(1);
   opacity: 1;
 }
+
+/*terminos y condiciones*/

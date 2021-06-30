@@ -27,12 +27,12 @@ sesion.addEventListener("submit", function (e) {
 
         //alerta.innerHTML = data;
         setTimeout(() => {
-          window.location.replace("index.php");
-        }, 3000);
+         /* window.location.replace("index.php");*/
+        }, /*3000*/);
 
       } else {
         //alerta.innerHTML = data;
-        Alerta_Mensaje('No se ha podido iniciar tu sesión, <br>email o contraseña incorrecta');
+        Alerta_Mensaje("No se ha podido iniciar tu sesión, <br>email o contraseña incorrecta");
         setTimeout(() => {
           Close();
         }, 8000);
@@ -53,8 +53,6 @@ function Alerta_Mensaje(Texto) {
   $('.Ventana-Modal').addClass('show');
   $('.Sub-Ventana_Modal').addClass('show');
   var Contenedor_Alerta = document.getElementById('Alerta_Modal');
-  console.log(Texto);
-  console.log(Contenedor_Alerta)
   Contenedor_Alerta.innerHTML = `
    <i class="far fa-times-circle" id="close" onclick="Close()"></i>
     <h2 id='Mensaje'> ${Texto} </h2>
