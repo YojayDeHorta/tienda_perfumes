@@ -215,8 +215,8 @@ function updateClock() {
 
 
 function close_Terminos() {
-  $('.Ventana-Modal').removeClass('show');
-  $('.Sub-Ventana_Modal').removeClass('show');
+  $('.Ventana-Terminos').removeClass('show');
+  $('.Sub-Ventana_Terminos').removeClass('show');
 }
 
 
@@ -226,7 +226,6 @@ function Alerta_Terminos() {
   $('.Sub-Ventana_Terminos').addClass('show');
   var Contenedor_Alerta = document.getElementById('Alerta_Termino');
  Contenedor_Alerta.innerHTML = `
-  <h1>ola como estas</h1>
  <i class="far fa-times-circle" id="close_Terminos" onclick="close_Terminos()"></i>
    <div class='Terminos_div'>
      <p id='Error'>

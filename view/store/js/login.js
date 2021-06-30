@@ -27,15 +27,15 @@ sesion.addEventListener("submit", function (e) {
 
         //alerta.innerHTML = data;
         setTimeout(() => {
-         /* window.location.replace("index.php");*/
-        }, /*3000*/);
+         window.location.replace("index.php");
+        }, 1000);
 
       } else {
         //alerta.innerHTML = data;
         Alerta_Mensaje("No se ha podido iniciar tu sesión, <br>email o contraseña incorrecta");
         setTimeout(() => {
           Close();
-        }, 8000);
+        }, 2000);
       }
     });
 });

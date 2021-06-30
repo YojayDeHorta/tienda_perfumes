@@ -15,23 +15,24 @@
 
 .Sub-Ventana_Modal{
   position: relative;
+  background: white;
   display: flex;
   align-items: center;
   width: 60%;
   transform: scale(0.6);
   opacity: 0;
   transition: .3s ease all;
-  top:10px;
   left: 100px;
+  top: -1000px;
 }
 
 
 .Div-Frase_Modal{
-  position: relative;
+  position: fixed;
   border: 5px solid black;
   border-radius: 10px;
   text-align: center;
-  background: silver;
+ background: silver;
   color: black;
   height: 200px;
   width:50%;
@@ -43,7 +44,7 @@
 .Div-Frase_Modal h2{
   position: relative;
   text-align: center;
-  top: 36px;
+  top: 53px;
   left:3px;
   font-size: 28px;
   font-family: Bradley Hand ITC;
@@ -59,7 +60,7 @@
   width: 47%;
   height: 30px;
   color: bisque;
-  top: 30px;
+  top: 80px;
   left:3px;
   font-size: 15px;
   font-family: Bradley Hand ITC;
@@ -67,7 +68,7 @@
 
 .Div-Frase_Modal button h1{
   position: relative;
-  top: -26px;
+  top: -6px;
 }
 
 

@@ -179,6 +179,8 @@ div[class='Ofertas'] {
     text-align: center;
     height: 230px;
     border: 2px solid silver;
+    top: -370px;
+
 }
 
 div[class='Ofertas'] img {

@@ -261,9 +261,23 @@ a[id="Olvidaste-contraseña"] {
   padding: 0;
   left: -80px;
 }
-/*
-#grupo__terminos input{
-  background-color: silver;
-  color: black;
-  
+
+#Letra_Terminos_Condiciones{
+  position: relative;
+  width: 100%;
+  left: -50px;
+}
+
+#Letra_Terminos_Condiciones:hover{
+  position: relative;
+  border-radius: 10px;
+  padding-bottom: 3px;
+  background-color: black;
+  color: bisque;
+}
+
+#terminos{
+  position: relative;
+  left: 46px;
+  top: 5px;
 }
