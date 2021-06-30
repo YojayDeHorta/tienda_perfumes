@@ -222,11 +222,11 @@ function close_Terminos() {
 
 
 function Alerta_Terminos() {
-  $('.Ventana-Modal').addClass('show');
-  $('.Sub-Ventana_Modal').addClass('show');
-  var Contenedor_Alerta = document.getElementById('Alerta_Terminos');
-  console.log(Contenedor_Alerta)
-  Contenedor_Alerta.innerHTML = `
+  $('.Ventana-Terminos').addClass('show');
+  $('.Sub-Ventana_Terminos').addClass('show');
+  var Contenedor_Alerta = document.getElementById('Alerta_Termino');
+ Contenedor_Alerta.innerHTML = `
+  <h1>ola como estas</h1>
  <i class="far fa-times-circle" id="close_Terminos" onclick="close_Terminos()"></i>
    <div class='Terminos_div'>
      <p id='Error'>
@@ -243,6 +243,5 @@ function Alerta_Terminos() {
      </p>
   </div> <br>
   <button onclick="close_Terminos()"> <h1>Aceptar</h1></button><button onclick="close_Terminos()"> <h1>Cancelar</h1></button>
-
 `
 }
