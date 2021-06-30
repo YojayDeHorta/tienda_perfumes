@@ -39,7 +39,7 @@ const mostrar = (articulos) => {
             step="1" required="required" value="${cantidad}" class="Input_Cantidad" id="Input_Cantidad_${articulo.id_producto}"  onclick="SumarYAgregar(${(articulo.precio_producto - descuento)},${articulo.id_producto})" >
         </form>
         <i class="fas fa-heart" id="Icon_Compras"></i>
-        <i class="far fa-trash-alt" id="Icon_Compras" onclick='Eliminar_Compra(${articulo.id_producto})'></i>
+        <i class="far fa-trash-alt" id="Icon_Compras" onclick='Alerta_Borrar(${articulo.id_producto})'></i>
         <br> <br>
         <h2 class="Sub_Total" id="Sub_Total_${articulo.id_producto}">SUB TOTAL <br> ${((articulo.precio_producto - descuento) * cantidad)} USD</h2>
       </div>               `;
@@ -98,23 +98,39 @@ function ActualizarTotal(sumaArticulos) {
   Precio_Total.innerHTML = `<p>Total</p>$ ${(total - cupon)} USD`;
 }
 function Eliminar_Compra(id_producto) {
-  if (confirm('estas seguro que quieres eliminar ese elemento de la lista?')) {
-    formData = new FormData();
-    formData.append("id_cliente", clienteid);
-    formData.append("id_producto", id_producto);
-    fetch("../../../controller/ACTIONS/act_delete-Compras.php", {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        location.reload();
-      });
 
-  } else {
-    // Do nothing!
-  }
+  formData = new FormData();
+  formData.append("id_cliente", clienteid);
+  formData.append("id_producto", id_producto);
+  fetch("../../../controller/ACTIONS/act_delete-Compras.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      location.reload();
+    });
+
+}
+//ventana modal
+function Close() {
+  $('.Ventana-Modal').removeClass('show');
+  $('.Sub-Ventana_Modal').removeClass('show');
+}
+
+
+
+function Alerta_Borrar(id_producto) {
+  $('.Ventana-Modal').addClass('show');
+  $('.Sub-Ventana_Modal').addClass('show');
+  var Contenedor_Alerta = document.getElementById('Alerta_Modal');
+  console.log(Contenedor_Alerta)
+  console.log(id_producto)
+  Contenedor_Alerta.innerHTML = `
+ <i class="far fa-times-circle" id="close" onclick="Close()"></i>
+  <h2 id='Mensaje'> ¿ESTÁS SEGURO QUE QUIERES ELIMINAR ESTE PRODUCTO?</h2>
+  <button onclick='Eliminar_Compra(${id_producto})'> <h1>Aceptar</h1></button><button onclick='Close()'> <h1>Cancelar</h1></button>`
 }
 
 //cupones

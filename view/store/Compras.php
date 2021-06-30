@@ -20,6 +20,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
   <link rel="icon" href="img/Icon-Perfume.jpg">
     <link href="css/Estilo_Principal.css" rel="stylesheet">
     <link href="css/Compras.css" rel="stylesheet">
+    <link href="css/alerta-borrar.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -65,11 +66,19 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
         </form>
       </div>
     </div>
-    
+  <div class="Ventana-Modal">
+      <div class="Sub-Ventana_Modal">
+        <div class="Div-Frase_Modal" id='Alerta_Modal'>
+        </div>
+      </div>
+  </div>  
   <script>
     var clienteid =<?php echo $_SESSION['ID_CLIENTE']; ?>;
   </script>
   <script src="js/Compras.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
 
