@@ -1,147 +1,145 @@
-    h1[class='Titulo_Carrito']{
-        position: relative;
-        text-align: center;
-        font-family: Bradley Hand ITC;
-        width: 100%;
-        top: 100px;
-        font-size: 40px;
-    }
+h1[class="Titulo_Carrito"] {
+  position: relative;
+  text-align: center;
+  font-family: Bradley Hand ITC;
+  width: 100%;
+  top: 100px;
+  font-size: 40px;
+}
 
+div[class="Flex_Compras"] {
+  position: relative;
+  background-color: white;
+  font-family: Bradley Hand ITC;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  width: 30%;
+  height: 255px;
+  top: 205px;
+  left: 140px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px black;
+}
 
-    div[class='Flex_Compras']{
-        position: relative;
-        background-color: white;
-         font-family: Bradley Hand ITC;
-        color: black;
-        text-align: center;
-        display: flex;
-        flex-flow: row wrap;
-        width: 30%;
-        height: 255px;
-        top: 205px;
-        left: 140px;
-        margin-bottom: 30px;
-        box-shadow: 5px 5px 5px black;
-    }
+div[class="Flex_Compras"] h3 {
+  position: relative;
+  width: 50%;
+  left: 150px;
+  font-size: 18px;
+  top: 55px;
+}
 
-    div[class='Flex_Compras'] h3 {
-        position: relative;
-        width: 50%;
-        left: 150px;
-        font-size: 18px;
-        top: 55px;
-    }
+div[class="Flex_Compras"] img {
+  position: relative;
+  left: -215px;
+  top: 30px;
+  padding-bottom: 50px;
+  width: 128px;
+  height: 198px;
+}
 
-    div[class='Flex_Compras'] img {
-        position: relative;
-        left: -215px;
-        top: 30px;
-        padding-bottom: 50px;
-        width: 128px;
-        height: 198px;
-    }
+div[class="Flex_Compras"] form {
+  position: relative;
+  font-size: 20px;
+  width: 100%;
+  left: 25px;
+  top: -120px;
+}
 
-   div[class='Flex_Compras'] form {
-        position: relative;
-        font-size: 20px;
-        width: 100%;
-        left: 25px;
-        top: -120px;
-    }
+div[class="Flex_Compras"] form input {
+  position: relative;
+  width: 12%;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border-radius: 10px;
+}
 
-   div[class='Flex_Compras'] form input {
-        position: relative;
-        width: 12%;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        border-radius: 10px;
-    }
+div[class="Flex_Compras"] #Icon_Compras {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  margin-left: 15px;
+  left: 370px;
+  top: -290px;
+}
 
-    div[class='Flex_Compras'] #Icon_Compras {
-        position: relative;
-        text-decoration: none;
-        color: black;
-        font-size: 25px;
-        margin-left: 15px;
-        left: 370px;
-        top: -290px;
-    }
+div[class="Flex_Compras"] #Icon_Compras:hover {
+  color: red;
+}
 
-   div[class='Flex_Compras'] #Icon_Compras:hover {
-        color: red;
-    }
+div[class="Flex_Compras"] h2 {
+  position: relative;
+  top: -105px;
+  left: 270px;
+  font-size: 18px;
+}
 
-    div[class='Flex_Compras'] h2 {
-        position: relative;
-        top: -105px;
-        left: 270px;
-        font-size: 18px;
-    }
+.Compra_Total_Carrito {
+  position: fixed;
+  font-family: Eras Bold ITC;
+  background-color: #ffffff;
+  text-align: center;
+  width: 30%;
+  height: 328px;
+  top: 250px;
+  left: 900px;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 20px;
+}
 
-    .Compra_Total_Carrito {
-        position: fixed;
-        font-family: Eras Bold ITC;
-        background-color: #ffffff;
-        text-align: center;
-        width: 30%;
-        height: 328px;
-        top: 250px;
-        left: 900px;
-        box-shadow: 5px 5px 5px black;
-        border-radius: 20px;
-    }
+.Compra_Total_Carrito h1 {
+  font-size: 25px;
+  width: 100%;
+  top: 10px;
+}
 
-    .Compra_Total_Carrito h1 {
-        font-size: 25px;
-        width: 100%;
-        top: 10px;
-    }
+.Compra_Total_Carrito h4 {
+  position: relative;
+  text-align: right;
+  font-size: 20px;
+  width: 95%;
+  top: 20px;
+  left: 15px;
+}
 
-    .Compra_Total_Carrito h4 {
-        position: relative;
-        text-align: right;
-        font-size: 20px;
-        width: 95%;
-        top: 20px;
-        left: 15px;
-    }
+.Total_Producto p {
+  position: relative;
+  text-align: left;
+  top: 22px;
+}
 
-    .Total_Producto p {
-        position: relative;
-        text-align: left;
-        top: 22px;
-    }
+#Precio_Envio {
+  position: relative;
+  border-bottom: 5px solid red;
+  height: 58px;
+}
 
-    #Precio_Envio {
-        position: relative;
-        border-bottom: 5px solid red;
-        height: 58px;
-    }
+#Precio {
+  position: relative;
+  height: 20px;
+  top: 15px;
+}
 
-    #Precio {
-        position: relative;
-        height: 20px;
-        top: 15px;
-    }
+div[class="Compra_Total_Carrito"] button {
+  position: relative;
+  background-color: black;
+  color: bisque;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 40%;
+  top: 40px;
+}
 
-    div[class='Compra_Total_Carrito'] button {
-        position: relative;
-        background-color: black;
-        color: bisque;
-        font-size: 20px;
-        border-radius: 5px;
-        width: 40%;
-        top: 40px;
-    }
+div[class="Compra_Total_Carrito"] button:hover {
+  background-color: #dc3545;
+  color: black;
+}
 
-   div[class='Compra_Total_Carrito'] button:hover {
-        background-color: #dc3545;
-        color: black;
-    }
-
-
-div[class='Compra_Total_Cupon'] {
+div[class="Compra_Total_Cupon"] {
   position: fixed;
   font-family: Eras Bold ITC;
   background-color: silver;
@@ -154,38 +152,88 @@ div[class='Compra_Total_Cupon'] {
   border-radius: 20px;
 }
 
-div[class='Compra_Total_Cupon']  label {
+div[class="Compra_Total_Cupon"] label {
   font-size: 20px;
   width: 100%;
   top: 18px;
   left: -60px;
 }
 
-div[class='Compra_Total_Cupon']  input {
-    position: relative;
-    outline: none;
-    text-decoration: none;
-    border: 2px solid green;
-    left: -55px;
-    top: 15px;
-    height: 20px;
+div[class="Compra_Total_Cupon"] input {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border: 2px solid green;
+  left: -55px;
+  top: 15px;
+  height: 20px;
 }
 
-
-div[class='Compra_Total_Cupon']  button {
- position: relative;
- background-color: black;
- color: bisque;
- outline: none;
- text-decoration: none;
- border-radius: 5px;
- left: 135px;
- top: -28px;
- width: 25%;
- font-size: 18px;
+div[class="Compra_Total_Cupon"] button {
+  position: relative;
+  background-color: black;
+  color: bisque;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
+  left: 135px;
+  top: -28px;
+  width: 25%;
+  font-size: 18px;
 }
 
-div[class='Compra_Total_Cupon']  button:hover {
- background-color: rgb(40, 167, 69);
- color: black;
+div[class="Compra_Total_Cupon"] button:hover {
+  background-color: rgb(40, 167, 69);
+  color: black;
+}
+
+.ribbon {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79a70a;
+  background: linear-gradient(#f70505 0%, #8f0808 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px;
+  left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #8f0808;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8f0808;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #8f0808;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8f0808;
 }

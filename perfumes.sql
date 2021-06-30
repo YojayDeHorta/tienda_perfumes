@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2021 a las 16:51:06
+-- Tiempo de generación: 30-06-2021 a las 17:21:03
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
-CREATE DATABASE perfumes;
-USE perfumes;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -21,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `perfumes`
 --
+CREATE DATABASE IF NOT EXISTS `perfumes` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `perfumes`;
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,9 @@ CREATE TABLE `compras` (
 
 INSERT INTO `compras` (`id_compra`, `id_producto`, `id_cliente`, `cantidad_compra`) VALUES
 (6, 2, 2, 2),
-(12, 9, 1, 2);
+(12, 9, 1, 1),
+(17, 4, 1, 1),
+(18, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -112,9 +115,10 @@ CREATE TABLE `descuentos` (
 --
 
 INSERT INTO `descuentos` (`id_descuento`, `id_producto`, `valor_descuento`, `usos_descuento`) VALUES
-(1, 9, 21, 0),
-(2, 10, 50, 0),
-(5, 3, 30, 50);
+(1, 9, 20, 30),
+(2, 10, 50, 40),
+(3, 2, 30, 50),
+(4, 4, 10, 10);
 
 -- --------------------------------------------------------
 
@@ -225,7 +229,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `cupones`
@@ -237,7 +241,7 @@ ALTER TABLE `cupones`
 -- AUTO_INCREMENT de la tabla `descuentos`
 --
 ALTER TABLE `descuentos`
-  MODIFY `id_descuento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_descuento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`

@@ -17,15 +17,19 @@ const mostrar = (articulos) => {
   comprasArticulo = articulos[0];
   descuentoArticulo = articulos[2];
   cantidadcompra = comprasArticulo;
+
   productosArticulo.forEach((articulo) => {
     let descuento = 0;
+    resultados += `
+    <div class="Flex_Compras" >`
     if (typeof descuentoArticulo[articulo.id_producto] !== 'undefined') {
+      resultados += `<div class="ribbon one"><span>${descuentoArticulo[articulo.id_producto]}%</span></div>`;
       descuento = articulo.precio_producto * (descuentoArticulo[articulo.id_producto] / 100);
     }
     sumaArticulos += (articulo.precio_producto - descuento) * cantidadcompra[articulo.id_producto];
     let cantidad = cantidadcompra[articulo.id_producto];
     resultados += `
-    <div class="Flex_Compras" id="Producto_${articulo.id_producto}">
+    
         <h3>${articulo.nombre_producto}</h3>
         <img src="img/productos/Catalogo-${articulo.id_producto}.png" class="Img_Producto" id="Img_Compra_1">
         <form name="Cantidad_Producto" action="" method="" id="Cantidad_Producto">
@@ -37,7 +41,7 @@ const mostrar = (articulos) => {
         <i class="far fa-trash-alt" id="Icon_Compras" onclick='Eliminar_Compra(${articulo.id_producto})'></i>
         <br> <br>
         <h2 class="Sub_Total" id="Sub_Total_${articulo.id_producto}">SUB TOTAL <br> ${~~((articulo.precio_producto - descuento) * cantidad)} USD</h2>
-    </div>               `;
+      </div>               `;
   });
   //        //<h2 class="Sub_Total" ">PRECIO INICIAL: <br> ${articulo[0].precio_producto} USD</h2>
   contenedorCompras.innerHTML = resultados;
