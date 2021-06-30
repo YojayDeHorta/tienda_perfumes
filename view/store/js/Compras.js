@@ -24,7 +24,8 @@ const mostrar = (articulos) => {
     <div class="Flex_Compras" >`
     if (typeof descuentoArticulo[articulo.id_producto] !== 'undefined') {
       resultados += `<div class="ribbon one"><span>${descuentoArticulo[articulo.id_producto]}%</span></div>`;
-      descuento = articulo.precio_producto * (descuentoArticulo[articulo.id_producto] / 100);
+      descuento = Math.trunc(articulo.precio_producto * (descuentoArticulo[articulo.id_producto] / 100));
+
     }
     sumaArticulos += (articulo.precio_producto - descuento) * cantidadcompra[articulo.id_producto];
     let cantidad = cantidadcompra[articulo.id_producto];
@@ -40,7 +41,7 @@ const mostrar = (articulos) => {
         <i class="fas fa-heart" id="Icon_Compras"></i>
         <i class="far fa-trash-alt" id="Icon_Compras" onclick='Eliminar_Compra(${articulo.id_producto})'></i>
         <br> <br>
-        <h2 class="Sub_Total" id="Sub_Total_${articulo.id_producto}">SUB TOTAL <br> ${~~((articulo.precio_producto - descuento) * cantidad)} USD</h2>
+        <h2 class="Sub_Total" id="Sub_Total_${articulo.id_producto}">SUB TOTAL <br> ${((articulo.precio_producto - descuento) * cantidad)} USD</h2>
       </div>               `;
   });
   //        //<h2 class="Sub_Total" ">PRECIO INICIAL: <br> ${articulo[0].precio_producto} USD</h2>
@@ -71,7 +72,7 @@ function SumarYAgregar(Precio, id_producto) {
   } else {
 
     ActualizarTotal(sumaArticulos + (Precio * diferencia));
-    Sub_Total.innerHTML = `SUB TOTAL <br> ${~~(Precio * cantidadNueva)} USD`;
+    Sub_Total.innerHTML = `SUB TOTAL <br> ${(Precio * cantidadNueva)} USD`;
     cantidadcompra[id_producto] = cantidadNueva;
     sumaArticulos = sumaArticulos + (Precio * diferencia);
     fetch("../../../controller/ACTIONS/act_edit-Compras.php", {
@@ -90,11 +91,11 @@ function SumarYAgregar(Precio, id_producto) {
 function ActualizarTotal(sumaArticulos) {
   total = (sumaArticulos + Valor_Envio);
   cupon = 0;
-  cupon = total * (cupon_valor / 100)
-  Precio_Subtotal.innerHTML = `<p>Subtotal</p>$ ${~~(sumaArticulos)} USD`;
+  cupon = Math.trunc(total * (cupon_valor / 100));
+  Precio_Subtotal.innerHTML = `<p>Subtotal</p>$ ${(sumaArticulos)} USD`;
   Precio_Envio.innerHTML = `<p>Envío</p>$ ${Valor_Envio} USD`;
   Cupon_id.innerHTML = `<p><p>Cupón</p>$ ${cupon_valor} %`;
-  Precio_Total.innerHTML = `<p>Total</p>$ ${~~(total - cupon)} USD`;
+  Precio_Total.innerHTML = `<p>Total</p>$ ${(total - cupon)} USD`;
 }
 function Eliminar_Compra(id_producto) {
   if (confirm('estas seguro que quieres eliminar ese elemento de la lista?')) {
