@@ -12,13 +12,17 @@ let cantidadcompra = [];
 let sumaArticulos = 0;
 let cupon_valor = 0;
 const mostrar = (articulos) => {
+
   productosArticulo = articulos[1];
   comprasArticulo = articulos[0];
-  comprasArticulo.forEach((compras) => {
-    cantidadcompra[compras.id_producto] = compras.cantidad_compra;
-  });
+  descuentoArticulo = articulos[2];
+  cantidadcompra = comprasArticulo;
   productosArticulo.forEach((articulo) => {
-    sumaArticulos += articulo.precio_producto * cantidadcompra[articulo.id_producto];
+    let descuento = 0;
+    if (typeof descuentoArticulo[articulo.id_producto] !== 'undefined') {
+      descuento = articulo.precio_producto * (descuentoArticulo[articulo.id_producto] / 100);
+    }
+    sumaArticulos += (articulo.precio_producto - descuento) * cantidadcompra[articulo.id_producto];
     let cantidad = cantidadcompra[articulo.id_producto];
     resultados += `
     <div class="Flex_Compras" id="Producto_${articulo.id_producto}">
@@ -27,12 +31,12 @@ const mostrar = (articulos) => {
         <form name="Cantidad_Producto" action="" method="" id="Cantidad_Producto">
             <h4>Cantidad</h4>
             <input type="number" name="Cantidad" min="1" max="${articulo.stock_disponible}" 
-            step="1" required="required" value="${cantidad}" class="Input_Cantidad" id="Input_Cantidad_${articulo.id_producto}"  onclick="SumarYAgregar(${articulo.precio_producto},${articulo.id_producto})" >
+            step="1" required="required" value="${cantidad}" class="Input_Cantidad" id="Input_Cantidad_${articulo.id_producto}"  onclick="SumarYAgregar(${(articulo.precio_producto - descuento)},${articulo.id_producto})" >
         </form>
         <i class="fas fa-heart" id="Icon_Compras"></i>
         <i class="far fa-trash-alt" id="Icon_Compras" onclick='Eliminar_Compra(${articulo.id_producto})'></i>
         <br> <br>
-        <h2 class="Sub_Total" id="Sub_Total_${articulo.id_producto}">SUB TOTAL <br> ${articulo.precio_producto * cantidad} USD</h2>
+        <h2 class="Sub_Total" id="Sub_Total_${articulo.id_producto}">SUB TOTAL <br> ${~~((articulo.precio_producto - descuento) * cantidad)} USD</h2>
     </div>               `;
   });
   //        //<h2 class="Sub_Total" ">PRECIO INICIAL: <br> ${articulo[0].precio_producto} USD</h2>
@@ -63,7 +67,7 @@ function SumarYAgregar(Precio, id_producto) {
   } else {
 
     ActualizarTotal(sumaArticulos + (Precio * diferencia));
-    Sub_Total.innerHTML = `SUB TOTAL <br> ${Precio * cantidadNueva} USD`;
+    Sub_Total.innerHTML = `SUB TOTAL <br> ${~~(Precio * cantidadNueva)} USD`;
     cantidadcompra[id_producto] = cantidadNueva;
     sumaArticulos = sumaArticulos + (Precio * diferencia);
     fetch("../../../controller/ACTIONS/act_edit-Compras.php", {
@@ -81,12 +85,12 @@ function SumarYAgregar(Precio, id_producto) {
 
 function ActualizarTotal(sumaArticulos) {
   total = (sumaArticulos + Valor_Envio);
-  descuento = 0;
-  descuento = total * (cupon_valor / 100)
-  Precio_Subtotal.innerHTML = `<p>Subtotal</p>$ ${sumaArticulos} USD`;
+  cupon = 0;
+  cupon = total * (cupon_valor / 100)
+  Precio_Subtotal.innerHTML = `<p>Subtotal</p>$ ${~~(sumaArticulos)} USD`;
   Precio_Envio.innerHTML = `<p>Envío</p>$ ${Valor_Envio} USD`;
   Cupon_id.innerHTML = `<p><p>Cupón</p>$ ${cupon_valor} %`;
-  Precio_Total.innerHTML = `<p>Total</p>$ ${~~(total - descuento)} USD`;
+  Precio_Total.innerHTML = `<p>Total</p>$ ${~~(total - cupon)} USD`;
 }
 function Eliminar_Compra(id_producto) {
   if (confirm('estas seguro que quieres eliminar ese elemento de la lista?')) {

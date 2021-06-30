@@ -132,12 +132,12 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
       <button class="tablinks" id='pestaña_2'  onclick="Tabs_Principal(event, 'Pestaña_2')">PERFUMES &nbsp; PARA &nbsp;ELLA</button>
     </div> <br> <br> <br>
     <div class="tabcontent" id="Pestaña_1">
-              <div class="Catalogo-Producto" id="Productos-Caballeros">
+        <div class="Catalogo-Producto" id="Productos-Caballeros">
         </div>
     </div>
 
     <div class="tabcontent" id="Pestaña_2" style='display:block'>
-              <div class="Catalogo-Producto" id="Productos-Damas">
+        <div class="Catalogo-Producto" id="Productos-Damas">
         </div>
     </div>
 

@@ -23,13 +23,27 @@ sesion.addEventListener("submit", function (e) {
     .then((respuesta) => respuesta.json())
     .then((data) => {
       if (data == "INICIO DE SESION CORRECTAMENTE") {
-        alerta.innerHTML = data;
+        Alerta_Mensaje(data);
+
+        //alerta.innerHTML = data;
         window.location.replace("index.php");
       } else {
-        alerta.innerHTML = data;
+        //alerta.innerHTML = data;
+        Alerta_Mensaje('No se ha podido iniciar tu sesión, <br>email o contraseña incorrecta');
         setTimeout(() => {
           alerta.innerHTML = "";
         }, 4000);
       }
     });
 });
+
+function Alerta_Mensaje(Texto) {
+  var Contenedor_Alerta = document.getElementById('Modal_Mensaje');
+  Contenedor_Alerta.style.display = "block";
+  console.log(Texto);
+  Contenedor_Alerta.innerHTML = `
+  <h2 id='Mensaje'> ${Texto} </h2>
+  <div onclick="togglePopup()" class="Close-btn" id='Close'><i class="far fa-times-circle"></i></div>
+  <button> <h1>Aceptar</h1></button> 
+  `
+}

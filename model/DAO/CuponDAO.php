@@ -4,7 +4,7 @@ require_once ("DataSource.php");
 require_once (__DIR__."/../ENTITIES/Cupon.php");
 
 /**
- * Description of productoDAO
+ * Description of CuponDAO
  *
  * @author Admin
  */

@@ -8,6 +8,7 @@
     <link rel="icon" href="img/Icon-Perfume.jpg">
     <link href="css/Estilo_Principal.css" rel="stylesheet">
     <link href="css/Login-Registro.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/alerta-modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -142,6 +143,8 @@
         <div class="tabcontent" id="Pestaña_2" style='display:block'>
             <form class="Formu" id="Iniciar">
                 <h1>Bienvenido a Perfumes <br> <i class="fas fa-users"><br></i></h1>
+                <div class="Modal_Content" id='Modal_Mensaje'>
+                </div>
                 <h4 id="alerta_login"> </h4>
                 <!-- este es el lugar donde sale el mensaje en login-->
                 <input id="Email" class="Input" type="text" name="email" placeholder=" Email o telefono"

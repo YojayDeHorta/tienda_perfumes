@@ -3,9 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-06-2021 a las 06:50:50
+-- Tiempo de generación: 30-06-2021 a las 16:51:06
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
+CREATE DATABASE perfumes;
 USE perfumes;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,7 +48,9 @@ INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `numero_movil`, `pas
 (4, 'juana', 'esteban', '305430432411', '$2y$10$iCuIj2lvgM7dS3o3lsNgE.CjfwiwzlCj3v1Gh8OZVAdsk8NxsHB/.', 'juanin@gmail.com'),
 (20, 'juana', 'juaninaz', '1234124121', '$2y$10$BqIqKyCkgQXe9YenBciC2u4Wn/82iyj8qMEiUanBjWvqv0Okl6iue', 'povenah12398@0ranges.com'),
 (21, 'juana', 'esteban', '3054304322411', '$2y$10$grT7YzvCiEQI9dp2HtJUteSXOs3hf7aPhy6tmdIjCY72kW73nppyS', 'yojay10020@gmail.com'),
-(24, 'juana', 'juaninaz', '305431234', '$2y$10$kuU0UcecQVsFR4xyckGWk.zhjadGLCzygZAlSbBi07RB0Q5ti7ma2', 'yojay10030@gmail.com');
+(24, 'juana', 'juaninaz', '305431234', '$2y$10$kuU0UcecQVsFR4xyckGWk.zhjadGLCzygZAlSbBi07RB0Q5ti7ma2', 'yojay10030@gmail.com'),
+(25, 'xasad', 'esteban', '3045981960', '$2y$10$Lqx3fQmH2A0JGnZT/bPD5OvIUQ9U3X9eL0puly2UO8mjWuHjpT8fK', 'herofi6129@wpsaevy.com'),
+(26, 'juana', 'ramirez', '30451515515', '$2y$10$cihuZaBHGONyoeirRWTBlez7EYLjlKFCeEwK28fbPUqziKEUUpz0.', 'pove2nah198@0ranges.com');
 
 -- --------------------------------------------------------
 
@@ -68,8 +71,50 @@ CREATE TABLE `compras` (
 
 INSERT INTO `compras` (`id_compra`, `id_producto`, `id_cliente`, `cantidad_compra`) VALUES
 (6, 2, 2, 2),
-(8, 1, 1, 1),
-(9, 3, 1, 4);
+(12, 9, 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cupones`
+--
+
+CREATE TABLE `cupones` (
+  `id_cupon` int(11) NOT NULL,
+  `nombre_cupon` varchar(20) NOT NULL,
+  `valor_cupon` int(2) NOT NULL,
+  `usos_cupon` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cupones`
+--
+
+INSERT INTO `cupones` (`id_cupon`, `nombre_cupon`, `valor_cupon`, `usos_cupon`) VALUES
+(1, 'cupon1', 10, 21),
+(2, 'cupon2', 50, 32);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `descuentos`
+--
+
+CREATE TABLE `descuentos` (
+  `id_descuento` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `valor_descuento` int(2) NOT NULL,
+  `usos_descuento` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `descuentos`
+--
+
+INSERT INTO `descuentos` (`id_descuento`, `id_producto`, `valor_descuento`, `usos_descuento`) VALUES
+(1, 9, 21, 0),
+(2, 10, 50, 0),
+(5, 3, 30, 50);
 
 -- --------------------------------------------------------
 
@@ -138,6 +183,20 @@ ALTER TABLE `compras`
   ADD KEY `FK_id_cliente` (`id_cliente`) USING BTREE;
 
 --
+-- Indices de la tabla `cupones`
+--
+ALTER TABLE `cupones`
+  ADD PRIMARY KEY (`id_cupon`),
+  ADD UNIQUE KEY `nombre producto` (`nombre_cupon`);
+
+--
+-- Indices de la tabla `descuentos`
+--
+ALTER TABLE `descuentos`
+  ADD PRIMARY KEY (`id_descuento`),
+  ADD UNIQUE KEY `id_producto` (`id_producto`) USING BTREE;
+
+--
 -- Indices de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
@@ -160,13 +219,25 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `cupones`
+--
+ALTER TABLE `cupones`
+  MODIFY `id_cupon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `descuentos`
+--
+ALTER TABLE `descuentos`
+  MODIFY `id_descuento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -178,7 +249,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- Restricciones para tablas volcadas
@@ -190,6 +261,12 @@ ALTER TABLE `productos`
 ALTER TABLE `compras`
   ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `descuentos`
+--
+ALTER TABLE `descuentos`
+  ADD CONSTRAINT `descuentos_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`);
 
 --
 -- Filtros para la tabla `pedidos`

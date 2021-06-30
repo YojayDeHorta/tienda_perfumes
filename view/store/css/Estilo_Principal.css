@@ -1,512 +1,568 @@
- @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 
 * {
-    position: relative;
-    text-decoration: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-div[class='Div-Principal']{
-    position: relative;
-    background-color: transparent;
-    width: 100%;
-    height: 3000px;
-    overflow: hidden;
+div[class="Div-Principal"] {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  height: 3000px;
+  overflow: hidden;
 }
 
 header {
-    position: relative;
-    background-color: black;
-    top: 10px;
-    width: 100%;
-    height: 1.35%;
+  position: relative;
+  background-color: black;
+  top: 10px;
+  width: 100%;
+  height: 1.35%;
 }
 
 header nav {
-    position: relative;
-    height: 2px;
+  position: relative;
+  height: 2px;
 }
 
 header nav a {
-    color: bisque;
+  color: bisque;
 }
 
 header nav a:hover {
-    color: white;
+  color: white;
 }
 
-header nav h1{
-    position: relative;
-    display: inline-block;
-    font-family: Bradley Hand ITC;
-    font-size: 30px;
-    cursor: pointer;
-    width: 12%;
-    left: 13px;
-    top: 3px;
-}
-
-
-
-
-header nav ul[class='Icons-ul'] {
-    position: relative;
-    text-transform:uppercase;
-    text-align: right;
-    width: 100%;
-    top: -30px;
-    left: 210px;
-}
-
-
-header nav ul[class='Icons-ul'] li {
-    position: relative;
-    display: inline-block;
-    font-family: Bradley Hand ITC;
-    text-transform: uppercase;
-    padding-left: 35px;
-    font-size: 20px;
-    left: -230px;
-}
-
-
-header nav ul[class='Icons-ul_2'] {
-    position: relative;
-    left: 1290px;
-    height: 2.5%;
-    width: 26%;
-    top: -35px;
-    font-size: 30px;
-}
-
-header nav ul[class='Icons-ul_2'] li {
+header nav h1 {
   position: relative;
-    display: inline-block;
-    padding-left: 30px;
+  display: inline-block;
+  font-family: Bradley Hand ITC;
+  font-size: 30px;
+  cursor: pointer;
+  width: 12%;
+  left: 13px;
+  top: 3px;
 }
 
+header nav ul[class="Icons-ul"] {
+  position: relative;
+  text-transform: uppercase;
+  text-align: right;
+  width: 100%;
+  top: -30px;
+  left: 210px;
+}
+
+header nav ul[class="Icons-ul"] li {
+  position: relative;
+  display: inline-block;
+  font-family: Bradley Hand ITC;
+  text-transform: uppercase;
+  padding-left: 35px;
+  font-size: 20px;
+  left: -230px;
+}
+
+header nav ul[class="Icons-ul_2"] {
+  position: relative;
+  left: 1290px;
+  height: 2.5%;
+  width: 26%;
+  top: -35px;
+  font-size: 30px;
+}
+
+header nav ul[class="Icons-ul_2"] li {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+}
 
 /*-----FRASE Y bUSQUEDA------*/
 
-
-div[class='Frase_Busqueda'] {
-    position: relative;
-    background-color: silver;
-    text-align: center;
-    top: 10px;
-    height: 2.5%;
+div[class="Frase_Busqueda"] {
+  position: relative;
+  background-color: silver;
+  text-align: center;
+  top: 10px;
+  height: 2.5%;
 }
 
-div[class='Frase_Busqueda'] h1 {
-    position: relative;
-    font-family: Bradley Hand ITC;
-    font-size: 30px;
-    top: 16px;
-    left: -40px;
+div[class="Frase_Busqueda"] h1 {
+  position: relative;
+  font-family: Bradley Hand ITC;
+  font-size: 30px;
+  top: 16px;
+  left: -40px;
 }
 
-div[class='Frase_Busqueda'] input {
-    position: relative;
-    border-radius: 10px;
-    padding-left: 39px;
-    outline: none;
-    left: 560px;
-    top: -25px;
-    width: 17%;
-    height: 40px;
-
+div[class="Frase_Busqueda"] input {
+  position: relative;
+  border-radius: 10px;
+  padding-left: 39px;
+  outline: none;
+  left: 560px;
+  top: -25px;
+  width: 17%;
+  height: 40px;
 }
 
-div[class='Frase_Busqueda'] i {
-    position: relative;
-    font-size: 25px;
-    cursor: pointer;
-    left: 310px;
-    top: -20px;
+div[class="Frase_Busqueda"] i {
+  position: relative;
+  font-size: 25px;
+  cursor: pointer;
+  left: 310px;
+  top: -20px;
 }
 
-div[class='Frase_Busqueda'] i:hover {
-    color: red;
+div[class="Frase_Busqueda"] i:hover {
+  color: red;
 }
 
 /*--------------------------------------------------*/
 /*---------slider-----------------*/
-div[class='slider'] {
-    position: relative;
-    border-top: 5px solid #b7a09f;
-    width: 100%;
-    height: 19%;
-    top: 2px;
-    margin-bottom: -7.5%;
+div[class="slider"] {
+  position: relative;
+  border-top: 5px solid #b7a09f;
+  width: 100%;
+  height: 19%;
+  top: 2px;
+  margin-bottom: -7.5%;
 }
 
-div[class='slider'] .myslide {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    display: none;
-    overflow: hidden;
-    top: 0px;
-    margin: 0;
-    padding: 0;
+div[class="slider"] .myslide {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  top: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-div[class='slider'] .next {
-    position: relative;
-    background-color: black;
-    font-size: 50px;
-    left: 1440px;
-    top: -220px;
-    cursor: pointer;
-    color: bisque;
+div[class="slider"] .next {
+  position: relative;
+  background-color: black;
+  font-size: 50px;
+  left: 1440px;
+  top: -220px;
+  cursor: pointer;
+  color: bisque;
 }
 
-div[class='slider'] .prev {
-    position: relative;
-    background-color: black;
-    font-size: 50px;
-    left: 25px;
-    top: -220px;
-    cursor: pointer;
-    color: bisque;
+div[class="slider"] .prev {
+  position: relative;
+  background-color: black;
+  font-size: 50px;
+  left: 25px;
+  top: -220px;
+  cursor: pointer;
+  color: bisque;
 }
 
-div[class='slider'] .Dirrecion {
-    position: relative;
-    display: inline-block;
-    width: 15px;
-    height: 3%;
-    border: 3px solid black;
-    border-radius: 50%;
-    margin: 0 10px;
-    cursor: pointer;
-    top: -60px;
-    left: 0px;
+div[class="slider"] .Dirrecion {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 3%;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  top: -60px;
+  left: 0px;
 }
 
-div[class='slider'] .Dirrecion:hover {
-    background-color: black;
+div[class="slider"] .Dirrecion:hover {
+  background-color: black;
 }
 
 /*---------slider-----------------*/
 
-div[class='Top-Favoritos'] {
-    position: relative;
-    border-bottom: 2px solid silver;
-    background-color: #d9d9d9 ;
-    text-align: center;
-    width: 100%;
-    height: 7%;
-    box-shadow: 0px 0px 0px 3px;
-    margin-bottom: -30px;
+div[class="Top-Favoritos"] {
+  position: relative;
+  border-bottom: 2px solid silver;
+  background-color: #d9d9d9;
+  text-align: center;
+  width: 100%;
+  height: 7%;
+  box-shadow: 0px 0px 0px 3px;
+  margin-bottom: -30px;
 }
 
-.Top-Favoritos table[class='Perfumes-Favoritos'] {
-    position: relative;
-    width: 100%;
-    color: black;
-    
+.Top-Favoritos table[class="Perfumes-Favoritos"] {
+  position: relative;
+  width: 100%;
+  color: black;
 }
 
-table[class='Perfumes-Favoritos'] td {
-    position: relative;
-    font-family: Bradley Hand ITC;
-    text-align: center;
-    font-size: 22px;
-
+table[class="Perfumes-Favoritos"] td {
+  position: relative;
+  font-family: Bradley Hand ITC;
+  text-align: center;
+  font-size: 22px;
 }
 
-table[class='Perfumes-Favoritos'] td img {
-    position: relative;
-    width: 30%;
-    padding-bottom: 0px;
-    margin-top: 5px;
+table[class="Perfumes-Favoritos"] td img {
+  position: relative;
+  width: 30%;
+  padding-bottom: 0px;
+  margin-top: 5px;
 }
 
-table[class='Perfumes-Favoritos'] td h3 {
-    position: relative;
-    font-size: 15px;
+table[class="Perfumes-Favoritos"] td h3 {
+  position: relative;
+  font-size: 15px;
 }
 
-
-table[class='Perfumes-Favoritos'] td button {
-    position: relative;
-    outline: none;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 40%;
-    height: 25px;
-    background-color: black;
-    color: bisque;
-    top: -5px;
+table[class="Perfumes-Favoritos"] td button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 40%;
+  height: 25px;
+  background-color: black;
+  color: bisque;
+  top: -5px;
 }
 
-
-table[class='Perfumes-Favoritos'] td button:hover {
-    background-color: white;
-    color: black;
+table[class="Perfumes-Favoritos"] td button:hover {
+  background-color: white;
+  color: black;
 }
 
 /*  -------------- TABS - PESTAÑAS ---------------  */
 .tab {
-    position: relative;
-    overflow: hidden;
-    top: 120px;
-    margin-bottom: 100px;
-    left:200px;
+  position: relative;
+  overflow: hidden;
+  top: 120px;
+  margin-bottom: 100px;
+  left: 200px;
 }
 
 .tabcontent {
-    position: relative;
-    display: none;
-    text-align: center;
+  position: relative;
+  display: none;
+  text-align: center;
 }
 
 #Pestaña_1,
 #Pestaña_2 {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .tab button {
-    position: relative;
-    background-color: inherit;
-    font-family: Bradley Hand ITC;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-left: 150px;
-    transition: 0.3s;
-    font-size: 40px;
-    right: 70px;
+  position: relative;
+  background-color: inherit;
+  font-family: Bradley Hand ITC;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 150px;
+  transition: 0.3s;
+  font-size: 40px;
+  right: 70px;
 }
 
 .tab button.active {
-    border-bottom: 5px solid red;
+  border-bottom: 5px solid red;
 }
-
 
 /**-----------------DIV  DE PRODUCTOS-------------------**/
 
 #Catalogo_Productos {
-    position: relative;
-    top: -400px;
+  position: relative;
+  top: -400px;
 }
 
 .Catalogo-Producto {
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 700px;
-    left: 70px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 700px;
+  left: 70px;
 }
 
 .Producto {
-    position: relative;
-    text-align: center;
-    background-color: transparent;
-    margin: 15px;
-    width: 29%;
-    height: 455px;
-    border-bottom: 3px solid bisque;
+  position: relative;
+  text-align: center;
+  background-color: transparent;
+  margin: 15px;
+  width: 29%;
+  height: 455px;
+  border-bottom: 3px solid bisque;
 }
 
 .Producto:hover {
-    border-radius: 20px;
-    background-color: silver;
-    border: 2px solid black;
-}
-
-.Titulo {
-    position: relative;
-    font-size: 16px;
-    padding-bottom: 30px;
+  border-radius: 20px;
+  background-color: silver;
+  border: 2px solid black;
 }
 
 .Img-Producto {
-    position: relative;
-    width: 120px;
-    top: -10px;
-    padding-bottom: 30px;
+  position: relative;
+  width: 120px;
+  top: -10px;
+  padding-bottom: 30px;
 }
 
 .Precio {
-    position: relative;
-    font-size: 18px;
-    top: -35px;
-    padding-bottom: 15px;
+  position: relative;
+  font-size: 18px;
+  top: -35px;
+  padding-bottom: 15px;
 }
 
 .Descripcion {
-    position: relative;
-    justify-content: center;
-    font-size: 17px;
-    top: -40px;
-    width: 97%;
-    left: 10px;
-    padding-bottom: 30px;
+  position: relative;
+  justify-content: center;
+  font-size: 17px;
+  top: -40px;
+  width: 97%;
+  left: 10px;
+  padding-bottom: 30px;
 }
 
 .Compra {
-    position: relative;
-    background-color: white;
-    border-radius: 15px;
-    color: black;
-    top: -48px;
-    height: 52px;
-    width: 40%;
-    font-family: arial black;
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+  top: -48px;
+  height: 52px;
+  width: 40%;
+  font-family: arial black;
 }
 
 .Compra:hover {
-    color: bisque;
-    background-color: black;
+  color: bisque;
+  background-color: black;
 }
 
-
 #Title_Videos {
-    position: relative;
-    top: 440px;
-    font-size: 50px;
-    left: 50px;
+  position: relative;
+  top: 440px;
+  font-size: 50px;
+  left: 50px;
 }
 
 .Tabla_Videos {
-    position: relative;
-    width: 90%;
-    top: 450px;
-    left: 65px;
+  position: relative;
+  width: 90%;
+  top: 450px;
+  left: 65px;
 }
 
 .Tabla_Videos th {
-    position: relative;
-    width: 30%;
-    height: 250px;
+  position: relative;
+  width: 30%;
+  height: 250px;
 }
 
 .Tabla_Videos a {
-    font-size: 25px;
-    height: 70px;
-    text-decoration: none;
-    border: 1px solid black;
-    color: bisque;
-    background-color: black;
-    border-radius: 10px;
+  font-size: 25px;
+  height: 70px;
+  text-decoration: none;
+  border: 1px solid black;
+  color: bisque;
+  background-color: black;
+  border-radius: 10px;
 }
 
+.Datos_Tabla_Producto {
+  position: relative;
+  text-align: center;
+  background-color: #d4d4d4;
+  overflow: hidden;
+  margin: 1px;
+  width: 120px;
+  height: 160px;
+  top: 20px;
+}
 
-    .Datos_Tabla_Producto {
-        position: relative;
-        text-align: center;
-        background-color: #d4d4d4;
-        overflow: hidden;
-        margin: 1px;
-        width: 120px;
-        height: 160px;
-        top: 20px;
-    }
+.Img_Producto {
+  position: relative;
+  width: 120px;
+  height: 155px;
+  top: -10px;
+}
 
-    .Img_Producto {
-        position: relative;
-        width: 120px;
-        height: 155px;
-        top: -10px;
-    }
+.Admin_Input_Producto {
+  position: relative;
+  background-color: white;
+  width: 90%;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
 
-    .Admin_Input_Producto {
-        position: relative;
-        background-color: white;
-        width: 90%;
-        text-decoration: none;
-        border: none;
-        outline: none;
-    }
+.Precio_Producto {
+  position: relative;
+  top: 60px;
+}
 
-    .Precio_Producto {
-        position: relative;
-        top: 60px;
-    }
+.Boton_Datos_Producto {
+  position: relative;
+  top: 55px;
+}
 
-    .Boton_Datos_Producto {
-        position: relative;
-        top: 55px;
-    }
+#Input_Producto_1,
+#Input_Producto_4,
+#Input_Producto_5 {
+  position: relative;
+  background-color: transparent;
+  border-bottom: 5px solid black;
+  padding-left: 15px;
+  top: 55px;
+}
 
-    #Input_Producto_1,
-    #Input_Producto_4,
-    #Input_Producto_5 {
-        position: relative;
-        background-color: transparent;
-        border-bottom: 5px solid black;
-        padding-left: 15px;
-        top: 55px;
-    }
+#Input_Producto_2 {
+  position: relative;
+  top: -29px;
+}
 
-    #Input_Producto_2 {
-        position: relative;
-        top: -29px;
-    }
+#Input_Producto_3 {
+  position: relative;
+  overflow: scroll;
+  width: 98%;
+  height: 140px;
+  top: 10px;
+  left: 0px;
+}
 
-    #Input_Producto_3 {
-        position: relative;
-        overflow: scroll;
-        width: 98%;
-        height: 140px;
-        top: 10px;
-        left: 0px;
-    }
+#Datos_1 {
+  position: relative;
+  width: 5%;
+  left: 4px;
+}
 
-    #Datos_1 {
-        position: relative;
-        width: 5%;
-        left: 4px;
-    }
+#Datos_2 {
+  position: relative;
+  width: 16.5%;
+  left: 7px;
+}
 
-    #Datos_2 {
-        position: relative;
-        width: 16.5%;
-        left: 7px;
-    }
+#Datos_3 {
+  position: relative;
+  width: 27%;
+  left: 10px;
+}
 
-    #Datos_3 {
-        position: relative;
-        width: 27%;
-        left: 10px;
-    }
+#Datos_4 {
+  position: relative;
+  width: 15.1%;
+  left: 13px;
+}
 
-    #Datos_4 {
-        position: relative;
-        width: 15.1%;
-        left: 13px;
-    }
+#Datos_5 {
+  position: relative;
+  width: 14%;
+  left: 15px;
+}
 
-    #Datos_5 {
-        position: relative;
-        width: 14%;
-        left: 15px;
-    }
+#Datos_6 {
+  position: relative;
+  width: 21%;
+  left: 17px;
+}
 
-    #Datos_6 {
-        position: relative;
-        width: 21%;
-        left: 17px;
-    }
+#Boton_Producto_Modificar {
+  position: relative;
+  background-color: #094293;
+  width: 40%;
+}
 
-    #Boton_Producto_Modificar {
-        position: relative;
-        background-color: #094293;
-        width: 40%;
-    }
+#Boton_Producto_Borrar {
+  position: relative;
+  background-color: red;
+  width: 40%;
+}
+/* titulo y */
+.Titulo {
+  position: relative;
+  font-size: 16px;
+  width: 50%;
+  /* padding-bottom: 30px; */
+}
 
-    #Boton_Producto_Borrar {
-        position: relative;
-        background-color: red;
-        width: 40%;
-    }
+.contenedor_nombre {
+  width: 80%;
+  height: 50px;
 
+  margin: auto;
+  padding: 10px;
+}
+
+.one {
+  width: 15%;
+  height: 50px;
+
+  float: left;
+}
+
+.two {
+  margin-left: 15%;
+  width: 80%;
+  height: 50px;
+}
+
+.ribbon {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79a70a;
+  background: linear-gradient(#f70505 0%, #8f0808 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px;
+  left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #8f0808;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8f0808;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #8f0808;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8f0808;
+}
