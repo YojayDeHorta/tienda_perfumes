@@ -28,6 +28,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/Icon-Perfume.jpg">
   <link href="css/Estilo_Principal.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/alerta-modal.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -186,10 +187,18 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
         </div>
     </div>
 </div> -->
-
+    <div class="Ventana-Modal" id="alerta_login">
+        <div class="Sub-Ventana_Modal">
+            <div class="Div-Frase_Modal" id='Alerta_Modal'>
+            </div>
+        </div>
+    </div>   
 
     <script src="js/productos.js" charset="uft-8"></script>
     <script type="text/javascript" src="js/Pagina_Principal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

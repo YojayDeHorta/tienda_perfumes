@@ -84,9 +84,30 @@ on(document, "click", "#botonCompra", (e) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        alert(data);
+        //alert(data);
+        Alerta_Mensaje(data);
       });
   } else {
-    alert("primero registrate o inicia sesion antes de comprar");
+    //alert("primero registrate o inicia sesion antes de comprar");
+    Alerta_Mensaje("primero registrate o inicia sesion antes de comprar");
   }
 });
+
+function Close() {
+  $('.Ventana-Modal').removeClass('show');
+  $('.Sub-Ventana_Modal').removeClass('show');
+}
+
+
+
+function Alerta_Mensaje(Texto) {
+  $('.Ventana-Modal').addClass('show');
+  $('.Sub-Ventana_Modal').addClass('show');
+  var Contenedor_Alerta = document.getElementById('Alerta_Modal');
+  Contenedor_Alerta.innerHTML = `
+   <i class="far fa-times-circle" id="close" onclick="Close()"></i>
+    <h2 id='Mensaje'> ${Texto} </h2>
+    <button onclick="Close()">Aceptar</button>
+
+  `
+}

@@ -24,7 +24,7 @@ if($comprarepetida==NULL){
 }else{
     $comprarepetida->setcantidad_compra($comprarepetida->getcantidad_compra()+1);
     modificarcompra($comprarepetida);
-    echo json_encode("producto ya agregado, sumado");
+    echo json_encode("producto sumado al carrito");
 }
 
 
