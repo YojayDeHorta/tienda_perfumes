@@ -1,5 +1,7 @@
 /**----------------LOGIN-------------------- */
-
+window.onload = function () {
+  alerta_google();
+};
 var sesion = document.getElementById("Iniciar");
 var alerta = document.getElementById("alerta_login");
 sesion.addEventListener("submit", function (e) {
@@ -27,7 +29,7 @@ sesion.addEventListener("submit", function (e) {
 
         //alerta.innerHTML = data;
         setTimeout(() => {
-         window.location.replace("index.php");
+          window.location.replace("index.php");
         }, 1000);
 
       } else {
@@ -59,4 +61,34 @@ function Alerta_Mensaje(Texto) {
     <button onclick="Close()">Aceptar</button>
 
   `
+}
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+function alerta_google() {
+  let id_alerta = getParameterByName('alert');
+  console.log(id_alerta);
+  // if (id_alerta == 1) {
+  //   Alerta_Mensaje('Inicio de sesion fallido,puede que ya estes registrado sin la cuenta de google')
+  // }
+  switch (id_alerta) {
+    case '1':
+      Alerta_Mensaje('Inicio de sesion fallido,puede que ya estes registrado sin la cuenta de google');
+      break;
+    case '2':
+      Alerta_Mensaje('el email o numero ya ha sido usado en otra cuenta, porfavor inicia sesion en dicha cuenta');
+      break;
+    case '3':
+      Alerta_Mensaje('registrado correctamente, ya puedes iniciar sesion');
+      break;
+    default:
+      break;
+  }
+  if (typeof window.history.pushState == 'function') {
+    window.history.pushState({}, "Hide", 'Registrate.html');
+  }
+
 }

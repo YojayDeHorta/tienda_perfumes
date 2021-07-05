@@ -44,7 +44,7 @@
         echo json_encode($cliente->toArray());
         return 1;            
 	}else{
-        echo json_encode('el email o correo ya ha sido usado en otra cuenta, porfavor inicia sesion en dicha cuenta');
+        echo json_encode('el email o numero movil ya ha sido usado en otra cuenta, porfavor inicia sesion en dicha cuenta');
         return 0;
 	}
 
