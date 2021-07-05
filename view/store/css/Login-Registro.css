@@ -296,3 +296,14 @@ a[id="Olvidaste-contraseña"] {
   position: relative;
   font-size: 30px;
 }
+
+.Api-login{
+  position: relative;
+  width: 100%;
+}
+
+#Google-login{
+  position: relative;
+  top: -10px;
+
+}
