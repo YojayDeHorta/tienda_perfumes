@@ -92,7 +92,7 @@ form[id="Registro"] {
   position: relative;
   background-color: #f4f4f4;
   width: 43%;
-  height: 600px;
+  height: 680px;
   left: 450px;
 }
 
@@ -280,4 +280,19 @@ a[id="Olvidaste-contraseña"] {
   position: relative;
   left: 46px;
   top: 5px;
+}
+
+
+.Api{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.Api #Google{
+  position: relative;
+  font-size: 30px;
 }

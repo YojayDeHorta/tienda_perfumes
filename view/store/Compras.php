@@ -67,7 +67,7 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
       </div>
     </div>
   <div class="Ventana-Modal">
-      <div class="Sub-Ventana_Modal">
+      <div class="Sub-Ventana_Modal" id='ventana'>
         <div class="Div-Frase_Modal" id='Alerta_Modal'>
         </div>
       </div>
@@ -82,3 +82,4 @@ if (!isset($_SESSION['NOMBRE_CLIENTE'])||$_SESSION['NOMBRE_CLIENTE']=="inicia se
 </body>
 </html>
 
+<!--<a href="Compras.php#ventana"></a>
