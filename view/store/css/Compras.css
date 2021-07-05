@@ -78,6 +78,12 @@ div[class="Flex_Compras"] h2 {
   font-size: 18px;
 }
 
+/*
+div#Compras_1{
+  position: relative;
+  background-color: red;
+}*/
+
 .Compra_Total_Carrito {
   position: fixed;
   font-family: Eras Bold ITC;

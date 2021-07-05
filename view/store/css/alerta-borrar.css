@@ -15,29 +15,29 @@
 
 .Sub-Ventana_Modal{
   position: relative;
-  background: white;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 60%;
   transform: scale(0.6);
   opacity: 0;
   transition: .3s ease all;
-  left: 100px;
-  top: -1000px;
+  left: 80px;
+  top: -965px;
+  /*top: -1000px;*/
 }
 
 
 .Div-Frase_Modal{
-  position: fixed;
+  position: relative;
   border: 5px solid black;
   border-radius: 10px;
   text-align: center;
- background: silver;
+  background: silver;
   color: black;
   height: 200px;
   width:50%;
   align-items: center;
-  left: 150px;
 }
 
 
@@ -90,3 +90,4 @@
   transform: scale(1);
   opacity: 1;
 }
+
