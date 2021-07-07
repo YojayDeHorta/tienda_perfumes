@@ -6,7 +6,7 @@ const contenedorProductos = document.getElementById("contenedor-productos");
 const formProducto = document.getElementById("formulario-producto");
 const id_producto = document.getElementById("id_producto");
 const tipo = document.getElementById("tipo");
-
+const productoimg = document.getElementById("productoimg");
 const imagen = document.getElementById("imagen");
 const producto = document.getElementById("producto");
 const descripcion = document.getElementById("descripcion");
@@ -14,8 +14,9 @@ const precio = document.getElementById("precio");
 const stock = document.getElementById("stock");
 const divIdproducto = document.getElementById("divId_producto");
 const divAvisoProducto = document.getElementById("divAvisoProducto");
+const button = document.getElementById("imagenbtn");
+let editarproductoaux = "";
 
-button = document.getElementById("imagenbtn");
 
 let file;
 
@@ -24,10 +25,11 @@ let resultados = "";
 btnProducto.addEventListener("click", () => {
   id_producto.value = "";
   tipo.value = "";
-
   imagen.value = "";
+  productoimg.innerHTML = "no se ha elegido imagen";
   producto.value = "";
   descripcion.value = "";
+
   precio.value = "";
   stock.value = "";
   modalProductos.show();
@@ -87,8 +89,9 @@ recharge(document, "click", "#borrar_producto", (e) => {
 
 //Procedimiento Editar
 let idproductoForm = 0;
-on(document, "click", "#editar_producto", (e) => {
+recharge(document, "click", "#editar_producto", (e) => {
   const fila = e.target.parentNode.parentNode;
+  editarproductoaux = e.target.parentNode.parentNode;
   idproductoForm = fila.children[0].innerHTML;
   const tipoForm = fila.children[1].innerHTML;
   const imagenForm = fila.children[2].innerHTML;
@@ -120,7 +123,7 @@ formProducto.addEventListener("submit", (e) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+
         if (typeof data === 'object' && data !== null) {
           alertify.alert("producto agregado exitosamente", function () {
             const nuevoproducto = [];
@@ -145,30 +148,39 @@ formProducto.addEventListener("submit", (e) => {
       .then((data) => {
         if (data == "producto editado exitosamente") {
           alertify.alert(data, function () {
-            location.reload();
+            editarproductoaux.innerHTML = `<tr>
+            <td>${datos.get("Id_producto")}</td>
+            <td>${datos.get("Tipo")}</td>
+            <td><img src="/view/store/img/productos/Catalogo-${datos.get("Id_producto")}.png " width="50" height="60"></td>
+            <td>${datos.get("Producto")}</td>
+            <td>${datos.get("Descripcion")}</td>
+            <td>${datos.get("Precio")}</td>
+            <td>${datos.get("Stock")}</td>
+            <td class="text-center"><a class="btnEditarProducto btn btn-primary" id="editar_producto">Editar</a><a class="btnBorrarProducto btn btn-danger" id="borrar_producto">Borrar</a></td>
+            </tr>`;
+            modalProductos.hide();
+            //location.reload();
           });
         } else {
           alertify.alert(data);
         }
       });
-    modalProductos.hide();
+
   }
 });
 
 
 //Procedimiento para la imagen
 button.onclick = () => {
-  imagen.click(); //if user click on the button then the imagen also clicked
+  imagen.click();
 }
 imagen.addEventListener("change", function () {
-  //getting user select file and [0] this means if user select multiple files then we'll select only the first one
   file = this.files[0];
-  //dropArea.classList.add("active");
-  showFile(); //calling function
+  mostrarimagen();
 });
 
-function showFile() {
-  let productoimg = document.getElementById("productoimg");
+function mostrarimagen() {
+
   let fileType = file.type;
   let validador = ["image/jpeg", "image/jpg", "image/png"];
   if (validador.includes(fileType)) {
@@ -181,7 +193,7 @@ function showFile() {
     }
     fileReader.readAsDataURL(file);
   } else {
-    alert("This is not an Image File!");
+    alert("usa una imagen de tipo jpg, png y jpeg!");
     imagen.value = "";
   }
 }

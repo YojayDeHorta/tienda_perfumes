@@ -30,10 +30,16 @@
     </header>
     <div class="Div-Tabs">
       <button class="tablinks" id='pestaña_1' onclick="Tabs_Principal(event, 'Pestaña_1')">
-        Administrar Productos
+        Productos
       </button>
       <button class="tablinks" id='pestaña_2' onclick="Tabs_Principal(event, 'Pestaña_2')">
-        Administrar Clientes
+        Clientes
+      </button>
+      <button class="tablinks" id='pestaña_3' onclick="Tabs_Principal(event, 'Pestaña_3')">
+        Cupones
+      </button>
+      <button class="tablinks" id='pestaña_4' onclick="Tabs_Principal(event, 'Pestaña_4')">
+        Descuentos
       </button>
     </div>
     <h3 class="Titulo_Admin">ADMINISTRADOR</h3>
@@ -75,6 +81,43 @@
           </thead>
 
           <tbody id="contenedor-clientes"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="Pestaña_3" class="tabcontent" style='display:block'>
+      <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded" id="Div_Cupones">
+        <button id="btnCupon" type="button" class="btn btn-primary" data-bs-toggle="modal"> Agregar Cupon</button>
+        <table class=" table mt-2 table-bordered table-striped" id="Tabla_Admin_Cupon">
+          <thead>
+            <tr class=" text-center">
+              <th>ID</th>
+              <th>NOMBRE DEL CUPON</th>
+              <th>VALOR DEL CUPON</th>
+              <th>USOS DEL CUPON</th>
+              <th>ACCIONES</th>
+            </tr>
+          </thead>
+
+          <tbody id="contenedor-cupones"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="Pestaña_4" class="tabcontent" style='display:block'>
+      <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded" id="Div_Descuentos">
+        <button id="btnDescuento" type="button" class="btn btn-primary" data-bs-toggle="modal"> Agregar
+          Descuento</button>
+        <table class=" table mt-2 table-bordered table-striped" id="Tabla_Admin_Descuentos">
+          <thead>
+            <tr class=" text-center">
+              <th>ID</th>
+              <th>NOMBRE DEL PRODUCTO</th>
+              <th>VALOR DEL DESCUENTO</th>
+              <th>USOS DEL DESCUENTO</th>
+              <th>ACCIONES</th>
+            </tr>
+          </thead>
+
+          <tbody id="contenedor-descuentos"></tbody>
         </table>
       </div>
     </div>
@@ -194,6 +237,50 @@
       </form>
     </div>
   </div>
+  <!-- modal cupones-->
+
+  <div id="modalCupones" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <form id="formulario-Cupon">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-dark">
+            <h5 class="modal-title" id="exampleModalLabel2">Tabla Cupones</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3 bg-danger" id="divAvisoCupon">
+            </div>
+            <div class="mb-3" id="divId_cupon">
+              <label for="id_cupon" class="col-form-label">id:</label>
+              <input type="number" class="form-control" id="id_cupon" name="Id_cupon" readonly autofocus>
+            </div>
+            <div class="mb-3">
+              <label for="cupon" class="col-form-label">nombre del cupon:</label>
+              <input type="text" class="form-control" id="nombre_cupon" name="nombre_cupon" minlength="4" maxlength="60"
+                title="El nombre del cupon puede tener un minimo de 4 caracteres y maximo 60" required autofocus>
+            </div>
+            <div class="mb-3">
+              <label for="valor_cupon" class="col-form-label">valor_cupon:</label>
+              <input type="text" class="form-control" id="valor_cupon" name="valor_cupon" minlength="1" maxlength="15"
+                title="El valor_cupon puede tener numeros, maximo 15" pattern="[0-9]+" required autofocus>
+            </div>
+            <div class="mb-3">
+              <label for="usos_cupon" class="col-form-label">usos_cupon:</label>
+              <input type="text" class="form-control" id="usos_cupon" name="usos_cupon" minlength="1" maxlength="3"
+                title="El usos_cupon puede tener maximo 999 productos, solo numeros" pattern="[0-9]+" required
+                autofocus>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Guardar Cupon</button>
+          </div>
+      </form>
+    </div>
+  </div>
+
   </div>
 
   <script type="text/javascript" src="js/1.js"></script>
@@ -206,6 +293,8 @@
     crossorigin="anonymous"></script>
   <script src="js/admin.js"></script>
   <script src="js/productos.js"></script>
+  <script src="js/cupones.js"></script>
+  <script src="js/descuentos.js"></script>
 </body>
 
 </html>

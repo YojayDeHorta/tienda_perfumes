@@ -10,9 +10,11 @@ const mostrar = (articulos) => {
   let contmujeres = 0;
   datosdescuento = productosdescuento();
   datosdescuento.then(response => {
-    response.forEach((variable) => {
+    respuestadescuento = response[0];
+    respuestadescuento.forEach((variable) => {
       descuentosproductos[variable.id_producto] = variable.valor_descuento;
     });
+
     articulos.forEach((item) => {
       var producto = document.createElement("div");
       producto.setAttribute("class", "Producto");

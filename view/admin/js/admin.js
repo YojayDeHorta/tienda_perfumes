@@ -15,6 +15,7 @@ const divId = document.getElementById("divId");
 const divAviso = document.getElementById("divAviso");
 let opcion = "";
 let resultadosuser = "";
+let editarclienteaux = "";
 //btncliente = document.getElementById("btnCliente");
 
 btnAdmin.addEventListener("click", () => {
@@ -70,7 +71,7 @@ on(document, "click", "#borrar_usuario", (e) => {
       .then((res) => res.json())
       .then((salida) => {
         alertify.alert(salida, function () {
-          fila.style.display = "none";
+          fila.innerHTML = "";
           //location.reload();
         });
       });
@@ -81,6 +82,7 @@ on(document, "click", "#borrar_usuario", (e) => {
 let idForm = 0;
 on(document, "click", "#editar_usuario", (e) => {
   const fila = e.target.parentNode.parentNode;
+  editarproductoaux = e.target.parentNode.parentNode;
   idForm = fila.children[0].innerHTML;
   const nombreForm = fila.children[1].innerHTML;
   const apellidoForm = fila.children[2].innerHTML;
@@ -142,13 +144,22 @@ formArticulo.addEventListener("submit", (e) => {
       .then((data) => {
         if (data == "cliente editado exitosamente") {
           alertify.alert(data, function () {
-            location.reload();
+            editarproductoaux.innerHTML = `<tr>
+            <td>${datos.get("id_cliente")}</td>
+            <td>${datos.get("nombre")}</td>
+            <td>${datos.get("apellido")}</td>
+            <td>${datos.get("numero_movil")}</td>
+            <td>${datos.get("email")}</td>
+            <td>${datos.get("password")}</td>
+            <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Borrar</a></td>
+            </tr>`;;
+            modalArticulo.hide();
           });
         }
         else {
           alertify.alert(data);
         }
       });
-    modalArticulo.hide();
+
   }
 });

@@ -23,7 +23,8 @@ const mostrar = (articulos) => {
         Numero_Articulo += 1;
         let descuento = 0;
         resultados += `
-    <div class="Flex_Compras" id='Compras_${Numero_Articulo}'>`
+        <div class="Flex_Compras" id='Compras_${Numero_Articulo}'>`
+
         if (typeof descuentoArticulo[articulo.id_producto] !== 'undefined') {
             resultados += `<div class="ribbon one"><span>${descuentoArticulo[articulo.id_producto]}%</span></div>`;
             descuento = Math.trunc(articulo.precio_producto * (descuentoArticulo[articulo.id_producto] / 100));
@@ -78,9 +79,9 @@ function SumarYAgregar(Precio, id_producto) {
         cantidadcompra[id_producto] = cantidadNueva;
         sumaArticulos = sumaArticulos + (Precio * diferencia);
         fetch("../../../controller/ACTIONS/act_edit-Compras.php", {
-                method: "POST",
-                body: formData,
-            })
+            method: "POST",
+            body: formData,
+        })
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -106,9 +107,9 @@ function Eliminar_Compra(id_producto) {
     formData.append("id_cliente", clienteid);
     formData.append("id_producto", id_producto);
     fetch("../../../controller/ACTIONS/act_delete-Compras.php", {
-            method: "POST",
-            body: formData,
-        })
+        method: "POST",
+        body: formData,
+    })
         .then((res) => res.json())
         .then((data) => {
             console.log(data);
@@ -127,18 +128,18 @@ function Close() {
 
 
 function Alerta_Borrar(id_producto, Producto_Seleccinado) {
-        
+
     /*var top_modal = '-1000px';
     var cantidad_productos = document.getElementsByClassName('Flex_Compras').length;
     //var a = cantidad_productos[0]; var b = cantidad_productos[cantidad_productos.length-1]
     */
     $('.Ventana-Modal').addClass('show');
     $('.Sub-Ventana_Modal').addClass('show');
-    
+
     var Contenedor_Alerta = document.getElementById('Alerta_Modal');
     var Contenedor_Principal = document.getElementById('ventana')
 
-    Contenedor_Alerta.name="Alerta_Borrar_Producto";
+    Contenedor_Alerta.name = "Alerta_Borrar_Producto";
 
     Contenedor_Alerta.innerHTML = `
     <i class="far fa-times-circle" id="close" onclick="Close()"></i>
@@ -151,35 +152,35 @@ function Alerta_Borrar(id_producto, Producto_Seleccinado) {
     if(id_producto!==1){
      Contenedor_Principal.style.top = top_modal.toString()+'px';
      /*console.log(top_modal)*//*
-    }/*else if(id_producto.toString()==='1'){
-        Contenedor_Principal.style.top = top_modal;
-    }*/
+ }/*else if(id_producto.toString()==='1'){
+     Contenedor_Principal.style.top = top_modal;
+ }*/
 
-    
 
-    
- /*   console.log('Numero_Producto',id_producto)
-    if(id_producto.toString()=='1') {
-       ventana.style.top = '260px';
-    }if(id_producto.toString()!='1'){
-        var top = 215 * id_producto ;
-        top = top.toString()+'px'; 
-        console.log(top)
-        ventana.style.top = top;
-    }
-    top = "";*/
+
+
+    /*   console.log('Numero_Producto',id_producto)
+       if(id_producto.toString()=='1') {
+          ventana.style.top = '260px';
+       }if(id_producto.toString()!='1'){
+           var top = 215 * id_producto ;
+           top = top.toString()+'px'; 
+           console.log(top)
+           ventana.style.top = top;
+       }
+       top = "";*/
 }
 
 
 
 //cupones
-formularioCupon.addEventListener("submit", function(e) {
+formularioCupon.addEventListener("submit", function (e) {
     e.preventDefault();
     var datos = new FormData(formularioCupon);
     fetch("../../../controller/ACTIONS/act_read-Cupones.php", {
-            method: "POST",
-            body: datos,
-        })
+        method: "POST",
+        body: datos,
+    })
         .then((respuesta) => respuesta.json())
         .then((data) => {
 

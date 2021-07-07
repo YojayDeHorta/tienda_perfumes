@@ -1,9 +1,14 @@
 <?php
         
         require_once (__DIR__."/../MDB/mdbDescuento.php");
-
+        require_once (__DIR__."/../MDB/mdbProducto.php");
         $productosdescuento=leerdescuentos();
-        echo json_encode($productosdescuento);
+        $array_productos=leerproductos();
+        foreach ( $array_productos as  $producto) {
+                $productospornombre[$producto["id_producto"]]=$producto["nombre_producto"];
+        }
+
+        echo json_encode(array($productosdescuento,$productospornombre));
         /*
                 $cupon=buscarcuponpornombre($nombre_cupon);
                 if($cupon==NULL){

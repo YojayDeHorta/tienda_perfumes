@@ -48,6 +48,11 @@ class DescuentoDAO{
         }
         return $descuentos;   
     }
+    public function borrardescuentos($id_descuento){
+        $data_source = new DataSource();
+        $resultado= $data_source->ejecutarActualizacion("DELETE FROM descuentos WHERE id_descuento = :id_descuento", array('id_descuento'=>$id_descuento));  
+        return $resultado;
+    }
     
     
     
