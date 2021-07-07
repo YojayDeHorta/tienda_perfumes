@@ -44,7 +44,25 @@ tabs_bottom.style = 'border-bottom:5px solid red'
 tabs_contenido.style.display = 'block';
 if(tabs=='Pestaña_1'){
   document.getElementById('Pestaña_2').style.display = "none";
+  document.getElementById('Pestaña_3').style.display = "none";
+  document.getElementById('Pestaña_4').style.display = "none";
 }
+if(tabs=='Pestaña_2'){
+  document.getElementById('Pestaña_1').style.display = "none";
+  document.getElementById('Pestaña_3').style.display = "none";
+  document.getElementById('Pestaña_4').style.display = "none";
+}
+if(tabs=='Pestaña_3'){
+  document.getElementById('Pestaña_1').style.display = "none";
+  document.getElementById('Pestaña_2').style.display = "none";
+  document.getElementById('Pestaña_4').style.display = "none";
+}
+if(tabs=='Pestaña_4'){
+  document.getElementById('Pestaña_1').style.display = "none";
+  document.getElementById('Pestaña_2').style.display = "none";
+  document.getElementById('Pestaña_3').style.display = "none";
+}
+
 
 
 //console.log('Prueba', tabs_bottom);*/
