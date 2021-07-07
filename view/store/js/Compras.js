@@ -41,7 +41,7 @@ const mostrar = (articulos) => {
             step="1" required="required" value="${cantidad}" class="Input_Cantidad" id="Input_Cantidad_${articulo.id_producto}"  onclick="SumarYAgregar(${(articulo.precio_producto - descuento)},${articulo.id_producto})" >
         </form>
         <i class="fas fa-heart" id="Icon_Compras"></i>
-        <a id='seleccion' href="Compras.php#Alerta_Modal"><i class="far fa-trash-alt" id="Icon_Compras" onclick='Alerta_Borrar(${articulo.id_producto},${Numero_Articulo})'></i></a>
+        <a id='seleccion' href="Compras.php#ventana"><i class="far fa-trash-alt" id="Icon_Compras" onclick='Alerta_Borrar(${articulo.id_producto},${Numero_Articulo})'></i></a>
         <br> <br>
         <h2 class="Sub_Total" id="Sub_Total_${articulo.id_producto}">SUB TOTAL <br> ${((articulo.precio_producto - descuento) * cantidad)} USD</h2>
       </div>               `;
