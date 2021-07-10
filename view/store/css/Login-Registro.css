@@ -9,8 +9,15 @@ div[id='Pagina_Registro_Login']{
 
 div[id='Pestaña_Usuario']{
   position:relative;
-  left:390px;
   margin-bottom:150px;
+}
+
+div[class='tabcontent']{
+  position: relative;
+  text-align: center;
+}
+#Pestaña_1,#Pestaña_2{
+  position: relative;
 }
 
 div[id='Pestaña_Usuario'] button{
@@ -20,9 +27,6 @@ div[id='Pestaña_Usuario'] button{
 
 div[id="Pestaña_1"] {
   position: relative;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   width: 100%;
 }
 
@@ -30,21 +34,23 @@ form[class="Formu"] {
   position: relative;
   box-shadow: 0px 0px 10px 0px;
   display: flex;
+  justify-self: center;
   flex-wrap: wrap;
-  width: 43%;
+  width: 50%;
   border: 2px solid black;
+  left: 25%;
+  top: 1%;
+  
 }
 
 form[id="Iniciar"] {
   position: relative;
-  display: flex;
   flex-direction: column;
-  width: 40%;
+  align-items: center;
   justify-content: center;
-  align-items:center;
   background-color: #f4f4f4;
-  left: 450px;
-  height: 400px;
+  /*left: 450px;*/
+  height: 50vh;
 }
 
 form[id="Iniciar"] h1 {
@@ -91,9 +97,10 @@ form[id="Iniciar"] #btn-Login:hover {
 form[id="Registro"] {
   position: relative;
   background-color: #f4f4f4;
-  width: 43%;
-  height: 680px;
-  left: 450px;
+  height: 110%;
+ /* height: 75vh;
+  /*height: 680px;
+  left: 450px;*/
 }
 
 form[id="Registro"] input {
@@ -106,7 +113,6 @@ form[id="Registro"] input {
   border-right: none;
   background-color: transparent;
 }
-
 
 
 .Formu h1 {
@@ -349,3 +355,4 @@ a[id="Olvidaste-contraseña"] {
   color: white;
 
 }
+

@@ -36,7 +36,6 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
   <div class="Div-Principal">
     <header>
       <nav>
-        <!--<h1 class='Logo-h1'><a href="Index.php"><i class="fas fa-home"></i>&nbsp;INICIO</a></h1>-->
          <h1 class='Logo-h1'><a href="Index.php">PERFUMES</a></h1>
         <ul class='Icons-ul'>
           <li><a href="Contacto.html">CONTACTO &nbsp; <i class="fas fa-address-book"></i></a></li> &nbsp; &nbsp; &nbsp;
@@ -60,7 +59,8 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
       </h1>
       <input class="Buscar" type="text" placeholder=" Buscar Productos"><i class="fas fa-search"></i>
     </div>
-    <div class="slider">
+    <div class='Contenedor-slider'>
+          <div class="slider">
       <!-- fade css -->
       <div class="myslide">
         <img src="img/Slider-11.jpg">
@@ -77,15 +77,17 @@ if (!isset($_SESSION['NOMBRE_CLIENTE']) || $_SESSION['NOMBRE_CLIENTE'] == "inici
       <div class="myslide">
         <img src="img/Slider-44.jpg">
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+      <!--
+      <a id='Flecha' class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a id='Flecha' class="next" onclick="plusSlides(1)">&#10095;</a>
+-->
       <div class="dotsbox" style="text-align:center">
         <span class="Dirrecion" onclick="currentSlide(1)"></span>
         <span class="Dirrecion" onclick="currentSlide(2)"></span>
         <span class="Dirrecion" onclick="currentSlide(3)"></span>
         <span class="Dirrecion" onclick="currentSlide(4)"></span>
       </div>
+    </div>
     </div>
     <div class="Top-Favoritos">
       <table class="Perfumes-Favoritos">
